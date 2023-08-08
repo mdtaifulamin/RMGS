@@ -328,12 +328,12 @@ const processSubmithandler = async () => {
                       </View>       */}
                       
                 <View style={styles.modal2ButtonContainer}>
-                  <View style={{borderWidth:1,width:screen_width*0.4,justifyContent:'center',alignItems:'center'}}>
+                  <View style={{width:screen_width*0.4,justifyContent:'center',alignItems:'center'}}>
                     {!loading && <SeconderyButton onPress={processSubmithandler}>Submit</SeconderyButton>}
                     {loading && <Text>Loading...</Text>} 
                     {error && <Text style={{ color: 'red' }}>{error}</Text>} 
                   </View>
-                  <View style={{borderWidth:1,width:screen_width*0.4,justifyContent:'center',alignItems:'center'}}>
+                  <View style={{width:screen_width*0.4,justifyContent:'center',alignItems:'center'}}>
                     <SeconderyButton onPress={() => { psetrModalisVisible(false) }}>Cancel</SeconderyButton>
                   </View>
                 </View>
@@ -483,7 +483,7 @@ const styles = StyleSheet.create({
     backgroundColor:GlobalStyles.colors.titleBackground,
     elevation:2,
     borderRadius:10,
-    marginBottom:screen_height*0.05,
+    marginBottom:screen_height*0.04,
     paddingVertical:8,
     width:screen_width*0.8,
     justifyContent:'center',
