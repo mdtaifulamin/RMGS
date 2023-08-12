@@ -1,0 +1,40 @@
+ /* body:{
+    color1: #edf6f9;
+    color2:#B3E5BE;
+    color3:#B3E5BE;
+    button1:#008921;
+    buttonTextColor:#ffffff;
+    color1: #e00a0a;
+
+}
+
+
+import React from 'react';
+import { Button, StatusBar, StyleSheet, ToastAndroid, View } from 'react-native';
+
+const ToastAndroidEg = () => {
+    const showToast = () => {
+        ToastAndroid.show('A pikachu appeared nearby !', ToastAndroid.SHORT);
+    };
+
+   
+    return (
+        <View>
+            <Button title="Toggle Toast" onPress={() => showToast()} />
+        </View>
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        paddingTop: StatusBar.currentHeight,
+        backgroundColor: '#888888',
+        padding: 8,
+    },
+});
+
+export default ToastAndroidEg;*/
+
+
