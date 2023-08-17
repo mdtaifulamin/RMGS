@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { View, StyleSheet, Animated } from 'react-native';
-import  { Svg,Circle } from 'react-native-svg';
+import { Svg, Circle } from 'react-native-svg';
 
-const ColoredCirclesBackground = () => {
-  const circleColors = ['#FF5733', '#34A853', '#F2D600', '#007BFF', '#9013FE', 'lightpink', 'lightgreen', 'cyan','#FF5733', '#34A853', '#F2D600', '#007BFF', '#9013FE', 'lightpink', 'lightgreen', 'cyan',];
+const NightSkyBackground = () => {
+  const circleColors = ['#0B3D91', '#1E3799', '#292B2C', '#4A235A', '#17202A'];
 
   const animatedValues = useRef([]);
-  const animationDuration = 10000;
+  const animationDuration = 3000;
 
   useEffect(() => {
     circleColors.forEach((_, index) => {
@@ -56,12 +56,12 @@ const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 const styles = StyleSheet.create({
   backgroundContainer: {
     position: 'absolute',
-    top: 20,
-    left: 10,
+    top: 0,
+    left: 0,
     width: '100%',
-    height: '90%',
-    opacity:0.2
+    height: '100%',
+    opacity: 0.3,
   },
 });
 
-export default ColoredCirclesBackground;
+export default NightSkyBackground;

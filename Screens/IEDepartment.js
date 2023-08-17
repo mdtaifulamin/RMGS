@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions } from 'react-native';
+import React, { useEffect, useState,useContext } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions,Modal } from 'react-native';
+import UserContext from '../UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
+import Header from '../components/Header';
+import { ModalAlert } from './AlertModal';
+
 const IEDepartmentPage = ({ navigation }) => {
   const [animation] = useState(new Animated.Value(0));
-  const buttonWidth = Dimensions.get('window').width / 2 - 20;
-
+  const buttonWidth = Dimensions.get('window').width / 2 - 30;
+  const { userInfo, updateUser } = useContext(UserContext);
+  const [modalVisible, setModalVisible] = useState(false);
   useEffect(() => {
     Animated.spring(animation, {
       toValue: 1,
@@ -19,33 +24,46 @@ const IEDepartmentPage = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-        <ColoredCirclesBackground/>
-      <Animated.View style={[styles.header, { transform: [{ translateY: buttonTransform }] }]}>
-        <Text style={styles.title}>IE Department</Text>
-      </Animated.View>
-      <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
-        <TouchableOpacity
-          style={[styles.subPageButton, { width: buttonWidth }]}
-          onPress={() => navigation.navigate('EfficiencyAnalysis')}>
-          <Text style={styles.buttonText}>Efficiency Analysis</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.subPageButton, { width: buttonWidth }]}
-          onPress={() => navigation.navigate('OverTime')}>
-          <Text style={styles.buttonText}>Over Time</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.subPageButton, { width: buttonWidth }]}
-          onPress={() => navigation.navigate('Target')}>
-          <Text style={styles.buttonText}>Target</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.subPageButton, { width: buttonWidth }]}
-          onPress={() => navigation.navigate('NewOperatorAssessment')}>
-          <Text style={styles.buttonText}>New Operator Assessment</Text>
-        </TouchableOpacity>
-      </Animated.View>
-      
+      <ColoredCirclesBackground />
+      <Header title={"IE Department"}/>
+      <View style={styles.buttonRow}>
+        <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+          <TouchableOpacity
+            style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+            onPress={() => {if (userInfo?userInfo.efficiencyAnalysis:false) {
+              navigation.navigate('EfficiencyAnalysis')
+            }else setModalVisible(true);}}>
+            <Text style={[styles.buttonText, ]}>Efficiency Analysis</Text>
+          </TouchableOpacity>
+        </Animated.View>
+        <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+          <TouchableOpacity
+            style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+            onPress={() => {if (userInfo?userInfo.Overtime:false) {navigation.navigate('OverTime')
+          }else setModalVisible(true);}}>
+            <Text style={[styles.buttonText,]}>Over Time</Text>
+          </TouchableOpacity>
+        </Animated.View>
+      </View>
+      <View style={styles.buttonRow}>
+        <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+          <TouchableOpacity
+            style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+            onPress={() => {if (userInfo?userInfo.target:false) {navigation.navigate('Target')
+          }else setModalVisible(true);}}>
+            <Text style={[styles.buttonText,]}>Target</Text>
+          </TouchableOpacity>
+        </Animated.View>
+        <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+          <TouchableOpacity
+            style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+            onPress={() => {if (userInfo?userInfo.newOperatorAssessment:false) {navigation.navigate('BottomTabNavigator')
+          }else setModalVisible(true);}}>
+            <Text style={[styles.buttonText,]}>New Operator Assessment</Text>
+          </TouchableOpacity>
+        </Animated.View>
+      </View>
+     <ModalAlert modalVisible={modalVisible} onRequestClose={() => setModalVisible(false)}/>
     </View>
   );
 };
@@ -56,37 +74,74 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
   },
   header: {
-    backgroundColor: '#007AFF',
+    backgroundColor: 'white',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
-    paddingBottom: 20,
     paddingHorizontal: 20,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
+    paddingVertical:"10%",
+    justifyContent:'center',
+    alignItems:'center',
+    elevation:20,
+    marginBottom:'15%'
   },
   title: {
-    color: 'white',
+    color: 'black',
     fontSize: 24,
     fontWeight: 'bold',
+    textAlign:'center'
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+    marginBottom: 10,
   },
   buttonContainer: {
-    paddingHorizontal: 10,
-    paddingTop: 20,
+    flex: 1,
+    paddingHorizontal: 5,
   },
   subPageButton: {
-    backgroundColor: 'rgba(0, 122, 255, 0.8)',
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
     height: 100,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    marginVertical: 10,
   },
   buttonText: {
-    color: 'white',
     fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(100, 100, 100, 0.8)',
+  },
+  modalContent: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 10,
+    width: '80%',
+  },
+  modalText: {
+    fontSize: 16,
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  modalButton: {
+    backgroundColor: '#007AFF',
+    borderRadius: 5,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    alignSelf: 'flex-end',
+  },
+  modalButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
   },
 });
 

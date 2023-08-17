@@ -1,18 +1,18 @@
 // import React from "react";
 // import { RefreshControl, FlatList, Text, View } from "react-native";
-// import EfficiencyItem from "./Efficiencyitem";
+// import PermissionItem from "./Permissionitem";
 
-// export default function EfficienciesList({ efficiencies, refreshing, onRefresh, }) {
-//   const renderEfficiencyItem = ({ item }) => {
+// export default function PermissionsList({ permissions, refreshing, onRefresh, }) {
+//   const renderPermissionItem = ({ item }) => {
 //     return (
-//       <EfficiencyItem {...item} />
+//       <PermissionItem {...item} />
 //     );
 //   };
 
 //   return (
 //     <FlatList
-//       data={efficiencies}
-//       renderItem={renderEfficiencyItem}
+//       data={permissions}
+//       renderItem={renderPermissionItem}
 //       keyExtractor={(item) => item.id}
 //       refreshControl={
 //         <RefreshControl colors={['red', 'green', 'blue']} refreshing={refreshing} onRefresh={onRefresh} />
@@ -33,7 +33,7 @@
 
 import React, { useRef } from "react";
 import { RefreshControl, FlatList, Text, View, Animated,Dimensions } from "react-native";
-import EfficiencyItem from "./Efficiencyitem";
+import PermissionItem from "./Permissionitem";
 
 
 const screenWidth = Dimensions.get('window').width
@@ -41,7 +41,7 @@ const screen_height=Dimensions.get('window').height
 const cardHeight = screen_height*0.15;
 const padding = screen_height*0.008;
 const offset = cardHeight + padding;
-export default function EfficienciesList({ efficiencies, refreshing, onRefresh,onLongPress}) {
+export default function PermissionsList({ permissions, refreshing, onRefresh,onLongPress}) {
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scrollY = useRef(new Animated.Value(0)).current;
   const fadeIn = () => {
@@ -52,7 +52,7 @@ export default function EfficienciesList({ efficiencies, refreshing, onRefresh,o
     }).start();
   };
 
-  const renderEfficiencyItem = ({item,index}) => {
+  const renderPermissionItem = ({item,index}) => {
     const inputRange = [offset * index, offset * index + offset];
                 const outputRange1 =  [1, 0];
                 const outputRange2 = [0,offset / 2];
@@ -69,7 +69,7 @@ export default function EfficienciesList({ efficiencies, refreshing, onRefresh,o
                 const opacity = scale;
     return (
       <Animated.View style={{ opacity: fadeAnim,transform: [{ translateY }, { scale }] } } >
-        <EfficiencyItem {...item} />
+        <PermissionItem {...item} />
       </Animated.View>
     );
   };
@@ -77,8 +77,8 @@ export default function EfficienciesList({ efficiencies, refreshing, onRefresh,o
   return (
     <Animated.FlatList
       style={{paddingVertical:padding/2}}
-      data={efficiencies}
-      renderItem={renderEfficiencyItem}
+      data={permissions}
+      renderItem={renderPermissionItem}
       keyExtractor={(item) => item.id}
       onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: scrollY } } }], {
         useNativeDriver: true,
@@ -95,9 +95,9 @@ export default function EfficienciesList({ efficiencies, refreshing, onRefresh,o
 
 // import React, { useRef } from "react";
 // import { RefreshControl, FlatList, Text, View, Animated } from "react-native";
-// import EfficiencyItem from "./Efficiencyitem";
+// import PermissionItem from "./Permissionitem";
 
-// export default function EfficienciesList({ efficiencies, refreshing, onRefresh }) {
+// export default function PermissionsList({ permissions, refreshing, onRefresh }) {
 //   const fadeAnim = useRef(new Animated.Value(0)).current;
 
 //   const fadeIn = () => {
@@ -108,18 +108,18 @@ export default function EfficienciesList({ efficiencies, refreshing, onRefresh,o
 //     }).start();
 //   };
 
-//   const renderEfficiencyItem = (itemData) => {
+//   const renderPermissionItem = (itemData) => {
 //     return (
 //       <Animated.View style={{ opacity: fadeAnim }}>
-//         <EfficiencyItem {...itemData.item} />
+//         <PermissionItem {...itemData.item} />
 //       </Animated.View>
 //     );
 //   };
 
 //   return (
 //     <FlatList
-//       data={efficiencies}
-//       renderItem={renderEfficiencyItem}
+//       data={permissions}
+//       renderItem={renderPermissionItem}
 //       keyExtractor={(item) => item.id}
 //       refreshControl={
 //         <RefreshControl  colors={['red', 'green', 'blue']} refreshing={refreshing} onRefresh={onRefresh} />
@@ -132,12 +132,12 @@ export default function EfficienciesList({ efficiencies, refreshing, onRefresh,o
 
 // import React, { useRef } from "react";
 // import { RefreshControl, FlatList, Text, View, Animated } from "react-native";
-// import EfficiencyItem from "./Efficiencyitem";
+// import PermissionItem from "./Permissionitem";
 
 // const cardHeight = 134;
 // const padding = 10;
 // const offset = cardHeight + padding;
-// export default function EfficienciesList({ efficiencies, refreshing, onRefresh }) {
+// export default function PermissionsList({ permissions, refreshing, onRefresh }) {
 //   const fadeAnim = useRef(new Animated.Value(0)).current;
 //   const scrollY = useRef(new Animated.Value(0)).current;
 
@@ -149,7 +149,7 @@ export default function EfficienciesList({ efficiencies, refreshing, onRefresh,o
 //     }).start();
 //   };
 
-//   const renderEfficiencyItem = ({ item, index }) => {
+//   const renderPermissionItem = ({ item, index }) => {
 //     const inputRange = [offset * index, offset * (index + 1)];
 //     const opacity = scrollY.interpolate({
 //       inputRange,
@@ -159,15 +159,15 @@ export default function EfficienciesList({ efficiencies, refreshing, onRefresh,o
 
 //     return (
 //       <Animated.View style={{ opacity }}>
-//         <EfficiencyItem {...item} />
+//         <PermissionItem {...item} />
 //       </Animated.View>
 //     );
 //   };
 
 //   return (
 //     <FlatList
-//       data={efficiencies}
-//       renderItem={renderEfficiencyItem}
+//       data={permissions}
+//       renderItem={renderPermissionItem}
 //       keyExtractor={(item) => item.id}
 //       onScroll={Animated.event(
 //         [{ nativeEvent: { contentOffset: { y: scrollY } } }],

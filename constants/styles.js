@@ -12,9 +12,9 @@ export const GlobalStyles={
             error500: '#9b095c',
             gray500: '#39324a',
             gray700: '#221c30',
-            backroundColor:'white',
+            backgroundColor:'white',
             manageProductionInformationBackground:'white',
-            headerColor:'#edf6f9',
+            headerColor:'rgba(255,255,255,1)',//'#edf6f9'
             text_border_button:"#008921",
             button1:"#008921",
             buttonTextColor:"black",
@@ -26,5 +26,8 @@ export const GlobalStyles={
             inputtextcolor:"gray",
             defectsBackground:'white',
             inputBackgroundColor:'#FFFF',
+            cardBackground1:'rgba(255, 255, 255, 0.7)',
+            cardBackground2:'rgba(255, 255, 255, 0.9)',
+            tabBarActiveColor:'white'
     }
 }

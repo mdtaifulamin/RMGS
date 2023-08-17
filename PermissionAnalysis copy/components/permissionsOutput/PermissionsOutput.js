@@ -1,17 +1,17 @@
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 
-import EfficienciesList from "./EfficienciesList";
-import EfficienciesSummery from "./EfficienciesSummery";
+import PermissionsList from "./PermissionsList";
+import PermissionsSummery from "./PermissionsSummery";
 import { GlobalStyles } from "../../../constants/styles";
 import NightSkyBackground from "../../../components/ColoredCircle";
 
 const screen_height = Dimensions.get('screen').height
 
-export default function EfficienciesOutput({efficiencies, efficienciesPeriod,fallbackText, refreshing, onRefresh}){
+export default function PermissionsOutput({permissions, permissionsPeriod,fallbackText, refreshing, onRefresh}){
     
     let content =<Text style={styles.infoText}>{fallbackText}</Text>;
-    if(efficiencies.length > 0){
-       content =<EfficienciesList efficiencies={efficiencies}  refreshing={refreshing} onRefresh={onRefresh} />
+    if(permissions.length > 0){
+       content =<PermissionsList permissions={permissions}  refreshing={refreshing} onRefresh={onRefresh} />
     
    }
 

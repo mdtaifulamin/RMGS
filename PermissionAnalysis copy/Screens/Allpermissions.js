@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import {  TextInput,Text, TouchableOpacity, View } from "react-native";
-import EfficienciesOutput from "../components/efficienciesOutput/EfficienciesOutput";
-import { EfficienciesContext } from "../Store/efficiencies-context";
+import PermissionsOutput from "../components/permissionsOutput/PermissionsOutput";
+import { PermissionsContext } from "../Store/permissions-context";
 import { getdateMinusdays} from "../util/date";
 import { GlobalStyles } from "../../constants/styles";
 import { Fontisto } from '@expo/vector-icons';
-import {  fetchLineEfficiencies } from "../util/forDataSendingGetting";
+import {  fetchLinePermissions } from "../util/forDataSendingGetting";
 import Loadingspinner from "../components/UI/loading";
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker'
 import React from "react";
@@ -17,7 +17,7 @@ import NightSkyBackground from "../../components/ColoredCircle";
 
 
 
-export default function Allefficiencies(){
+export default function Allpermissions(){
     const [refreshing, setRefreshing] = useState(false);
 
     const [linevalue, setlineValue] = useState('');
@@ -57,34 +57,34 @@ export default function Allefficiencies(){
     
     
     
-   const efficienciesCtx= useContext(EfficienciesContext);
+   const permissionsCtx= useContext(PermissionsContext);
    function searchHnadler(){  
         setSearch(!search)
    }
   
    
    useEffect(() =>{                                      //updated
-        async  function getAEfficiencies(){
-            const efficiencies=  await fetchLineEfficiencies(linevalue,date); 
+        async  function getAPermissions(){
+            const permissions=  await fetc(linevalue,date); 
             setIsfetching(false);
             setRefreshing(false);
-            efficienciesCtx.setEfficiency(efficiencies);
+            permissionsCtx.setPermission(permissions);
         }
 
-        getAEfficiencies();
+        getAPermissions();
         
     },[search,refreshing]);
 
     //  useFocusEffect(
     //     React.useCallback(() => {                                        //updated
-    //         async  function getAEfficiencies(){
-    //             const efficiencies=  await fetchLineEfficiencies(linevalue,date); 
+    //         async  function getAPermissions(){
+    //             const permissions=  await fetchLinePermissions(linevalue,date); 
     //             setIsfetching(false);
     //             setRefreshing(false);
-    //             efficienciesCtx.setEfficiency(efficiencies);
+    //             permissionsCtx.setPermission(permissions);
     //         }
     
-    //         getAEfficiencies();
+    //         getAPermissions();
             
     //      },[search,refreshing]));
    
@@ -92,9 +92,9 @@ export default function Allefficiencies(){
         return <Loadingspinner/>       
      }
    
-    const allEfficiencies= efficienciesCtx.efficiencies.filter((efficiency)=>{
+    const allPermissions= permissionsCtx.permissions.filter((permission)=>{
        
-        return  efficiency.lineNumber===linevalue ;
+        return  permission.lineNumber===linevalue ;
         
     });
     
@@ -128,6 +128,6 @@ return (
                 <Button onPress={searchHnadler} >Search</Button>
             </View>
      </View>
-        <EfficienciesOutput  efficiencies={allEfficiencies}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
+        <PermissionsOutput  permissions={allPermissions}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
     </>
 )}

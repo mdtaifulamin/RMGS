@@ -14,10 +14,12 @@ import QualityDepartmentPage from './Screens/QualityDepartment';
 import HRDepartmentPage from './Screens/HRDepartment';
  import EfficiencyAnalysisPage from './Screens/EfficiencyAnalysis'; 
 // import EfficiencyContainer from './Screens/efficiencyContainer';
+import SignupWaitingPage from './Screens/SignUpWaiting';
+import SignupPage from './Screens/SignUp';
 import TargetPage from './Screens/Target';
 import OverTimePage from './Screens/OverTime';
 import NewOperatorAssessmentPage from './Screens/NewOperatorAssessment';
-
+import BottomTabNavigator from './components/BottomTabNavigator';
 const Stack = createStackNavigator();
 
 function App(){
@@ -34,17 +36,20 @@ function App(){
             }}
           >
             <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="SignUp" component={SignupPage} />
+            <Stack.Screen name="SignupWaiting" component={SignupWaitingPage} />
             <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'log in', headerRight: () => null }} />
             <Stack.Screen name="Profile" component={ProfileScreen} options={{ title: 'Your Profile' }} />
-            <Stack.Screen name="Admin" component={AdminScreen} options={{ title: 'Admin' }} />
-            <Stack.Screen name="IEDepartment" component={IEDepartmentPage} options={{ title: 'Home' }} />
+            <Stack.Screen name="AdminPage" component={AdminScreen} options={{ title: 'Home' , headerShown:false}} />
+            <Stack.Screen name="IEDepartment" component={IEDepartmentPage} options={{ title: 'Home'  }} />
             <Stack.Screen name="ProductionDepartment" component={ProductionDepartmentPage} options={{ title: 'Production Department' }} />
-            <Stack.Screen name="QualityDepartment" component={QualityDepartmentPage} options={{ title: 'Quality Department' }} />
+            <Stack.Screen name="QualityDepartment" component={QualityDepartmentPage} options={{ title: 'Home' }} />
             <Stack.Screen name="HRDepartment" component={HRDepartmentPage} options={{ title: 'HR Department' }} />
             <Stack.Screen name="EfficiencyAnalysis" component={EfficiencyAnalysisPage} options={{ title: 'Efficiency Analysis' , headerShown:false}} />
             <Stack.Screen name="Target" component={TargetPage} options={{ title: 'Target' }} />
             <Stack.Screen name="OverTime" component={OverTimePage} options={{ title: 'Over Time' }} />
-            <Stack.Screen name="NewOperatorAssessment" component={NewOperatorAssessmentPage} options={{ title: 'IE' }} />
+            {/* <Stack.Screen name="NewOperatorAssessment" component={NewOperatorAssessmentPage} options={{ title: 'IE' }} /> */}
+            <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} options={{ title: 'IE' }} />
           </Stack.Navigator>
         </NavigationContainer>
       </UserProvider>

@@ -1,10 +1,10 @@
 import { useNavigation } from "@react-navigation/native";
 import { Pressable, StyleSheet, Text, View ,Dimensions} from "react-native";
-import { GlobalStyles } from "../../constants/styles";
+import { GlobalStyles } from "../../../constants/styles";
 import { getFormattedDate } from "../../util/date";
 import { EfficienciesContext } from "../../Store/efficiencies-context";
 import { useContext } from "react";
-
+import NightSkyBackground from "../../../components/ColoredCircle";
 const screenWidth = Dimensions.get('window').width
 const screen_height=Dimensions.get('window').height
 export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,styleName,SMV,manpower,hour,production,without,due,rejection,}){
@@ -33,11 +33,11 @@ export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,
     const target10=p.target10;
     const production=p.production+p.without-p.due+p.rejection;
     sFilteredEfficiencies.push({
-        Availableminute:Availableminute,
-        earnedminute:earnedminute,
-        hour:hour,
-        target10:target10,
-        production:production,
+        Availableminute:Number(Availableminute),
+        earnedminute:Number(earnedminute),
+        hour:Number(hour),
+        target10:Number(target10),
+        production:Number(production),
     })
 })
 //console.log(sFilteredEfficiencies);
@@ -50,11 +50,11 @@ const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
     
       
      const netproduction= production+without-due+rejection;
-     console.log('p'+total.production+' t '+(total.target10/10)*total.hour)
+     //console.log('p'+total.production+' t '+(total.target10/10)*total.hour)
     return(
 
         <Pressable onPress={efficiencyPresshandler}  style={({pressed})=> pressed && styles.pressed} >
-            <View style={[styles.rootEfficiencyItem,{}]}>
+            <View style={[styles.rootEfficiencyItem]}>
                 <View style={styles.lineDate}>
                     <View style={{}}> 
                         <Text style={styles.textBase}>{getFormattedDate(date)}</Text>
@@ -68,16 +68,16 @@ const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
                         <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017}]}> {daysRun}</Text>
                     </View>   */}
                     <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
-                         <Text style={styles.production}>T. Hour:</Text>
-                         <Text style={styles.production}> {(+total.hour).toFixed(2)} </Text>
+                         <Text style={styles.textBase}>T. Hour:</Text>
+                         <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017}]}> {(+total.hour).toFixed(2)} </Text>
                     </View>
                     <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
                         <Text style={styles.textBase}>T. Target: </Text>
-                        <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017,color:total.production<((total.target10/10)*total.hour+2)?GlobalStyles.colors.primary50:GlobalStyles.colors.deleteButton}]}> {((total.target10/10)*total.hour).toFixed(0)}</Text>
+                        <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017,color:total.production<((total.target10/10)*total.hour+2)?GlobalStyles.colors.textColor:GlobalStyles.colors.deleteButton}]}> {((total.target10/10)*total.hour).toFixed(0)}</Text>
                     </View> 
                     <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
                         <Text style={[styles.textBase]}>T. Prod.: </Text>
-                        <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017,color:total.production<((total.target10/10)*total.hour+2)?GlobalStyles.colors.primary50:GlobalStyles.colors.deleteButton}]}> {total.production}</Text>
+                        <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017,color:total.production<((total.target10/10)*total.hour+2)?GlobalStyles.colors.textColor:GlobalStyles.colors.deleteButton}]}> {total.production}</Text>
                     </View>                        
                 </View>
                 <View style={styles.productionContainer}>
@@ -137,9 +137,10 @@ const styles= StyleSheet.create({
     },
     
     rootEfficiencyItem:{
-        padding:3,
+        paddingTop:3,
+        paddingLeft:10,
         marginVertical:screen_height*0.008/2,
-        backgroundColor:GlobalStyles.colors.primary500,
+        backgroundColor:GlobalStyles.colors.cardBackground1,
         flexDirection:'row',
         justifyContent:'space-between',
         borderRadius:8,
@@ -148,7 +149,7 @@ const styles= StyleSheet.create({
         
     },
     textBase:{
-        color:GlobalStyles.colors.primary50,
+        color:GlobalStyles.colors.textcolor,
         fontSize:screen_height*0.017
     },
     description:{
@@ -157,6 +158,7 @@ const styles= StyleSheet.create({
         fontWeight:'bold'
     },
     lineDate:{
+        paddingTop:3,
         fontSize:screen_height*0.017,
         flex:.4,
         fontWeight:'bold',
@@ -165,7 +167,7 @@ const styles= StyleSheet.create({
     productionContainer:{
         paddingHorizontal:1,
         paddingVertical:1,
-        backgroundColor:'white',
+        backgroundColor:GlobalStyles.colors.cardBackground2,
         justifyContent:'center',
         alignItems:'center',
         borderRadius:8,
@@ -175,8 +177,8 @@ const styles= StyleSheet.create({
         shadowColor:'gray'
     },
     production:{
-        color: GlobalStyles.colors.primary50,
-        fontWeight:'bold',
+        color: GlobalStyles.colors.textcolor,
+        //fontWeight:'bold',
         
     },
     productionComponents:{

@@ -3,7 +3,7 @@ import { database1 } from "../../firebase";
 import { getFormattedDate } from "./date";
 
 export const storeEfficiency=async(efficiencyData)=>{
-  const response = await addDoc(collection(database, "efficiencies"), efficiencyData) ; 
+  const response = await addDoc(collection(database1, "efficiencies"), efficiencyData) ; 
   const id= response.id;
   return id;
 }

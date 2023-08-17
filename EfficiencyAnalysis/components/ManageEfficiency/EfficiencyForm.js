@@ -3,7 +3,7 @@ import {  StyleSheet, Text, View ,TouchableOpacity,TextInput} from "react-native
 import Input from "./Input";
 import Button from "../../util/Button";
 import { getdateMinusdays, getFormattedDate } from "../../util/date";
-import { GlobalStyles } from "../../constants/styles";
+import { GlobalStyles } from "../../../constants/styles";
 import { DateTimePickerAndroid } from "@react-native-community/datetimepicker";
 import { fetchBuyer, fetchHours } from "../../util/forDataSendingGetting";
 import { async } from "@firebase/util";
@@ -143,11 +143,11 @@ export default function EfficiencyForm({onSubmit,onCancel,onButton, defaultValue
                                                     SMV:       +inputs.SMV.value,
                                                     manpower:    +inputs.manpower.value, // eval is removed for removing NaN
                                                     target10: +inputs.target10.value,
-                                                    hour:       +!isNaN(inputs.hour.value)?(+inputs.hour.value).toFixed(6):+checkevalerror(inputs.hour.value),
-                                                    production: +!isNaN(inputs.production.value)?+inputs.production.value:+checkevalerror(inputs.production.value),
-                                                    without:     +!isNaN(inputs.without.value)?+inputs.without.value:+checkevalerror(inputs.without.value),
-                                                    due:         +!isNaN(inputs.due.value)?+inputs.due.value:+checkevalerror(inputs.due.value),
-                                                    rejection:   +!isNaN(inputs.rejection.value)?+inputs.rejection.value:+checkevalerror(inputs.rejection.value),
+                                                    hour:       +(+!isNaN(inputs.hour.value)?(+inputs.hour.value).toFixed(6):+checkevalerror(inputs.hour.value)),
+                                                    production: +(!isNaN(inputs.production.value)?+inputs.production.value:+checkevalerror(inputs.production.value)),
+                                                    without:     +(!isNaN(inputs.without.value)?+inputs.without.value:+checkevalerror(inputs.without.value)),
+                                                    due:         +(!isNaN(inputs.due.value)?+inputs.due.value:+checkevalerror(inputs.due.value)),
+                                                    rejection:   +(!isNaN(inputs.rejection.value)?+inputs.rejection.value:+checkevalerror(inputs.rejection.value)),
                                                     remarks:inputs.remarks.value,
                                                  };
 
@@ -274,7 +274,7 @@ export default function EfficiencyForm({onSubmit,onCancel,onButton, defaultValue
             <View >
                 <View style={styles.inputsRow}>
                     <View style={{flex:1,marginVertical:8}}>                
-                        <Text style={{fontSize:12,color:GlobalStyles.colors.text_border_button,marginBottom: 4}}> Line:</Text>
+                        <Text style={{fontSize:12,color:GlobalStyles.colors.textcolor,marginBottom: 4}}> Line:</Text>
                         <DropDownPicker
                             listMode="MODAL"
                             open={lopen}
@@ -284,7 +284,7 @@ export default function EfficiencyForm({onSubmit,onCancel,onButton, defaultValue
                             setValue={setlValue}
                             setItems={setlItems}
                             style={{borderRadius:20,backgroundColor:'white',borderColor:'white',borderWidth:.2}}
-                            containerStyle={{elevation:5,backgroundColor:'white',borderRadius:20}}
+                            containerStyle={{elevation:5,backgroundColor:GlobalStyles.colors.backgroundColor,borderRadius:20}}
                             onChangeValue={inputChangeHandler.bind(this,'lineNumber')}
                             placeholder="Select Line"
                             searchable={true} 
@@ -311,7 +311,7 @@ export default function EfficiencyForm({onSubmit,onCancel,onButton, defaultValue
                 </View>
                 <View style={{flexDirection:'row'}}> 
                     <View style={{flex:1,marginVertical:8}}>                
-                        <Text style={{fontSize:12,color:GlobalStyles.colors.text_border_button,marginBottom: 4}}> Buyer:</Text>
+                        <Text style={{fontSize:12,color:GlobalStyles.colors.textcolor,marginBottom: 4}}> Buyer:</Text>
                         <DropDownPicker
                             listMode="MODAL"
                             open={open}
@@ -320,8 +320,8 @@ export default function EfficiencyForm({onSubmit,onCancel,onButton, defaultValue
                             setOpen={setOpen}
                             setValue={setValue}
                             setItems={setItems}
-                            style={{borderRadius:20,backgroundColor:'white',borderColor:'white',borderWidth:.2}}
-                            containerStyle={{elevation:5,backgroundColor:'white',borderRadius:20}}
+                            style={{borderRadius:20,backgroundColor:GlobalStyles.colors.backgroundColor,borderColor:'white',borderWidth:.2}}
+                            containerStyle={{elevation:5,backgroundColor:GlobalStyles.colors.backgroundColor,borderRadius:20}}
                             onChangeValue={inputChangeHandler.bind(this,'buyerName')}
                             placeholder="Select Buyer"
                             searchable={true}
@@ -347,7 +347,7 @@ export default function EfficiencyForm({onSubmit,onCancel,onButton, defaultValue
                 </View>
                 <View style={styles.inputsRow}>
                     <View style={{flex:1,marginVertical:8}}>                
-                        <Text style={{fontSize:12,color:GlobalStyles.colors.text_border_button,marginBottom: 4}}> Days Run:</Text>
+                        <Text style={{fontSize:12,color:GlobalStyles.colors.textcolor,marginBottom: 4}}> Days Run:</Text>
                         <DropDownPicker
                             listMode="MODAL"
                             open={dopen}
@@ -356,8 +356,8 @@ export default function EfficiencyForm({onSubmit,onCancel,onButton, defaultValue
                             setOpen={setdOpen}
                             setValue={setdValue}
                             setItems={setdItems}
-                            style={{borderRadius:20,backgroundColor:'white',borderColor:'white',borderWidth:.2}}
-                            containerStyle={{elevation:5,backgroundColor:'white',borderRadius:20}}
+                            style={{borderRadius:20,backgroundColor:GlobalStyles.colors.backgroundColor,borderColor:'white',borderWidth:.2}}
+                            containerStyle={{elevation:5,backgroundColor:GlobalStyles.colors.backgroundColor,borderRadius:20}}
                             onChangeValue={inputChangeHandler.bind(this,"daysRun")}
                             placeholder="Select Day"
                             searchable={true} 
@@ -371,7 +371,7 @@ export default function EfficiencyForm({onSubmit,onCancel,onButton, defaultValue
                         />
                     </View>
                     <View style={{flex:1,marginVertical:8, marginLeft:'1%'}}>                
-                        <Text style={{fontSize:12,color:GlobalStyles.colors.text_border_button,marginBottom: 4}}> Item Name:</Text>
+                        <Text style={{fontSize:12,color:GlobalStyles.colors.textcolor,marginBottom: 4}}> Item Name:</Text>
                         <DropDownPicker
                             listMode="MODAL"
                             open={itemopen}
@@ -380,8 +380,8 @@ export default function EfficiencyForm({onSubmit,onCancel,onButton, defaultValue
                             setOpen={setitemOpen}
                             setValue={setitemValue}
                             setItems={setitemItems}
-                            style={{borderRadius:20,backgroundColor:'white',borderColor:'white',borderWidth:.2}}
-                            containerStyle={{elevation:5,backgroundColor:'white',borderRadius:20}}
+                            style={{borderRadius:20,backgroundColor:GlobalStyles.colors.backgroundColor,borderColor:'white',borderWidth:.2}}
+                            containerStyle={{elevation:5,backgroundColor:GlobalStyles.colors.backgroundColor,borderRadius:20}}
                             onChangeValue={inputChangeHandler.bind(this,"itemName")}
                             placeholder="Select Item"
                             searchable={true} 
@@ -521,7 +521,7 @@ const styles = StyleSheet.create({
     title:{
         fontSize:20,
         fontWeight:'bold',
-        color:GlobalStyles.colors.button1,
+        color:GlobalStyles.colors.textcolor,
         marginBottom:25,
         textAlign:'center',
     },

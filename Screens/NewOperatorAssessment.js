@@ -5,6 +5,7 @@ import { GlobalStyles } from "../constants/styles";
 import { useEffect, useState } from "react";
 import PrimaryButton, { SeconderyButton } from "../PrimaryButtons"
 import { StoreData } from "../data-storing";
+import Header from '../components/Header';
 
 
 
@@ -200,9 +201,7 @@ const processSubmithandler = async () => {
   return (
     <>       
       <View style={styles.container}>
-          <View style={[styles.inputTitleBackgroundContainer , {opacity:rmodalisVisible?0.3:1}]}>
-            <Text style={styles.inputTitleText}> Operator Assesment </Text>
-          </View>
+          <Header title={"Operator Assesment"}/>
         <ScrollView style={{flex:10,opacity:rmodalisVisible?0.3:1}}>
           <View style={{flex:7}}>            
             <View style={{backgroundColor:'white',justifyContent:'center',alignItems:'flex-end',padding:'1%',marginTop:2,flex:1,marginLeft:screen_width*0.7,borderTopLeftRadius:8,borderBottomLeftRadius:8}}>

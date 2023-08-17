@@ -4,7 +4,7 @@ import { Text, View ,StyleSheet, ScrollView,Modal,TouchableOpacity, Dimensions} 
 import EfficiencyForm from "../components/ManageEfficiency/EfficiencyForm";
 import IconButton from "../components/UI/iconButton";
 import Loadingspinner from "../components/UI/loading";
-import { GlobalStyles } from "../constants/styles";
+import { GlobalStyles } from "../../constants/styles";
 import { EfficienciesContext } from "../Store/efficiencies-context";
 import { deleteefficiency, storeEfficiency, updateEfficiency } from "../util/forDataSendingGetting";
 import ButtonM from "../util/Button";
@@ -124,7 +124,7 @@ export default function ManageEfficiency({route,navigation}){
      }
 
     return (
-        <ScrollView style={{flex:1,backgroundColor:GlobalStyles.colors.manageEfficiencyBackground,}}>
+        <ScrollView style={{flex:1,backgroundColor:GlobalStyles.colors.backgroundColor,}}>
         <View style={styles.container}>
        
         <View>
@@ -188,7 +188,7 @@ const styles= StyleSheet.create({
     container:{
         flex:1,
         padding:'5%',
-        backgroundColor:GlobalStyles.colors.manageEfficiencyBackground,
+        backgroundColor:GlobalStyles.colors.backgroundColor,
         justifyContent:'center',
         
 

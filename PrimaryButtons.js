@@ -4,7 +4,7 @@ import * as Animateble from 'react-native-animatable';
 import { GlobalStyles } from "./constants/styles";
 const screen_width = Dimensions.get('screen').width
 const screen_height = Dimensions.get('screen').height
-export default function PrimaryButton({children,onPress}){
+export default function PrimaryButton({children,onPress,disabled}){
     const flashAnimRef= useRef();
     
     
@@ -15,6 +15,7 @@ export default function PrimaryButton({children,onPress}){
                 <TouchableOpacity 
                     style={[styles.buttonInnerContainer,{backgroundColor:GlobalStyles.colors.primaryButtonColor}]}
                     onPress={()=>{flashAnimRef.current.pulse(800);onPress()}} 
+                    disabled={disabled}
                  >
                     <Text style={styles.buttonText}> {children}</Text>
                 </TouchableOpacity>

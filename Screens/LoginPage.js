@@ -52,6 +52,9 @@ const LoginScreen = ({ navigation }) => {
     setLoginStatus('Invalid username or password');
   }
 };
+const handleSignUp =()=>{
+  navigation.navigate('SignUp')
+}
 
   return (
     <View  style={[styles.container,{backgroundColor:themeStyles.backgroundColor}]}>
@@ -80,6 +83,9 @@ const LoginScreen = ({ navigation }) => {
       </View>
       <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
         <Text style={styles.loginButtonText}>Log In</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.loginButton} onPress={handleSignUp}>
+        <Text style={styles.loginButtonText}>Sign Up</Text>
       </TouchableOpacity>
       {loginStatus ? <Text style={styles.errorText}> {loginStatus} </Text> : null}
       <Switch

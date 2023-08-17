@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import { GlobalStyles } from "../../../constants/styles";
 
-export default function EfficienciesSummery({efficiencies,periodName}){
+export default function PermissionsSummery({permissions,periodName}){
     
     
 

@@ -1,17 +1,18 @@
 import React, { useContext, useEffect,  useState } from "react";
 import {  StyleSheet, Text, ToastAndroid, TouchableOpacity, View,Modal, Dimensions } from "react-native";
-import EfficienciesOutput from "../components/efficienciesOutput/EfficienciesOutput";
-import { EfficienciesContext } from "../Store/efficiencies-context";
+import PermissionsOutput from "../components/permissionsOutput/PermissionsOutput";
+import { PermissionsContext } from "../Store/permissions-context";
 import { getFormattedDate, momentTime} from "../util/date";
 import DropDownPicker from 'react-native-dropdown-picker';
 import { GlobalStyles } from "../../constants/styles";
 import { Fontisto } from '@expo/vector-icons';
-import { fetchEfficiencies, storeEfficiency } from "../util/forDataSendingGetting";
+import { fetchUserInfoBYDate } from "../../forDataSendingGetting";
 import Loadingspinner from "../components/UI/loading";
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker'
 import ButtonM from "../util/Button";
 import { convertOrdinalToNumber, getOrdinalIndicator } from "../util/ordinalTonumberToordinal";
 import NightSkyBackground from "../../components/ColoredCircle";
+import { fetchPermissions } from "../util/forDataSendingGetting";
 
 
 const blockWiseLine = [
@@ -54,7 +55,7 @@ const checkNumberInArray = (number, array) => {
 
     const screenWidth = Dimensions.get('window').width
     const screen_height=Dimensions.get('window').height
-export default function Recentefficiencies(){
+export default function Recentpermissions(){
     
     const [modalVisible, setModalVisible] = useState(false);
     const [open, setOpen] = useState(false);
@@ -91,55 +92,55 @@ export default function Recentefficiencies(){
     showMode('time');
     };
    //for copy 
-    const [cdate, setcDate] = useState(new Date());
-    const ConChange = (event, cselectedDate) =>{
-        const ccurrentDate = cselectedDate;
-        setcDate(ccurrentDate);
+    // const [cdate, setcDate] = useState(new Date());
+    // const ConChange = (event, cselectedDate) =>{
+    //     const ccurrentDate = cselectedDate;
+    //     setcDate(ccurrentDate);
         
-        };
+    //     };
         
-        const cshowMode = (ccurrentMode) => {
-        DateTimePickerAndroid.open({
-          value: cdate,
-          onChange: ConChange,
-          mode: ccurrentMode,
-          is24Hour: true,
+    //     const cshowMode = (ccurrentMode) => {
+    //     DateTimePickerAndroid.open({
+    //       value: cdate,
+    //       onChange: ConChange,
+    //       mode: ccurrentMode,
+    //       is24Hour: true,
           
-        });
-        console.log(ConChange+'t')
-        };
+    //     });
+    //     console.log(ConChange+'t')
+    //     };
     
-        const cshowDatepicker = () => {
-        cshowMode('date');
+    //     const cshowDatepicker = () => {
+    //     cshowMode('date');
        
-        };
+    //     };
     
-        const cshowTimepicker = () => {
-        cshowMode('time');
-        };
-    
-    
+    //     const cshowTimepicker = () => {
+    //     cshowMode('time');
+    //     };
     
     
-   const efficienciesCtx= useContext(EfficienciesContext);
+    
+    
+   const permissionsCtx= useContext(PermissionsContext);
    useEffect(() =>{                                        //updated
-        async  function getEfficiencies(){
-            const efficiencies=  await fetchEfficiencies(date,value);
+        async  function getPermissions(){
+            const permissions=  await fetchPermissions(date);
             setIsfetching(false);
             setRefreshing(false);
-            efficienciesCtx.setEfficiency(efficiencies);   
+            permissionsCtx.setPermission(permissions);   
         }
-        getEfficiencies();
-     },[value,date,refreshing])
-    //  const efficienciesCtx= useContext(EfficienciesContext);  
+        getPermissions();
+     },[date,refreshing])
+    //  const permissionsCtx= useContext(PermissionsContext);  
     //  useFocusEffect(
     //   React.useCallback(() => {                                        //updated
-    //       async  function getEfficiencies(){
-    //           const efficiencies=  await fetchEfficiencies(date,value);
+    //       async  function getPermissions(){
+    //           const permissions=  await fetchPermissions(date,value);
     //           setIsfetching(false);
-    //           efficienciesCtx.setEfficiency(efficiencies);   
+    //           permissionsCtx.setPermission(permissions);   
     //       }
-    //       getEfficiencies();
+    //       getPermissions();
          
     //    },[value,date]))
      
@@ -148,46 +149,46 @@ export default function Recentefficiencies(){
         return <Loadingspinner/>       
      }
      
-    const recentEfficiencies= efficienciesCtx.efficiencies.filter((efficiency)=>{
+    // const recentPermissions= permissionsCtx.permissions.filter((permission)=>{
         
-        return  getFormattedDate(date) === getFormattedDate(efficiency.date); //&& checkNumberInArray(Number(efficiency.lineNumber), value) ;
+    //     return  getFormattedDate(date) === getFormattedDate(permission.date); //&& checkNumberInArray(Number(permission.lineNumber), value) ;
         
-    });
+    // });
    
-    function copyHandler(){
+    // function copyHandler(){
        
-       recentEfficiencies.forEach(async(data) => {
-       // itoday.setDate(itoday.getDate())
+    //    recentPermissions.forEach(async(data) => {
+    //    // itoday.setDate(itoday.getDate())
 
-        //console.log(new Date(itoday))
-        const changedDaysRun= data.daysRun?getOrdinalIndicator(convertOrdinalToNumber(data.daysRun)+1):'';
-        const efficiencyData= {
-          lineNumber: data.lineNumber, 
-          date: new Date(momentTime(cdate)),
-          buyerName: data.buyerName,
-          SO:        data.SO,
-          daysRun: changedDaysRun,
-          styleName: data.styleName,
-          itemName: data.itemName,
-          SMV:       +data.SMV,
-          manpower:  0,
-          hour:       0,
-          production: '',
-          without:   '',
-          due:        '',
-          rejection:  '',
-          };
-          const id= await storeEfficiency(efficiencyData);
+    //     //console.log(new Date(itoday))
+    //     const changedDaysRun= data.daysRun?getOrdinalIndicator(convertOrdinalToNumber(data.daysRun)+1):'';
+    //     const permissionData= {
+    //       lineNumber: data.lineNumber, 
+    //       date: new Date(momentTime(cdate)),
+    //       buyerName: data.buyerName,
+    //       SO:        data.SO,
+    //       daysRun: changedDaysRun,
+    //       styleName: data.styleName,
+    //       itemName: data.itemName,
+    //       SMV:       +data.SMV,
+    //       manpower:  0,
+    //       hour:       0,
+    //       production: '',
+    //       without:   '',
+    //       due:        '',
+    //       rejection:  '',
+    //       };
+    //       const id= await storePermission(permissionData);
          
-    }
-    )
-        const showToast = () => {
-            ToastAndroid.show('Successfully Copied', ToastAndroid.SHORT);
-        };
-        //console.log(recentEfficiencies+'r')
-        showToast()
-        handleCloseModal()
-    }
+    // }
+    // )
+    //     const showToast = () => {
+    //         ToastAndroid.show('Successfully Copied', ToastAndroid.SHORT);
+    //     };
+    //     //console.log(recentPermissions+'r')
+    //     showToast()
+    //     handleCloseModal()
+    // }
 
 // const createTwoButtonAlert = () =>
 // Alert.alert('Data Copy for Next Day', 'Are You Sure, You want to copy data to '+ momentTime( new Date( )) +'  ?', [
@@ -211,7 +212,7 @@ return (
     <View style={{ flex: 1 }}>
         <NightSkyBackground/>
        <View style={styles.rootSearchContainer}>
-            <View style={{flex:4, zIndex:10000, backgroundColor:GlobalStyles.colors.backgroundColor,marginHorizontal:"1%",}}>
+            {/* <View style={{flex:4, zIndex:10000, backgroundColor:GlobalStyles.colors.backgroundColor,marginHorizontal:"1%",}}>
                 <DropDownPicker
                     listMode="MODAL"
                     open={open}
@@ -224,7 +225,7 @@ return (
                     placeholder="Select a Block"
                     
                 />
-            </View>
+            </View> */}
                 <TouchableOpacity onPress={showDatepicker}  style={{backgroundColor:GlobalStyles.colors.backgroundColor,borderWidth:.2,borderRadius:10,flexDirection:"row",padding:screenWidth*0.03,flex:3.5,justifyContent:'center',alignItems:'center',}}>
                     <View style={{ justifyContent:'center',marginRight:'3%'}}>
                         <Text style={{fontSize:13}}>Date: {getFormattedDate(date)} </Text>
@@ -233,10 +234,10 @@ return (
                         <Fontisto name="date" size={16} color="black" />
                     </View>
                 </TouchableOpacity> 
-            <View style={{backgroundColor:GlobalStyles.colors.backgroundColor,flex:3,marginLeft:6,minHeight:42,justifyContent:'center',alignItems:'center',alignContent:'center',flexWrap:'wrap'}}>
+            {/* <View style={{backgroundColor:GlobalStyles.colors.backgroundColor,flex:3,marginLeft:6,minHeight:42,justifyContent:'center',alignItems:'center',alignContent:'center',flexWrap:'wrap'}}>
                 <ButtonM onPress={handleOpenModal} >Batch Copy</ButtonM>
-            </View>
-            <View style={styles.container}>
+            </View> */}
+            {/* <View style={styles.container}>
                 <Modal
                     visible={modalVisible}
                     animationType="slide"
@@ -266,10 +267,10 @@ return (
                         </View>
                     </View>
                 </Modal>
-            </View>
+            </View> */}
         </View>
         <View style={{flex:10}}>
-            <EfficienciesOutput efficiencies={recentEfficiencies}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
+            <PermissionsOutput permissions={permissionsCtx.permissions} fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
         </View>    
     </View>
 )}

@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ManageEfficiency from '../EfficiencyAnalysis/Screens/manageefficiency'
 import Recentefficiencies from '../EfficiencyAnalysis/Screens/recentefficiencies';
 import Allefficiencies from '../EfficiencyAnalysis/Screens/Allefficiencies';
-import { GlobalStyles } from '../EfficiencyAnalysis/constants/styles';
+import { GlobalStyles } from '../constants/styles';
 import {  Ionicons } from "@expo/vector-icons";
 import IconButton from '../EfficiencyAnalysis/components/UI/iconButton';
 import EfficienciesContextProvider from '../EfficiencyAnalysis/Store/efficiencies-context';
@@ -21,19 +21,20 @@ const screenWidth = Dimensions.get('window').width
 
 const EfficiencyOverview = () =>{
   return <Bottomtabs.Navigator screenOptions={({navigation})=>({
-          tabBarActiveBackgroundColor:'#c2f8cb',
+          tabBarActiveBackgroundColor:GlobalStyles.colors.tabBarActiveColor,
           headerStyle:{ backgroundColor: GlobalStyles.colors.headerColor},
-          headerTintColor:GlobalStyles.colors.text_border_button,
+          headerTintColor:GlobalStyles.colors.textcolor,
           tabBarStyle:{
             height: screenHeight * 0.06,
-            marginHorizontal: screenWidth * 0.03,
-            marginBottom: screenHeight * 0.01,
+            // marginHorizontal: screenWidth * 0.03,
+            // marginBottom: screenHeight * 0.01,
             borderRadius: 10,
-            elevation: 3,
-            backgroundColor: '#f0fff1',
-            position: 'absolute'
+            elevation: 50,
+            backgroundColor: GlobalStyles.colors.tabBarActiveColor,
+            position: 'absolute',
+            shadowOffset:(1,0)
           },
-          tabBarActiveTintColor:GlobalStyles.colors.accent500,
+          //tabBarActiveTintColor:GlobalStyles.colors.tabBarActiveColor,
           headerLeft:({tintColor})=> <IconButton icon="arrow-back-outline" size={24} color={tintColor} onPress={()=>{ navigation.navigate('IEDepartment')}} />,
           headerRight:({tintColor})=> <IconButton icon="add" size={24} color={tintColor} onPress={()=>{ navigation.navigate('ManageEfficiency')}} />
          })}>
@@ -68,7 +69,7 @@ const EfficiencyAnalysisPage = () => {
           {/* <NavigationContainer> */}
             <Stack.Navigator screenOptions={{
               headerStyle:{backgroundColor:GlobalStyles.colors.headerColor},
-              headerTintColor:GlobalStyles.colors.text_border_button,
+              headerTintColor:GlobalStyles.colors.textcolor,
             }}>
 
                 <Stack.Screen 
