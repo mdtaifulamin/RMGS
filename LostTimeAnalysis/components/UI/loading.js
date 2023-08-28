@@ -4,7 +4,7 @@ import { GlobalStyles } from "../../../constants/styles";
 export default function Loadingspinner(){
      return(
         <View style={styles.container}>
-            <ActivityIndicator size="large" color='black' />
+            <ActivityIndicator size="large" color='white' />
         </View>
      )
 }
@@ -15,6 +15,6 @@ const styles =StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         padding:24,
-        backgroundColor:GlobalStyles.colors.backgroundColor
+        backgroundColor:GlobalStyles.colors.primary500
     }
 })

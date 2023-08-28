@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet,st } from 'react-native';
 
-export default function Header({header,title}) {
+export default function Header({header,title,children}) {
     
     return(
     <View style={styles.header} >
@@ -12,7 +12,7 @@ export default function Header({header,title}) {
                 <Text style={styles.title}>{title}</Text>
             </View>
         )}
-        
+        {children}
     </View>
     )
 }

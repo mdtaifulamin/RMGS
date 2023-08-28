@@ -20,6 +20,8 @@ import TargetPage from './Screens/Target';
 import OverTimePage from './Screens/OverTime';
 import NewOperatorAssessmentPage from './Screens/NewOperatorAssessment';
 import BottomTabNavigator from './components/BottomTabNavigator';
+import LostTimeAnalysisPage from './Screens/LostTimeAnalysis';
+
 const Stack = createStackNavigator();
 
 function App(){
@@ -46,8 +48,9 @@ function App(){
             <Stack.Screen name="QualityDepartment" component={QualityDepartmentPage} options={{ title: 'Home' }} />
             <Stack.Screen name="HRDepartment" component={HRDepartmentPage} options={{ title: 'HR Department' }} />
             <Stack.Screen name="EfficiencyAnalysis" component={EfficiencyAnalysisPage} options={{ title: 'Efficiency Analysis' , headerShown:false}} />
+            <Stack.Screen name="LostTimeAnalysis" component={LostTimeAnalysisPage} options={{ title: 'Lost Time Analysis' , headerShown:false}} />
             <Stack.Screen name="Target" component={TargetPage} options={{ title: 'Target' }} />
-            <Stack.Screen name="OverTime" component={OverTimePage} options={{ title: 'Over Time' }} />
+            <Stack.Screen name="OverTime" component={OverTimePage} options={{ title: 'Over Time', headerShown:false}} />
             {/* <Stack.Screen name="NewOperatorAssessment" component={NewOperatorAssessmentPage} options={{ title: 'IE' }} /> */}
             <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} options={{ title: 'IE' }} />
           </Stack.Navigator>

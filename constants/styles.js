@@ -17,7 +17,7 @@ export const GlobalStyles={
             headerColor:'rgba(255,255,255,1)',//'#edf6f9'
             text_border_button:"#008921",
             button1:"#008921",
-            buttonTextColor:"black",
+            buttonTextColor:"white",
             inputBox:"White",
             deleteButton:"#760000",
             titleBackground:'white',

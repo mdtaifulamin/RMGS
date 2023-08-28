@@ -1,0 +1,159 @@
+import { createContext, useReducer } from "react";
+const Dummy_lostTimes =[
+    {
+        date: new Date('2021-12-19'),
+        lineNumber:'1',
+        id:'2021-12-19-1', //date-lineNumber
+        totallineproduction:1000, //style1Totalproduction+style2Totalproduction+style3Totalproduction+style4Totalproduction,
+        toallinehour: 10,
+        totallineavailableminute: 10,
+        netlineavailableminute: 10,
+        totalearnedminute: 1000,//style1Totalproduction * style1SMV +style2Production * style2SMV + style3Totalproduction * style3SMV +style4Totalproduction * style4SMV,
+        linemanpower:35,
+        totallosttimeminute:120,
+        remarks: 'A pair of hoes',
+        target:3000,
+        hitrate:100,//totallineproduction/target,
+        lostTime:85,//totalearnedminute/totallineavailableminute,
+        performance:90,//totalearnedminute/netlineavailableminute,
+        St1Name:'PaddyPro',
+        st1Buyer:'Hugo Boss',
+        style1SMV:8.5,
+        style1Production:1000,
+        style1without:100,
+        style1due:200,
+        style1rejection:150,
+        style1Totalproduction: 500,//style1Production+style1without+style1rejection-style1due,
+        St2Name:'PaddyPro',
+        st2Buyer:'Hugo Boss',
+        style2SMV:8.5,
+        style2Production:100,
+        style2without:100,
+        style2due:200,
+        style2rejection:150,
+        style2Totalproduction: 600,//style2Production+style2without+style2rejection-style2due,
+        St36Name:'PaddyPro',
+        st3Buyer:'Hugo Boss',
+        style3SMV:8.5,
+        style3Production:10,
+        style3without:100,
+        style3due:200,
+        style3rejection:150,
+        style3Totalproduction: 700,//style3Production+style3without+style3rejection-style3due,
+        St4Name:'PaddyPro',
+        st4Buyer:'Hugo Boss',
+        style4SMV:8.5,
+        style4Production:0,
+        style4without:100,
+        style4due:200,
+        style4rejection:150,
+        style4Totalproduction: 800//style4Production+style4without+style4rejection-style4due,    
+    },
+    {
+        date: new Date('2021-12-19'),
+        id:'2021-12-19-2',
+        lineNumber:'2',
+        totallineproduction:3000, //style1Totalproduction+style2Totalproduction+style3Totalproduction+style4Totalproduction,
+        toallinehour: 10,
+        totallineavailableminute: 10,
+        netlineavailableminute: 10,
+        totalearnedminute: 1000,//style1Totalproduction * style1SMV +style2Production * style2SMV + style3Totalproduction * style3SMV +style4Totalproduction * style4SMV,
+        linemanpower:35,
+        totallosttimeminute:120,
+        remarks: 'A pair of hoes',
+        target:3000,
+        hitrate:100,//totallineproduction/target,
+        lostTime:85,//totalearnedminute/totallineavailableminute,
+        performance:90,//totalearnedminute/netlineavailableminute,
+        St1Name:'PaddyPro',
+        st1Buyer:'Hugo Boss',
+        style1SMV:8.5,
+        style1Production:1000,
+        style1without:100,
+        style1due:200,
+        style1rejection:150,
+        style1Totalproduction: 500,//style1Production+style1without+style1rejection-style1due,
+        St2Name:'PaddyPro',
+        st2Buyer:'Hugo Boss',
+        style2SMV:8.5,
+        style2Production:100,
+        style2without:100,
+        style2due:200,
+        style2rejection:150,
+        style2Totalproduction: 600,//style2Production+style2without+style2rejection-style2due,
+        St36Name:'PaddyPro',
+        st3Buyer:'Hugo Boss',
+        style3SMV:8.5,
+        style3Production:10,
+        style3without:100,
+        style3due:200,
+        style3rejection:150,
+        style3Totalproduction: 700,//style3Production+style3without+style3rejection-style3due,
+        St4Name:'PaddyPro',
+        st4Buyer:'Hugo Boss',
+        style4SMV:8.5,
+        style4Production:0,
+        style4without:100,
+        style4due:200,
+        style4rejection:150,
+        style4Totalproduction: 800//style4Production+style4without+style4rejection-style4due,    
+    },
+    
+];
+export const LostTimesContext = createContext({
+    lostTimes: [],
+    addLostTime: ({date,lineNumber,totallineproduction,toallinehour,totallineavailableminute,netlineavailableminute,totalearnedminute,linemanpower,totallosttimeminute,remarks,target,hitrate,lostTime,performance,St1Name,st1Buyer,style1SMV,style1Production,style1without,style1due,style1rejection,style1Totalproduction,St2Name,st2Buyer,style2SMV,style2Production,style2without,style2due,style2rejection,style2Totalproduction,St36Name,st3Buyer,style3SMV,style3Production,style3without,style3due,style3rejection,style3Totalproduction,St4Name,st4Buyer,style4SMV,style4Production,style4without,style4due,style4rejection,style4Totalproduction}) => {},
+    deleteLostTime: (id) => {},
+    updateLostTime: (id,{date,lineNumber,totallineproduction,toallinehour,totallineavailableminute,netlineavailableminute,totalearnedminute,linemanpower,totallosttimeminute,remarks,target,hitrate,lostTime,performance,St1Name,st1Buyer,style1SMV,style1Production,style1without,style1due,style1rejection,style1Totalproduction,St2Name,st2Buyer,style2SMV,style2Production,style2without,style2due,style2rejection,style2Totalproduction,St36Name,st3Buyer,style3SMV,style3Production,style3without,style3due,style3rejection,style3Totalproduction,St4Name,st4Buyer,style4SMV,style4Production,style4without,style4due,style4rejection,style4Totalproduction}) => {},
+});
+
+function lostTimesReducer(state,action){
+    switch (action.type) {
+        case 'ADD':
+            const id = date+'-'+lineNumber;
+            return [{...action.payload, id: id},...state];     
+        case 'UPDATE':
+            const updatableLostTimeIndex = state.findIndex(
+                (lostTime) => lostTime.id === action.payload.id
+            );
+            const updatableLostTime = state[updatableLostTimeIndex];
+            const updatedItem = {...updatableLostTime,...action.payload.data};
+            const updatedLostTimes= [...state];
+            updatedLostTimes[updatableLostTimeIndex] = updatedItem;
+            return updatedLostTimes;
+        case 'DELETE':
+            return state.filter((lostTime) => lostTime.id !== action.payload);                
+        default:
+            return state;
+    }
+}
+
+function LostTimesContextProvider ({children}){
+ const [lostTimeState,dispatch] = useReducer(lostTimesReducer,Dummy_lostTimes);
+   
+ function addLostTime(lostTimeData){
+        dispatch({type:'ADD', payload: lostTimeData});
+    }
+
+    function deleteLostTime(id){
+        dispatch({type: 'DELETE' , payload : id});
+    }
+    function updateLostTime(id, lostTimeData){
+        dispatch({type:'UPDATE', payload:{id: id, data: lostTimeData}});
+    }
+
+    const value = {
+        lostTimes: lostTimeState,
+        addLostTime: addLostTime,
+        deleteLostTime: deleteLostTime,
+        updateLostTime: updateLostTime,
+    };
+
+    return (
+        <LostTimesContext.Provider value={value}>
+              {children}
+        </LostTimesContext.Provider>
+    )
+}
+
+export default LostTimesContextProvider;

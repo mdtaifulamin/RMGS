@@ -2,37 +2,37 @@ import { useNavigation } from "@react-navigation/native";
 import { Pressable, StyleSheet, Text, View ,Dimensions} from "react-native";
 import { GlobalStyles } from "../../../constants/styles";
 import { getFormattedDate } from "../../util/date";
-import { EfficienciesContext } from "../../Store/efficiencies-context";
+import { OverTimesContext } from "../../Store/overTimes-context";
 import { useContext } from "react";
 import NightSkyBackground from "../../../components/ColoredCircle";
 const screenWidth = Dimensions.get('window').width
 const screen_height=Dimensions.get('window').height
-export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,styleName,SMV,manpower,hour,production,without,due,rejection,}){
+export default function OverTimeItem({date,lineNumber,id,buyerName,daysRun,SO,styleName,TWO_HOUR_OT,manpower,hour,production,without,due,rejection,}){
      const navigation=useNavigation();     
-     function efficiencyPresshandler(){
-         navigation.navigate('ManageEfficiency',{
-            efficiencyId: id            
+     function overTimePresshandler(){
+         navigation.navigate('ManageOverTime',{
+            overTimeId: id            
          });       
      }
      
 
-     const efficiencyCtx= useContext(EfficienciesContext);
-     let fFilteredEfficiencies=efficiencyCtx.efficiencies.filter(function(obj){
+     const overTimeCtx= useContext(OverTimesContext);
+     let fFilteredOverTimes=overTimeCtx.overTimes.filter(function(obj){
         return  obj.lineNumber==lineNumber && obj.date.toLocaleDateString()==date.toLocaleDateString();
     })
    
     
 
-    const sFilteredEfficiencies=[];
-    fFilteredEfficiencies.forEach((p)=>{
+    const sFilteredOverTimes=[];
+    fFilteredOverTimes.forEach((p)=>{
         //console.log(p)
     const Availableminute=p.manpower* p.hour *60;
   
-    const earnedminute=(p.production+p.without+p.rejection-p.due)*p.SMV;
+    const earnedminute=(p.production+p.without+p.rejection-p.due)*p.TWO_HOUR_OT;
     const hour=p.hour;
     const target10=p.target10;
     const production=p.production+p.without-p.due+p.rejection;
-    sFilteredEfficiencies.push({
+    sFilteredOverTimes.push({
         Availableminute:Number(Availableminute),
         earnedminute:Number(earnedminute),
         hour:Number(hour),
@@ -40,8 +40,8 @@ export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,
         production:Number(production),
     })
 })
-//console.log(sFilteredEfficiencies);
-const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
+//console.log(sFilteredOverTimes);
+const total=sFilteredOverTimes.reduce(function myFunc(total, num) {
   return ({Availableminute: total.Availableminute + num.Availableminute,earnedminute:total.earnedminute+num.earnedminute,hour: total.hour+num.hour,target10:total.target10+num.target10,production:total.production+num.production})
   
 })
@@ -50,11 +50,11 @@ const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
     
       
      const netproduction= production+without-due+rejection;
-     //console.log('p'+total.production+' t '+(total.target10/10)*total.hour)
+     //console.log('p'+total.production+' t '+(total.2/10)*total.hour)
     return(
 
-        <Pressable onPress={efficiencyPresshandler}  style={({pressed})=> pressed && styles.pressed} >
-            <View style={[styles.rootEfficiencyItem]}>
+        <Pressable onPress={overTimePresshandler}  style={({pressed})=> pressed && styles.pressed} >
+            <View style={[styles.rootOverTimeItem]}>
                 <View style={styles.lineDate}>
                     <View style={{}}> 
                         <Text style={styles.textBase}>{getFormattedDate(date)}</Text>
@@ -91,10 +91,10 @@ const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
                     </View> 
                     <View style={{flexDirection:'row', justifyContent:'space-between'}}>  
                         <View style={styles.productionComponents}>
-                            <Text style={styles.production}>SMV:</Text>
+                            <Text style={styles.production}>TWO_HOUR_OT:</Text>
                         </View>
                         <View style={styles.productionComponents}>
-                            <Text style={styles.production}>{SMV}</Text>  
+                            <Text style={styles.production}>{TWO_HOUR_OT}</Text>  
                         </View>
                     </View> 
                     <View style={{flexDirection:'row', justifyContent:'space-between'}}>
@@ -117,7 +117,7 @@ const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
                     </View>
                     <View style={{flexDirection:'row', justifyContent:'space-between'}}>
                         <View style={styles.productionComponents}>
-                         <Text style={styles.production}>Line Efficiency:</Text>
+                         <Text style={styles.production}>Line OverTime:</Text>
                         </View>
                         <View style={styles.productionComponents}>
                          <Text style={styles.production}>{((total.earnedminute/total.Availableminute)*100).toFixed(2)} % </Text>  
@@ -136,7 +136,7 @@ const styles= StyleSheet.create({
         opacity:.75,
     },
     
-    rootEfficiencyItem:{
+    rootOverTimeItem:{
         paddingTop:3,
         paddingLeft:10,
         marginVertical:screen_height*0.008/2,
@@ -165,7 +165,7 @@ const styles= StyleSheet.create({
         flexDirection:'column'
     },
     productionContainer:{
-        paddingLeft:screenWidth*0.02,
+        paddingHorizontal:1,
         paddingVertical:1,
         backgroundColor:GlobalStyles.colors.cardBackground2,
         justifyContent:'center',
@@ -179,7 +179,6 @@ const styles= StyleSheet.create({
     production:{
         color: GlobalStyles.colors.textcolor,
         //fontWeight:'bold',
-        fontSize:screenWidth*0.025
         
     },
     productionComponents:{
@@ -189,6 +188,6 @@ const styles= StyleSheet.create({
         margin:screen_height*0.0001,
         padding:1,
         flex:1,
-        //alignItems:'center'
+        alignItems:'center'
     }
 })

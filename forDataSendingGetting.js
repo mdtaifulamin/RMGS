@@ -28,6 +28,7 @@ export const fetchUserInfo = async(ID,pass)=>{
       Overtime: data.Overtime?data.Overtime:false,
       target:data.target?data.target:false,
       newOperatorAssessment: data.newOperatorAssessment?data.newOperatorAssessment:false,
+      block:data.block?data.block:'',
       };
     efficiencies.push(efficiencyobj)
     

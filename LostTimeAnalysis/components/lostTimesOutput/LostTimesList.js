@@ -1,0 +1,186 @@
+// import React from "react";
+// import { RefreshControl, FlatList, Text, View } from "react-native";
+// import LostTimeItem from "./LostTimeitem";
+
+// export default function LostTimesList({ lostTimes, refreshing, onRefresh, }) {
+//   const renderLostTimeItem = ({ item }) => {
+//     return (
+//       <LostTimeItem {...item} />
+//     );
+//   };
+
+//   return (
+//     <FlatList
+//       data={lostTimes}
+//       renderItem={renderLostTimeItem}
+//       keyExtractor={(item) => item.id}
+//       refreshControl={
+//         <RefreshControl colors={['red', 'green', 'blue']} refreshing={refreshing} onRefresh={onRefresh} />
+//       }
+//     />
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+import React, { useRef } from "react";
+import { RefreshControl, FlatList, Text, View, Animated,Dimensions } from "react-native";
+import LostTimeItem from "./LostTimeitem";
+
+
+const screenWidth = Dimensions.get('window').width
+const screen_height=Dimensions.get('window').height
+const cardHeight = screen_height*0.15;
+const padding = screen_height*0.008;
+const offset = cardHeight + padding;
+export default function LostTimesList({ lostTimes, refreshing, onRefresh,onLongPress}) {
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const scrollY = useRef(new Animated.Value(0)).current;
+  const fadeIn = () => {
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 1000,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const renderLostTimeItem = ({item,index}) => {
+    const inputRange = [offset * index, offset * index + offset];
+                const outputRange1 =  [1, 0];
+                const outputRange2 = [0,offset / 2];
+                const scale = scrollY.interpolate({
+                    inputRange,
+                    outputRange: outputRange1,
+                    extrapolate: 'clamp',
+                });
+                const translateY = scrollY.interpolate({
+                    inputRange,
+                    outputRange: outputRange2,
+                    extrapolate: 'clamp',
+                });
+                const opacity = scale;
+    return (
+      <Animated.View style={{ opacity: fadeAnim,transform: [{ translateY }, { scale }] } } >
+        <LostTimeItem {...item} />
+      </Animated.View>
+    );
+  };
+
+  return (
+    <Animated.FlatList
+      style={{paddingVertical:padding/2}}
+      data={lostTimes}
+      renderItem={renderLostTimeItem}
+      keyExtractor={(item) => item.id}
+      onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: scrollY } } }], {
+        useNativeDriver: true,
+    })}
+      refreshControl={
+        <RefreshControl  colors={['red', 'green', 'blue']} refreshing={refreshing} onRefresh={onRefresh} />
+      }
+      onLayout={fadeIn}
+    />
+  );
+}
+
+//second code
+
+// import React, { useRef } from "react";
+// import { RefreshControl, FlatList, Text, View, Animated } from "react-native";
+// import LostTimeItem from "./LostTimeitem";
+
+// export default function LostTimesList({ lostTimes, refreshing, onRefresh }) {
+//   const fadeAnim = useRef(new Animated.Value(0)).current;
+
+//   const fadeIn = () => {
+//     Animated.timing(fadeAnim, {
+//       toValue: 1,
+//       duration: 1000,
+//       useNativeDriver: true,
+//     }).start();
+//   };
+
+//   const renderLostTimeItem = (itemData) => {
+//     return (
+//       <Animated.View style={{ opacity: fadeAnim }}>
+//         <LostTimeItem {...itemData.item} />
+//       </Animated.View>
+//     );
+//   };
+
+//   return (
+//     <FlatList
+//       data={lostTimes}
+//       renderItem={renderLostTimeItem}
+//       keyExtractor={(item) => item.id}
+//       refreshControl={
+//         <RefreshControl  colors={['red', 'green', 'blue']} refreshing={refreshing} onRefresh={onRefresh} />
+//       }
+//       onLayout={fadeIn}
+//     />
+//   );
+// }
+
+
+// import React, { useRef } from "react";
+// import { RefreshControl, FlatList, Text, View, Animated } from "react-native";
+// import LostTimeItem from "./LostTimeitem";
+
+// const cardHeight = 134;
+// const padding = 10;
+// const offset = cardHeight + padding;
+// export default function LostTimesList({ lostTimes, refreshing, onRefresh }) {
+//   const fadeAnim = useRef(new Animated.Value(0)).current;
+//   const scrollY = useRef(new Animated.Value(0)).current;
+
+//   const fadeIn = () => {
+//     Animated.timing(fadeAnim, {
+//       toValue: 1,
+//       duration: 1000,
+//       useNativeDriver: true,
+//     }).start();
+//   };
+
+//   const renderLostTimeItem = ({ item, index }) => {
+//     const inputRange = [offset * index, offset * (index + 1)];
+//     const opacity = scrollY.interpolate({
+//       inputRange,
+//       outputRange: [0, 1],
+//       extrapolate: "clamp",
+//     });
+
+//     return (
+//       <Animated.View style={{ opacity }}>
+//         <LostTimeItem {...item} />
+//       </Animated.View>
+//     );
+//   };
+
+//   return (
+//     <FlatList
+//       data={lostTimes}
+//       renderItem={renderLostTimeItem}
+//       keyExtractor={(item) => item.id}
+//       onScroll={Animated.event(
+//         [{ nativeEvent: { contentOffset: { y: scrollY } } }],
+//         { useNativeDriver: false }
+//       )}
+//       refreshControl={
+//         <RefreshControl
+//           colors={["red", "green", "blue"]}
+//           refreshing={refreshing}
+//           onRefresh={onRefresh}
+//         />
+//       }
+//       onLayout={fadeIn}
+//     />
+//   );
+// }

@@ -2,29 +2,29 @@ import { useNavigation } from "@react-navigation/native";
 import { Pressable, StyleSheet, Text, View ,Dimensions} from "react-native";
 import { GlobalStyles } from "../../../constants/styles";
 import { getFormattedDate } from "../../util/date";
-import { EfficienciesContext } from "../../Store/efficiencies-context";
+import { LostTimesContext } from "../../Store/lostTimes-context";
 import { useContext } from "react";
 import NightSkyBackground from "../../../components/ColoredCircle";
 const screenWidth = Dimensions.get('window').width
 const screen_height=Dimensions.get('window').height
-export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,styleName,SMV,manpower,hour,production,without,due,rejection,}){
+export default function LostTimeItem({date,lineNumber,id,buyerName,daysRun,SO,styleName,SMV,manpower,hour,production,without,due,rejection,}){
      const navigation=useNavigation();     
-     function efficiencyPresshandler(){
-         navigation.navigate('ManageEfficiency',{
-            efficiencyId: id            
+     function lostTimePresshandler(){
+         navigation.navigate('ManageLostTime',{
+            lostTimeId: id            
          });       
      }
      
 
-     const efficiencyCtx= useContext(EfficienciesContext);
-     let fFilteredEfficiencies=efficiencyCtx.efficiencies.filter(function(obj){
+     const lostTimeCtx= useContext(LostTimesContext);
+     let fFilteredLostTimes=lostTimeCtx.lostTimes.filter(function(obj){
         return  obj.lineNumber==lineNumber && obj.date.toLocaleDateString()==date.toLocaleDateString();
     })
    
     
 
-    const sFilteredEfficiencies=[];
-    fFilteredEfficiencies.forEach((p)=>{
+    const sFilteredLostTimes=[];
+    fFilteredLostTimes.forEach((p)=>{
         //console.log(p)
     const Availableminute=p.manpower* p.hour *60;
   
@@ -32,7 +32,7 @@ export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,
     const hour=p.hour;
     const target10=p.target10;
     const production=p.production+p.without-p.due+p.rejection;
-    sFilteredEfficiencies.push({
+    sFilteredLostTimes.push({
         Availableminute:Number(Availableminute),
         earnedminute:Number(earnedminute),
         hour:Number(hour),
@@ -40,8 +40,8 @@ export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,
         production:Number(production),
     })
 })
-//console.log(sFilteredEfficiencies);
-const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
+//console.log(sFilteredLostTimes);
+const total=sFilteredLostTimes.reduce(function myFunc(total, num) {
   return ({Availableminute: total.Availableminute + num.Availableminute,earnedminute:total.earnedminute+num.earnedminute,hour: total.hour+num.hour,target10:total.target10+num.target10,production:total.production+num.production})
   
 })
@@ -53,8 +53,8 @@ const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
      //console.log('p'+total.production+' t '+(total.target10/10)*total.hour)
     return(
 
-        <Pressable onPress={efficiencyPresshandler}  style={({pressed})=> pressed && styles.pressed} >
-            <View style={[styles.rootEfficiencyItem]}>
+        <Pressable onPress={lostTimePresshandler}  style={({pressed})=> pressed && styles.pressed} >
+            <View style={[styles.rootLostTimeItem]}>
                 <View style={styles.lineDate}>
                     <View style={{}}> 
                         <Text style={styles.textBase}>{getFormattedDate(date)}</Text>
@@ -117,7 +117,7 @@ const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
                     </View>
                     <View style={{flexDirection:'row', justifyContent:'space-between'}}>
                         <View style={styles.productionComponents}>
-                         <Text style={styles.production}>Line Efficiency:</Text>
+                         <Text style={styles.production}>Line LostTime:</Text>
                         </View>
                         <View style={styles.productionComponents}>
                          <Text style={styles.production}>{((total.earnedminute/total.Availableminute)*100).toFixed(2)} % </Text>  
@@ -136,7 +136,7 @@ const styles= StyleSheet.create({
         opacity:.75,
     },
     
-    rootEfficiencyItem:{
+    rootLostTimeItem:{
         paddingTop:3,
         paddingLeft:10,
         marginVertical:screen_height*0.008/2,
@@ -165,7 +165,7 @@ const styles= StyleSheet.create({
         flexDirection:'column'
     },
     productionContainer:{
-        paddingLeft:screenWidth*0.02,
+        paddingHorizontal:1,
         paddingVertical:1,
         backgroundColor:GlobalStyles.colors.cardBackground2,
         justifyContent:'center',
@@ -179,7 +179,6 @@ const styles= StyleSheet.create({
     production:{
         color: GlobalStyles.colors.textcolor,
         //fontWeight:'bold',
-        fontSize:screenWidth*0.025
         
     },
     productionComponents:{
@@ -189,6 +188,6 @@ const styles= StyleSheet.create({
         margin:screen_height*0.0001,
         padding:1,
         flex:1,
-        //alignItems:'center'
+        alignItems:'center'
     }
 })

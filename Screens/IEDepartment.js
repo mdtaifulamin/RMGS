@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions,Modal } 
 import UserContext from '../UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
-import { ModalAlert } from './AlertModal';
+import { ModalAlert } from '../components/AlertModal';
 
 const IEDepartmentPage = ({ navigation }) => {
   const [animation] = useState(new Animated.Value(0));
@@ -62,7 +62,18 @@ const IEDepartmentPage = ({ navigation }) => {
             <Text style={[styles.buttonText,]}>New Operator Assessment</Text>
           </TouchableOpacity>
         </Animated.View>
+        
       </View>
+      <View style={styles.buttonRow}>
+      <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+          <TouchableOpacity
+            style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+            onPress={() => {if (false) {navigation.navigate('LostTimeAnalysis')
+          }else setModalVisible(true);}}>
+            <Text style={[styles.buttonText,]}>Lost Time Analysis</Text>
+          </TouchableOpacity>
+        </Animated.View>
+    </View>
      <ModalAlert modalVisible={modalVisible} onRequestClose={() => setModalVisible(false)}/>
     </View>
   );

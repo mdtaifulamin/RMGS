@@ -1,18 +1,17 @@
 import React, { useContext, useEffect,  useState } from "react";
 import {  StyleSheet, Text, ToastAndroid, TouchableOpacity, View,Modal, Dimensions } from "react-native";
-import EfficienciesOutput from "../components/efficienciesOutput/EfficienciesOutput";
-import { EfficienciesContext } from "../Store/efficiencies-context";
+import LostTimesOutput from "../components/lostTimesOutput/LostTimesOutput";
+import { LostTimesContext } from "../Store/lostTimes-context";
 import { getFormattedDate, momentTime} from "../util/date";
 import DropDownPicker from 'react-native-dropdown-picker';
 import { GlobalStyles } from "../../constants/styles";
 import { Fontisto } from '@expo/vector-icons';
-import { fetchEfficiencies, storeEfficiency } from "../util/forDataSendingGetting";
+import { fetchLostTimes, storeLostTime } from "../util/forDataSendingGetting";
 import Loadingspinner from "../components/UI/loading";
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker'
 import ButtonM from "../util/Button";
 import { convertOrdinalToNumber, getOrdinalIndicator } from "../util/ordinalTonumberToordinal";
 import NightSkyBackground from "../../components/ColoredCircle";
-import Header from "../../components/Header";
 
 
 const blockWiseLine = [
@@ -55,7 +54,7 @@ const checkNumberInArray = (number, array) => {
 
     const screenWidth = Dimensions.get('window').width
     const screen_height=Dimensions.get('window').height
-export default function Recentefficiencies(){
+export default function RecentlostTimes(){
     
     const [modalVisible, setModalVisible] = useState(false);
     const [open, setOpen] = useState(false);
@@ -122,25 +121,25 @@ export default function Recentefficiencies(){
     
     
     
-   const efficienciesCtx= useContext(EfficienciesContext);
+   const lostTimesCtx= useContext(LostTimesContext);
    useEffect(() =>{                                        //updated
-        async  function getEfficiencies(){
-            const efficiencies=  await fetchEfficiencies(date,value);
+        async  function getLostTimes(){
+            const lostTimes=  await fetchLostTimes(date,value);
             setIsfetching(false);
             setRefreshing(false);
-            efficienciesCtx.setEfficiency(efficiencies);   
+            lostTimesCtx.setLostTime(lostTimes);   
         }
-        getEfficiencies();
+        getLostTimes();
      },[value,date,refreshing])
-    //  const efficienciesCtx= useContext(EfficienciesContext);  
+    //  const lostTimesCtx= useContext(LostTimesContext);  
     //  useFocusEffect(
     //   React.useCallback(() => {                                        //updated
-    //       async  function getEfficiencies(){
-    //           const efficiencies=  await fetchEfficiencies(date,value);
+    //       async  function getLostTimes(){
+    //           const lostTimes=  await fetchLostTimes(date,value);
     //           setIsfetching(false);
-    //           efficienciesCtx.setEfficiency(efficiencies);   
+    //           lostTimesCtx.setLostTime(lostTimes);   
     //       }
-    //       getEfficiencies();
+    //       getLostTimes();
          
     //    },[value,date]))
      
@@ -149,20 +148,20 @@ export default function Recentefficiencies(){
         return <Loadingspinner/>       
      }
      
-    const recentEfficiencies= efficienciesCtx.efficiencies.filter((efficiency)=>{
+    const recentLostTimes= lostTimesCtx.lostTimes.filter((lostTime)=>{
         
-        return  getFormattedDate(date) === getFormattedDate(efficiency.date); //&& checkNumberInArray(Number(efficiency.lineNumber), value) ;
+        return  getFormattedDate(date) === getFormattedDate(lostTime.date); //&& checkNumberInArray(Number(lostTime.lineNumber), value) ;
         
     });
    
     function copyHandler(){
        
-       recentEfficiencies.forEach(async(data) => {
+       recentLostTimes.forEach(async(data) => {
        // itoday.setDate(itoday.getDate())
 
         //console.log(new Date(itoday))
         const changedDaysRun= data.daysRun?getOrdinalIndicator(convertOrdinalToNumber(data.daysRun)+1):'';
-        const efficiencyData= {
+        const lostTimeData= {
           lineNumber: data.lineNumber, 
           date: new Date(momentTime(cdate)),
           buyerName: data.buyerName,
@@ -178,14 +177,14 @@ export default function Recentefficiencies(){
           due:        '',
           rejection:  '',
           };
-          const id= await storeEfficiency(efficiencyData);
+          const id= await storeLostTime(lostTimeData);
          
     }
     )
         const showToast = () => {
             ToastAndroid.show('Successfully Copied', ToastAndroid.SHORT);
         };
-        //console.log(recentEfficiencies+'r')
+        //console.log(recentLostTimes+'r')
         showToast()
         handleCloseModal()
     }
@@ -211,35 +210,32 @@ return (
     
     <View style={{ flex: 1 }}>
         <NightSkyBackground/>
-       <Header>
-            <View style={{flexDirection:'row'}}>
-                <View style={{ backgroundColor:GlobalStyles.colors.backgroundColor,marginHorizontal:screenWidth*0.02,justifyContent:'center',alignItems:'center'}}>
-                    <DropDownPicker
-                        listMode="MODAL"
-                        open={open}
-                        value={value}
-                        items={items}
-                        setOpen={setOpen}
-                        setValue={setValue}
-                        setItems={setItems}
-                        style={{height:screen_height*0.06,width:screenWidth*0.3,borderWidth:0,elevation:2}}
-                        placeholder="Block "
-                        
-                    />
-                </View>
-                    <TouchableOpacity onPress={showDatepicker}  style={{height:screen_height*0.06,elevation:2,backgroundColor:GlobalStyles.colors.backgroundColor,borderRadius:10,flexDirection:"row",justifyContent:'center',alignItems:'center',marginHorizontal:screenWidth*0.03}}>
-                        <View style={{ justifyContent:'center',marginRight:screenWidth*0.04}}>
-                            <Text style={{fontSize:13}}>Date: {getFormattedDate(date)} </Text>
-                        </View>
-                        <View style={{ justifyContent:'center', marginLeft:'3%'}}>
-                            <Fontisto name="date" size={16} color="black" />
-                        </View>
-                    </TouchableOpacity> 
-                <View style={{marginRight:screenWidth*0.01,minHeight:42,justifyContent:'center',alignItems:'center',alignContent:'center',flexWrap:'wrap',}}>
-                    <ButtonM onPress={handleOpenModal} >Batch Copy</ButtonM>
-                </View>
+       <View style={styles.rootSearchContainer}>
+            <View style={{flex:4, zIndex:10000, backgroundColor:GlobalStyles.colors.backgroundColor,marginHorizontal:"1%",}}>
+                <DropDownPicker
+                    listMode="MODAL"
+                    open={open}
+                    value={value}
+                    items={items}
+                    setOpen={setOpen}
+                    setValue={setValue}
+                    setItems={setItems}
+                    style={{borderRadius:10,borderWidth:.2,}}
+                    placeholder="Select a Block"
+                    
+                />
             </View>
-       </Header>
+                <TouchableOpacity onPress={showDatepicker}  style={{backgroundColor:GlobalStyles.colors.backgroundColor,borderWidth:.2,borderRadius:10,flexDirection:"row",padding:screenWidth*0.03,flex:3.5,justifyContent:'center',alignItems:'center',}}>
+                    <View style={{ justifyContent:'center',marginRight:'3%'}}>
+                        <Text style={{fontSize:13}}>Date: {getFormattedDate(date)} </Text>
+                    </View>
+                    <View style={{ justifyContent:'center', marginLeft:'3%'}}>
+                        <Fontisto name="date" size={16} color="black" />
+                    </View>
+                </TouchableOpacity> 
+            <View style={{backgroundColor:GlobalStyles.colors.backgroundColor,flex:3,marginLeft:6,minHeight:42,justifyContent:'center',alignItems:'center',alignContent:'center',flexWrap:'wrap'}}>
+                <ButtonM onPress={handleOpenModal} >Batch Copy</ButtonM>
+            </View>
             <View style={styles.container}>
                 <Modal
                     visible={modalVisible}
@@ -271,14 +267,26 @@ return (
                     </View>
                 </Modal>
             </View>
-       
+        </View>
         <View style={{flex:10}}>
-            <EfficienciesOutput efficiencies={recentEfficiencies}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
+            <LostTimesOutput lostTimes={recentLostTimes}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
         </View>    
     </View>
 )}
 
 const styles=StyleSheet.create({
+    rootSearchContainer:{
+        flexDirection:'row',
+        backgroundColor:GlobalStyles.colors.backgroundColor,
+        paddingTop:10,
+        justifyContent:'center',
+        alignItems:'center',
+        alignContent:'center',
+        paddingBottom:5,
+        elevation:20,
+        marginBottom:1
+    },
+    
   
     deleteCopyContainer:{
         marginTop:"5%",

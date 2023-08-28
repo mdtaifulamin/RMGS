@@ -4,6 +4,7 @@ import { AntDesign } from '@expo/vector-icons';
 import UserContext from '../UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
+import { ModalAlert } from '../components/AlertModal';
 const HomeScreen = ({ navigation }) => {
   const [animation] = useState(new Animated.Value(0));
   const buttonWidth = Dimensions.get('window').width / 2 - 20;
@@ -76,33 +77,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
         
       </ScrollView>
-      <Modal
-        visible={modalVisible}
-        animationType="slide"
-        transparent={true}
-        onRequestClose={() => setModalVisible(false)}
-      >
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <Text style={styles.modalText}>
-              You do not have permission to access this department.
-            </Text>
-            <Text style={styles.modalText}>
-              Please, Contact with Md. Taiful Amin
-            </Text>
-            <Text style={styles.modalText}>
-              Mobile:- 01701014481
-            </Text>
-            <TouchableOpacity
-              style={styles.modalButton}
-              onPress={() => setModalVisible(false)}
-            >
-              <Text style={styles.modalButtonText}>OK</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
-
+      <ModalAlert modalVisible={modalVisible} onRequestClose={() => setModalVisible(false)}/>
     </View>
   );
 };

@@ -1,21 +1,27 @@
 import React, { useContext, useEffect,  useState } from "react";
 import {  StyleSheet, Text, ToastAndroid, TouchableOpacity, View,Modal, Dimensions } from "react-native";
-import EfficienciesOutput from "../components/efficienciesOutput/EfficienciesOutput";
-import { EfficienciesContext } from "../Store/efficiencies-context";
+import OverTimesOutput from "../components/overTimesOutput/OverTimesOutput";
+import { OverTimesContext } from "../Store/overTimes-context";
 import { getFormattedDate, momentTime} from "../util/date";
 import DropDownPicker from 'react-native-dropdown-picker';
 import { GlobalStyles } from "../../constants/styles";
 import { Fontisto } from '@expo/vector-icons';
-import { fetchEfficiencies, storeEfficiency } from "../util/forDataSendingGetting";
+import { fetchOverTimes, storeOverTime } from "../util/forDataSendingGetting";
 import Loadingspinner from "../components/UI/loading";
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker'
 import ButtonM from "../util/Button";
 import { convertOrdinalToNumber, getOrdinalIndicator } from "../util/ordinalTonumberToordinal";
 import NightSkyBackground from "../../components/ColoredCircle";
 import Header from "../../components/Header";
+import UserContext from "../../UserContext";
+import { convertRangeStringToArrayOfArrays } from "../../components/convertStringToarray";
 
 
-const blockWiseLine = [
+    const screenWidth = Dimensions.get('window').width
+    const screen_height=Dimensions.get('window').height
+export default function RecentoverTimes(){
+    const { userInfo, updateUser } = useContext(UserContext);
+    const blockWiseLine = userInfo.block?convertRangeStringToArrayOfArrays(userInfo.block):[
     [1,2,3,4,5,6],
     [7,8,9,10,11,12,13,14,15],
     [16,17,18,19,20,21],
@@ -52,14 +58,10 @@ const checkNumberInArray = (number, array) => {
 
     return false;
 }
-
-    const screenWidth = Dimensions.get('window').width
-    const screen_height=Dimensions.get('window').height
-export default function Recentefficiencies(){
     
     const [modalVisible, setModalVisible] = useState(false);
     const [open, setOpen] = useState(false);
-    const [value, setValue] = useState( null); //updated 31/3/2023
+    const [value, setValue] = useState(null); //updated 31/3/2023
     const [items, setItems] = useState(
         blockWiseLine.map((e) => ({label: `Line ${e[0]} - ${e[e.length - 1]}`,value:e}))
     );
@@ -72,7 +74,6 @@ export default function Recentefficiencies(){
     const onChange = (event, selectedDate) => {
     const currentDate = selectedDate;
     setDate(currentDate);
-    
     };
     
     const showMode = (currentMode) => {
@@ -122,25 +123,25 @@ export default function Recentefficiencies(){
     
     
     
-   const efficienciesCtx= useContext(EfficienciesContext);
+   const overTimesCtx= useContext(OverTimesContext);
    useEffect(() =>{                                        //updated
-        async  function getEfficiencies(){
-            const efficiencies=  await fetchEfficiencies(date,value);
+        async  function getOverTimes(){
+            const overTimes=  await fetchOverTimes(date,value);
             setIsfetching(false);
             setRefreshing(false);
-            efficienciesCtx.setEfficiency(efficiencies);   
+            overTimesCtx.setOverTime(overTimes);   
         }
-        getEfficiencies();
+        getOverTimes();
      },[value,date,refreshing])
-    //  const efficienciesCtx= useContext(EfficienciesContext);  
+    //  const overTimesCtx= useContext(OverTimesContext);  
     //  useFocusEffect(
     //   React.useCallback(() => {                                        //updated
-    //       async  function getEfficiencies(){
-    //           const efficiencies=  await fetchEfficiencies(date,value);
+    //       async  function getOverTimes(){
+    //           const overTimes=  await fetchOverTimes(date,value);
     //           setIsfetching(false);
-    //           efficienciesCtx.setEfficiency(efficiencies);   
+    //           overTimesCtx.setOverTime(overTimes);   
     //       }
-    //       getEfficiencies();
+    //       getOverTimes();
          
     //    },[value,date]))
      
@@ -149,20 +150,20 @@ export default function Recentefficiencies(){
         return <Loadingspinner/>       
      }
      
-    const recentEfficiencies= efficienciesCtx.efficiencies.filter((efficiency)=>{
+    const recentOverTimes= overTimesCtx.overTimes.filter((overTime)=>{
         
-        return  getFormattedDate(date) === getFormattedDate(efficiency.date); //&& checkNumberInArray(Number(efficiency.lineNumber), value) ;
+        return  getFormattedDate(date) === getFormattedDate(overTime.date); //&& checkNumberInArray(Number(overTime.lineNumber), value) ;
         
     });
    
     function copyHandler(){
        
-       recentEfficiencies.forEach(async(data) => {
+       recentOverTimes.forEach(async(data) => {
        // itoday.setDate(itoday.getDate())
 
         //console.log(new Date(itoday))
         const changedDaysRun= data.daysRun?getOrdinalIndicator(convertOrdinalToNumber(data.daysRun)+1):'';
-        const efficiencyData= {
+        const overTimeData= {
           lineNumber: data.lineNumber, 
           date: new Date(momentTime(cdate)),
           buyerName: data.buyerName,
@@ -170,7 +171,7 @@ export default function Recentefficiencies(){
           daysRun: changedDaysRun,
           styleName: data.styleName,
           itemName: data.itemName,
-          SMV:       +data.SMV,
+          TWO_HOUR_OT:       +data.TWO_HOUR_OT,
           manpower:  0,
           hour:       0,
           production: '',
@@ -178,14 +179,14 @@ export default function Recentefficiencies(){
           due:        '',
           rejection:  '',
           };
-          const id= await storeEfficiency(efficiencyData);
+          const id= await storeOverTime(overTimeData);
          
     }
     )
         const showToast = () => {
             ToastAndroid.show('Successfully Copied', ToastAndroid.SHORT);
         };
-        //console.log(recentEfficiencies+'r')
+        //console.log(recentOverTimes+'r')
         showToast()
         handleCloseModal()
     }
@@ -211,9 +212,10 @@ return (
     
     <View style={{ flex: 1 }}>
         <NightSkyBackground/>
-       <Header>
+        {/* <View style={styles.rootSearchContainer}> */}
+        <Header >
             <View style={{flexDirection:'row'}}>
-                <View style={{ backgroundColor:GlobalStyles.colors.backgroundColor,marginHorizontal:screenWidth*0.02,justifyContent:'center',alignItems:'center'}}>
+                <View style={{ backgroundColor:GlobalStyles.colors.backgroundColor,marginHorizontal:screenWidth*0.03,}}>
                     <DropDownPicker
                         listMode="MODAL"
                         open={open}
@@ -223,7 +225,7 @@ return (
                         setValue={setValue}
                         setItems={setItems}
                         style={{height:screen_height*0.06,width:screenWidth*0.3,borderWidth:0,elevation:2}}
-                        placeholder="Block "
+                        placeholder="Select a Block"
                         
                     />
                 </View>
@@ -239,7 +241,7 @@ return (
                     <ButtonM onPress={handleOpenModal} >Batch Copy</ButtonM>
                 </View>
             </View>
-       </Header>
+        </Header>
             <View style={styles.container}>
                 <Modal
                     visible={modalVisible}
@@ -271,14 +273,27 @@ return (
                     </View>
                 </Modal>
             </View>
+        
        
         <View style={{flex:10}}>
-            <EfficienciesOutput efficiencies={recentEfficiencies}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
+            <OverTimesOutput overTimes={recentOverTimes}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
         </View>    
     </View>
 )}
 
 const styles=StyleSheet.create({
+    rootSearchContainer:{
+        flexDirection:'row',
+        backgroundColor:GlobalStyles.colors.backgroundColor,
+        paddingTop:10,
+        justifyContent:'center',
+        alignItems:'center',
+        alignContent:'center',
+        paddingBottom:5,
+        elevation:20,
+        marginBottom:1
+    },
+    
   
     deleteCopyContainer:{
         marginTop:"5%",

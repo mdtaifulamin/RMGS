@@ -58,7 +58,8 @@ const handleSignUp =()=>{
 
   return (
     <View  style={[styles.container,{backgroundColor:themeStyles.backgroundColor}]}>
-      <Image source={require('../assets/icon.png')} style={styles.logo} />
+      <Image source={require('../assets/RMGS2.gif')} style={styles.logo} />
+      
       <TextInput
         style={[styles.input,{color:themeStyles.textColor}]}
         placeholderTextColor={themeStyles.placeHolderTextColor}
@@ -88,12 +89,12 @@ const handleSignUp =()=>{
         <Text style={styles.loginButtonText}>Sign Up</Text>
       </TouchableOpacity>
       {loginStatus ? <Text style={styles.errorText}> {loginStatus} </Text> : null}
-      <Switch
+      {/* <Switch
           value={isDarkMode}
           onValueChange={toggleTheme}
           trackColor={{ false: lightTheme.placeHolderTextColor, true: darkTheme.placeHolderTextColor }}
           thumbColor={isDarkMode ? darkTheme.placeHolderTextColor : lightTheme.placeHolderTextColor}
-        />
+        /> */}
     </View>
   );
 };
@@ -106,8 +107,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
   },
   logo: {
-    width: 150,
-    height: 50,
+    width: 300,
+    height: 200,
     marginBottom: 40,
   },
   input: {

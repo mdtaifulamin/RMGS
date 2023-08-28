@@ -1,24 +1,23 @@
 import { useContext, useEffect, useState } from "react";
 import {  TextInput,Text, TouchableOpacity, View } from "react-native";
-import EfficienciesOutput from "../components/efficienciesOutput/EfficienciesOutput";
-import { EfficienciesContext } from "../Store/efficiencies-context";
+import OverTimesOutput from "../components/overTimesOutput/OverTimesOutput";
+import { OverTimesContext } from "../Store/overTimes-context";
 import { getdateMinusdays} from "../util/date";
 import { GlobalStyles } from "../../constants/styles";
 import { Fontisto } from '@expo/vector-icons';
-import {  fetchLineEfficiencies } from "../util/forDataSendingGetting";
+import {  fetchLineOverTimes } from "../util/forDataSendingGetting";
 import Loadingspinner from "../components/UI/loading";
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker'
 import React from "react";
 import Button from "../util/Button";
 import NightSkyBackground from "../../components/ColoredCircle";
-import Header from "../../components/Header";
 
 
 
 
 
 
-export default function Allefficiencies(){
+export default function AlloverTimes(){
     const [refreshing, setRefreshing] = useState(false);
 
     const [linevalue, setlineValue] = useState('');
@@ -58,34 +57,34 @@ export default function Allefficiencies(){
     
     
     
-   const efficienciesCtx= useContext(EfficienciesContext);
+   const overTimesCtx= useContext(OverTimesContext);
    function searchHnadler(){  
         setSearch(!search)
    }
   
    
    useEffect(() =>{                                      //updated
-        async  function getAEfficiencies(){
-            const efficiencies=  await fetchLineEfficiencies(linevalue,date); 
+        async  function getAOverTimes(){
+            const overTimes=  await fetchLineOverTimes(linevalue,date); 
             setIsfetching(false);
             setRefreshing(false);
-            efficienciesCtx.setEfficiency(efficiencies);
+            overTimesCtx.setOverTime(overTimes);
         }
 
-        getAEfficiencies();
+        getAOverTimes();
         
     },[search,refreshing]);
 
     //  useFocusEffect(
     //     React.useCallback(() => {                                        //updated
-    //         async  function getAEfficiencies(){
-    //             const efficiencies=  await fetchLineEfficiencies(linevalue,date); 
+    //         async  function getAOverTimes(){
+    //             const overTimes=  await fetchLineOverTimes(linevalue,date); 
     //             setIsfetching(false);
     //             setRefreshing(false);
-    //             efficienciesCtx.setEfficiency(efficiencies);
+    //             overTimesCtx.setOverTime(overTimes);
     //         }
     
-    //         getAEfficiencies();
+    //         getAOverTimes();
             
     //      },[search,refreshing]));
    
@@ -93,9 +92,9 @@ export default function Allefficiencies(){
         return <Loadingspinner/>       
      }
    
-    const allEfficiencies= efficienciesCtx.efficiencies.filter((efficiency)=>{
+    const allOverTimes= overTimesCtx.overTimes.filter((overTime)=>{
        
-        return  efficiency.lineNumber===linevalue ;
+        return  overTime.lineNumber===linevalue ;
         
     });
     
@@ -109,8 +108,7 @@ return (
     <>
     
         <NightSkyBackground/>
-        <Header>
-        <View style={{flexDirection:'row'}}>
+        <View style={{flexDirection:'row', backgroundColor:GlobalStyles.colors.backgroundColor,paddingVertical:10,marginBottom:1.5}}>
             <View style={{flex:2, zIndex:10000, backgroundColor:GlobalStyles.colors.backgroundColor,borderRadius:10,borderWidth:.2,borderRightWidth:.2,marginHorizontal:'1%'}}>
                     <TextInput style={{padding:11,color:GlobalStyles.colors.textcolor}} value={linevalue} placeholder="Line:" onChangeText={onchangeHandler}/>
             </View>
@@ -126,11 +124,10 @@ return (
                     </View>
                 </TouchableOpacity> 
             </View>
-            <View style={{flex:3,justifyContent:'center'}}>
-                <Button onPress={searchHnadler}  >Search</Button>
+            <View style={{flex:3,justifyContent:'center',backgroundColor:GlobalStyles.colors.backgroundColor,paddingHorizontal:5}}>
+                <Button onPress={searchHnadler} >Search</Button>
             </View>
-        </View>
-        </Header>
-        <EfficienciesOutput  efficiencies={allEfficiencies}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
+     </View>
+        <OverTimesOutput  overTimes={allOverTimes}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
     </>
 )}
