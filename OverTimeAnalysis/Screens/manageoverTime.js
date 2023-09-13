@@ -80,7 +80,8 @@ export default function ManageOverTime({route,navigation}){
         }else{
         const id= Id;
         // console.log({...overTimeData,id:id});
-            overTimesCtx.updateOverTime(id,overTimeData)
+            //overTimesCtx.updateOverTime(id,overTimeData)
+            overTimesCtx.deleteOverTime(Id)
             overTimesCtx.addOverTime({...overTimeData,id:id});
             
         }
