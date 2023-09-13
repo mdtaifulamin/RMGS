@@ -7,50 +7,14 @@ import { useContext } from "react";
 import NightSkyBackground from "../../../components/ColoredCircle";
 const screenWidth = Dimensions.get('window').width
 const screen_height=Dimensions.get('window').height
-export default function OverTimeItem({date,lineNumber,id,buyerName,daysRun,SO,styleName,TWO_HOUR_OT,manpower,hour,production,without,due,rejection,}){
+export default function OverTimeItem({date,lineNumber,manpower, id,twoHourOT, fourHourOT, sixHourOT,Main_TNC, TNC_2,TNC_4,TNC_6,remarks}){
      const navigation=useNavigation();     
      function overTimePresshandler(){
          navigation.navigate('ManageOverTime',{
             overTimeId: id            
          });       
      }
-     
-
-     const overTimeCtx= useContext(OverTimesContext);
-     let fFilteredOverTimes=overTimeCtx.overTimes.filter(function(obj){
-        return  obj.lineNumber==lineNumber && obj.date.toLocaleDateString()==date.toLocaleDateString();
-    })
    
-    
-
-    const sFilteredOverTimes=[];
-    fFilteredOverTimes.forEach((p)=>{
-        //console.log(p)
-    const Availableminute=p.manpower* p.hour *60;
-  
-    const earnedminute=(p.production+p.without+p.rejection-p.due)*p.TWO_HOUR_OT;
-    const hour=p.hour;
-    const target10=p.target10;
-    const production=p.production+p.without-p.due+p.rejection;
-    sFilteredOverTimes.push({
-        Availableminute:Number(Availableminute),
-        earnedminute:Number(earnedminute),
-        hour:Number(hour),
-        target10:Number(target10),
-        production:Number(production),
-    })
-})
-//console.log(sFilteredOverTimes);
-const total=sFilteredOverTimes.reduce(function myFunc(total, num) {
-  return ({Availableminute: total.Availableminute + num.Availableminute,earnedminute:total.earnedminute+num.earnedminute,hour: total.hour+num.hour,target10:total.target10+num.target10,production:total.production+num.production})
-  
-})
-//console.log(total)
-
-    
-      
-     const netproduction= production+without-due+rejection;
-     //console.log('p'+total.production+' t '+(total.2/10)*total.hour)
     return(
 
         <Pressable onPress={overTimePresshandler}  style={({pressed})=> pressed && styles.pressed} >
@@ -61,69 +25,39 @@ const total=sFilteredOverTimes.reduce(function myFunc(total, num) {
                     </View>
                     <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
                         <Text style={styles.textBase}>Line: </Text>
-                        <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017}]}> {lineNumber}</Text>
-                    </View> 
-                    {/* <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
-                        <Text style={styles.textBase}>Days Run: </Text>
-                        <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017}]}> {daysRun}</Text>
-                    </View>   */}
-                    <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
-                         <Text style={styles.textBase}>T. Hour:</Text>
-                         <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017}]}> {(+total.hour).toFixed(2)} </Text>
-                    </View>
-                    <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
-                        <Text style={styles.textBase}>T. Target: </Text>
-                        <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017,color:total.production<((total.target10/10)*total.hour+2)?GlobalStyles.colors.textColor:GlobalStyles.colors.deleteButton}]}> {((total.target10/10)*total.hour).toFixed(0)}</Text>
+                        <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017}]}> {+lineNumber}</Text>
                     </View> 
                     <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
-                        <Text style={[styles.textBase]}>T. Prod.: </Text>
-                        <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017,color:total.production<((total.target10/10)*total.hour+2)?GlobalStyles.colors.textColor:GlobalStyles.colors.deleteButton}]}> {total.production}</Text>
-                    </View>                        
+                         <Text style={styles.textBase}>Manpower:</Text>
+                         <Text style={[styles.textBase,{fontWeight:'bold',fontSize:screen_height*0.017}]}> {+manpower} </Text>
+                    </View>                      
                 </View>
                 <View style={styles.productionContainer}>
+                    <Text style={{marginBottom:screen_height*0.02}}>Over Time Manpower Summary</Text>
                     <View style={{flexDirection:'row', justifyContent:'space-between'}}>  
                         <View style={styles.productionComponents}>
-                            <Text style={styles.production}>Style Name:</Text>
+                            <Text style={styles.production}>2 Hour:</Text>
                         </View>
                         <View style={styles.productionComponents}>
-                            <Text style={styles.production}>{styleName}</Text>  
+                            <Text style={styles.production}>{+twoHourOT}</Text>  
                         </View>
                     </View> 
                     <View style={{flexDirection:'row', justifyContent:'space-between'}}>  
                         <View style={styles.productionComponents}>
-                            <Text style={styles.production}>TWO_HOUR_OT:</Text>
+                            <Text style={styles.production}>4 hour:</Text>
                         </View>
                         <View style={styles.productionComponents}>
-                            <Text style={styles.production}>{TWO_HOUR_OT}</Text>  
+                            <Text style={styles.production}>{+fourHourOT}</Text>  
                         </View>
                     </View> 
                     <View style={{flexDirection:'row', justifyContent:'space-between'}}>
                         <View style={styles.productionComponents}>
-                            <Text style={styles.production}>Style Production:</Text>
+                            <Text style={styles.production}>6 Hour:</Text>
                         </View>
                         <View style={styles.productionComponents}>
-                            <Text style={styles.production}>{netproduction}</Text>  
+                            <Text style={styles.production}>{+sixHourOT}</Text>  
                         </View>
                     </View>  
-                    
-                    <View style={{flexDirection:'row', justifyContent:'space-between'}}>
-                        <View style={styles.productionComponents}>
-                            <Text style={styles.production}>Days Run: </Text>
-                        </View>
-                        <View style={styles.productionComponents}>
-                            <Text style={styles.production}> {daysRun}</Text> 
-                        </View>
-                        
-                    </View>
-                    <View style={{flexDirection:'row', justifyContent:'space-between'}}>
-                        <View style={styles.productionComponents}>
-                         <Text style={styles.production}>Line OverTime:</Text>
-                        </View>
-                        <View style={styles.productionComponents}>
-                         <Text style={styles.production}>{((total.earnedminute/total.Availableminute)*100).toFixed(2)} % </Text>  
-                        </View>
-                        
-                    </View>
                 </View>
             </View>
         </Pressable>        

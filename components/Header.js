@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         overflow: 'hidden',
         elevation:20,
-        marginBottom:'10%'
+        //marginBottom:'10%'
       },
       headerOverlay: {
         position: 'absolute',

@@ -1,11 +1,12 @@
 import React from 'react';
 import Stopwatch from "../StopWatch";
-import { TextInput, View,Text, StyleSheet, ScrollView ,StatusBar, Modal, FlatList, Dimensions, TouchableOpacity} from "react-native";
+import { TextInput, View,Text, StyleSheet, ScrollView ,StatusBar, Modal, FlatList, Dimensions, TouchableOpacity,} from "react-native";
 import { GlobalStyles } from "../constants/styles";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import PrimaryButton, { SeconderyButton } from "../PrimaryButtons"
 import { StoreData } from "../data-storing";
 import Header from '../components/Header';
+import UserContext from '../UserContext';
 
 
 
@@ -111,6 +112,7 @@ function Input({label,style,textInputConfig,invalid}) {
     ];
 
     //const originalData= eval(fetchProcesses());
+    const { userInfo, updateUser } = useContext(UserContext);
     const [data,setData]=useState(originalData);
     const [filterText, setFilterText] = useState('');
     const handleFilter = (text) => {
@@ -171,7 +173,8 @@ const processSubmithandler = async () => {
     applicantName:'',
     machineName:'',                    
     processTime:'',
-    rating:'100',     
+    rating:'100', 
+    assessedBy:userInfo.userName,    
   }); 
 
   function inputChangeHandler(inputIdentifier,enteredValue) {
@@ -192,6 +195,7 @@ const processSubmithandler = async () => {
     machineName:inputs.machineName,                     
     processTime:+inputs.processTime,
     rating:+inputs.rating,
+    assessedBy:userInfo.userName,
   }
   function processHandler(){
   setModalisVisible(true)
@@ -240,7 +244,7 @@ const processSubmithandler = async () => {
           </View> 
           
           <View style={styles.primaryButtonContainer}>      
-            <PrimaryButton onPress={processHandler}>Select Process</PrimaryButton>
+            <PrimaryButton onPress={processHandler} >Select Process</PrimaryButton>
             {/* <PrimaryButton onPress={rejectsHandler}>Rejects</PrimaryButton>       */}
           </View>
         </ScrollView>

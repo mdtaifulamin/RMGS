@@ -72,15 +72,17 @@ export default function ManageOverTime({route,navigation}){
         navigation.goBack();
     }
 
-    async function confirmHandler(overTimeData){
+    async function confirmHandler(overTimeData,Id){
         setIsSubmitting(true);
         if(isEditing){
             await updateOverTime(editedOverTimeId,overTimeData);
-            overTimesCtx.updateOverTime(editedOverTimeId,overTimeData);
+            overTimesCtx.updateOverTime(Id,overTimeData);
         }else{
-        const id= await storeOverTime(overTimeData);
+        const id= Id;
         // console.log({...overTimeData,id:id});
+            overTimesCtx.updateOverTime(id,overTimeData)
             overTimesCtx.addOverTime({...overTimeData,id:id});
+            
         }
         navigation.goBack();
     }

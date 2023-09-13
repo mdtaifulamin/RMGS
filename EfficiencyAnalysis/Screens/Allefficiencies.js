@@ -110,23 +110,23 @@ return (
     
         <NightSkyBackground/>
         <Header>
-        <View style={{flexDirection:'row'}}>
-            <View style={{flex:2, zIndex:10000, backgroundColor:GlobalStyles.colors.backgroundColor,borderRadius:10,borderWidth:.2,borderRightWidth:.2,marginHorizontal:'1%'}}>
+        <View style={{flexDirection:'row',marginHorizontal:'1%'}}>
+            <View style={{flex:2, zIndex:10000, borderRadius:10,borderWidth:.2,borderRightWidth:.2,marginHorizontal:'1%'}}>
                     <TextInput style={{padding:11,color:GlobalStyles.colors.textcolor}} value={linevalue} placeholder="Line:" onChangeText={onchangeHandler}/>
             </View>
-            <View style={{backgroundColor:GlobalStyles.colors.backgroundColor,flex:4,borderRadius:10,borderWidth:.2,maxHeight:'100%'}}>
+            <View style={{flex:4,borderRadius:10,borderWidth:.2,maxHeight:'100%'}}>
                 <TouchableOpacity onPress={showDatepicker} style={{alignItems:'flex-start',justifyContent:'center',alignItems:'center',flex:1,}}>
                     <View style={{flexDirection:'row',marginHorizontal:'2%',}}>
                         <View style={{ justifyContent:'center',marginRight:'3%',marginLeft:'2%'}}>
                             <Text >From Date: {date.toLocaleDateString()} </Text>
                         </View>
-                        <View style={{ justifyContent:'center', marginRight:'2%'}}>
+                        <View style={{ justifyContent:'center',}}>
                             <Fontisto name="date" size={16} color="black" />
                         </View>
                     </View>
                 </TouchableOpacity> 
             </View>
-            <View style={{flex:3,justifyContent:'center'}}>
+            <View style={{flex:3,justifyContent:'center',marginLeft:'1%'}}>
                 <Button onPress={searchHnadler}  >Search</Button>
             </View>
         </View>

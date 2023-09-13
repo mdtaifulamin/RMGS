@@ -1,5 +1,5 @@
 import React, { useEffect, useState,useContext } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions,Modal } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions,Modal, ScrollView } from 'react-native';
 import UserContext from '../UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
@@ -26,54 +26,56 @@ const IEDepartmentPage = ({ navigation }) => {
     <View style={styles.container}>
       <ColoredCirclesBackground />
       <Header title={"IE Department"}/>
-      <View style={styles.buttonRow}>
-        <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
-          <TouchableOpacity
-            style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
-            onPress={() => {if (userInfo?userInfo.efficiencyAnalysis:false) {
-              navigation.navigate('EfficiencyAnalysis')
+      <ScrollView style={{marginTop:30,flex:1}}>
+        <View style={styles.buttonRow}>
+          <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+            <TouchableOpacity
+              style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+              onPress={() => {if (userInfo?userInfo.efficiencyAnalysis:false) {
+                navigation.navigate('EfficiencyAnalysis')
+              }else setModalVisible(true);}}>
+              <Text style={[styles.buttonText, ]}>Efficiency Analysis</Text>
+            </TouchableOpacity>
+          </Animated.View>
+          <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+            <TouchableOpacity
+              style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+              onPress={() => {if (userInfo?userInfo.Overtime:false) {navigation.navigate('OverTime')
             }else setModalVisible(true);}}>
-            <Text style={[styles.buttonText, ]}>Efficiency Analysis</Text>
-          </TouchableOpacity>
-        </Animated.View>
+              <Text style={[styles.buttonText,]}>Over Time</Text>
+            </TouchableOpacity>
+          </Animated.View>
+        </View>
+        <View style={styles.buttonRow}>
+          <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+            <TouchableOpacity
+              style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+              onPress={() => {if (userInfo?userInfo.target:false) {navigation.navigate('Target')
+            }else setModalVisible(true);}}>
+              <Text style={[styles.buttonText,]}>Target</Text>
+            </TouchableOpacity>
+          </Animated.View>
+          <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+            <TouchableOpacity
+              style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+              onPress={() => {if (userInfo?userInfo.newOperatorAssessment:false) {navigation.navigate('BottomTabNavigator')
+            }else setModalVisible(true);}}>
+              <Text style={[styles.buttonText,]}>New Operator Assessment</Text>
+            </TouchableOpacity>
+          </Animated.View>
+          
+        </View>
+        <View style={styles.buttonRow}>
         <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
-          <TouchableOpacity
-            style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
-            onPress={() => {if (userInfo?userInfo.Overtime:false) {navigation.navigate('OverTime')
-          }else setModalVisible(true);}}>
-            <Text style={[styles.buttonText,]}>Over Time</Text>
-          </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+              onPress={() => {if (false) {navigation.navigate('LostTimeAnalysis')
+            }else setModalVisible(true);}}>
+              <Text style={[styles.buttonText,]}>Lost Time Analysis</Text>
+            </TouchableOpacity>
         </Animated.View>
       </View>
-      <View style={styles.buttonRow}>
-        <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
-          <TouchableOpacity
-            style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
-            onPress={() => {if (userInfo?userInfo.target:false) {navigation.navigate('Target')
-          }else setModalVisible(true);}}>
-            <Text style={[styles.buttonText,]}>Target</Text>
-          </TouchableOpacity>
-        </Animated.View>
-        <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
-          <TouchableOpacity
-            style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
-            onPress={() => {if (userInfo?userInfo.newOperatorAssessment:false) {navigation.navigate('BottomTabNavigator')
-          }else setModalVisible(true);}}>
-            <Text style={[styles.buttonText,]}>New Operator Assessment</Text>
-          </TouchableOpacity>
-        </Animated.View>
-        
-      </View>
-      <View style={styles.buttonRow}>
-      <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
-          <TouchableOpacity
-            style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
-            onPress={() => {if (false) {navigation.navigate('LostTimeAnalysis')
-          }else setModalVisible(true);}}>
-            <Text style={[styles.buttonText,]}>Lost Time Analysis</Text>
-          </TouchableOpacity>
-        </Animated.View>
-    </View>
+    </ScrollView>
      <ModalAlert modalVisible={modalVisible} onRequestClose={() => setModalVisible(false)}/>
     </View>
   );
@@ -83,6 +85,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F5F5F5',
+   
   },
   header: {
     backgroundColor: 'white',
@@ -109,6 +112,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 10,
     marginBottom: 10,
+    
   },
   buttonContainer: {
     flex: 1,

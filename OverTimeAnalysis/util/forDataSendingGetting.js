@@ -5,7 +5,6 @@ import { getFormattedDate } from "./date";
 
 export const storeOverTime=async(overTimeData,Id)=>{
   const response = await setDoc(doc(database, "overTimes", Id), overTimeData);//await addDoc(collection(database, "overTimes"), overTimeData) ; 
-  
   const id= Id;
   return id;
 }
@@ -22,17 +21,21 @@ export const fetchOverTimes = async(date,value)=>{
    docSnap.forEach((doc) => {
     //console.log(doc.data().date.toDate());
     const data= doc.data();
-     const overTimeobj= {
-      id:doc.id,
-      lineNumber: data.lineNumber?+data.lineNumber:0, 
-      manpower:data.manpower?+data.manpower:0,
+    const overTimeobj = {
+      id: doc.id,
+      lineNumber: data.lineNumber ? +data.lineNumber : 0,
       date: data.date.toDate(),
-      twoHourOT: data.twoHourOT?+data.twoHourOT:0,
-      fourHourOT:  +data.fourHourOT,
-      sixHourOT: +data.sixHourOT? +data.sixHourOT:' ',
-      TNC:       +(+data.TNC)?+(+data.TNC):'',
-      remarks: data.remarks?data.remarks:' '
-      };
+      manpower: data.manpower ? +data.manpower : 0,
+      twoHourOT: data.twoHourOT ? +data.twoHourOT : 0,
+      fourHourOT: data.fourHourOT ? +data.fourHourOT : 0,
+      sixHourOT: data.sixHourOT ? +data.sixHourOT : 0,
+      Main_TNC: data.Main_TNC ? +data.Main_TNC : 0,
+      TNC_2: data.TNC_2 ? +data.TNC_2 : 0,
+      TNC_4: data.TNC_4 ? +data.TNC_4 : 0,
+      TNC_6: data.TNC_6 ? +data.TNC_6 : 0,
+      remarks: data.remarks ? data.remarks : ' ',
+    };
+    
     overTimes.push(overTimeobj)
     
        })
@@ -102,14 +105,18 @@ export const fetchHours = async()=>{
    docSnap.forEach((doc) => {
     const data= doc.data();
      const overTimeobj= {
-      id:doc.id,
-      lineNumber: data.lineNumber?+data.lineNumber:'', 
+      id: doc.id,
+      lineNumber: data.lineNumber ? +data.lineNumber : 0,
       date: data.date.toDate(),
-      twoHourOT:       +data.twoHourOT,
-      fourHourOT:  +data.fourHourOT,
-      sixHourOT: +data.sixHourOT? +data.sixHourOT:' ',
-      TNC:       +(+data.TNC)?+(+data.TNC):'',
-      remarks: data.remarks?data.remarks:' '
+      manpower: data.manpower ? +data.manpower : 0,
+      twoHourOT: data.twoHourOT ? +data.twoHourOT : 0,
+      fourHourOT: data.fourHourOT ? +data.fourHourOT : 0,
+      sixHourOT: data.sixHourOT ? +data.sixHourOT : 0,
+      Main_TNC: data.Main_TNC ? +data.Main_TNC : 0,
+      TNC_2: data.TNC_2 ? +data.TNC_2 : 0,
+      TNC_4: data.TNC_4 ? +data.TNC_4 : 0,
+      TNC_6: data.TNC_6 ? +data.TNC_6 : 0,
+      remarks: data.remarks ? data.remarks : ' ',
      };
     overTimes.push(overTimeobj)
    

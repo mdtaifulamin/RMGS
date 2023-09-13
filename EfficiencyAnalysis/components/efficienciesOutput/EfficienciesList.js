@@ -38,7 +38,7 @@ import EfficiencyItem from "./Efficiencyitem";
 
 const screenWidth = Dimensions.get('window').width
 const screen_height=Dimensions.get('window').height
-const cardHeight = screen_height*0.15;
+const cardHeight = screen_height*0.19;
 const padding = screen_height*0.008;
 const offset = cardHeight + padding;
 export default function EfficienciesList({ efficiencies, refreshing, onRefresh,onLongPress}) {

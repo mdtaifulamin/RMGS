@@ -107,7 +107,7 @@ export default function Recentefficiencies(){
           is24Hour: true,
           
         });
-        console.log(ConChange+'t')
+        //console.log(ConChange+'t')
         };
     
         const cshowDatepicker = () => {
@@ -128,9 +128,11 @@ export default function Recentefficiencies(){
             const efficiencies=  await fetchEfficiencies(date,value);
             setIsfetching(false);
             setRefreshing(false);
+            efficienciesCtx.setEfficiency([])
             efficienciesCtx.setEfficiency(efficiencies);   
         }
         getEfficiencies();
+        console.log(value)
      },[value,date,refreshing])
     //  const efficienciesCtx= useContext(EfficienciesContext);  
     //  useFocusEffect(
@@ -189,17 +191,6 @@ export default function Recentefficiencies(){
         showToast()
         handleCloseModal()
     }
-
-// const createTwoButtonAlert = () =>
-// Alert.alert('Data Copy for Next Day', 'Are You Sure, You want to copy data to '+ momentTime( new Date( )) +'  ?', [
-//     {
-//         text: 'Cancel',
-//         onPress: () => console.log('Cancel Pressed'),
-//         style: 'cancel',
-//     },
-//     { text: 'Copy', onPress:() =>  copyHandler() },
-// ]);
-
 const handleOpenModal = () => {
     setModalVisible(true);
   };
@@ -208,12 +199,11 @@ const handleOpenModal = () => {
     setModalVisible(false);
   };
 return (
-    
+
     <View style={{ flex: 1 }}>
-        <NightSkyBackground/>
        <Header>
-            <View style={{flexDirection:'row'}}>
-                <View style={{ backgroundColor:GlobalStyles.colors.backgroundColor,marginHorizontal:screenWidth*0.02,justifyContent:'center',alignItems:'center'}}>
+            <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center',height:screen_height/15}}>
+                <View style={{ }}>
                     <DropDownPicker
                         listMode="MODAL"
                         open={open}
@@ -222,12 +212,12 @@ return (
                         setOpen={setOpen}
                         setValue={setValue}
                         setItems={setItems}
-                        style={{height:screen_height*0.06,width:screenWidth*0.3,borderWidth:0,elevation:2}}
+                        style={{height:screen_height/15,width:screenWidth/10*2.5,marginLeft:screenWidth/30,elevation:2,borderWidth:0}}
                         placeholder="Block "
                         
                     />
                 </View>
-                    <TouchableOpacity onPress={showDatepicker}  style={{height:screen_height*0.06,elevation:2,backgroundColor:GlobalStyles.colors.backgroundColor,borderRadius:10,flexDirection:"row",justifyContent:'center',alignItems:'center',marginHorizontal:screenWidth*0.03}}>
+                    <TouchableOpacity onPress={showDatepicker}  style={{height:screen_height/15,elevation:2,backgroundColor:GlobalStyles.colors.backgroundColor,borderRadius:10,flexDirection:"row",justifyContent:'center',alignItems:'center',marginHorizontal:screenWidth*0.02}}>
                         <View style={{ justifyContent:'center',marginRight:screenWidth*0.04}}>
                             <Text style={{fontSize:13}}>Date: {getFormattedDate(date)} </Text>
                         </View>
@@ -235,12 +225,13 @@ return (
                             <Fontisto name="date" size={16} color="black" />
                         </View>
                     </TouchableOpacity> 
-                <View style={{marginRight:screenWidth*0.01,minHeight:42,justifyContent:'center',alignItems:'center',alignContent:'center',flexWrap:'wrap',}}>
+                <View style={{marginRight:screenWidth/30,minHeight:42,justifyContent:'center',alignItems:'center',alignContent:'center',flexWrap:'wrap',}}>
                     <ButtonM onPress={handleOpenModal} >Batch Copy</ButtonM>
                 </View>
             </View>
        </Header>
-            <View style={styles.container}>
+    
+            <View >
                 <Modal
                     visible={modalVisible}
                     animationType="slide"
@@ -271,8 +262,8 @@ return (
                     </View>
                 </Modal>
             </View>
-       
-        <View style={{flex:10}}>
+
+        <View style={{flex:10,}}>
             <EfficienciesOutput efficiencies={recentEfficiencies}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
         </View>    
     </View>

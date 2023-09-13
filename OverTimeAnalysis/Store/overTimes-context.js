@@ -2,10 +2,10 @@ import { createContext, useReducer } from "react";
 
 export const OverTimesContext = createContext({
     overTimes: [],
-    addOverTime: ({date,lineNumber,id,buyerName,daysRun,SO,styleName,itemName,TWO_HOUR_OT,manpower,hour,target10,production,without,due,rejection,remarks}) => {},
+    addOverTime: ({date,lineNumber,manpower, id,twoHourOT, fourHourOT, sixHourOT,Main_TNC, TNC_2,TNC_4,TNC_6,remarks}) => {},
     setOverTime: (overTimes) => {},
     deleteOverTime: (id) => {},
-    updateOverTime: (id,{date,lineNumber,buyerName,daysRun,SO,styleName,itemName,TWO_HOUR_OT,manpower,hour,target10,production,without,due,rejection,remarks}) => {},})
+    updateOverTime: (id,{date,lineNumber,manpower, twoHourOT, fourHourOT, sixHourOT,Main_TNC, TNC_2,TNC_4,TNC_6,remarks}) => {},})
 
 function overTimesReducer(state,action){
     switch (action.type) {

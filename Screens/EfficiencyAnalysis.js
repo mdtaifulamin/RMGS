@@ -26,9 +26,9 @@ const EfficiencyOverview = () =>{
           headerTintColor:GlobalStyles.colors.textcolor,
           tabBarStyle:{
             height: screenHeight * 0.06,
-            // marginHorizontal: screenWidth * 0.03,
-            // marginBottom: screenHeight * 0.01,
-            borderRadius: 10,
+            marginHorizontal: screenWidth * 0.03,
+            marginBottom: screenHeight * 0.01,
+            borderRadius: 20,
             elevation: 50,
             backgroundColor: GlobalStyles.colors.tabBarActiveColor,
             position: 'absolute',
