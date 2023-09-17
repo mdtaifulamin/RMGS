@@ -6,7 +6,7 @@ const NightSkyBackground = () => {
   const circleColors = ['#0B3D91', '#1E3799', '#292B2C', '#4A235A', '#17202A'];
 
   const animatedValues = useRef([]);
-  const animationDuration = 3000;
+  const animationDuration = 30000;
 
   useEffect(() => {
     circleColors.forEach((_, index) => {
@@ -43,7 +43,7 @@ const NightSkyBackground = () => {
             cy={Math.random() * 15}
             r={Math.random() * 100}
             fill={color}
-            opacity={animatedValues.current[index]}
+            opacity={0.5}
           />
         ))}
       </Svg>

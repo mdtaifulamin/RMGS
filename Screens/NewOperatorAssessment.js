@@ -6,7 +6,7 @@ import { useEffect, useState,useContext } from "react";
 import PrimaryButton, { SeconderyButton } from "../PrimaryButtons"
 import { StoreData } from "../data-storing";
 import Header from '../components/Header';
-import UserContext from '../UserContext';
+import UserContext from '../components/Store/UserContext';
 
 
 

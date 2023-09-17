@@ -5,7 +5,7 @@ import { useTheme } from '../ThemeContext'; // Import useTheme hook
 import { darkTheme, lightTheme } from '../theme';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { fetchUserInfo } from '../forDataSendingGetting';
-import UserContext from '../UserContext'; 
+import UserContext from '../components/Store/UserContext'; 
 
 const LoginScreen = ({ navigation }) => {
   const { userInfo, updateUser } = useContext(UserContext);
@@ -51,10 +51,10 @@ const LoginScreen = ({ navigation }) => {
   } else {
     setLoginStatus('Invalid username or password');
   }
-};
-const handleSignUp =()=>{
-  navigation.navigate('SignUp')
-}
+  };
+  const handleSignUp =()=>{
+    navigation.navigate('SignUp')
+  }
 
   return (
     <View  style={[styles.container,{backgroundColor:themeStyles.backgroundColor}]}>

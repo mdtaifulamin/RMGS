@@ -1,4 +1,3 @@
-
 import { useContext, useLayoutEffect, useState } from "react";
 import { Text, View ,StyleSheet, ScrollView,Modal,TouchableOpacity, Dimensions} from "react-native"
 import EfficiencyForm from "../components/ManageEfficiency/EfficiencyForm";
@@ -124,7 +123,7 @@ export default function ManageEfficiency({route,navigation}){
      }
 
     return (
-        <ScrollView style={{flex:1,backgroundColor:GlobalStyles.colors.backgroundColor,}}>
+        <ScrollView style={{flex:1,backgroundColor:GlobalStyles.colors.manageProductionInformationBackground,}}>
         <View style={styles.container}>
        
         <View>
@@ -188,7 +187,7 @@ const styles= StyleSheet.create({
     container:{
         flex:1,
         padding:'5%',
-        backgroundColor:GlobalStyles.colors.backgroundColor,
+        backgroundColor:GlobalStyles.colors.manageProductionInformationBackground,
         justifyContent:'center',
         
 

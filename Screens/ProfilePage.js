@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { View, Text, Button } from 'react-native';
-import UserContext from '../UserContext'; // Import UserContext
+import UserContext from '../components/Store/UserContext'; // Import UserContext
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const ProfileScreen = ({navigation}) => {

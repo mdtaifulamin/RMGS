@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView, Dimensions, Animated, Easing, Modal } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import UserContext from '../UserContext';
+import UserContext from '../components/Store/UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
 import { ModalAlert } from '../components/AlertModal';

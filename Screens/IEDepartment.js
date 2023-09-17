@@ -1,6 +1,6 @@
 import React, { useEffect, useState,useContext } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions,Modal, ScrollView } from 'react-native';
-import UserContext from '../UserContext';
+import UserContext from '../components/Store/UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
 import { ModalAlert } from '../components/AlertModal';

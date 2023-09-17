@@ -31,12 +31,13 @@ const styles = StyleSheet.create({
     label:{
         fontSize:12,
         color:GlobalStyles.colors.textcolor,
-        marginBottom: 4
+        marginBottom: 4,
+        //backgroundColor:'gray'
     },
     input:{
-        backgroundColor:GlobalStyles.colors.backgroundColor,
+        backgroundColor:GlobalStyles.colors.textInputBackground,
         padding:11,
-        borderRadius:18,
+        borderRadius:10,
         fontSize:18,
         color:GlobalStyles.colors.textcolor,
         elevation:5,

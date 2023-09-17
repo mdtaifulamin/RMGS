@@ -13,12 +13,12 @@ export const GlobalStyles={
             gray500: '#39324a',
             gray700: '#221c30',
             backgroundColor:'white',
-            manageProductionInformationBackground:'white',
+            manageProductionInformationBackground:"#F7F7F7",
             headerColor:'rgba(255,255,255,1)',//'#edf6f9'
             text_border_button:"#008921",
             button1:"#008921",
             buttonTextColor:"white",
-            inputBox:"White",
+            inputBox:"#F7F7F7",
             deleteButton:"#760000",
             titleBackground:'white',
             titleText:"black",
@@ -28,6 +28,7 @@ export const GlobalStyles={
             inputBackgroundColor:'#FFFF',
             cardBackground1:'rgba(255, 255, 255, 0.7)',
             cardBackground2:'rgba(255, 255, 255, 0.9)',
-            tabBarActiveColor:'white'
+            tabBarActiveColor:'white',
+            textInputBackground:"#F7F7F7",
     }
 }

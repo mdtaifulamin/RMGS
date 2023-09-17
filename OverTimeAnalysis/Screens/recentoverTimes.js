@@ -13,7 +13,7 @@ import ButtonM from "../util/Button";
 import { convertOrdinalToNumber, getOrdinalIndicator } from "../util/ordinalTonumberToordinal";
 import NightSkyBackground from "../../components/ColoredCircle";
 import Header from "../../components/Header";
-import UserContext from "../../UserContext";
+import UserContext from "../../components/Store/UserContext";
 import { convertRangeStringToArrayOfArrays } from "../../components/convertStringToarray";
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet } from 'react-native';
-import { UserProvider } from './UserContext';
+import { UserProvider } from './components/Store/UserContext';
 import { ThemeProvider } from './ThemeContext';
 import LoginScreen from './Screens/LoginPage';
 import HomeScreen from './Screens/HomePage';
@@ -21,12 +21,14 @@ import OverTimePage from './Screens/OverTime';
 import NewOperatorAssessmentPage from './Screens/NewOperatorAssessment';
 import BottomTabNavigator from './components/BottomTabNavigator';
 import LostTimeAnalysisPage from './Screens/LostTimeAnalysis';
+import { OTProvider } from './components/Store/OTcontext';
 
 const Stack = createStackNavigator();
 
 function App(){
   return (
     <ThemeProvider>
+      <OTProvider>
       <UserProvider>
         <NavigationContainer>
           <Stack.Navigator
@@ -56,6 +58,7 @@ function App(){
           </Stack.Navigator>
         </NavigationContainer>
       </UserProvider>
+      </OTProvider>
     </ThemeProvider>
   );
 };

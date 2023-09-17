@@ -13,7 +13,9 @@ import ButtonM from "../util/Button";
 import { convertOrdinalToNumber, getOrdinalIndicator } from "../util/ordinalTonumberToordinal";
 import NightSkyBackground from "../../components/ColoredCircle";
 import Header from "../../components/Header";
-
+import { fetchOverTimes } from "../../OverTimeAnalysis/util/forDataSendingGetting";
+import OTContext from "../../components/Store/OTcontext";
+import UserContext from "../../components/Store/UserContext";
 
 const blockWiseLine = [
     [1,2,3,4,5,6],
@@ -56,7 +58,8 @@ const checkNumberInArray = (number, array) => {
     const screenWidth = Dimensions.get('window').width
     const screen_height=Dimensions.get('window').height
 export default function Recentefficiencies(){
-    
+    const {OTInfo, setOTInfo}=useContext(OTContext);
+    // const { userInfo, updateUser } = useContext(UserContext);
     const [modalVisible, setModalVisible] = useState(false);
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState( null); //updated 31/3/2023
@@ -125,6 +128,9 @@ export default function Recentefficiencies(){
    const efficienciesCtx= useContext(EfficienciesContext);
    useEffect(() =>{                                        //updated
         async  function getEfficiencies(){
+            const ot= await fetchOverTimes(date,value);
+            setOTInfo(ot)
+            console.log(ot);
             const efficiencies=  await fetchEfficiencies(date,value);
             setIsfetching(false);
             setRefreshing(false);
