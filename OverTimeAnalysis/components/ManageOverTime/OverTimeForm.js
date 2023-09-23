@@ -62,8 +62,8 @@ export default function SpreadsheetForm({defaultValues,navigation,onSubmit}) {
     for (const lineKey in inputData) {
       const lineData = inputData[lineKey];
       today= getFormattedDate(new Date())
-      dataToSubmit[lineKey] = { ...lineData, 'date':new Date(today),'lineNumber': lineKey.replace('Line_', '') };
-      id= today + lineKey
+      dataToSubmit[lineKey] = { ...lineData, 'date': defaultValues?defaultValues.date:new Date(today),'lineNumber': lineKey.replace('Line_', '') };
+      id= defaultValues?getFormattedDate(defaultValues.date)+lineKey:today + lineKey
       if (dataToSubmit[lineKey].manpower>0) {
         storeOverTime(dataToSubmit[lineKey],id);
         onSubmit(dataToSubmit[lineKey],id)

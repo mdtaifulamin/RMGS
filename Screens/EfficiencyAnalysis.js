@@ -12,6 +12,7 @@ import {  Ionicons } from "@expo/vector-icons";
 import IconButton from '../EfficiencyAnalysis/components/UI/iconButton';
 import EfficienciesContextProvider from '../EfficiencyAnalysis/Store/efficiencies-context';
 import IEDepartmentPage from './IEDepartment';
+import DownloadEfficiencies from '../EfficiencyAnalysis/Screens/DownloadEfficiencies';
 
 const Stack= createNativeStackNavigator();
 const Bottomtabs= createBottomTabNavigator();
@@ -51,6 +52,17 @@ const EfficiencyOverview = () =>{
               
               <Bottomtabs.Screen 
               name='All Efficiencies'  
+              component={Allefficiencies} 
+              options={{
+                title:'LINEWISE EFFICIENCY',
+                tabBarShowLabel: false,
+                tabBarIcon:({color,size})=>(
+                  <Ionicons name='calendar' size={size} color={color}/>
+                ),
+              }}/>
+
+              <Bottomtabs.Screen 
+              name='Download Efficiencies'  
               component={Allefficiencies} 
               options={{
                 title:'LINEWISE EFFICIENCY',

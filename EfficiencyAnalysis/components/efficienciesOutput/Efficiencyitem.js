@@ -7,7 +7,7 @@ import { useContext } from "react";
 import NightSkyBackground from "../../../components/ColoredCircle";
 const screenWidth = Dimensions.get('window').width
 const screen_height=Dimensions.get('window').height
-export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,styleName,SMV,manpower,hour,production,without,due,rejection,}){
+export default function EfficiencyItem({date,lineNumber,id,buyerName,hourTNC,hourMinusTNC,daysRun,SO,styleName,SMV,manpower,hour,production,without,due,rejection,}){
      const navigation=useNavigation();     
      function efficiencyPresshandler(){
          navigation.navigate('ManageEfficiency',{
@@ -22,14 +22,15 @@ export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,
     })
    
     
-
+    //console.log(hourMinusTNC)
     const sFilteredEfficiencies=[];
     fFilteredEfficiencies.forEach((p)=>{
         //console.log(p)
     const Availableminute=p.manpower* p.hour *60;
   
     const earnedminute=(p.production+p.without+p.rejection-p.due)*p.SMV;
-    const hour=p.hour;
+    const hour=p.hour/10*p.hourTNC;
+    const hourMinusTNC=p.hourMinusTNC;
     const target10=p.target10;
     const production=p.production+p.without-p.due+p.rejection;
     const totalWithout=p.without;
@@ -38,6 +39,7 @@ export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,
         Availableminute:Number(Availableminute),
         earnedminute:Number(earnedminute),
         hour:Number(hour),
+        hourMinusTNC:Number(hourMinusTNC),
         target10:Number(target10),
         production:Number(production),
         totalWithout:Number(totalWithout),
@@ -46,7 +48,7 @@ export default function EfficiencyItem({date,lineNumber,id,buyerName,daysRun,SO,
 })
 //console.log(sFilteredEfficiencies);
 const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
-  return ({Availableminute: total.Availableminute + num.Availableminute,earnedminute:total.earnedminute+num.earnedminute,hour: total.hour+num.hour,target10:total.target10+num.target10,production:total.production+num.production,totalWithout:total.totalWithout+num.totalWithout,totalDue:total.totalDue+num.totalDue})
+  return ({Availableminute: total.Availableminute + num.Availableminute,earnedminute:total.earnedminute+num.earnedminute,hour: total.hour+num.hour,target10:total.target10+num.target10,production:total.production+num.production,totalWithout:total.totalWithout+num.totalWithout,totalDue:total.totalDue+num.totalDue+num.totalWithout,hourMinusTNC:total.hourMinusTNC+num.hourMinusTNC})
   
 })
 //console.log(total)
@@ -73,11 +75,11 @@ const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
                     </View>   */}
                     <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
                          <Text style={styles.textBase}>T. Hour:</Text>
-                         <Text style={[styles.textBase,{fontWeight:'bold'}]}> {(+total.hour).toFixed(2)} </Text>
+                         <Text style={[styles.textBase,{fontWeight:'bold',color:((+total.hour/hourTNC)==1)?GlobalStyles.colors.textcolor:GlobalStyles.colors.deleteButton}]}> {(+total.hour).toFixed(2)} </Text>
                     </View>
                     <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
                         <Text style={styles.textBase}>T. Target: </Text>
-                        <Text style={[styles.textBase,{fontWeight:'bold',color:total.production<((total.target10/10)*total.hour+2)?GlobalStyles.colors.textcolor:GlobalStyles.colors.deleteButton}]}> {((total.target10/10)*total.hour).toFixed(0)}</Text>
+                        <Text style={[styles.textBase,{fontWeight:'bold',color:total.production<((total.target10/10)*total.hourMinusTNC+2)?GlobalStyles.colors.textcolor:GlobalStyles.colors.deleteButton}]}> {((total.target10/10)*total.hourMinusTNC).toFixed(0)} </Text>
                     </View> 
                     <View style={{flexDirection:"row",marginTop:screen_height*0.001,paddingVertical:1}}> 
                         <Text style={[styles.textBase]}>T. Prod.: </Text>

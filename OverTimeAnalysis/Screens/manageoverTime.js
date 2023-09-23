@@ -75,8 +75,10 @@ export default function ManageOverTime({route,navigation}){
     async function confirmHandler(overTimeData,Id){
         setIsSubmitting(true);
         if(isEditing){
+            const id= Id;
             await updateOverTime(editedOverTimeId,overTimeData);
-            overTimesCtx.updateOverTime(Id,overTimeData);
+            //overTimesCtx.deleteOverTime(id)
+            overTimesCtx.updateOverTime(id,overTimeData);
         }else{
         const id= Id;
         // console.log({...overTimeData,id:id});

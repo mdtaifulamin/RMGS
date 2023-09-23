@@ -32,6 +32,8 @@ export const fetchEfficiencies = async(date,value)=>{
       SMV:       +data.SMV,
       manpower:  +data.manpower,
       target10: data.target10? data.target10:' ',
+      hourMinusTNC:data.hourMinusTNC?data.hourMinusTNC:' ',
+      hourTNC:data.hourTNC?data.hourTNC:' ',
       hour:       +(+data.hour).toFixed(6),
       production: +data.production,
       without:     +data.without,

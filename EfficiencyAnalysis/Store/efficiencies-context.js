@@ -2,10 +2,10 @@ import { createContext, useReducer } from "react";
 
 export const EfficienciesContext = createContext({
     efficiencies: [],
-    addEfficiency: ({date,lineNumber,id,buyerName,daysRun,SO,styleName,itemName,SMV,manpower,hour,target10,production,without,due,rejection,remarks}) => {},
+    addEfficiency: ({date,lineNumber,id,buyerName,daysRun,SO,styleName,itemName,SMV,manpower,hourTNC,hourMinusTNC,target10,production,without,due,rejection,remarks}) => {},
     setEfficiency: (efficiencies) => {},
     deleteEfficiency: (id) => {},
-    updateEfficiency: (id,{date,lineNumber,buyerName,daysRun,SO,styleName,itemName,SMV,manpower,hour,target10,production,without,due,rejection,remarks}) => {},})
+    updateEfficiency: (id,{date,lineNumber,buyerName,daysRun,SO,styleName,itemName,SMV,manpower,hour,hourTNC,hourMinusTNC,target10,production,without,due,rejection,remarks}) => {},})
 
 function efficienciesReducer(state,action){
     switch (action.type) {

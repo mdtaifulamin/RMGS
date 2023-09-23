@@ -129,6 +129,7 @@ const checkNumberInArray = (number, array) => {
             const overTimes=  await fetchOverTimes(date,value);
             setIsfetching(false);
             setRefreshing(false);
+            console.log(overTimes)
             overTimesCtx.setOverTime(overTimes);   
         }
         getOverTimes();

@@ -88,6 +88,8 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
       manpower: +inputs.manpower.value,
       target10: +inputs.target10.value,
       hour: +(!isNaN(inputs.hour.value) ? (+inputs.hour.value).toFixed(6) : +checkevalerror(inputs.hour.value)),
+      hourTNC:+(!isNaN(inputs.hourTNC.value) ? (+inputs.hourTNC.value).toFixed(6) : +checkevalerror(inputs.hourTNC.value)),
+      hourMinusTNC:+(!isNaN(inputs.hourMinusTNC.value) ? (+inputs.hourMinusTNC.value).toFixed(6) : +checkevalerror(inputs.hourMinusTNC.value)),
       production: +(!isNaN(inputs.production.value) ? +inputs.production.value : +checkevalerror(inputs.production.value)),
       without: +(!isNaN(inputs.without.value) ? +inputs.without.value : +checkevalerror(inputs.without.value)),
       due: +(!isNaN(inputs.due.value) ? +inputs.due.value : +checkevalerror(inputs.due.value)),
@@ -126,6 +128,8 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
           manpower: { value: curInputs.manpower.value, isValid: manpowerIsvalid },
           target10: { value: curInputs.target10.value, isValid: target10Isvalid },
           hour: { value: (+curInputs.hour.value).toFixed(6), isValid: hourIsvalid },
+          hourTNC:{value:(+curInputs.hourTNC.value).toFixed(6),isValid:true},
+          hourMinusTNC:{value:(+curInputs.hourMinusTNC.value).toFixed(6),isValid:true},
           production: { value: curInputs.production.value, isValid: productionIsvalid },
           without: { value: curInputs.without.value, isValid: withoutsvalid },
           due: { value: curInputs.due.value, isValid: dueIsvalid },
@@ -192,17 +196,48 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
       try {
         const hours = await fetchHours();
         sethourss(hours);
-
         if (inputs.lineNumber.value) {
           const lineNumber = +inputs.lineNumber.value;
-          const manpowerValue = otInfo.find(item => { return item.lineNumber === lineNumber && getFormattedDate(item.date) == inputs.date.value })?.manpower?.toString();
-          setInputs(prevInputs => ({
-            ...prevInputs,
-            manpower: {
-              value: manpowerValue,
-              isValid: true
-            }
-          }));
+          const otInfoItem = otInfo.find(item => item.lineNumber === lineNumber && getFormattedDate(item.date) === inputs.date.value);
+
+          if (otInfoItem) {
+            const {
+              Main_TNC,
+              TNC_2,
+              TNC_4,
+              TNC_6,
+              fourHourOT,
+              lineNumber,
+              manpower,
+              remarks,
+              sixHourOT,
+              twoHourOT
+          } = otInfoItem;
+          
+            
+            setInputs(prevInputs => ({
+              ...prevInputs,
+              manpower: {
+                value: manpower.toString(),
+                isValid: true
+              },
+              hourTNC:{
+                value:manpower?(8+(Number(twoHourOT)/Number(manpower)*2)+(Number(fourHourOT)/Number(manpower)*1.75)+(Number(sixHourOT)/Number(manpower)*2)).toString():"0",
+                isValid:true
+              },
+              hourMinusTNC:{
+                value:manpower?(8+(Number(twoHourOT-TNC_2)/Number(manpower-Main_TNC)*2)+(Number(fourHourOT-TNC_4)/Number(manpower-Main_TNC)*1.75)+(Number(sixHourOT-TNC_6)/Number(manpower-Main_TNC)*2)).toString():"0",
+                isValid:true
+              },
+  
+            }));
+            console.log(otInfo)
+            // Now you have the values of manpower and TNC_Main from otInfoItem
+          } else {
+            // Handle the case where no matching item was found in otInfo
+          }
+          
+          
         }
 
         const buyername = await fetchBuyer();
@@ -377,7 +412,7 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
           <Input
             style={styles.rowInput}
             invalid={!inputs.hour.isValid}
-            label={"Hour:  " + evalCalculation(inputs.hour.value)} textInputConfig={{
+            label={"Style Hour:  "+ (evalCalculation(inputs.hour.value)*(+inputs.hourTNC.value)/10).toFixed(2)+'   Total Hour: '+(+inputs.hourTNC.value).toFixed(2) } textInputConfig={{
               keyboardType: 'phone-pad',
               maxLentgh: 10,
               onChangeText: inputChangeHandler.bind(this, 'hour'),
