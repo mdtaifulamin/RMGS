@@ -8,7 +8,7 @@ import ManageOverTime from '../OverTimeAnalysis/Screens/manageoverTime'
 import RecentoverTimes from '../OverTimeAnalysis/Screens/recentoverTimes';
 import AlloverTimes from '../OverTimeAnalysis/Screens/AlloverTimes';
 import { GlobalStyles } from '../constants/styles';
-import {  Ionicons } from "@expo/vector-icons";
+import {  Ionicons,Entypo } from "@expo/vector-icons";
 import IconButton from '../OverTimeAnalysis/components/UI/iconButton';
 import OverTimesContextProvider from '../OverTimeAnalysis/Store/overTimes-context';
 
@@ -56,7 +56,7 @@ const OverTimeOverview = () =>{
                 title:'LINEWISE OVER_TIME',
                 tabBarShowLabel: false,
                 tabBarIcon:({color,size})=>(
-                  <Ionicons name='calendar' size={size} color={color}/>
+                  <Entypo name='download' size={size} color={color}/>
                 ),
               }}/>
         </Bottomtabs.Navigator>

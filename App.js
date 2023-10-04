@@ -22,17 +22,47 @@ import NewOperatorAssessmentPage from './Screens/NewOperatorAssessment';
 import BottomTabNavigator from './components/BottomTabNavigator';
 import LostTimeAnalysisPage from './Screens/LostTimeAnalysis';
 import { OTProvider } from './components/Store/OTcontext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useState ,useEffect,useContext} from 'react';
+import Loadingspinner from './EfficiencyAnalysis/components/UI/loading';
+import UserContext from './components/Store/UserContext';
 
 const Stack = createStackNavigator();
 
-function App(){
+export function Root(){
+ const [login,setLogin]=useState(false)
+ const [loading, setLoading] = useState(true);
+ const { userInfo, updateUser } = useContext(UserContext);
+  useEffect(() => {
+    AsyncStorage.getItem('userInfo')
+     .then(userInfoString => {
+       if (userInfoString) {
+         const storedUserInfo = JSON.parse(userInfoString);
+         setLogin(storedUserInfo.login);
+         // Update your context or state with storedUserInfo
+         //console.log(storedUserInfo.ID)
+         //console.log(login +"t")
+         updateUser(storedUserInfo)
+         setLoading(false);
+         
+       }
+     })
+     .catch(error => console.log('Error loading user info:', error));
+   
+   
+  }, [])
+  const route=login===true?"Home":'Login'
+  //console.log(JSON.stringify(userInfo)+route + login)
+  if (loading) {
+    // If still loading, show LoadingScreen
+    return <Loadingspinner/>;
+  }
   return (
     <ThemeProvider>
       <OTProvider>
-      <UserProvider>
         <NavigationContainer>
           <Stack.Navigator
-            initialRouteName="Login"
+            initialRouteName={route}
             screenOptions={{
               headerStyle: styles.header,
               headerTitleStyle: styles.headerTitle,
@@ -42,7 +72,7 @@ function App(){
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="SignUp" component={SignupPage} />
             <Stack.Screen name="SignupWaiting" component={SignupWaitingPage} />
-            <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'log in', headerRight: () => null }} />
+            <Stack.Screen name="Home" component={HomeScreen} options={{  headerRight: () => null }} />
             <Stack.Screen name="Profile" component={ProfileScreen} options={{ title: 'Your Profile' }} />
             <Stack.Screen name="AdminPage" component={AdminScreen} options={{ title: 'Home' , headerShown:false}} />
             <Stack.Screen name="IEDepartment" component={IEDepartmentPage} options={{ title: 'Home'  }} />
@@ -57,11 +87,20 @@ function App(){
             <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} options={{ title: 'IE' }} />
           </Stack.Navigator>
         </NavigationContainer>
-      </UserProvider>
       </OTProvider>
     </ThemeProvider>
   );
 };
+
+export default function App(){
+  return (
+    <UserProvider>
+      <Root/>
+    </UserProvider>
+  )
+    
+  
+}
 
 const styles = StyleSheet.create({
   header: {
@@ -76,7 +115,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+//export default App;
 
 
 

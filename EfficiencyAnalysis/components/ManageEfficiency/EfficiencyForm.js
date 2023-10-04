@@ -11,15 +11,28 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import Loadingspinner from "../UI/loading";
 import { evalCalculation } from "../../util/ordinalTonumberToordinal";
 import OTContext from "../../../components/Store/OTcontext";
+import UserContext from "../../../components/Store/UserContext";
+import { convertRangeStringToArrayOfArrays } from "../../../components/convertStringToarray";
 
 export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultValues, testp }) {
+  const { userInfo, updateUser } = useContext(UserContext);
   const { otInfo, setOTInfo } = useContext(OTContext);
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState([{ label: "Loading, please wait", value: "loading" }]);
   const [lopen, setlOpen] = useState(false);
   const [lvalue, setlValue] = useState(null);
-  const [litems, setlItems] = useState(Array.from({ length: 150 }, (_, i) => ({ label: `${i + 1}`, value: `${i + 1}` })));
+  const [litems, setlItems] = useState(convertRangeStringToArrayOfArrays(userInfo.block).flatMap((range) =>
+  range.map((value) => ({
+    label: `${value}`,
+    value: `${value}`,
+  }))
+)
+);
+    console.log(
+      convertRangeStringToArrayOfArrays(userInfo.block)
+    );
+    
   const [dopen, setdOpen] = useState(false);
   const [dvalue, setdValue] = useState(null);
   const [ditems, setdItems] = useState(Array.from({ length: 215 }, (_, i) => {
@@ -196,6 +209,7 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
       try {
         const hours = await fetchHours();
         sethourss(hours);
+        console.log(hours)
         if (inputs.lineNumber.value) {
           const lineNumber = +inputs.lineNumber.value;
           const otInfoItem = otInfo.find(item => item.lineNumber === lineNumber && getFormattedDate(item.date) === inputs.date.value);
@@ -235,6 +249,7 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
             // Now you have the values of manpower and TNC_Main from otInfoItem
           } else {
             // Handle the case where no matching item was found in otInfo
+            
           }
           
           
@@ -258,7 +273,6 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
   return (
     <View style={styles.form}>
       <Text style={styles.title}>Your line-wise style efficiency Data</Text>
-
       <View>
         <View style={styles.inputsRow}>
           <View style={{ flex: 1, marginVertical: 8 }}>
@@ -405,7 +419,7 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
             label={'Manpower: (Database Manpower:' + databaseManpower + ")"} textInputConfig={{
               keyboardType: 'phone-pad',
               maxLentgh: 10,
-              editable: false,
+              //editable: false,
               onChangeText: inputChangeHandler.bind(this, 'manpower'),
               value: inputs.manpower.value,
             }} />

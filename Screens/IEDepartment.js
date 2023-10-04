@@ -4,6 +4,7 @@ import UserContext from '../components/Store/UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
 import { ModalAlert } from '../components/AlertModal';
+import { FontAwesome5,Ionicons,Feather,MaterialCommunityIcons } from '@expo/vector-icons';
 
 const IEDepartmentPage = ({ navigation }) => {
   const [animation] = useState(new Animated.Value(0));
@@ -34,6 +35,7 @@ const IEDepartmentPage = ({ navigation }) => {
               onPress={() => {if (userInfo?userInfo.efficiencyAnalysis:false) {
                 navigation.navigate('EfficiencyAnalysis')
               }else setModalVisible(true);}}>
+              <Ionicons name="analytics-outline" size={24} color="black" />
               <Text style={[styles.buttonText, ]}>Efficiency Analysis</Text>
             </TouchableOpacity>
           </Animated.View>
@@ -42,6 +44,7 @@ const IEDepartmentPage = ({ navigation }) => {
               style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
               onPress={() => {if (userInfo?userInfo.Overtime:false) {navigation.navigate('OverTime')
             }else setModalVisible(true);}}>
+              <Ionicons name="time-outline" size={24} color="black" />
               <Text style={[styles.buttonText,]}>Over Time</Text>
             </TouchableOpacity>
           </Animated.View>
@@ -52,6 +55,7 @@ const IEDepartmentPage = ({ navigation }) => {
               style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
               onPress={() => {if (userInfo?userInfo.target:false) {navigation.navigate('Target')
             }else setModalVisible(true);}}>
+              <Feather name="target" size={24} color="black" />
               <Text style={[styles.buttonText,]}>Target</Text>
             </TouchableOpacity>
           </Animated.View>
@@ -60,6 +64,7 @@ const IEDepartmentPage = ({ navigation }) => {
               style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
               onPress={() => {if (userInfo?userInfo.newOperatorAssessment:false) {navigation.navigate('BottomTabNavigator')
             }else setModalVisible(true);}}>
+              <MaterialCommunityIcons name="human-queue" size={24} color="black" />
               <Text style={[styles.buttonText,]}>New Operator Assessment</Text>
             </TouchableOpacity>
           </Animated.View>
@@ -71,6 +76,7 @@ const IEDepartmentPage = ({ navigation }) => {
               style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
               onPress={() => {if (false) {navigation.navigate('LostTimeAnalysis')
             }else setModalVisible(true);}}>
+              <MaterialCommunityIcons name="cookie-clock-outline" size={24} color="black" />
               <Text style={[styles.buttonText,]}>Lost Time Analysis</Text>
             </TouchableOpacity>
         </Animated.View>
@@ -119,7 +125,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
   },
   subPageButton: {
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    backgroundColor: 'rgba(255, 255, 254, 0.9)',
     height: 100,
     justifyContent: 'center',
     alignItems: 'center',

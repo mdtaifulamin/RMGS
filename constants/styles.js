@@ -26,7 +26,7 @@ export const GlobalStyles={
             inputtextcolor:"gray",
             defectsBackground:'white',
             inputBackgroundColor:'#FFFF',
-            cardBackground1:'rgba(255, 255, 255, 0.7)',
+            cardBackground1:'rgba(255, 255, 255, 0.9)',
             cardBackground2:'rgba(255, 255, 255, 0.9)',
             tabBarActiveColor:'white',
             textInputBackground:"#F7F7F7",

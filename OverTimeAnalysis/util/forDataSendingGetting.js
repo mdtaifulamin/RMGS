@@ -127,3 +127,38 @@ export const fetchHours = async()=>{
   return overTimes.sort((a,b)=>{return b.date -a.date});
   
  }
+
+ export const fetchOverTimesByDate = async(date)=>{
+  const sDate= getFormattedDate(date)                       //updated
+  const datess=new Date(sDate)
+  const q =  query(collection(database, "overTimes"),where("date","==",datess)); //,where("date","==",datess) where("lineNumber", "==","1")
+  
+  const docSnap= await getDocs(q);
+  const overTimes= [];
+  if (docSnap){
+   docSnap.forEach((doc) => {
+    //console.log(doc.data().date.toDate());
+    const data= doc.data();
+    const overTimeobj = {
+      date: data.date.toDate(),
+      lineNumber: data.lineNumber ? +data.lineNumber : 0,
+      manpower: data.manpower ? +data.manpower : 0,
+      twoHourOT: data.twoHourOT ? +data.twoHourOT : 0,
+      fourHourOT: data.fourHourOT ? +data.fourHourOT : 0,
+      sixHourOT: data.sixHourOT ? +data.sixHourOT : 0,
+      Main_TNC: data.Main_TNC ? +data.Main_TNC : 0,
+      TNC_2: data.TNC_2 ? +data.TNC_2 : 0,
+      TNC_4: data.TNC_4 ? +data.TNC_4 : 0,
+      TNC_6: data.TNC_6 ? +data.TNC_6 : 0,
+      remarks: data.remarks ? data.remarks : ' ',
+    };
+    
+    overTimes.push(overTimeobj)
+    
+       })
+  }else{
+   console.log('no such data')
+  }
+  //console.log(overTimes)
+  return overTimes.sort((a,b)=>{return b.lineNumber -a.lineNumber});
+ }

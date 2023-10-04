@@ -7,7 +7,7 @@ import { useContext } from "react";
 import NightSkyBackground from "../../../components/ColoredCircle";
 const screenWidth = Dimensions.get('window').width
 const screen_height=Dimensions.get('window').height
-export default function PermissionItem({date,id,buyerName,daysRun,SO,styleName,SMV,manpower,hour,production,without,due,rejection,ID}){
+export default function PermissionItem({date,id,userName,block,dept,styleName,SMV,manpower,hour,production,without,due,rejection,ID}){
      const navigation=useNavigation();     
      function permissionPresshandler(){
          navigation.navigate('ManagePermission',{
@@ -56,6 +56,9 @@ export default function PermissionItem({date,id,buyerName,daysRun,SO,styleName,S
         <Pressable onPress={permissionPresshandler}  style={({pressed})=> pressed && styles.pressed} >
             <View style={[styles.rootPermissionItem]}>
                <Text>{ID}</Text>
+               <Text>{userName}</Text>
+               <Text>{block}</Text>
+               <Text>{dept}</Text>
             </View>
         </Pressable>        
     )
@@ -68,11 +71,10 @@ const styles= StyleSheet.create({
     },
     
     rootPermissionItem:{
-        paddingTop:3,
-        paddingLeft:10,
+        padding:10,
         marginVertical:screen_height*0.008/2,
         backgroundColor:GlobalStyles.colors.cardBackground1,
-        flexDirection:'row',
+        flexDirection:'coloumn',
         justifyContent:'space-between',
         borderRadius:8,
         elevation:5, 

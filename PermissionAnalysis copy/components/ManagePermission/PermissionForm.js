@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, Switch } from "react-native";
+import { StyleSheet, View, Text, Switch, TextInput } from "react-native";
 import Button from "../../util/Button";
 import { GlobalStyles } from "../../../constants/styles";
 import { getFormattedDate, momentTime } from "../../util/date";
@@ -14,7 +14,8 @@ export default function PermissionForm({ onSubmit, onCancel, defaultValues }) {
   const [overtime, setOvertime] = useState(defaultValues ? defaultValues.Overtime : false);
   const [target, setTarget] = useState(defaultValues ? defaultValues.target : false);
   const [newOperatorAssessment, setNewOperatorAssessment] = useState(defaultValues ? defaultValues.newOperatorAssessment : false);
- console.log(defaultValues)
+  const [block,setBlock]=useState(defaultValues?defaultValues.block?.toString():'')
+ //console.log(defaultValues)
   const handleSubmit = () => {
     const permissionData = {
         ID: defaultValues ? defaultValues.ID : '',
@@ -31,9 +32,10 @@ export default function PermissionForm({ onSubmit, onCancel, defaultValues }) {
         target: target,
         newOperatorAssessment: newOperatorAssessment,
         userName: defaultValues? defaultValues.userName :' ',
+        block:block,
       // ...Other fields...
     };
-
+    console.log(permissionData)
     onSubmit(permissionData);
   };
 
@@ -77,7 +79,10 @@ export default function PermissionForm({ onSubmit, onCancel, defaultValues }) {
         <Text>New Operator Assesment</Text>
         <Switch value={newOperatorAssessment} onValueChange={() => setNewOperatorAssessment(!newOperatorAssessment)} />
       </View>
-
+      <View style={styles.switchContainer}>
+        <Text>block</Text>
+      </View>
+      <TextInput style={{borderWidth:1,padding:5}} value={block} onChangeText={(text) => setBlock(text)}/>
       <View style={styles.buttons}>
         <Button style={styles.button} onPress={handleSubmit}>
           Submit

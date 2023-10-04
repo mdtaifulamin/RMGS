@@ -16,26 +16,28 @@ import Header from "../../components/Header";
 import { fetchOverTimes } from "../../OverTimeAnalysis/util/forDataSendingGetting";
 import OTContext from "../../components/Store/OTcontext";
 import UserContext from "../../components/Store/UserContext";
+import { convertRangeStringToArrayOfArrays } from "../../components/convertStringToarray";
+import { ModalOTAlert } from "../../components/AlertModal";
 
-const blockWiseLine = [
-    [1,2,3,4,5,6],
-    [7,8,9,10,11,12,13,14,15],
-    [16,17,18,19,20,21],
-    [22,23,24,25,26,27,28,29,30],
-    [31,32,33,34,35,36],
-    [37,38,39,40,41,42,43,44,45],
-    [46,47,48,49],
-    [50,51,52,53,54,55],
-    [56,57,58,59,60,61,62],
-    [63,64,65,66,67,68,69],
-    [70,71,72,73,74,75,76],
-    [77,78,79,80,81],
-    [82,83,84,85,86],
-    [87,88,89,90,91],
-    [92,93,94,95,96],
-    [97,98,99,100,101,102,103,104,105],
-    [106,107,108,109,110,111,112,113,114]
-]
+// const blockWiseLine = [
+//     [1,2,3,4,5,6],
+//     [7,8,9,10,11,12,13,14,15],
+//     [16,17,18,19,20,21],
+//     [22,23,24,25,26,27,28,29,30],
+//     [31,32,33,34,35,36],
+//     [37,38,39,40,41,42,43,44,45],
+//     [46,47,48,49],
+//     [50,51,52,53,54,55],
+//     [56,57,58,59,60,61,62],
+//     [63,64,65,66,67,68,69],
+//     [70,71,72,73,74,75,76],
+//     [77,78,79,80,81],
+//     [82,83,84,85,86],
+//     [87,88,89,90,91],
+//     [92,93,94,95,96],
+//     [97,98,99,100,101,102,103,104,105],
+//     [106,107,108,109,110,111,112,113,114]
+// ]
 
 
 const checkNumberInArray = (number, array) => {
@@ -57,12 +59,16 @@ const checkNumberInArray = (number, array) => {
 
     const screenWidth = Dimensions.get('window').width
     const screen_height=Dimensions.get('window').height
+
 export default function Recentefficiencies(){
+    const { userInfo, updateUser } = useContext(UserContext);
+    const [modalotVisible, setModalotVisible] = useState(false);
     const {OTInfo, setOTInfo}=useContext(OTContext);
     // const { userInfo, updateUser } = useContext(UserContext);
     const [modalVisible, setModalVisible] = useState(false);
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState( null); //updated 31/3/2023
+    const blockWiseLine = convertRangeStringToArrayOfArrays(userInfo.block)
     const [items, setItems] = useState(
         blockWiseLine.map((e) => ({label: `Line ${e[0]} - ${e[e.length - 1]}`,value:e}))
     );
@@ -137,20 +143,10 @@ export default function Recentefficiencies(){
             efficienciesCtx.setEfficiency([])
             efficienciesCtx.setEfficiency(efficiencies);   
         }
-        getEfficiencies();
+        try{getEfficiencies();}catch{ setModalotVisible(true)};
         console.log(value)
      },[value,date,refreshing])
-    //  const efficienciesCtx= useContext(EfficienciesContext);  
-    //  useFocusEffect(
-    //   React.useCallback(() => {                                        //updated
-    //       async  function getEfficiencies(){
-    //           const efficiencies=  await fetchEfficiencies(date,value);
-    //           setIsfetching(false);
-    //           efficienciesCtx.setEfficiency(efficiencies);   
-    //       }
-    //       getEfficiencies();
-         
-    //    },[value,date]))
+    
      
      
     if(isfetching){
@@ -267,6 +263,7 @@ return (
                         </View>
                     </View>
                 </Modal>
+                <ModalOTAlert modalVisible={modalotVisible} onRequestClose={() => setModalotVisible(false)}/>
             </View>
 
         <View style={{flex:10,}}>

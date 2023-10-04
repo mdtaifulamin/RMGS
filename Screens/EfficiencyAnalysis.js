@@ -8,11 +8,11 @@ import ManageEfficiency from '../EfficiencyAnalysis/Screens/manageefficiency'
 import Recentefficiencies from '../EfficiencyAnalysis/Screens/recentefficiencies';
 import Allefficiencies from '../EfficiencyAnalysis/Screens/Allefficiencies';
 import { GlobalStyles } from '../constants/styles';
-import {  Ionicons } from "@expo/vector-icons";
+import {  Ionicons,Entypo } from "@expo/vector-icons";
 import IconButton from '../EfficiencyAnalysis/components/UI/iconButton';
 import EfficienciesContextProvider from '../EfficiencyAnalysis/Store/efficiencies-context';
 import IEDepartmentPage from './IEDepartment';
-import DownloadEfficiencies from '../EfficiencyAnalysis/Screens/DownloadEfficiencies';
+import DownloadEfficiencies from '../EfficiencyAnalysis/Screens/downloadEfficiencies';
 
 const Stack= createNativeStackNavigator();
 const Bottomtabs= createBottomTabNavigator();
@@ -63,12 +63,12 @@ const EfficiencyOverview = () =>{
 
               <Bottomtabs.Screen 
               name='Download Efficiencies'  
-              component={Allefficiencies} 
+              component={DownloadEfficiencies} 
               options={{
-                title:'LINEWISE EFFICIENCY',
+                title:'Download EFFICIENCY',
                 tabBarShowLabel: false,
                 tabBarIcon:({color,size})=>(
-                  <Ionicons name='calendar' size={size} color={color}/>
+                  <Entypo name="download" size={24} color={color} />
                 ),
               }}/>
         </Bottomtabs.Navigator>

@@ -1,22 +1,30 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView, Dimensions, Animated, Easing, Modal } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView, Dimensions, Animated, Easing, Modal, Button } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import UserContext from '../components/Store/UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
 import { ModalAlert } from '../components/AlertModal';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
 const HomeScreen = ({ navigation }) => {
   const [animation] = useState(new Animated.Value(0));
   const buttonWidth = Dimensions.get('window').width / 2 - 20;
   const { userInfo, updateUser } = useContext(UserContext);
   const [modalVisible, setModalVisible] = useState(false);
-
+  
   useEffect(() => {
     Animated.spring(animation, {
       toValue: 1,
       useNativeDriver: false,
     }).start();
-    console.log(userInfo)
+    if(userInfo?.ID==""){
+      navigation.navigate("Login")
+      
+    }
+    console.log(userInfo.ID)
+    //console.log(userInfo===null)
   }, []);
 
   const buttonTransform = animation.interpolate({
@@ -28,6 +36,7 @@ const HomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <ColoredCirclesBackground />
       <Header header={"Welcome to "} title={"RMGS"}/>
+     
       <ScrollView style={styles.buttonContainer}>
         <View style={styles.row}>
           <Animated.View style={{ transform: [{ translateY: buttonTransform }] }}>
@@ -74,10 +83,23 @@ const HomeScreen = ({ navigation }) => {
                 <Text style={styles.buttonText}>Admin</Text>
               </TouchableOpacity>
             </Animated.View>
+            <Animated.View style={{ transform: [{ translateY: buttonTransform }] }}>
+              <TouchableOpacity
+                style={[styles.departmentButton, styles.shinyButton, { width: buttonWidth }]}
+                onPress={() => {
+                AsyncStorage.setItem('userInfo', JSON.stringify({...userInfo,login:false}))
+                .catch(error => console.log('Error saving user info:', error));
+                navigation.navigate('Login');
+                } }>
+                <AntDesign name="logout" size={50} />
+                <Text style={styles.buttonText}>Log Out</Text>
+                <Text style={styles.buttonText}>User:{userInfo.userName}</Text>
+              </TouchableOpacity>
+            </Animated.View>
           </View>
-        
       </ScrollView>
       <ModalAlert modalVisible={modalVisible} onRequestClose={() => setModalVisible(false)}/>
+      
     </View>
   );
 };
@@ -188,6 +210,14 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
   },
+  fixedView : {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    width:50,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+  }
 });
 
 export default HomeScreen;

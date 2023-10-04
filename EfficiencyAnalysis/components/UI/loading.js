@@ -1,10 +1,11 @@
-import { ActivityIndicator, StyleSheet, View } from "react-native";
+import { ActivityIndicator, Image, StyleSheet, View } from "react-native";
 import { GlobalStyles } from "../../../constants/styles";
 
 export default function Loadingspinner(){
      return(
         <View style={styles.container}>
-            <ActivityIndicator size="large" color='black' />
+            {/* <ActivityIndicator size="large" color='black' /> */}
+           <Image source={require('./RMGS2.gif')} style={{height:250,width:250}}/>
         </View>
      )
 }

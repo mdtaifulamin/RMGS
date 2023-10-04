@@ -1,133 +1,100 @@
-import { useContext, useEffect, useState } from "react";
-import {  TextInput,Text, TouchableOpacity, View } from "react-native";
-import OverTimesOutput from "../components/overTimesOutput/OverTimesOutput";
-import { OverTimesContext } from "../Store/overTimes-context";
-import { getdateMinusdays} from "../util/date";
-import { GlobalStyles } from "../../constants/styles";
-import { Fontisto } from '@expo/vector-icons';
-import {  fetchLineOverTimes } from "../util/forDataSendingGetting";
-import Loadingspinner from "../components/UI/loading";
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Button, View ,Text,Dimensions} from 'react-native';
+import { fetchEfficiencies, fetchEfficienciesByDate, fetchOverTimesByDate } from '../util/forDataSendingGetting';
+import { useState } from 'react';
+// expo add expo-file-system expo-sharing xlsx
+import * as XLSX from 'xlsx';
+import * as FileSystem from 'expo-file-system';
+import * as Sharing from 'expo-sharing';
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker'
-import React from "react";
-import Button from "../util/Button";
-import NightSkyBackground from "../../components/ColoredCircle";
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { getFormattedDate, getdateMinusdays, getdatePlusdays, momentTime } from '../util/date';
+import { Fontisto } from '@expo/vector-icons';
+import UserContext from '../../components/Store/UserContext';
 
+export default function DownloadEfficiencies() {
+  const [data,setData]=useState([])
+  const screenWidth = Dimensions.get('window').width
+  const screen_height=Dimensions.get('window').height
+  const [date, setDate] = useState(new Date());
 
-
-
-
-
-export default function AlloverTimes(){
-    const [refreshing, setRefreshing] = useState(false);
-
-    const [linevalue, setlineValue] = useState('');
-    const [search,setSearch] = useState(true)
-
-    const Today= new Date();
-    const mdate= getdateMinusdays(Today,5);
-    const [ isfetching,setIsfetching]= useState(true)
-
-    const [date, setDate] = useState(new Date(mdate));
-
-    const onChange = (event, selectedDate) => {
-    const currentDate = selectedDate;
-    setDate(currentDate);
-    
-    };
-    
-    const showMode = (currentMode) => {
-    DateTimePickerAndroid.open({
-      value: date,
-      onChange,
-      mode: currentMode,
-      is24Hour: true,
-    });
-    };
-
-    const showDatepicker = () => {
-    showMode('date');
-    };
-
-    const showTimepicker = () => {
-    showMode('time');
-    };
-   
-    
-    
-    
-    
-    
-   const overTimesCtx= useContext(OverTimesContext);
-   function searchHnadler(){  
-        setSearch(!search)
-   }
+  const onChange = (event, selectedDate) => {
+  const currentDate = selectedDate;
+  setDate(currentDate);
   
-   
-   useEffect(() =>{                                      //updated
-        async  function getAOverTimes(){
-            const overTimes=  await fetchLineOverTimes(linevalue,date); 
-            setIsfetching(false);
-            setRefreshing(false);
-            overTimesCtx.setOverTime(overTimes);
-        }
+  };
+  
+  const showMode = (currentMode) => {
+  DateTimePickerAndroid.open({
+    value: date,
+    onChange,
+    mode: currentMode,
+    is24Hour: true,
+  });
+  };
 
-        getAOverTimes();
-        
-    },[search,refreshing]);
+  const showDatepicker = () => {
+  showMode('date');
+  };
 
-    //  useFocusEffect(
-    //     React.useCallback(() => {                                        //updated
-    //         async  function getAOverTimes(){
-    //             const overTimes=  await fetchLineOverTimes(linevalue,date); 
-    //             setIsfetching(false);
-    //             setRefreshing(false);
-    //             overTimesCtx.setOverTime(overTimes);
-    //         }
+  const showTimepicker = () => {
+  showMode('time');
+  };
+
+  //start
+  
+  // Example data
+  
+  // Calculate cumulative Target10
+  
+
+
+  const generateExcel = async() => {
+    //const data = await fetchAssesment(momentTime(date),momentTime(getdatePlusdays(cdate,1)));
+   //const lines= [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50], [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75], [76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100], [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]]
     
-    //         getAOverTimes();
-            
-    //      },[search,refreshing]));
+   const result = await fetchOverTimesByDate(date);
    
-    if(isfetching){
-        return <Loadingspinner/>       
-     }
-   
-    const allOverTimes= overTimesCtx.overTimes.filter((overTime)=>{
-       
-        return  overTime.lineNumber===linevalue ;
-        
-    });
-    
-    
-        function onchangeHandler(a){
-                setlineValue(a)
-        }
-       
-    
-return (
-    <>
-    
-        <NightSkyBackground/>
-        <View style={{flexDirection:'row', backgroundColor:GlobalStyles.colors.backgroundColor,paddingVertical:10,marginBottom:1.5}}>
-            <View style={{flex:2, zIndex:10000, backgroundColor:GlobalStyles.colors.backgroundColor,borderRadius:10,borderWidth:.2,borderRightWidth:.2,marginHorizontal:'1%'}}>
-                    <TextInput style={{padding:11,color:GlobalStyles.colors.textcolor}} value={linevalue} placeholder="Line:" onChangeText={onchangeHandler}/>
-            </View>
-            <View style={{backgroundColor:GlobalStyles.colors.backgroundColor,flex:4,borderRadius:10,borderWidth:.2,maxHeight:'100%'}}>
-                <TouchableOpacity onPress={showDatepicker} style={{alignItems:'flex-start',justifyContent:'center',alignItems:'center',flex:1,}}>
-                    <View style={{flexDirection:'row',marginHorizontal:'2%',}}>
-                        <View style={{ justifyContent:'center',marginRight:'3%',marginLeft:'2%'}}>
-                            <Text >From Date: {date.toLocaleDateString()} </Text>
-                        </View>
-                        <View style={{ justifyContent:'center', marginRight:'2%'}}>
-                            <Fontisto name="date" size={16} color="black" />
-                        </View>
-                    </View>
-                </TouchableOpacity> 
-            </View>
-            <View style={{flex:3,justifyContent:'center',backgroundColor:GlobalStyles.colors.backgroundColor,paddingHorizontal:5}}>
-                <Button onPress={searchHnadler} >Search</Button>
-            </View>
-     </View>
-        <OverTimesOutput  overTimes={allOverTimes}  fallbackText={' No Data Found at Today for Selected Block'} refreshing={refreshing} onRefresh={() => setRefreshing(true)}/>
-    </>
-)}
+    var ws = XLSX.utils.json_to_sheet(result);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Overtime Data of " +getFormattedDate(date));
+  
+    const excelFilePath = FileSystem.documentDirectory + "Overtime Data of " +getFormattedDate(date)+".xlsx";
+  
+    FileSystem.writeAsStringAsync(excelFilePath, XLSX.write(wb, { type: "base64" }), {
+      encoding: FileSystem.EncodingType.Base64,
+    })
+      .then(() => {
+        Sharing.shareAsync(excelFilePath);
+      })
+      .catch((error) => {
+        console.error('Error writing or sharing Excel file:', error);
+      });
+  };
+
+  return (
+    <View style={styles.container}>
+       <TouchableOpacity onPress={showDatepicker} style={{justifyContent:'center',alignItems:'center',width:screenWidth*0.5,marginVertical:screen_height*0.04,backgroundColor:'white',elevation:10,borderRadius:10}}>
+                                <View style={{flexDirection:'row',padding:screen_height*0.01,}}>
+                                    <View style={{ justifyContent:'center',marginRight:screenWidth*0.03,marginLeft:screenWidth*0.03}}>
+                                        <Text >From : {date.toLocaleDateString()} </Text>
+                                    </View>
+                                    <View style={{ justifyContent:'center', marginRight:screenWidth*0.03}}>
+                                        <Fontisto name="date" size={16} color="black" />
+                                    </View>
+                                </View>
+        </TouchableOpacity>  
+      <Button title="Download Data" onPress={generateExcel} />
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

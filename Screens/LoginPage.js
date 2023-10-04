@@ -9,13 +9,17 @@ import UserContext from '../components/Store/UserContext';
 
 const LoginScreen = ({ navigation }) => {
   const { userInfo, updateUser } = useContext(UserContext);
-  const { isDarkMode, toggleTheme } = useTheme(); // Get theme context
+  //const  [login, setLogin]  = useState(false); 
+  const { isDarkMode, setdarkmood } = useTheme(false);// Get theme context
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false); // Track password visibility
   const [loginStatus, setLoginStatus] = useState('');
   const themeStyles = isDarkMode ? darkTheme : lightTheme; // Apply appropriate theme styles
   
+
+  
+
   useEffect(() => {
     // Call updateUser to update the user info in the context
    // Load userInfo from AsyncStorage
@@ -25,21 +29,22 @@ const LoginScreen = ({ navigation }) => {
          const storedUserInfo = JSON.parse(userInfoString);
          setUsername(storedUserInfo.ID.toString());
          setPassword(storedUserInfo.password.toString());
+         //setLogin(storedUserInfo.login);
          // Update your context or state with storedUserInfo
          //console.log(storedUserInfo.ID)
        }
      })
      .catch(error => console.log('Error loading user info:', error));
+     
  }, []);
 
- 
-
  const handleLogin = async() => {  
-  const auth1= await fetchUserInfo(username,password)
+ const auth1= await fetchUserInfo(username,password)
+  
   if (eval(auth1[0])===undefined?false:auth1[0].ID===username) {
     updateUser(auth1[0])
-    //console.log(userInfo.ID)
-    AsyncStorage.setItem('userInfo', JSON.stringify(auth1[0]))
+    //console.log(userInfo)
+    AsyncStorage.setItem('userInfo', JSON.stringify({...auth1[0],login:true}))
     .catch(error => console.log('Error saving user info:', error))
     navigation.navigate('Home');
     setLoginStatus('');
@@ -57,7 +62,7 @@ const LoginScreen = ({ navigation }) => {
   }
 
   return (
-    <View  style={[styles.container,{backgroundColor:themeStyles.backgroundColor}]}>
+      <View  style={[styles.container,{backgroundColor:themeStyles.backgroundColor}]}>
       <Image source={require('../assets/RMGS2.gif')} style={styles.logo} />
       
       <TextInput
@@ -85,7 +90,7 @@ const LoginScreen = ({ navigation }) => {
       <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
         <Text style={styles.loginButtonText}>Log In</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.loginButton} onPress={handleSignUp}>
+      <TouchableOpacity style={styles.SignUpButton} onPress={handleSignUp}>
         <Text style={styles.loginButtonText}>Sign Up</Text>
       </TouchableOpacity>
       {loginStatus ? <Text style={styles.errorText}> {loginStatus} </Text> : null}
@@ -141,6 +146,15 @@ const styles = StyleSheet.create({
     
   },
   loginButton: {
+    width: '80%',
+    height: 50,
+    backgroundColor: '#007AFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  SignUpButton: {
     width: '80%',
     height: 50,
     backgroundColor: '#3897F0',

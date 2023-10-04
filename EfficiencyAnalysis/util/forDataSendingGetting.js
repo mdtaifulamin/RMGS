@@ -1,5 +1,5 @@
 import {setDoc,addDoc, collection, doc, getDoc, getDocs, query, where,deleteDoc,updateDoc, orderBy} from "firebase/firestore";
-import { database1 } from "../../firebase";
+import { database1,database } from "../../firebase";
 import { getFormattedDate } from "./date";
 
 export const storeEfficiency=async(efficiencyData)=>{
@@ -62,7 +62,7 @@ export async function updateEfficiency (id,efficiencies){
 }
 
 export const fetchHours = async()=>{ 
-  const docSnap = await getDocs(collection(database1, "hours"));
+  const docSnap = await getDocs(collection(database, "effhours"));
   const hours= [];
   if (docSnap){
    docSnap.forEach((doc) => {
@@ -137,3 +137,47 @@ export const fetchHours = async()=>{
   return efficiencies.sort((a,b)=>{return b.date -a.date});
   
  }
+
+ export const fetchEfficienciesByDate = async (date) => {
+  const sDate= getFormattedDate(date)                       //updated
+  const datess=new Date(sDate)
+  
+  const q =  query(collection(database1, "efficiencies"),where("date","==",datess)); //,where("date","==",datess) where("lineNumber", "==","1")
+  
+  const docSnap= await getDocs(q);
+  const efficiencies= [];
+  if (docSnap){
+   docSnap.forEach((doc) => {
+    //console.log(doc.data().date.toDate());
+    const data= doc.data();
+     const efficiencyobj= {
+      lineNumber: +data.lineNumber, 
+      date: data.date.toDate(),
+      buyerName: data.buyerName,
+      SO:        data.SO,
+      daysRun: data.daysRun?data.daysRun:' ',
+      styleName: data.styleName,
+      itemName: data.itemName? data.itemName:' ',
+      SMV:       +data.SMV,
+      manpower:  +data.manpower,
+      target10: data.target10? +data.target10:' ',
+      hourMinusTNC:data.hourMinusTNC?+data.hourMinusTNC:' ',
+      hourTNC:data.hourTNC?+data.hourTNC:' ',
+      hour:       +(+data.hour).toFixed(6),
+      production: +data.production,
+      without:     +data.without,
+      due:         +data.due,
+      rejection:   +data.rejection,
+      remarks: data.remarks?data.remarks:' '
+      };
+    efficiencies.push(efficiencyobj)
+    
+       })
+  }else{
+   console.log('no such data')
+  }
+  //console.log(efficiencies)
+  return efficiencies.sort((a,b)=>{return a.lineNumber -b.lineNumber});
+ }
+ 
+

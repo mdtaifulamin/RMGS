@@ -2,10 +2,10 @@ import { createContext, useReducer } from "react";
 
 export const PermissionsContext = createContext({
     permissions: [],
-    addPermission: ({date,lineNumber,id,buyerName,daysRun,SO,styleName,itemName,SMV,manpower,hour,target10,production,without,due,rejection,remarks}) => {},
+    addPermission: ({date,lineNumber,id,buyerName,daysRun,SO,styleName,itemName,SMV,block,manpower,hour,target10,production,without,due,rejection,remarks}) => {},
     setPermission: (permissions) => {},
     deletePermission: (id) => {},
-    updatePermission: (id,{date,lineNumber,buyerName,daysRun,SO,styleName,itemName,SMV,manpower,hour,target10,production,without,due,rejection,remarks}) => {},})
+    updatePermission: (id,{date,lineNumber,buyerName,daysRun,SO,styleName,itemName,block,SMV,manpower,hour,target10,production,without,due,rejection,remarks}) => {},})
 
 function permissionsReducer(state,action){
     switch (action.type) {
