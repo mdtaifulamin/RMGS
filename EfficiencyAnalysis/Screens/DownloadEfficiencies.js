@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Button, View ,Text,Dimensions} from 'react-native';
-import { fetchEfficiencies, fetchEfficienciesByDate } from '../util/forDataSendingGetting';
+import { fetchEfficienciesByDate } from '../util/forDataSendingGetting';
 import { useState } from 'react';
 // expo add expo-file-system expo-sharing xlsx
 import * as XLSX from 'xlsx';
@@ -8,9 +8,8 @@ import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { getFormattedDate, getdateMinusdays, getdatePlusdays, momentTime } from '../util/date';
+import { getFormattedDate} from '../util/date';
 import { Fontisto } from '@expo/vector-icons';
-import UserContext from '../../components/Store/UserContext';
 import BrightSkyBackground from '../../components/ColoredBackground';
 
 export default function DownloadEfficiencies() {
