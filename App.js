@@ -25,6 +25,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useState ,useEffect,useContext} from 'react';
 import Loadingspinner from './EfficiencyAnalysis/components/UI/loading';
 import UserContext from './components/Store/UserContext';
+import DeveloperMeetScreen from './Screens/Developermeet';
 
 const Stack = createStackNavigator();
 
@@ -82,6 +83,7 @@ export function Root(){
             <Stack.Screen name="LostTimeAnalysis" component={LostTimeAnalysisPage} options={{ title: 'Lost Time Analysis' , headerShown:false}} />
             <Stack.Screen name="Target" component={TargetPage} options={{ title: 'Target' }} />
             <Stack.Screen name="OverTime" component={OverTimePage} options={{ title: 'Over Time', headerShown:false}} />
+            <Stack.Screen name="developermeet" component={DeveloperMeetScreen} options={{ title: 'Developer Meet', headerShown:false}} />
             {/* <Stack.Screen name="NewOperatorAssessment" component={NewOperatorAssessmentPage} options={{ title: 'IE' }} /> */}
             <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} options={{ title: 'IE' }} />
           </Stack.Navigator>

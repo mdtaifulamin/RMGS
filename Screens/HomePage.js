@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView, Dimensions, Animated, Easing, Modal, Button } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign ,MaterialCommunityIcons} from '@expo/vector-icons';
 import UserContext from '../components/Store/UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
@@ -87,16 +87,29 @@ const HomeScreen = ({ navigation }) => {
               <TouchableOpacity
                 style={[styles.departmentButton, styles.shinyButton, { width: buttonWidth }]}
                 onPress={() => {
-                AsyncStorage.setItem('userInfo', JSON.stringify({...userInfo,login:false}))
-                .catch(error => console.log('Error saving user info:', error));
-                navigation.navigate('Login');
+                navigation.navigate('developermeet');
                 } }>
-                <AntDesign name="logout" size={50} />
-                <Text style={styles.buttonText}>Log Out</Text>
-                <Text style={styles.buttonText}>User:{userInfo.userName}</Text>
+                <MaterialCommunityIcons name="contacts-outline" size={40} color="black" />
+                <Text style={styles.buttonText}>Developer</Text>
               </TouchableOpacity>
             </Animated.View>
           </View>
+          <View style={styles.row}>
+            <Animated.View style={{ transform: [{ translateY: buttonTransform }] }}>
+                <TouchableOpacity
+                  style={[styles.departmentButton, styles.shinyButton, { width: buttonWidth }]}
+                  onPress={() => {
+                  AsyncStorage.setItem('userInfo', JSON.stringify({...userInfo,login:false}))
+                  .catch(error => console.log('Error saving user info:', error));
+                  navigation.navigate('Login');
+                  } }>
+                  <AntDesign name="logout" size={50} />
+                  <Text style={styles.buttonText}>Log Out</Text>
+                  <Text style={styles.buttonText}>User:{userInfo.userName}</Text>
+                </TouchableOpacity>
+            </Animated.View>
+          </View>
+          
       </ScrollView>
       <ModalAlert modalVisible={modalVisible} onRequestClose={() => setModalVisible(false)}/>
       
