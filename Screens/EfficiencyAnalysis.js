@@ -12,7 +12,7 @@ import {  Ionicons,Entypo } from "@expo/vector-icons";
 import IconButton from '../EfficiencyAnalysis/components/UI/iconButton';
 import EfficienciesContextProvider from '../EfficiencyAnalysis/Store/efficiencies-context';
 import IEDepartmentPage from './IEDepartment';
-import DownloadEfficiencies from '../EfficiencyAnalysis/Screens/downloadEfficiencies';
+import Dnloadefficiencies from '../EfficiencyAnalysis/Screens/Dnloadefficiencies';
 
 const Stack= createNativeStackNavigator();
 const Bottomtabs= createBottomTabNavigator();
@@ -63,7 +63,7 @@ const EfficiencyOverview = () =>{
 
               <Bottomtabs.Screen 
               name='Download Efficiencies'  
-              component={DownloadEfficiencies} 
+              component={Dnloadefficiencies} 
               options={{
                 title:'Download EFFICIENCY',
                 tabBarShowLabel: false,
