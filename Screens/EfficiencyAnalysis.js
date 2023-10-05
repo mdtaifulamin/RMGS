@@ -12,7 +12,7 @@ import {  Ionicons,Entypo } from "@expo/vector-icons";
 import IconButton from '../EfficiencyAnalysis/components/UI/iconButton';
 import EfficienciesContextProvider from '../EfficiencyAnalysis/Store/efficiencies-context';
 import IEDepartmentPage from './IEDepartment';
-//import DownloadEfficiencies from '../EfficiencyAnalysis/Screens/downloadEfficiencies';
+import DownloadEfficiencies from '../EfficiencyAnalysis/Screens/downloadEfficiencies';
 
 const Stack= createNativeStackNavigator();
 const Bottomtabs= createBottomTabNavigator();
@@ -61,7 +61,7 @@ const EfficiencyOverview = () =>{
                 ),
               }}/>
 
-              {/* <Bottomtabs.Screen 
+              <Bottomtabs.Screen 
               name='Download Efficiencies'  
               component={DownloadEfficiencies} 
               options={{
@@ -70,7 +70,7 @@ const EfficiencyOverview = () =>{
                 tabBarIcon:({color,size})=>(
                   <Entypo name="download" size={24} color={color} />
                 ),
-              }}/> */}
+              }}/>
         </Bottomtabs.Navigator>
 }
 const EfficiencyAnalysisPage = () => {

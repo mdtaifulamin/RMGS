@@ -1,0 +1,13 @@
+It looks like you haven't initialized the git repository yet.
+EAS requires you to use a git repository for your project.
+[?25l[2K[1G[36m?[39m [1mWould you like us to run 'git init' in H:\RMGS for you?[22m [90m»[39m [90m(Y/n)[39m[2K[1G[2K[1G[32m√[39m [1mWould you like us to run 'git init' in H:\RMGS for you?[22m [90m...[39m yes
+[?25hWe're going to make an initial commit for your repository.
+[2K[1G[36m?[39m [1mCommit message:[22m [90m»[39m [90mInitial commit[39m78[2K[1G[2K[1G[32m√[39m [1mCommit message:[22m [90m...[39m Initial commit78
+[?25hfatal: detected dubious ownership in repository at 'H:/RMGS'
+'H:/RMGS' is on a file system that does not record ownership
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory H:/RMGS
+
+git exited with non-zero code: 128
+    Error: build command failed.
