@@ -175,6 +175,9 @@ const styles = StyleSheet.create({
     color: 'red',
     marginTop: 10,
   },
+  Version: {
+    
+  },
 });
 
 export default LoginScreen;
