@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions,ScrollView } from 'react-native';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
 
@@ -23,6 +23,7 @@ const QualityDepartmentPage = ({ navigation }) => {
     <View style={styles.container}>
       <ColoredCirclesBackground />
       <Header title={"Quality Department"}/>
+      <ScrollView style={{marginTop:30,flex:1}}>
       <View style={styles.buttonRow}>
         <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
           <TouchableOpacity
@@ -55,6 +56,7 @@ const QualityDepartmentPage = ({ navigation }) => {
           </TouchableOpacity>
         </Animated.View>
       </View>
+      </ScrollView>
     </View>
   );
 };

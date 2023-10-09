@@ -26,6 +26,7 @@ import { useState ,useEffect,useContext} from 'react';
 import Loadingspinner from './EfficiencyAnalysis/components/UI/loading';
 import UserContext from './components/Store/UserContext';
 import DeveloperMeetScreen from './Screens/Developermeet';
+import { storeUserInfo } from './data-storing';
 
 const Stack = createStackNavigator();
 
@@ -43,14 +44,20 @@ export function Root(){
          //console.log(storedUserInfo.ID)
          //console.log(login +"t")
          updateUser(storedUserInfo)
-         setLoading(false);
          
+         setLoading(false);
+        
        }
      })
-     .catch(error => console.log('Error loading user info:', error));
-   
-   
+     .catch(error => {
+      console.log('Error loading user info:', error);
+      setLoading(false); // Make sure to handle errors 
+    });
+    userInfo===null&& setTimeout(() => {
+      setLoading(false)
+    }, 15000); // for the newly installed login
   }, [])
+  console.log(userInfo)
   const route=login===true?"Home":'Login'
   //console.log(JSON.stringify(userInfo)+route + login)
   if (loading) {

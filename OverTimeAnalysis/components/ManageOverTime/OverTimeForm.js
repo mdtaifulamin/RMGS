@@ -20,6 +20,7 @@ import { getFormattedDate } from '../../util/date';
 import UserContext from '../../../components/Store/UserContext';
 import { convertRangeStringToArrayOfArrays } from '../../../components/convertStringToarray';
 import { GlobalStyles } from '../../../constants/styles';
+import { useNavigation } from '@react-navigation/native';
 
 
 const columnNames = [
@@ -28,7 +29,8 @@ const columnNames = [
 
   
   
-export default function SpreadsheetForm({defaultValues,navigation,onSubmit}) {
+export default function SpreadsheetForm({defaultValues,onSubmit}) {
+  const navigation = useNavigation();
   const { userInfo, updateUser } = useContext(UserContext);
   const blockWiseLine = defaultValues?[[defaultValues.lineNumber]]:convertRangeStringToArrayOfArrays(userInfo.block)
   const [isLoading, setIsLoading] = useState(false);
@@ -57,7 +59,6 @@ export default function SpreadsheetForm({defaultValues,navigation,onSubmit}) {
   const inputRefs = useRef({});
   const handleSubmit = () => {
     const dataToSubmit = {};
-    
     // Restructure data for Firebase
     for (const lineKey in inputData) {
       const lineData = inputData[lineKey];
@@ -205,7 +206,7 @@ export default function SpreadsheetForm({defaultValues,navigation,onSubmit}) {
             <TouchableOpacity
               onPress={() => {
                 setModalVisible(false);
-                
+                navigation.goBack();                
               }}
               style={styles.closeButton}
             >

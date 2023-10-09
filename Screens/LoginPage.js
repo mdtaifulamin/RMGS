@@ -100,6 +100,9 @@ const LoginScreen = ({ navigation }) => {
           trackColor={{ false: lightTheme.placeHolderTextColor, true: darkTheme.placeHolderTextColor }}
           thumbColor={isDarkMode ? darkTheme.placeHolderTextColor : lightTheme.placeHolderTextColor}
         /> */}
+        <View style={{marginTop:'15%'}}>
+              <Text> Version: 1.0 </Text>
+        </View>
     </View>
   );
 };

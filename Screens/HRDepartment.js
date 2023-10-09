@@ -1,60 +1,47 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import React, { useState } from 'react';
+import { View, Button, Text } from 'react-native';
+import * as DocumentPicker from 'expo-document-picker';
+import * as FileSystem from 'expo-file-system';
+import XLSX from 'xlsx';
 
 const HRDepartmentPage = () => {
+  const [excelData, setExcelData] = useState(null);
+
+  const pickDocument = async () => {
+    try {
+      const result = await DocumentPicker.getDocumentAsync({});
+      if (result.type === 'success') {
+        const { uri } = result;
+        const file = await FileSystem.readAsStringAsync(uri, { encoding: 'base64' });
+        setExcelData(file);
+      }
+    } catch (error) {
+      console.error('Error picking document:', error);
+    }
+  };
+
+  const convertExcelToJson = () => {
+    if (excelData) {
+      try {
+        const workbook = XLSX.read(excelData, { type: 'base64' });
+        const sheetName = workbook.SheetNames[0]; // Assuming the data is in the first sheet
+        const worksheet = workbook.Sheets[sheetName];
+        const jsonData = XLSX.utils.sheet_to_json(worksheet);
+        console.log('JSON Data:', jsonData);
+      } catch (error) {
+        console.error('Error converting Excel to JSON:', error);
+      }
+    }
+  };
+
   return (
-    <View style={styles.container}>
-      <Image
-        source={require('../assets/RMGS2.gif')} // Add an image of the developer
-        style={styles.avatar}
-      />
-      <Text style={styles.title}>Meet the Developer</Text>
-      <Text style={styles.subtitle}>MD. TAIFUL AMIN</Text>
-      <View style={styles.separator}></View>
-      <Text style={styles.description}>
-        Hi there! I'm MD. Taiful Amin, the developer behind this app. I'm passionate about creating user-friendly and efficient mobile applications.
-        Let's make technology work for you.
-      </Text>
+    <View>
+      <Button title="Pick Excel File" onPress={pickDocument} />
+      {excelData && (
+        <Button title="Convert to JSON" onPress={convertExcelToJson} />
+      )}
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5F5F5',
-    alignItems: 'center',
-    paddingTop: 40,
-    paddingHorizontal: 20,
-  },
-  avatar: {
-    width: 160,
-    height: 160,
-    borderRadius: 80,
-    marginBottom: 20,
-  },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    marginBottom: 10,
-    color: '#333', // Darker text color
-  },
-  subtitle: {
-    fontSize: 20,
-    color: 'gray',
-  },
-  separator: {
-    height: 2,
-    width: '80%',
-    backgroundColor: '#007AFF', // Accent color
-    marginVertical: 20,
-  },
-  description: {
-    fontSize: 18,
-    lineHeight: 26,
-    textAlign: 'center',
-    color: '#666', // Slightly darker text color
-  },
-});
 
 export default HRDepartmentPage;

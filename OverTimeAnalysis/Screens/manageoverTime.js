@@ -66,6 +66,7 @@ export default function ManageOverTime({route,navigation}){
         await deleteoverTime(editedOverTimeId);
         overTimesCtx.deleteOverTime(editedOverTimeId);
         navigation.goBack();
+        setIsSubmitting(false);
     }
 
     function cancelHandler(){
@@ -79,6 +80,7 @@ export default function ManageOverTime({route,navigation}){
             await updateOverTime(editedOverTimeId,overTimeData);
             //overTimesCtx.deleteOverTime(id)
             overTimesCtx.updateOverTime(id,overTimeData);
+            navigation.goBack();
         }else{
         const id= Id;
         // console.log({...overTimeData,id:id});
@@ -87,7 +89,8 @@ export default function ManageOverTime({route,navigation}){
             overTimesCtx.addOverTime({...overTimeData,id:id});
             
         }
-        navigation.goBack();
+        setIsSubmitting(false);
+       // navigation.goBack();
     }
     const handleOpenModal = () => {
         setModalVisible(true);

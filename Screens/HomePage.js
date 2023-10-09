@@ -108,6 +108,7 @@ const HomeScreen = ({ navigation }) => {
                   <Text style={styles.buttonText}>User:{userInfo.userName}</Text>
                 </TouchableOpacity>
             </Animated.View>
+            
           </View>
           
       </ScrollView>
@@ -122,56 +123,19 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#F5F5F5',
   },
-  header: {
-    position: 'relative',
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    paddingBottom: 20,
-    paddingHorizontal: 20,
-    paddingTop: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'hidden',
-    elevation:20,
-    marginBottom:'10%'
-  },
-  headerOverlay: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: 'rgba(255, 255, 250, 0.3)',
-  },
+  
+ 
   shinyButton: {
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.3)',
+    borderColor: 'rgba(255, 255, 255, 0.8)',
     shadowColor: 'rgba(0, 0, 0, 0.3)',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.5,
     shadowRadius: 5,
     elevation: 10,
     },
-  logo: {
-    width: 100,
-    height: 100,
-    marginBottom: 10,
-  },
-  titleContainer: {
-    borderBottomWidth: 2,
-    paddingBottom: 10,
-    marginBottom: 10,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  appName: {
-    fontSize: 32,
-    fontWeight: 'bold',
-  },
+
   buttonContainer: {
     flex: 1,
     paddingHorizontal: 10,
