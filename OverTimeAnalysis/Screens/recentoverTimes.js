@@ -238,9 +238,9 @@ return (
                             <Fontisto name="date" size={16} color="black" />
                         </View>
                     </TouchableOpacity> 
-                <View style={{marginRight:screenWidth*0.01,minHeight:42,justifyContent:'center',alignItems:'center',alignContent:'center',flexWrap:'wrap',}}>
+               {false && <View style={{marginRight:screenWidth*0.01,minHeight:42,justifyContent:'center',alignItems:'center',alignContent:'center',flexWrap:'wrap',}}>
                     <ButtonM onPress={handleOpenModal} >Batch Copy</ButtonM>
-                </View>
+                </View>}
             </View>
         </Header>
             <View style={styles.container}>

@@ -1,0 +1,1754 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "g:\\RMGS",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2023-10-10 10:52:10",
+            "filesum": 142,
+            "codesum": 38107,
+            "commentsum": 4209,
+            "blanksum": 1711,
+            "statistics": {
+                ".js": {
+                    "code": 9757,
+                    "comment": 1809,
+                    "blank": 1610
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 11,
+                    "code": 111,
+                    "comment": 9,
+                    "filename": "App.js"
+                },
+                {
+                    "filename": "assets\\adaptive-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\favicon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\RMGS.gif",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\RMGS.mp4",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\RMGS.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\RMGS2.gif",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\splash.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\Taif.jpeg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "babel.config.js"
+                },
+                {
+                    "filename": "build.log",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 6,
+                    "code": 99,
+                    "comment": 1,
+                    "filename": "components\\AlertModal.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 21,
+                    "comment": 1,
+                    "filename": "components\\BottomTabNavigator.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 34,
+                    "comment": 0,
+                    "filename": "components\\ColoredBackground.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 58,
+                    "comment": 0,
+                    "filename": "components\\ColoredCircle.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 16,
+                    "comment": 2,
+                    "filename": "components\\convertStringToarray.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 121,
+                    "comment": 1,
+                    "filename": "components\\Header.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "components\\Store\\OTcontext.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 14,
+                    "comment": 3,
+                    "filename": "components\\Store\\UserContext.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 0,
+                    "comment": 39,
+                    "filename": "constants\\color.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 34,
+                    "comment": 2,
+                    "filename": "constants\\styles.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "data-storing.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "eas.json"
+                },
+                {
+                    "blank": 30,
+                    "code": 55,
+                    "comment": 101,
+                    "filename": "EfficiencyAnalysis\\components\\efficienciesOutput\\EfficienciesList.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 32,
+                    "comment": 1,
+                    "filename": "EfficiencyAnalysis\\components\\efficienciesOutput\\EfficienciesOutput.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\components\\efficienciesOutput\\EfficienciesSummery.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 228,
+                    "comment": 14,
+                    "filename": "EfficiencyAnalysis\\components\\efficienciesOutput\\Efficiencyitem.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 65,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\components\\efficienciesOutput\\Modal.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\components\\ManageEfficiency\\# Terminal Environment Changes.md"
+                },
+                {
+                    "blank": 96,
+                    "code": 508,
+                    "comment": 474,
+                    "filename": "EfficiencyAnalysis\\components\\ManageEfficiency\\EfficiencyForm.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 48,
+                    "comment": 2,
+                    "filename": "EfficiencyAnalysis\\components\\ManageEfficiency\\Input.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\components\\UI\\iconButton.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\components\\UI\\loading.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 384,
+                    "comment": 1142,
+                    "filename": "EfficiencyAnalysis\\components\\UI\\RMGS2.gif"
+                },
+                {
+                    "blank": 36,
+                    "code": 90,
+                    "comment": 11,
+                    "filename": "EfficiencyAnalysis\\Screens\\Allefficiencies.js"
+                },
+                {
+                    "blank": 23,
+                    "code": 98,
+                    "comment": 8,
+                    "filename": "EfficiencyAnalysis\\Screens\\Dnloadefficiencies.js"
+                },
+                {
+                    "blank": 23,
+                    "code": 98,
+                    "comment": 8,
+                    "filename": "EfficiencyAnalysis\\Screens\\downloadEfficiencies.js"
+                },
+                {
+                    "blank": 30,
+                    "code": 199,
+                    "comment": 5,
+                    "filename": "EfficiencyAnalysis\\Screens\\manageefficiency.js"
+                },
+                {
+                    "blank": 45,
+                    "code": 245,
+                    "comment": 29,
+                    "filename": "EfficiencyAnalysis\\Screens\\recentefficiencies.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 57,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\Store\\efficiencies-context.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 151,
+                    "comment": 19,
+                    "filename": "EfficiencyAnalysis\\Store\\efficienciescontext"
+                },
+                {
+                    "blank": 3,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\util\\Button.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "EfficiencyAnalysis\\util\\date.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\util\\datepicker.js"
+                },
+                {
+                    "blank": 20,
+                    "code": 158,
+                    "comment": 9,
+                    "filename": "EfficiencyAnalysis\\util\\forDataSendingGetting.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 45,
+                    "comment": 5,
+                    "filename": "EfficiencyAnalysis\\util\\ordinalTonumberToordinal.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 26,
+                    "comment": 9,
+                    "filename": "firebase.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 102,
+                    "comment": 14,
+                    "filename": "forDataSendingGetting.js"
+                },
+                {
+                    "blank": 20,
+                    "code": 165,
+                    "comment": 9,
+                    "filename": "LostTimeAnalysis\\components\\lostTimesOutput\\LostTimeitem.js"
+                },
+                {
+                    "blank": 30,
+                    "code": 55,
+                    "comment": 101,
+                    "filename": "LostTimeAnalysis\\components\\lostTimesOutput\\LostTimesList.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 32,
+                    "comment": 1,
+                    "filename": "LostTimeAnalysis\\components\\lostTimesOutput\\LostTimesOutput.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\components\\lostTimesOutput\\LostTimesSummery.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 65,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\components\\lostTimesOutput\\Modal.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\components\\ManageLostTime\\# Terminal Environment Changes.md"
+                },
+                {
+                    "blank": 10,
+                    "code": 48,
+                    "comment": 1,
+                    "filename": "LostTimeAnalysis\\components\\ManageLostTime\\Input.js"
+                },
+                {
+                    "blank": 52,
+                    "code": 486,
+                    "comment": 25,
+                    "filename": "LostTimeAnalysis\\components\\ManageLostTime\\LostTimeForm.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\components\\UI\\iconButton.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\components\\UI\\loading.js"
+                },
+                {
+                    "blank": 36,
+                    "code": 87,
+                    "comment": 11,
+                    "filename": "LostTimeAnalysis\\Screens\\AlllostTimes.js"
+                },
+                {
+                    "blank": 31,
+                    "code": 199,
+                    "comment": 5,
+                    "filename": "LostTimeAnalysis\\Screens\\managelostTime.js"
+                },
+                {
+                    "blank": 47,
+                    "code": 259,
+                    "comment": 27,
+                    "filename": "LostTimeAnalysis\\Screens\\recentlostTimes.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 57,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\Store\\lostTimes-context.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 151,
+                    "comment": 19,
+                    "filename": "LostTimeAnalysis\\Store\\lostTimescontext"
+                },
+                {
+                    "blank": 3,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\util\\Button.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "LostTimeAnalysis\\util\\date.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\util\\datepicker.js"
+                },
+                {
+                    "blank": 14,
+                    "code": 121,
+                    "comment": 5,
+                    "filename": "LostTimeAnalysis\\util\\forDataSendingGetting.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 45,
+                    "comment": 5,
+                    "filename": "LostTimeAnalysis\\util\\ordinalTonumberToordinal.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\components\\ManageOverTime\\# Terminal Environment Changes.md"
+                },
+                {
+                    "blank": 10,
+                    "code": 48,
+                    "comment": 1,
+                    "filename": "OverTimeAnalysis\\components\\ManageOverTime\\Input.js"
+                },
+                {
+                    "blank": 29,
+                    "code": 265,
+                    "comment": 34,
+                    "filename": "OverTimeAnalysis\\components\\ManageOverTime\\OverTimeForm.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 65,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\components\\overTimesOutput\\Modal.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 118,
+                    "comment": 2,
+                    "filename": "OverTimeAnalysis\\components\\overTimesOutput\\OverTimeitem.js"
+                },
+                {
+                    "blank": 30,
+                    "code": 55,
+                    "comment": 101,
+                    "filename": "OverTimeAnalysis\\components\\overTimesOutput\\OverTimesList.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 32,
+                    "comment": 1,
+                    "filename": "OverTimeAnalysis\\components\\overTimesOutput\\OverTimesOutput.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\components\\overTimesOutput\\OverTimesSummery.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\components\\UI\\iconButton.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\components\\UI\\loading.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 384,
+                    "comment": 1142,
+                    "filename": "OverTimeAnalysis\\components\\UI\\RMGS2.gif"
+                },
+                {
+                    "blank": 18,
+                    "code": 76,
+                    "comment": 6,
+                    "filename": "OverTimeAnalysis\\Screens\\AlloverTimes.js"
+                },
+                {
+                    "blank": 32,
+                    "code": 203,
+                    "comment": 8,
+                    "filename": "OverTimeAnalysis\\Screens\\manageoverTime.js"
+                },
+                {
+                    "blank": 47,
+                    "code": 267,
+                    "comment": 27,
+                    "filename": "OverTimeAnalysis\\Screens\\recentoverTimes.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 57,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\Store\\overTimes-context.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 151,
+                    "comment": 19,
+                    "filename": "OverTimeAnalysis\\Store\\overTimescontext"
+                },
+                {
+                    "blank": 3,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\util\\Button.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "OverTimeAnalysis\\util\\date.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\util\\datepicker.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 140,
+                    "comment": 10,
+                    "filename": "OverTimeAnalysis\\util\\forDataSendingGetting.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 45,
+                    "comment": 5,
+                    "filename": "OverTimeAnalysis\\util\\ordinalTonumberToordinal.js"
+                },
+                {
+                    "blank": 18,
+                    "code": 26791,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 58,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\components\\ManagePermission\\# Terminal Environment Changes.md"
+                },
+                {
+                    "blank": 10,
+                    "code": 48,
+                    "comment": 1,
+                    "filename": "PermissionAnalysis copy\\components\\ManagePermission\\Input.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 120,
+                    "comment": 16,
+                    "filename": "PermissionAnalysis copy\\components\\ManagePermission\\PermissionForm.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 65,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\components\\permissionsOutput\\Modal.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 81,
+                    "comment": 29,
+                    "filename": "PermissionAnalysis copy\\components\\permissionsOutput\\Permissionitem.js"
+                },
+                {
+                    "blank": 30,
+                    "code": 55,
+                    "comment": 101,
+                    "filename": "PermissionAnalysis copy\\components\\permissionsOutput\\PermissionsList.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 32,
+                    "comment": 1,
+                    "filename": "PermissionAnalysis copy\\components\\permissionsOutput\\PermissionsOutput.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\components\\permissionsOutput\\PermissionsSummery.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\components\\UI\\iconButton.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\components\\UI\\loading.js"
+                },
+                {
+                    "blank": 36,
+                    "code": 87,
+                    "comment": 11,
+                    "filename": "PermissionAnalysis copy\\Screens\\Allpermissions.js"
+                },
+                {
+                    "blank": 32,
+                    "code": 177,
+                    "comment": 4,
+                    "filename": "PermissionAnalysis copy\\Screens\\managepermission.js"
+                },
+                {
+                    "blank": 48,
+                    "code": 166,
+                    "comment": 122,
+                    "filename": "PermissionAnalysis copy\\Screens\\recentpermissions.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 57,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\Store\\permissions-context.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 151,
+                    "comment": 19,
+                    "filename": "PermissionAnalysis copy\\Store\\permissionscontext"
+                },
+                {
+                    "blank": 3,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\util\\Button.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "PermissionAnalysis copy\\util\\date.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\util\\datepicker.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 49,
+                    "comment": 4,
+                    "filename": "PermissionAnalysis copy\\util\\forDataSendingGetting.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 45,
+                    "comment": 5,
+                    "filename": "PermissionAnalysis copy\\util\\ordinalTonumberToordinal.js"
+                },
+                {
+                    "blank": 23,
+                    "code": 63,
+                    "comment": 0,
+                    "filename": "PrimaryButtons.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 95,
+                    "comment": 4,
+                    "filename": "Screens\\AdminPage.js"
+                },
+                {
+                    "blank": 22,
+                    "code": 106,
+                    "comment": 2,
+                    "filename": "Screens\\AssesmentDownload.js"
+                },
+                {
+                    "blank": 23,
+                    "code": 293,
+                    "comment": 9,
+                    "filename": "Screens\\ConsumptionForm.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 58,
+                    "comment": 6,
+                    "filename": "Screens\\Developermeet.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 104,
+                    "comment": 1,
+                    "filename": "Screens\\EfficiencyAnalysis.js"
+                },
+                {
+                    "blank": 14,
+                    "code": 82,
+                    "comment": 0,
+                    "filename": "Screens\\efficiencyContainer.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 184,
+                    "comment": 1,
+                    "filename": "Screens\\HomePage.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 42,
+                    "comment": 1,
+                    "filename": "Screens\\HRDepartment.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 161,
+                    "comment": 0,
+                    "filename": "Screens\\IEDepartment.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 156,
+                    "comment": 17,
+                    "filename": "Screens\\LoginPage.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 90,
+                    "comment": 3,
+                    "filename": "Screens\\LostTimeAnalysis.js"
+                },
+                {
+                    "blank": 37,
+                    "code": 444,
+                    "comment": 29,
+                    "filename": "Screens\\NewOperatorAssessment.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 92,
+                    "comment": 1,
+                    "filename": "Screens\\OverTime.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "Screens\\ProductionDepartment.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 38,
+                    "comment": 7,
+                    "filename": "Screens\\ProfilePage.js"
+                },
+                {
+                    "blank": 33,
+                    "code": 107,
+                    "comment": 311,
+                    "filename": "Screens\\QualityDepartment.js"
+                },
+                {
+                    "blank": 17,
+                    "code": 181,
+                    "comment": 6,
+                    "filename": "Screens\\SignUp.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "Screens\\SignUpWaiting.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "Screens\\Target.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 15,
+                    "comment": 4,
+                    "filename": "Screens\\VersionControlScreen.js"
+                },
+                {
+                    "blank": 33,
+                    "code": 169,
+                    "comment": 3,
+                    "filename": "StopWatch.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "theme.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "ThemeContext.js"
+                }
+            ]
+        },
+        {
+            "version": "0.2.7",
+            "counttime": "2023-10-10 10:56:19",
+            "filesum": 142,
+            "codesum": 38107,
+            "commentsum": 4209,
+            "blanksum": 1711,
+            "statistics": {
+                ".json": {
+                    "code": 26915,
+                    "comment": 0,
+                    "blank": 19
+                },
+                ".js": {
+                    "code": 9757,
+                    "comment": 1809,
+                    "blank": 1610
+                },
+                ".md": {
+                    "code": 36,
+                    "comment": 0,
+                    "blank": 8
+                },
+                "": {
+                    "code": 631,
+                    "comment": 77,
+                    "blank": 40
+                },
+                ".css": {
+                    "code": 0,
+                    "comment": 39,
+                    "blank": 2
+                },
+                ".gif": {
+                    "code": 768,
+                    "comment": 2284,
+                    "blank": 32
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": ".expo\\devices.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": ".expo\\packager-info.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": ".expo\\README.md"
+                },
+                {
+                    "blank": 0,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": ".expo\\settings.json"
+                },
+                {
+                    "blank": 8,
+                    "code": 27,
+                    "comment": 1,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 11,
+                    "code": 111,
+                    "comment": 9,
+                    "filename": "App.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "app.json"
+                },
+                {
+                    "filename": "assets\\adaptive-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\favicon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\RMGS.gif",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\RMGS.mp4",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\RMGS.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\RMGS2.gif",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\splash.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "assets\\Taif.jpeg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "babel.config.js"
+                },
+                {
+                    "filename": "build.log",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 6,
+                    "code": 99,
+                    "comment": 1,
+                    "filename": "components\\AlertModal.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 21,
+                    "comment": 1,
+                    "filename": "components\\BottomTabNavigator.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 34,
+                    "comment": 0,
+                    "filename": "components\\ColoredBackground.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 58,
+                    "comment": 0,
+                    "filename": "components\\ColoredCircle.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 16,
+                    "comment": 2,
+                    "filename": "components\\convertStringToarray.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 121,
+                    "comment": 1,
+                    "filename": "components\\Header.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "components\\Store\\OTcontext.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 14,
+                    "comment": 3,
+                    "filename": "components\\Store\\UserContext.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 0,
+                    "comment": 39,
+                    "filename": "constants\\color.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 34,
+                    "comment": 2,
+                    "filename": "constants\\styles.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "data-storing.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "eas.json"
+                },
+                {
+                    "blank": 30,
+                    "code": 55,
+                    "comment": 101,
+                    "filename": "EfficiencyAnalysis\\components\\efficienciesOutput\\EfficienciesList.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 32,
+                    "comment": 1,
+                    "filename": "EfficiencyAnalysis\\components\\efficienciesOutput\\EfficienciesOutput.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\components\\efficienciesOutput\\EfficienciesSummery.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 228,
+                    "comment": 14,
+                    "filename": "EfficiencyAnalysis\\components\\efficienciesOutput\\Efficiencyitem.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 65,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\components\\efficienciesOutput\\Modal.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\components\\ManageEfficiency\\# Terminal Environment Changes.md"
+                },
+                {
+                    "blank": 96,
+                    "code": 508,
+                    "comment": 474,
+                    "filename": "EfficiencyAnalysis\\components\\ManageEfficiency\\EfficiencyForm.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 48,
+                    "comment": 2,
+                    "filename": "EfficiencyAnalysis\\components\\ManageEfficiency\\Input.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\components\\UI\\iconButton.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\components\\UI\\loading.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 384,
+                    "comment": 1142,
+                    "filename": "EfficiencyAnalysis\\components\\UI\\RMGS2.gif"
+                },
+                {
+                    "blank": 36,
+                    "code": 90,
+                    "comment": 11,
+                    "filename": "EfficiencyAnalysis\\Screens\\Allefficiencies.js"
+                },
+                {
+                    "blank": 23,
+                    "code": 98,
+                    "comment": 8,
+                    "filename": "EfficiencyAnalysis\\Screens\\Dnloadefficiencies.js"
+                },
+                {
+                    "blank": 23,
+                    "code": 98,
+                    "comment": 8,
+                    "filename": "EfficiencyAnalysis\\Screens\\downloadEfficiencies.js"
+                },
+                {
+                    "blank": 30,
+                    "code": 199,
+                    "comment": 5,
+                    "filename": "EfficiencyAnalysis\\Screens\\manageefficiency.js"
+                },
+                {
+                    "blank": 45,
+                    "code": 245,
+                    "comment": 29,
+                    "filename": "EfficiencyAnalysis\\Screens\\recentefficiencies.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 57,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\Store\\efficiencies-context.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 151,
+                    "comment": 19,
+                    "filename": "EfficiencyAnalysis\\Store\\efficienciescontext"
+                },
+                {
+                    "blank": 3,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\util\\Button.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "EfficiencyAnalysis\\util\\date.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "EfficiencyAnalysis\\util\\datepicker.js"
+                },
+                {
+                    "blank": 20,
+                    "code": 158,
+                    "comment": 9,
+                    "filename": "EfficiencyAnalysis\\util\\forDataSendingGetting.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 45,
+                    "comment": 5,
+                    "filename": "EfficiencyAnalysis\\util\\ordinalTonumberToordinal.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 26,
+                    "comment": 9,
+                    "filename": "firebase.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 102,
+                    "comment": 14,
+                    "filename": "forDataSendingGetting.js"
+                },
+                {
+                    "blank": 20,
+                    "code": 165,
+                    "comment": 9,
+                    "filename": "LostTimeAnalysis\\components\\lostTimesOutput\\LostTimeitem.js"
+                },
+                {
+                    "blank": 30,
+                    "code": 55,
+                    "comment": 101,
+                    "filename": "LostTimeAnalysis\\components\\lostTimesOutput\\LostTimesList.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 32,
+                    "comment": 1,
+                    "filename": "LostTimeAnalysis\\components\\lostTimesOutput\\LostTimesOutput.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\components\\lostTimesOutput\\LostTimesSummery.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 65,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\components\\lostTimesOutput\\Modal.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\components\\ManageLostTime\\# Terminal Environment Changes.md"
+                },
+                {
+                    "blank": 10,
+                    "code": 48,
+                    "comment": 1,
+                    "filename": "LostTimeAnalysis\\components\\ManageLostTime\\Input.js"
+                },
+                {
+                    "blank": 52,
+                    "code": 486,
+                    "comment": 25,
+                    "filename": "LostTimeAnalysis\\components\\ManageLostTime\\LostTimeForm.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\components\\UI\\iconButton.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\components\\UI\\loading.js"
+                },
+                {
+                    "blank": 36,
+                    "code": 87,
+                    "comment": 11,
+                    "filename": "LostTimeAnalysis\\Screens\\AlllostTimes.js"
+                },
+                {
+                    "blank": 31,
+                    "code": 199,
+                    "comment": 5,
+                    "filename": "LostTimeAnalysis\\Screens\\managelostTime.js"
+                },
+                {
+                    "blank": 47,
+                    "code": 259,
+                    "comment": 27,
+                    "filename": "LostTimeAnalysis\\Screens\\recentlostTimes.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 57,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\Store\\lostTimes-context.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 151,
+                    "comment": 19,
+                    "filename": "LostTimeAnalysis\\Store\\lostTimescontext"
+                },
+                {
+                    "blank": 3,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\util\\Button.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "LostTimeAnalysis\\util\\date.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "LostTimeAnalysis\\util\\datepicker.js"
+                },
+                {
+                    "blank": 14,
+                    "code": 121,
+                    "comment": 5,
+                    "filename": "LostTimeAnalysis\\util\\forDataSendingGetting.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 45,
+                    "comment": 5,
+                    "filename": "LostTimeAnalysis\\util\\ordinalTonumberToordinal.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\components\\ManageOverTime\\# Terminal Environment Changes.md"
+                },
+                {
+                    "blank": 10,
+                    "code": 48,
+                    "comment": 1,
+                    "filename": "OverTimeAnalysis\\components\\ManageOverTime\\Input.js"
+                },
+                {
+                    "blank": 29,
+                    "code": 265,
+                    "comment": 34,
+                    "filename": "OverTimeAnalysis\\components\\ManageOverTime\\OverTimeForm.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 65,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\components\\overTimesOutput\\Modal.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 118,
+                    "comment": 2,
+                    "filename": "OverTimeAnalysis\\components\\overTimesOutput\\OverTimeitem.js"
+                },
+                {
+                    "blank": 30,
+                    "code": 55,
+                    "comment": 101,
+                    "filename": "OverTimeAnalysis\\components\\overTimesOutput\\OverTimesList.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 32,
+                    "comment": 1,
+                    "filename": "OverTimeAnalysis\\components\\overTimesOutput\\OverTimesOutput.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\components\\overTimesOutput\\OverTimesSummery.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\components\\UI\\iconButton.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\components\\UI\\loading.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 384,
+                    "comment": 1142,
+                    "filename": "OverTimeAnalysis\\components\\UI\\RMGS2.gif"
+                },
+                {
+                    "blank": 18,
+                    "code": 76,
+                    "comment": 6,
+                    "filename": "OverTimeAnalysis\\Screens\\AlloverTimes.js"
+                },
+                {
+                    "blank": 32,
+                    "code": 203,
+                    "comment": 8,
+                    "filename": "OverTimeAnalysis\\Screens\\manageoverTime.js"
+                },
+                {
+                    "blank": 47,
+                    "code": 267,
+                    "comment": 27,
+                    "filename": "OverTimeAnalysis\\Screens\\recentoverTimes.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 57,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\Store\\overTimes-context.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 151,
+                    "comment": 19,
+                    "filename": "OverTimeAnalysis\\Store\\overTimescontext"
+                },
+                {
+                    "blank": 3,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\util\\Button.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "OverTimeAnalysis\\util\\date.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "OverTimeAnalysis\\util\\datepicker.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 140,
+                    "comment": 10,
+                    "filename": "OverTimeAnalysis\\util\\forDataSendingGetting.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 45,
+                    "comment": 5,
+                    "filename": "OverTimeAnalysis\\util\\ordinalTonumberToordinal.js"
+                },
+                {
+                    "blank": 18,
+                    "code": 26791,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 58,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\components\\ManagePermission\\# Terminal Environment Changes.md"
+                },
+                {
+                    "blank": 10,
+                    "code": 48,
+                    "comment": 1,
+                    "filename": "PermissionAnalysis copy\\components\\ManagePermission\\Input.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 120,
+                    "comment": 16,
+                    "filename": "PermissionAnalysis copy\\components\\ManagePermission\\PermissionForm.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 65,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\components\\permissionsOutput\\Modal.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 81,
+                    "comment": 29,
+                    "filename": "PermissionAnalysis copy\\components\\permissionsOutput\\Permissionitem.js"
+                },
+                {
+                    "blank": 30,
+                    "code": 55,
+                    "comment": 101,
+                    "filename": "PermissionAnalysis copy\\components\\permissionsOutput\\PermissionsList.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 32,
+                    "comment": 1,
+                    "filename": "PermissionAnalysis copy\\components\\permissionsOutput\\PermissionsOutput.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\components\\permissionsOutput\\PermissionsSummery.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\components\\UI\\iconButton.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\components\\UI\\loading.js"
+                },
+                {
+                    "blank": 36,
+                    "code": 87,
+                    "comment": 11,
+                    "filename": "PermissionAnalysis copy\\Screens\\Allpermissions.js"
+                },
+                {
+                    "blank": 32,
+                    "code": 177,
+                    "comment": 4,
+                    "filename": "PermissionAnalysis copy\\Screens\\managepermission.js"
+                },
+                {
+                    "blank": 48,
+                    "code": 166,
+                    "comment": 122,
+                    "filename": "PermissionAnalysis copy\\Screens\\recentpermissions.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 57,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\Store\\permissions-context.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 151,
+                    "comment": 19,
+                    "filename": "PermissionAnalysis copy\\Store\\permissionscontext"
+                },
+                {
+                    "blank": 3,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\util\\Button.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "PermissionAnalysis copy\\util\\date.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "PermissionAnalysis copy\\util\\datepicker.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 49,
+                    "comment": 4,
+                    "filename": "PermissionAnalysis copy\\util\\forDataSendingGetting.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 45,
+                    "comment": 5,
+                    "filename": "PermissionAnalysis copy\\util\\ordinalTonumberToordinal.js"
+                },
+                {
+                    "blank": 23,
+                    "code": 63,
+                    "comment": 0,
+                    "filename": "PrimaryButtons.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 95,
+                    "comment": 4,
+                    "filename": "Screens\\AdminPage.js"
+                },
+                {
+                    "blank": 22,
+                    "code": 106,
+                    "comment": 2,
+                    "filename": "Screens\\AssesmentDownload.js"
+                },
+                {
+                    "blank": 23,
+                    "code": 293,
+                    "comment": 9,
+                    "filename": "Screens\\ConsumptionForm.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 58,
+                    "comment": 6,
+                    "filename": "Screens\\Developermeet.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 104,
+                    "comment": 1,
+                    "filename": "Screens\\EfficiencyAnalysis.js"
+                },
+                {
+                    "blank": 14,
+                    "code": 82,
+                    "comment": 0,
+                    "filename": "Screens\\efficiencyContainer.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 184,
+                    "comment": 1,
+                    "filename": "Screens\\HomePage.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 42,
+                    "comment": 1,
+                    "filename": "Screens\\HRDepartment.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 161,
+                    "comment": 0,
+                    "filename": "Screens\\IEDepartment.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 156,
+                    "comment": 17,
+                    "filename": "Screens\\LoginPage.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 90,
+                    "comment": 3,
+                    "filename": "Screens\\LostTimeAnalysis.js"
+                },
+                {
+                    "blank": 37,
+                    "code": 444,
+                    "comment": 29,
+                    "filename": "Screens\\NewOperatorAssessment.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 92,
+                    "comment": 1,
+                    "filename": "Screens\\OverTime.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "Screens\\ProductionDepartment.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 38,
+                    "comment": 7,
+                    "filename": "Screens\\ProfilePage.js"
+                },
+                {
+                    "blank": 33,
+                    "code": 107,
+                    "comment": 311,
+                    "filename": "Screens\\QualityDepartment.js"
+                },
+                {
+                    "blank": 17,
+                    "code": 181,
+                    "comment": 6,
+                    "filename": "Screens\\SignUp.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "Screens\\SignUpWaiting.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "Screens\\Target.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 15,
+                    "comment": 4,
+                    "filename": "Screens\\VersionControlScreen.js"
+                },
+                {
+                    "blank": 33,
+                    "code": 169,
+                    "comment": 3,
+                    "filename": "StopWatch.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "theme.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "ThemeContext.js"
+                }
+            ]
+        }
+    ]
+}

@@ -31,7 +31,7 @@ export default function EfficiencyItem({date,lineNumber,id,buyerName,hourTNC,hou
   
     const earnedminute=(p.production+p.without+p.rejection-p.due)*p.SMV;
     const hour=p.hour/10*p.hourTNC;
-    const hourMinusTNC=p.hourMinusTNC;
+    const hourMinusTNC=p.hour/10*p.hourMinusTNC;
     const target10=p.target10;
     const production=p.production+p.without-p.due+p.rejection;
     const totalWithout=p.without;
@@ -52,7 +52,7 @@ const total=sFilteredEfficiencies.reduce(function myFunc(total, num) {
   return ({Availableminute: total.Availableminute + num.Availableminute,earnedminute:total.earnedminute+num.earnedminute,hour: total.hour+num.hour,target10:total.target10+num.target10,production:total.production+num.production,totalWithout:total.totalWithout+num.totalWithout,totalDue:total.totalDue+num.totalDue+num.totalWithout,hourMinusTNC:total.hourMinusTNC+num.hourMinusTNC})
   
 })
-//console.log(total)
+console.log(total)
 
     
       
@@ -217,7 +217,7 @@ const styles= StyleSheet.create({
         justifyContent:'center',
         paddingTop:3,
         fontSize:screen_height*0.017,
-        flex:.4,
+        flex:.5,
         fontWeight:'bold',
         flexDirection:'column'
     },

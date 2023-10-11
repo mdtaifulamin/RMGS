@@ -179,6 +179,7 @@ export default function SpreadsheetForm({defaultValues,onSubmit}) {
               <View key={index+1} style={styles.inputRow}>
                 <TextInput
                   placeholder="Enter data..."
+                  keyboardType='number-pad'
                   onChangeText={(value) => handleInputChange(columnName, line, value)}
                   value={inputData[`Line_${line}`]?.[columnName]}
                   ref={(input) => (inputRefs.current[`${columnName}_${line}`] = input)}
