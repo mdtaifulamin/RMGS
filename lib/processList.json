@@ -1,0 +1,6560 @@
+{
+    "Tee": [
+        {
+            "label": "Shoulder join (Stripe)(4T OL)",
+            "value": "TSHO101"
+        },
+        {
+            "label": "Ironing (Finishing)",
+            "value": "TIRONFO101"
+        },
+        {
+            "label": "Packing (Finishing)",
+            "value": "TPACKFO101"
+        },
+        {
+            "label": "Folding (Finishing)",
+            "value": "TFOLFO101"
+        },
+        {
+            "label": "Shoulder join(4T OL)",
+            "value": "TSHO102"
+        },
+        {
+            "label": "Shoulder join (Lycra)(4T OL)",
+            "value": "TSHO103"
+        },
+        {
+            "label": "Shoulder join (Fleece)(4T OL)",
+            "value": "TSHO104"
+        },
+        {
+            "label": "1st shoulder join(4T OL)",
+            "value": "TSHO105"
+        },
+        {
+            "label": "2nd shoulder join(4T OL)",
+            "value": "TSHO106"
+        },
+        {
+            "label": "Shoulder join & pull(3T OL)",
+            "value": "TSHO107"
+        },
+        {
+            "label": "Shoulder join (long)(4T OL)",
+            "value": "TSHO108"
+        },
+        {
+            "label": "Shoulder join (long) (Fleece)(4T OL)",
+            "value": "TSHO109"
+        },
+        {
+            "label": "Shoulder join & pull(4T OL)",
+            "value": "TSHO110"
+        },
+        {
+            "label": "Shoulder join with sleeve(4T OL)",
+            "value": "TSHO111"
+        },
+        {
+            "label": "Shoulder topstitch(FL CY)",
+            "value": "TSHO112"
+        },
+        {
+            "label": "Shoulder topstitch with sleeve(FL COV)",
+            "value": "TSHO113"
+        },
+        {
+            "label": "Panel matching(HEL)",
+            "value": "TSHO114"
+        },
+        {
+            "label": "Shoulder loop attach(SN)",
+            "value": "TSHO115"
+        },
+        {
+            "label": "Shoulder join & shoulder scissoring(4T OL)",
+            "value": "TSHO116"
+        },
+        {
+            "label": "Shoulder topstitch(Long)(FL CY)",
+            "value": "TSHO117"
+        },
+        {
+            "label": "Sleeve attach SS (In set)(4T OL)",
+            "value": "TSLE201"
+        },
+        {
+            "label": "Sleeve attach (Stripe)(4T OL)",
+            "value": "TSLE202"
+        },
+        {
+            "label": "Sleeve attach (Stripe long)(4T OL)",
+            "value": "TSLE203"
+        },
+        {
+            "label": "Sleeve attach (Synthetic)(4T OL)",
+            "value": "TSLE204"
+        },
+        {
+            "label": "Sleeve attach LS (long)(4T OL)",
+            "value": "TSLE205"
+        },
+        {
+            "label": "Sleeve attach at front (Raglan)(4T OL)",
+            "value": "TSLE206"
+        },
+        {
+            "label": "Sleeve attach at back (Raglan)(4T OL)",
+            "value": "TSLE207"
+        },
+        {
+            "label": "Sleeve attach (Tubular)(4T OL)",
+            "value": "TSLE208"
+        },
+        {
+            "label": "Sleeve attach (Tubular long)(4T OL)",
+            "value": "TSLE209"
+        },
+        {
+            "label": "Cut & sew attach at sleeve (4T OL)",
+            "value": "TSLE210"
+        },
+        {
+            "label": "Cut & sew v tack to sleeve(SN)",
+            "value": "TSLE211"
+        },
+        {
+            "label": "Sleeve servicing ( Edge)(4T OL)",
+            "value": "TSLE212"
+        },
+        {
+            "label": "Sleeve servicing  (Stripe)(4T OL)",
+            "value": "TSLE213"
+        },
+        {
+            "label": "Sleeve binding(FL BIN)",
+            "value": "TSLE214"
+        },
+        {
+            "label": "Sleeve binding matching tack(SN)",
+            "value": "TSLE215"
+        },
+        {
+            "label": "Sleeve open outer tack(SN)",
+            "value": "TSLE216"
+        },
+        {
+            "label": "Sleeve hem(FL HEM)",
+            "value": "TSLE217"
+        },
+        {
+            "label": "Sleeve hem (Open)(FL HEM)",
+            "value": "TSLE218"
+        },
+        {
+            "label": "Sleeve hem (Stripe)(FL HEM)",
+            "value": "TSLE219"
+        },
+        {
+            "label": "Sleeve hem edge topstitch(FL CY)",
+            "value": "TSLE220"
+        },
+        {
+            "label": "Sleeve hem & pull(3T OL)",
+            "value": "TSLE221"
+        },
+        {
+            "label": "Sleeve hem edge trim(OL)",
+            "value": "TSLE222"
+        },
+        {
+            "label": "Armhole topstitch (Open)(FL CY)",
+            "value": "TSLE223"
+        },
+        {
+            "label": "Armhole topstitch (Round)(FL COV)",
+            "value": "TSLE224"
+        },
+        {
+            "label": "Armhole topstitch (front) (Raglan)(FL COV)",
+            "value": "TSLE225"
+        },
+        {
+            "label": "Armhole topstitch (Back) (Raglan)(FL COV)",
+            "value": "TSLE226"
+        },
+        {
+            "label": "Sleeve hem (Blind)(FL HEM)",
+            "value": "TSLE227"
+        },
+        {
+            "label": "Sleeve tack to body(SN)",
+            "value": "TSLE228"
+        },
+        {
+            "label": "Armhole cross tack(SN)",
+            "value": "TSLE229"
+        },
+        {
+            "label": "sleeve hem join tack(SN)",
+            "value": "TSLE230"
+        },
+        {
+            "label": "Armhole binding (T.top)(FL BIN)",
+            "value": "TSLE231"
+        },
+        {
+            "label": "Armhole binding measure & cut (T.top)(HEL)",
+            "value": "TSLE232"
+        },
+        {
+            "label": "Armhole binding stitch open (T.top)(HEL)",
+            "value": "TSLE233"
+        },
+        {
+            "label": "Armhole binding end tack (T.top)(SN)",
+            "value": "TSLE234"
+        },
+        {
+            "label": "Armhole binding end close (T.top)(FL CY)",
+            "value": "TSLE235"
+        },
+        {
+            "label": "Armhole hem (Open)(FL CY)",
+            "value": "TSLE236"
+        },
+        {
+            "label": "Armhole hem & pull (Open)(3T OL)",
+            "value": "TSLE237"
+        },
+        {
+            "label": "Side or sleeve frill ol(3T OL)",
+            "value": "TSLE238"
+        },
+        {
+            "label": "Side or sleeve frill hem(SN)",
+            "value": "TSLE239"
+        },
+        {
+            "label": "Body & sleeve frill match(HEL)",
+            "value": "TSLE240"
+        },
+        {
+            "label": "Body & sleeve frill attach with V  (Viscos febric) (SN)",
+            "value": "TSLE241"
+        },
+        {
+            "label": "False tack for sleeve hem(SN)",
+            "value": "TSLE242"
+        },
+        {
+            "label": "Sleeve hem (6 cm)(FL HEM)",
+            "value": "TSLE243"
+        },
+        {
+            "label": "Mark for sleeve tab patch label attach(SN)",
+            "value": "TSLE244"
+        },
+        {
+            "label": "Sleeve patch label attach(SN)",
+            "value": "TSLE245"
+        },
+        {
+            "label": "Sleeve edge ol(3T OL)",
+            "value": "TSLE246"
+        },
+        {
+            "label": "Mark for sleeve turn up & tack(HEL)",
+            "value": "TSLE247"
+        },
+        {
+            "label": "Sleeve turn up & tack & false stitch open(SN)",
+            "value": "TSLE248"
+        },
+        {
+            "label": "Sleeve turn up & tack  (SN)",
+            "value": "TSLE249"
+        },
+        {
+            "label": "Sleeve attach at front(big) (Raglan)(4T OL)",
+            "value": "TSLE250"
+        },
+        {
+            "label": "Sleeve attach at back(big) (Raglan)(4T OL)",
+            "value": "TSLE251"
+        },
+        {
+            "label": "Sleeve cuff measure cut & trim(OL)",
+            "value": "TCUF301"
+        },
+        {
+            "label": "Sleeve cuff join ,fold & mark(SN)",
+            "value": "TCUF302"
+        },
+        {
+            "label": "Sleeve cuff join & topstitch(SN)",
+            "value": "TCUF303"
+        },
+        {
+            "label": "Sleeve cuff inside tack(SN)",
+            "value": "TCUF304"
+        },
+        {
+            "label": "Sleeve cuff attach (Open)(4T OL)",
+            "value": "TCUF305"
+        },
+        {
+            "label": "Sleeve cuff attach (Round)(4T OL)",
+            "value": "TCUF306"
+        },
+        {
+            "label": "Sleeve cuff attach (Stripe & open)(4T OL)",
+            "value": "TCUF307"
+        },
+        {
+            "label": "Sleeve cuff topstitch (Open)(FL CY)",
+            "value": "TCUF308"
+        },
+        {
+            "label": "Sleeve cuff topstitch (Round)(FL CY)",
+            "value": "TCUF309"
+        },
+        {
+            "label": "Sleeve cuff servicing(SN)",
+            "value": "TCUF310"
+        },
+        {
+            "label": "Sleeve turn up & tack(SN)",
+            "value": "TSLE401"
+        },
+        {
+            "label": "Sleeve turn up bartack(B TACK)",
+            "value": "TSLE402"
+        },
+        {
+            "label": "Iron for sleeve turn up tack(Iron)",
+            "value": "TSLE403"
+        },
+        {
+            "label": "Mark for sleeve turn up bartack(Iron)",
+            "value": "TSLE404"
+        },
+        {
+            "label": "Sleeve turn up bartack & false stitch open(B TACK)",
+            "value": "TSLE405"
+        },
+        {
+            "label": "Neck rib make(3T OL)",
+            "value": "TNEC501"
+        },
+        {
+            "label": "Neck rib join,fold & mark(SN)",
+            "value": "TNEC502"
+        },
+        {
+            "label": "Neck rib end tack(SN)",
+            "value": "TNEC503"
+        },
+        {
+            "label": "Neck rib v  make & mark(SN)",
+            "value": "TNEC504"
+        },
+        {
+            "label": "Neck rib attach (Folder)(4T OL)",
+            "value": "TNEC505"
+        },
+        {
+            "label": "Neck rib attach(4T OL)",
+            "value": "TNEC506"
+        },
+        {
+            "label": "Neck rib attach (Roller)(4T OL)",
+            "value": "TNEC507"
+        },
+        {
+            "label": "Neck rib join ( double)(SN)",
+            "value": "TNEC508"
+        },
+        {
+            "label": "Neck rib edge trim(SN EDCUT)",
+            "value": "TNEC509"
+        },
+        {
+            "label": "Neck rib end close(4T OL)",
+            "value": "TNEC510"
+        },
+        {
+            "label": "Neck rib mark & tack to body(SN)",
+            "value": "TNEC511"
+        },
+        {
+            "label": "Neck rib servicing 1st(SN)",
+            "value": "TNEC512"
+        },
+        {
+            "label": "Neck rib servicing 2nd(SN)",
+            "value": "TNEC513"
+        },
+        {
+            "label": "Neck rib servicing 3rd(SN)",
+            "value": "TNEC514"
+        },
+        {
+            "label": "Neck rib servicing(OL)",
+            "value": "TNEC515"
+        },
+        {
+            "label": "Neck rib join & topstitch(double)(SN)",
+            "value": "TNEC516"
+        },
+        {
+            "label": "Neck rib topstitch(FL CY)",
+            "value": "TNEC517"
+        },
+        {
+            "label": "Neck rib topstitch full(FL CY)",
+            "value": "TNEC518"
+        },
+        {
+            "label": "Neck rib join 1st part(SN)",
+            "value": "TNEC519"
+        },
+        {
+            "label": "Neck rib join 2nd part(SN)",
+            "value": "TNEC520"
+        },
+        {
+            "label": "Neck carling tack(SN)",
+            "value": "TNEC521"
+        },
+        {
+            "label": "Front neck topstitch(FL CY)",
+            "value": "TNEC522"
+        },
+        {
+            "label": "Neck label attach with mark(SN)",
+            "value": "TNEC523"
+        },
+        {
+            "label": "Neck rib v  make & mark (V neck)(SN)",
+            "value": "TNEC524"
+        },
+        {
+            "label": "V tack to body (V neck)(SN)",
+            "value": "TNEC525"
+        },
+        {
+            "label": "Mark for neck rib attach (V neck)(HEL)",
+            "value": "TNEC526"
+        },
+        {
+            "label": "Neck rib attach (V neck)(4T OL)",
+            "value": "TNEC527"
+        },
+        {
+            "label": "V Front neck topstitch  (V neck)(SN)",
+            "value": "TNEC528"
+        },
+        {
+            "label": "Front neck topstitch end security tack (V neck)(SN)",
+            "value": "TNEC529"
+        },
+        {
+            "label": "V security tack (V neck)(SN)",
+            "value": "TNEC530"
+        },
+        {
+            "label": "Neck binding (T.top)(FL BIN)",
+            "value": "TNEC531"
+        },
+        {
+            "label": "Neck binding measure cut (T.top)(HEL)",
+            "value": "TNEC532"
+        },
+        {
+            "label": "Neck binding stitch open (T.top)(HEL)",
+            "value": "TNEC533"
+        },
+        {
+            "label": "Neck binding end tack (T.top)(SN)",
+            "value": "TNEC534"
+        },
+        {
+            "label": "Neck binding end close (T.top)(FL CY)",
+            "value": "TNEC535"
+        },
+        {
+            "label": "Neck rib end  stitch open(HEL)",
+            "value": "TNEC536"
+        },
+        {
+            "label": "Neck rib measure cut(HEL)",
+            "value": "TNEC537"
+        },
+        {
+            "label": "Neck rib Iron(IRON)",
+            "value": "TNEC538"
+        },
+        {
+            "label": "Front neck topstitch end tack & stitch open(SN)",
+            "value": "TNEC539"
+        },
+        {
+            "label": "Neck RIB make(4T OL)",
+            "value": "TNEC540"
+        },
+        {
+            "label": "Neck RIB stitch open & end tack(Double)(SN)",
+            "value": "TNEC541"
+        },
+        {
+            "label": "Body & neck rib mark for attach(HEL)",
+            "value": "TNEC542"
+        },
+        {
+            "label": "Neck rib joinedge overlock(4T OL)",
+            "value": "TNEC543"
+        },
+        {
+            "label": "Neck rib join & topstitch(SN)",
+            "value": "TNEC544"
+        },
+        {
+            "label": "Neck rib measure cut(OL)",
+            "value": "TNEC545"
+        },
+        {
+            "label": "Neck rib end tack with stitch open(SN)",
+            "value": "TNEC546"
+        },
+        {
+            "label": "Security tack at neck(SN)",
+            "value": "TNEC547"
+        },
+        {
+            "label": "Neck Loop mark & attach(SN)",
+            "value": "TNEC548"
+        },
+        {
+            "label": "Back neck tape measure cut & iron(HEL)",
+            "value": "TBAC601"
+        },
+        {
+            "label": "Back neck tape attach  (Tee) (Binding)(FL BIN)",
+            "value": "TBAC602"
+        },
+        {
+            "label": "Back neck tape attach  (Tee) (Acc. Tape)(SN)",
+            "value": "TBAC603"
+        },
+        {
+            "label": "Back neck tape end tack & trim(SN)",
+            "value": "TBAC604"
+        },
+        {
+            "label": "Back neck tape close  (Tee, self) (With label)(SN)",
+            "value": "TBAC605"
+        },
+        {
+            "label": "Back neck tape close  (Tee, self) (With loop)(SN)",
+            "value": "TBAC606"
+        },
+        {
+            "label": "Back neck tape close  (Tee, self) (Without label)(SN)",
+            "value": "TBAC607"
+        },
+        {
+            "label": "Back neck tape close  (Tee, acc tape) (With label)(SN)",
+            "value": "TBAC608"
+        },
+        {
+            "label": "Back neck tape close  (Tee, acc tape) (Without label)(SN)",
+            "value": "TBAC609"
+        },
+        {
+            "label": "Shoulder to shoulder binding attach(FL BIN)",
+            "value": "TBAC610"
+        },
+        {
+            "label": "Shoulder to shoulder tape attach(FOA)",
+            "value": "TBAC611"
+        },
+        {
+            "label": "Back neck tape attach(DN)",
+            "value": "TBAC612"
+        },
+        {
+            "label": "Back neck tape mark & attach(SN)",
+            "value": "TBAC613"
+        },
+        {
+            "label": "Inside tape or layer attach(By folder) (T.top)(SN)",
+            "value": "TBAC614"
+        },
+        {
+            "label": "Inside tape end rolling (T.top)(SN)",
+            "value": "TBAC615"
+        },
+        {
+            "label": "Inside tape end fold and tack (T.top)(SN)",
+            "value": "TBAC616"
+        },
+        {
+            "label": "Inside tape or layer  close 1st (T.top)(SN)",
+            "value": "TBAC617"
+        },
+        {
+            "label": "Inside tape or layer  close 2nd (T.top)(SN)",
+            "value": "TBAC618"
+        },
+        {
+            "label": "Zigzag stitch at back tape(FL CY)",
+            "value": "TBAC619"
+        },
+        {
+            "label": "Back neck tape end stitch open(HEL)",
+            "value": "TBAC620"
+        },
+        {
+            "label": "Back neck tape end insert & tack(SN)",
+            "value": "TBAC621"
+        },
+        {
+            "label": "Back neck tape end stitch open for DN(HEL)",
+            "value": "TBAC622"
+        },
+        {
+            "label": "Back neck tape end insert & tack for DN(SN)",
+            "value": "TBAC623"
+        },
+        {
+            "label": "Back neck tape close  (Tee, self) (Two label)(SN)",
+            "value": "TBAC624"
+        },
+        {
+            "label": "Back neck tape attach  (Tape Stripe)(FL BIN)",
+            "value": "TBAC625"
+        },
+        {
+            "label": "Back neck tape close shoulder to shoulder(SN)",
+            "value": "TBAC626"
+        },
+        {
+            "label": "Back neck tape close shoulder to shoulder (One label)(SN)",
+            "value": "TBAC627"
+        },
+        {
+            "label": "Back neck tape close shoulder to shoulder (Two label)(SN)",
+            "value": "TBAC628"
+        },
+        {
+            "label": "Back neck tape contrast tape spread & iron(IRON)",
+            "value": "TBAC629"
+        },
+        {
+            "label": "Back neck tape contrast tape attach(SN)",
+            "value": "TBAC630"
+        },
+        {
+            "label": "Mark for label close(HEL)",
+            "value": "TBAC631"
+        },
+        {
+            "label": "Back neck tape attach & trim(FL BIN)",
+            "value": "TBAC632"
+        },
+        {
+            "label": "Back neck tape attach & trim(SN)",
+            "value": "TBAC633"
+        },
+        {
+            "label": "Back neck tape check & trim(HEL)",
+            "value": "TBAC634"
+        },
+        {
+            "label": "Mark for Back neck tape attach & trim(HEL)",
+            "value": "TBAC635"
+        },
+        {
+            "label": "Side seam  (Regular)(4T OL)",
+            "value": "TSID701"
+        },
+        {
+            "label": "Side seam with side slit o/l(lower part)(4T OL)",
+            "value": "TSID702"
+        },
+        {
+            "label": "Side seam(point match)(4T OL)",
+            "value": "TSID703"
+        },
+        {
+            "label": "Side seam with care label(4T OL)",
+            "value": "TSID704"
+        },
+        {
+            "label": "Side seam(inside panel)(4T OL)",
+            "value": "TSID705"
+        },
+        {
+            "label": "Side seam SS (Stripe)(4T OL)",
+            "value": "TSID706"
+        },
+        {
+            "label": "Side seam LS(4T OL)",
+            "value": "TSID707"
+        },
+        {
+            "label": "Side seam LS (Stripe)(4T OL)",
+            "value": "TSID708"
+        },
+        {
+            "label": "Side seam LS  (Cardigan)(4T OL)",
+            "value": "TSID709"
+        },
+        {
+            "label": "Side seam topstitch(FL COV)",
+            "value": "TSID710"
+        },
+        {
+            "label": "Side seam topstitch end tack & stitch open(SN)",
+            "value": "TSID711"
+        },
+        {
+            "label": "Side seam matching tack(SN)",
+            "value": "TSID712"
+        },
+        {
+            "label": "Side seam with body set ( 1st part) (T.Top)(4T OL)",
+            "value": "TSID713"
+        },
+        {
+            "label": "Side seam with body set ( 2nd part) (T.Top)(4T OL)",
+            "value": "TSID714"
+        },
+        {
+            "label": "Binding attach at side cut & sew(FL BIN)",
+            "value": "TSID715"
+        },
+        {
+            "label": "Binding close at side cut & sew(SN)",
+            "value": "TSID716"
+        },
+        {
+            "label": "Side seam topstitch(FL CY)",
+            "value": "TSID717"
+        },
+        {
+            "label": "Bottom hem(FL HEM)",
+            "value": "TBOT801"
+        },
+        {
+            "label": "Bottom hem (O/L)(3T OL)",
+            "value": "TBOT802"
+        },
+        {
+            "label": "Bottom hem join tack(SN)",
+            "value": "TBOT803"
+        },
+        {
+            "label": "Tack at bottom hem(SN)",
+            "value": "TBOT804"
+        },
+        {
+            "label": "Bottom hem pull & knot make(HEL)",
+            "value": "TBOT805"
+        },
+        {
+            "label": "Bottom hem o/l with mobilon tape(4T OL)",
+            "value": "TBOT806"
+        },
+        {
+            "label": "Bottom hem  (chinese)(FL CY)",
+            "value": "TBOT807"
+        },
+        {
+            "label": "Tack at bottom hem (double)(SN)",
+            "value": "TBOT808"
+        },
+        {
+            "label": "Bottom false tack for bottom hem(SN)",
+            "value": "TBOT809"
+        },
+        {
+            "label": "Bottom hem (6cm)(FL HEM)",
+            "value": "TBOT810"
+        },
+        {
+            "label": "Bottom rib join(SN)",
+            "value": "TBOT811"
+        },
+        {
+            "label": "Bottom rib inside tack(SN)",
+            "value": "TBOT812"
+        },
+        {
+            "label": "Bottom rib servicing(FL CY)",
+            "value": "TBOT813"
+        },
+        {
+            "label": "Bottom rib attach(4T OL)",
+            "value": "TBOT814"
+        },
+        {
+            "label": "Bottom rib topstitch(FL CY)",
+            "value": "TBOT815"
+        },
+        {
+            "label": "Bottom servicing(4T OL)",
+            "value": "TBOT816"
+        },
+        {
+            "label": "Bottom Blind hem(3T OL)",
+            "value": "TBOT817"
+        },
+        {
+            "label": "Push for bottom hem(HEL)",
+            "value": "TBOT818"
+        },
+        {
+            "label": "Bottom hem (Stripe)(FL HEM)",
+            "value": "TBOT819"
+        },
+        {
+            "label": "Mark for bottom tab patch label attach(SN)",
+            "value": "TBOT820"
+        },
+        {
+            "label": "Bottom patch label attach(SN)",
+            "value": "TBOT821"
+        },
+        {
+            "label": "Bottom Rib join, fold & mark(SN)",
+            "value": "TBOT822"
+        },
+        {
+            "label": "Bottom hem (Open)(FL HEM)",
+            "value": "TBOT823"
+        },
+        {
+            "label": "Side slit open tack with tape & stitch open(SN)",
+            "value": "TSID901"
+        },
+        {
+            "label": "Side slit minner  make &  mark(SN)",
+            "value": "TSID902"
+        },
+        {
+            "label": "Side slit tape attach(SN)",
+            "value": "TSID903"
+        },
+        {
+            "label": "Side slit tape end tack & trim(SN)",
+            "value": "TSID904"
+        },
+        {
+            "label": "Side slit tape close(SN)",
+            "value": "TSID905"
+        },
+        {
+            "label": "Side slit tape servicing(4T OL)",
+            "value": "TSID906"
+        },
+        {
+            "label": "Side slit o/l(4T OL)",
+            "value": "TSID907"
+        },
+        {
+            "label": "Bar tack at side slit(B TACK)",
+            "value": "TSID908"
+        },
+        {
+            "label": "Back slit hem(Flat lock)",
+            "value": "TSID909"
+        },
+        {
+            "label": "Back deviding join at slit area(SN)",
+            "value": "TSID910"
+        },
+        {
+            "label": "Side slit open close(SN)",
+            "value": "TSID911"
+        },
+        {
+            "label": "Side slit tape make(FL BIN)",
+            "value": "TSID912"
+        },
+        {
+            "label": "Mark for pocket attach(Helper)",
+            "value": "TPOC1001"
+        },
+        {
+            "label": "Mark for pocket patch label attach(Helper)",
+            "value": "TPOC1002"
+        },
+        {
+            "label": "Pocket hem & raw edge trim(Flat lock)",
+            "value": "TPOC1003"
+        },
+        {
+            "label": "Patch label attach at pocket (Single Needle)",
+            "value": "TPOC1004"
+        },
+        {
+            "label": "Pocket iron & scissoring(Iron)",
+            "value": "TPOC1005"
+        },
+        {
+            "label": "Pocket attach with diamond(Single Needle)",
+            "value": "TPOC1006"
+        },
+        {
+            "label": "Pocket attach  (Stripe)(Single Needle)",
+            "value": "TPOC1007"
+        },
+        {
+            "label": "Pocket Overlock(3T OL)",
+            "value": "TPOC1008"
+        },
+        {
+            "label": "Pocket end tack(SN)",
+            "value": "TPOC1009"
+        },
+        {
+            "label": "Main label attach with paper(SN)",
+            "value": "TLAB1101"
+        },
+        {
+            "label": "Care label make(4T OL)",
+            "value": "TLAB1102"
+        },
+        {
+            "label": "Care label make (8 Part)(SN)",
+            "value": "TLAB1103"
+        },
+        {
+            "label": "Care label attach(SN)",
+            "value": "TLAB1104"
+        },
+        {
+            "label": "Care label make & attach(SN)",
+            "value": "TLAB1105"
+        },
+        {
+            "label": "Bottom tab label mark & attach(SN)",
+            "value": "TLAB1106"
+        },
+        {
+            "label": "Mark for label attach(HEL)",
+            "value": "TLAB1107"
+        },
+        {
+            "label": "Flag label attach(SN)",
+            "value": "TLAB1108"
+        },
+        {
+            "label": "Mark for bottom patch label(HEL)",
+            "value": "TLAB1109"
+        },
+        {
+            "label": "Patch label attach(SN)",
+            "value": "TLAB1110"
+        },
+        {
+            "label": "Organic & country  or loop label make(SN)",
+            "value": "TLAB1111"
+        },
+        {
+            "label": "Organic label attach(SN)",
+            "value": "TLAB1112"
+        },
+        {
+            "label": "Organic & main or loop label make with poly(SN)",
+            "value": "TLAB1113"
+        },
+        {
+            "label": "Organic & country label attach(SN)",
+            "value": "TLAB1114"
+        },
+        {
+            "label": "Organic label make(SN)",
+            "value": "TLAB1115"
+        },
+        {
+            "label": "Mark for main & size label attach(SN)",
+            "value": "TLAB1116"
+        },
+        {
+            "label": "Slim fit label iron(IRON)",
+            "value": "TLAB1117"
+        },
+        {
+            "label": "Main label attach (slim fit lbl)(SN)",
+            "value": "TLAB1118"
+        },
+        {
+            "label": "Care label make & attach (one part)(SN)",
+            "value": "TLAB1119"
+        },
+        {
+            "label": "Country label attach(SN)",
+            "value": "TLAB1120"
+        },
+        {
+            "label": "Country label attach & false stitch open(SN)",
+            "value": "TLAB1121"
+        },
+        {
+            "label": "Size label attach(SN)",
+            "value": "TLAB1122"
+        },
+        {
+            "label": "Mark for country & main label attach(HEL)",
+            "value": "TLAB1123"
+        },
+        {
+            "label": "Main & country & organic label attach(IRON)",
+            "value": "TLAB1124"
+        },
+        {
+            "label": "Hood tab label mark & attach(SN)",
+            "value": "TLAB1125"
+        },
+        {
+            "label": "Main label mark & attach(SN)",
+            "value": "TLAB1126"
+        },
+        {
+            "label": "Care label attach & middle tack(SN)",
+            "value": "TLAB1127"
+        },
+        {
+            "label": "Neck label mark & attach(SN)",
+            "value": "TLAB1128"
+        },
+        {
+            "label": "Mark for neck loop(HEL)",
+            "value": "TLAB1129"
+        },
+        {
+            "label": "Main & organic label make (SN)",
+            "value": "TLAB1130"
+        },
+        {
+            "label": "Main & organic label mark & attach(SN)",
+            "value": "TLAB1131"
+        },
+        {
+            "label": "Mark for front patch label attach(HEL)",
+            "value": "TLAB1132"
+        },
+        {
+            "label": "Front patch label attach(SN)",
+            "value": "TLAB1133"
+        },
+        {
+            "label": "False size label attach(SN)",
+            "value": "TLAB1134"
+        },
+        {
+            "label": "Main label make(SN)",
+            "value": "TLAB1135"
+        },
+        {
+            "label": "Neck label make with size label(SN)",
+            "value": "TLAB1136"
+        },
+        {
+            "label": "Mark for main label & loop attach(HEL)",
+            "value": "TLAB1137"
+        },
+        {
+            "label": "Back knitting tape attach(SN)",
+            "value": "TLAB1138"
+        },
+        {
+            "label": "Front panel matching(HEL)",
+            "value": "TFRO1201"
+        },
+        {
+            "label": "Front upper & lower two part tiken join(3T OL)",
+            "value": "TFRO1202"
+        },
+        {
+            "label": "Front two part edge servicing(SN)",
+            "value": "TFRO1203"
+        },
+        {
+            "label": "Front cut & sew attach (Half)(SN)",
+            "value": "TFRO1204"
+        },
+        {
+            "label": "Front part edge servicing(4T OL)",
+            "value": "TFRO1205"
+        },
+        {
+            "label": "Front binding attach(FL BIN)",
+            "value": "TFRO1206"
+        },
+        {
+            "label": "Front binding edge topstitch(SN)",
+            "value": "TFRO1207"
+        },
+        {
+            "label": "Mark for front & back tape attach(IRON)",
+            "value": "TFRO1208"
+        },
+        {
+            "label": "Tape attach at front with box(SN)",
+            "value": "TFRO1209"
+        },
+        {
+            "label": "Zigzag stitch at front tape(SN ZIGZAG)",
+            "value": "TFRO1210"
+        },
+        {
+            "label": "Front cut & sew V tack to body with sleeve(SN)",
+            "value": "TFRO1211"
+        },
+        {
+            "label": "Front cut & sew attach with back(4T OL)",
+            "value": "TFRO1212"
+        },
+        {
+            "label": "Back & front cut & sew false attach(SN)",
+            "value": "TFRO1213"
+        },
+        {
+            "label": "Front & back cut & sew attach (4T OL)",
+            "value": "TFRO1214"
+        },
+        {
+            "label": "Front & back cut & sew topstitch(FL CY)",
+            "value": "TFRO1215"
+        },
+        {
+            "label": "Front cut & sew attach(4T OL)",
+            "value": "TFRO1216"
+        },
+        {
+            "label": "Front cut & sew topstitch(FL CY)",
+            "value": "TFRO1217"
+        },
+        {
+            "label": "Fusing set at body left & fold(IRON)",
+            "value": "TFRO1218"
+        },
+        {
+            "label": "Fusing set at body right & fold(IRON)",
+            "value": "TFRO1219"
+        },
+        {
+            "label": "Tape mark for zigzag stitch(HEL)",
+            "value": "TFRO1220"
+        },
+        {
+            "label": "Zigzag stitch at front neck(SN ZIGZAG)",
+            "value": "TFRO1221"
+        },
+        {
+            "label": "Back deviding join (large)(4T OL)",
+            "value": "TFRO1222"
+        },
+        {
+            "label": "Back deviding topstitch(FL COV)",
+            "value": "TFRO1223"
+        },
+        {
+            "label": "Box make at back (SN)",
+            "value": "TFRO1224"
+        },
+        {
+            "label": "Dard make at front part(SN)",
+            "value": "TFRO1225"
+        },
+        {
+            "label": "Dard topstitch(FL COV)",
+            "value": "TFRO1226"
+        },
+        {
+            "label": "Security tack at dard & over stitch open(SN)",
+            "value": "TFRO1227"
+        },
+        {
+            "label": "Cut & sew attach at back(SN)",
+            "value": "TFRO1228"
+        },
+        {
+            "label": "Cut & sew attach at back ol(4T OL)",
+            "value": "TFRO1229"
+        },
+        {
+            "label": "Cut & sew topstitch(FL COV)",
+            "value": "TFRO1230"
+        },
+        {
+            "label": "Front yoke attach (4T OL)",
+            "value": "TFRO1231"
+        },
+        {
+            "label": "Back yoke attach(4T OL)",
+            "value": "TFRO1232"
+        },
+        {
+            "label": "Back deviding join(4T OL)",
+            "value": "TFRO1233"
+        },
+        {
+            "label": "Back deviding topstitch(FL CY)",
+            "value": "TFRO1234"
+        },
+        {
+            "label": "Moon mark & false attach(SN)",
+            "value": "TMOO1301"
+        },
+        {
+            "label": "Moon topstitch & false stitch open(FL COV)",
+            "value": "TMOO1302"
+        },
+        {
+            "label": "Moon iron & scissoring(IRON)",
+            "value": "TMOO1303"
+        },
+        {
+            "label": "Moon mark & attach(SN)",
+            "value": "TMOO1304"
+        },
+        {
+            "label": "Body mark for moon attach(HEL)",
+            "value": "TMOO1305"
+        },
+        {
+            "label": "Patch label mark & attach at half moon (SN)",
+            "value": "TMOO1306"
+        },
+        {
+            "label": "Half moon attach(SN)",
+            "value": "TMOO1307"
+        },
+        {
+            "label": "Moon attach(SN)",
+            "value": "TMOO1308"
+        },
+        {
+            "label": "Moon topstitch(SN)",
+            "value": "TMOO1309"
+        },
+        {
+            "label": "Body middle mark for moon attach(HEL)",
+            "value": "TMOO1310"
+        },
+        {
+            "label": "Triangle iron with fusing(IRON)",
+            "value": "TMOO1311"
+        },
+        {
+            "label": "Traingle attach(SN)",
+            "value": "TMOO1312"
+        },
+        {
+            "label": "Fit label attach at moon (SN)",
+            "value": "TMOO1313"
+        },
+        {
+            "label": "Main label attach at moon(SN)",
+            "value": "TMOO1314"
+        },
+        {
+            "label": "Fit label attach at triangle(SN)",
+            "value": "TMOO1315"
+        },
+        {
+            "label": "Half moon edge ol & iron(3T OL)",
+            "value": "TMOO1316"
+        },
+        {
+            "label": "Half moon attach  (Lycra)(SN)",
+            "value": "TMOO1317"
+        },
+        {
+            "label": "Half moon attach  (Stripe)(SN)",
+            "value": "TMOO1318"
+        },
+        {
+            "label": "Mark for main & fit label attach(HEL)",
+            "value": "TMOO1319"
+        },
+        {
+            "label": "Main label attach with size label(SN)",
+            "value": "TMOO1320"
+        },
+        {
+            "label": "Back patch label attach with mark(SN)",
+            "value": "TMOO1321"
+        },
+        {
+            "label": "Binding cutter & shoulder scissoring(BIN CUT)",
+            "value": "TOTH1401"
+        },
+        {
+            "label": "Spot & sticker remove(HEL)",
+            "value": "TOTH1402"
+        },
+        {
+            "label": "Sleeve & bottom join tack(SN)",
+            "value": "TOTH1403"
+        },
+        {
+            "label": "Body preparation(HEL)",
+            "value": "TOTH1404"
+        },
+        {
+            "label": "Thread sucking for mercerized fabric(HEL)",
+            "value": "TOTH1405"
+        },
+        {
+            "label": "Metal mark & attach(BUTTON ATT)",
+            "value": "TOTH1406"
+        },
+        {
+            "label": "Mark for button attach(HEL)",
+            "value": "TBUT1501"
+        },
+        {
+            "label": "Button hole make(BUTTON HOLE)",
+            "value": "TBUT1502"
+        },
+        {
+            "label": "Button attach(BUTTON ATT)",
+            "value": "TBUT1503"
+        },
+        {
+            "label": "Button insert(HEL)",
+            "value": "TBUT1504"
+        }
+    ],
+    "Polo": [
+        {
+            "label": "Shoulder join (Stripe)(4T OL)",
+            "value": "PSHO101"
+        },
+        {
+            "label": "Ironing (Finishing)",
+            "value": "PIRONFO101"
+        },
+        {
+            "label": "Packing (Finishing)",
+            "value": "PPACKFO101"
+        },
+        {
+            "label": "Folding (Finishing)",
+            "value": "PFOLFO101"
+        },
+        {
+            "label": "Shoulder join(4T OL)",
+            "value": "PSHO102"
+        },
+        {
+            "label": "Shoulder join (Fleece)(4T OL)",
+            "value": "PSHO103"
+        },
+        {
+            "label": "1st shoulder join(4T OL)",
+            "value": "PSHO104"
+        },
+        {
+            "label": "2nd shoulder join(4T OL)",
+            "value": "PSHO105"
+        },
+        {
+            "label": "Shoulder join & pull(3T OL)",
+            "value": "PSHO106"
+        },
+        {
+            "label": "Shoulder join (long)(4T OL)",
+            "value": "PSHO107"
+        },
+        {
+            "label": "Shoulder join (long) (Fleece)(4T OL)",
+            "value": "PSHO108"
+        },
+        {
+            "label": "Shoulder join & pull(4T OL)",
+            "value": "PSHO109"
+        },
+        {
+            "label": "Shoulder join with sleeve(4T OL)",
+            "value": "PSHO110"
+        },
+        {
+            "label": "Shoulder topstitch(FL CY)",
+            "value": "PSHO111"
+        },
+        {
+            "label": "Shoulder topstitch with sleeve(FL CY)",
+            "value": "PSHO112"
+        },
+        {
+            "label": "Panel matching(HEL)",
+            "value": "PSHO113"
+        },
+        {
+            "label": "Shoulder join(SN)",
+            "value": "PSHO114"
+        },
+        {
+            "label": "Sleeve attach (In set)(4T OL)",
+            "value": "PSLE201"
+        },
+        {
+            "label": "Sleeve attach (Stripe)(4T OL)",
+            "value": "PSLE202"
+        },
+        {
+            "label": "Sleeve attach (Stripe long)(4T OL)",
+            "value": "PSLE203"
+        },
+        {
+            "label": "Sleeve attach (Synthetic)(4T OL)",
+            "value": "PSLE204"
+        },
+        {
+            "label": "Sleeve attach (long)(4T OL)",
+            "value": "PSLE205"
+        },
+        {
+            "label": "Sleeve attach at front (Raglan)(4T OL)",
+            "value": "PSLE206"
+        },
+        {
+            "label": "Sleeve attach at back (Raglan)(4T OL)",
+            "value": "PSLE207"
+        },
+        {
+            "label": "Sleeve attach (Tubular)(4T OL)",
+            "value": "PSLE208"
+        },
+        {
+            "label": "Sleeve attach (Tubular long)(4T OL)",
+            "value": "PSLE209"
+        },
+        {
+            "label": "Cut & sew attach at sleeve lower (4T OL)",
+            "value": "PSLE210"
+        },
+        {
+            "label": "Cut & sew v tack to sleeve(SN)",
+            "value": "PSLE211"
+        },
+        {
+            "label": "Sleeve servicing(4T OL)",
+            "value": "PSLE212"
+        },
+        {
+            "label": "Sleeve servicing (Stripe)(4T OL)",
+            "value": "PSLE213"
+        },
+        {
+            "label": "Sleeve binding(FL BIN)",
+            "value": "PSLE214"
+        },
+        {
+            "label": "Sleeve binding matching tack(SN)",
+            "value": "PSLE215"
+        },
+        {
+            "label": "Sleev outer tack(SN)",
+            "value": "PSLE216"
+        },
+        {
+            "label": "Sleeve hem(FL HEM)",
+            "value": "PSLE217"
+        },
+        {
+            "label": "Sleeve hem (Stripe)(FL HEM)",
+            "value": "PSLE218"
+        },
+        {
+            "label": "Sleeve hem edge topstitch(FL CY)",
+            "value": "PSLE219"
+        },
+        {
+            "label": "Sleeve hem & pull (Blind)(3T OL)",
+            "value": "PSLE220"
+        },
+        {
+            "label": "Sleeve hem edge trim(OL)",
+            "value": "PSLE221"
+        },
+        {
+            "label": "Armhole topstitch (Open)(FL CY)",
+            "value": "PSLE222"
+        },
+        {
+            "label": "Armhole topstitch (Round)(FL CY)",
+            "value": "PSLE223"
+        },
+        {
+            "label": "Armhole topstitch (front) (Raglan)(FL CY)",
+            "value": "PSLE224"
+        },
+        {
+            "label": "Armhole topstitch (Back) (Raglan)(FL CY)",
+            "value": "PSLE225"
+        },
+        {
+            "label": "Sleeve hem (Open)(FL HEM)",
+            "value": "PSLE226"
+        },
+        {
+            "label": "Sleeve tack to body(SN)",
+            "value": "PSLE227"
+        },
+        {
+            "label": "Armhole cross tack(SN)",
+            "value": "PSLE228"
+        },
+        {
+            "label": "sleeve hem join tack(SN)",
+            "value": "PSLE229"
+        },
+        {
+            "label": "Side or sleeve frill ol(3T OL)",
+            "value": "PSLE230"
+        },
+        {
+            "label": "Side or sleeve frill hem(SN)",
+            "value": "PSLE231"
+        },
+        {
+            "label": "Body & sleeve frill match(Iron)",
+            "value": "PSLE232"
+        },
+        {
+            "label": "Body & sleeve frill attach with V  (Viscos febric) (SN)",
+            "value": "PSLE233"
+        },
+        {
+            "label": "Sleeve hem (6 cm)(FL HEM)",
+            "value": "PSLE234"
+        },
+        {
+            "label": "Sleeve mark for tape attach(Iron)",
+            "value": "PSLE235"
+        },
+        {
+            "label": "Sleeve mark for patch label attach(Iron)",
+            "value": "PSLE236"
+        },
+        {
+            "label": "Sleeve patch label attach(SN)",
+            "value": "PSLE237"
+        },
+        {
+            "label": "False tack for sleeve hem(SN)",
+            "value": "PSLE238"
+        },
+        {
+            "label": "Tape attach at sleeve(SN)",
+            "value": "PSLE239"
+        },
+        {
+            "label": "Tape close at sleeve(SN)",
+            "value": "PSLE240"
+        },
+        {
+            "label": "Sleeve cuff measure cut & trim(OL)",
+            "value": "PCUF301"
+        },
+        {
+            "label": "Sleeve cuff join ,fold & mark(Single Needle)",
+            "value": "PCUF302"
+        },
+        {
+            "label": "Sleeve cuff join & topstitch(Single Needle)",
+            "value": "PCUF303"
+        },
+        {
+            "label": "Sleeve cuff inside tack(Single Needle)",
+            "value": "PCUF304"
+        },
+        {
+            "label": "Sleeve cuff attach (Open)(4T OL)",
+            "value": "PCUF305"
+        },
+        {
+            "label": "Sleeve cuff attach (Round)(4T OL)",
+            "value": "PCUF306"
+        },
+        {
+            "label": "Sleeve cuff topstitch (Open)(FL CY)",
+            "value": "PCUF307"
+        },
+        {
+            "label": "Sleeve cuff topstitch (Round)(FL CY)",
+            "value": "PCUF308"
+        },
+        {
+            "label": "Sleeve cuff servicing(SN)",
+            "value": "PCUF309"
+        },
+        {
+            "label": "Sleeve cuff iron for stripe(Iron)",
+            "value": "PCUF310"
+        },
+        {
+            "label": "Sleeve cuff attach (Stripe & round)(SN)",
+            "value": "PCUF311"
+        },
+        {
+            "label": "Sleeve turn up & tack(SN)",
+            "value": "PSLE401"
+        },
+        {
+            "label": "Sleeve turn up bartack(B TACK)",
+            "value": "PSLE402"
+        },
+        {
+            "label": "Iron for sleeve turn up tack(Iron)",
+            "value": "PSLE403"
+        },
+        {
+            "label": "Mark for sleeve turn up bartack(Iron)",
+            "value": "PSLE404"
+        },
+        {
+            "label": "Sleeve turn up bartack & false stitch open(B TACK)",
+            "value": "PSLE405"
+        },
+        {
+            "label": "Collar  servicing & iron(SN)",
+            "value": "PFLA501"
+        },
+        {
+            "label": "Collar tack to body(SN)",
+            "value": "PFLA502"
+        },
+        {
+            "label": "Collar  attach(4T OL)",
+            "value": "PFLA503"
+        },
+        {
+            "label": "Collar panel attach 1st part(SN)",
+            "value": "PFLA504"
+        },
+        {
+            "label": "Collar panel attach 2nd part(SN)",
+            "value": "PFLA505"
+        },
+        {
+            "label": "Collar two part join (SN)",
+            "value": "PFLA506"
+        },
+        {
+            "label": "Collar two part edge topstitch(SN)",
+            "value": "PFLA507"
+        },
+        {
+            "label": "Mark for collar & label attach(HEL)",
+            "value": "PFLA508"
+        },
+        {
+            "label": "Collar attach (SN)",
+            "value": "PFLA509"
+        },
+        {
+            "label": "Mark for collar two part join(HEL)",
+            "value": "PFLA510"
+        },
+        {
+            "label": "Collar stand runstitch(SN)",
+            "value": "PFLA511"
+        },
+        {
+            "label": "Collar two part join(SN)",
+            "value": "PSTA601"
+        },
+        {
+            "label": "Collar two part edge turn & top stitch(SN)",
+            "value": "PSTA602"
+        },
+        {
+            "label": "Collar stand hem & set(SN)",
+            "value": "PSTA603"
+        },
+        {
+            "label": "Collar stand rawstitch(SN)",
+            "value": "PSTA604"
+        },
+        {
+            "label": "Collar stand 1st part attach(SN)",
+            "value": "PSTA605"
+        },
+        {
+            "label": "Collar stand 2nd part attach(SN)",
+            "value": "PSTA606"
+        },
+        {
+            "label": "Collar stand middle topstitch(SN)",
+            "value": "PSTA607"
+        },
+        {
+            "label": "Collar draw & collar edge trim & iron(OL)",
+            "value": "PSTA608"
+        },
+        {
+            "label": "Collar attach(SN)",
+            "value": "PSTA609"
+        },
+        {
+            "label": "Collar stand close(SN)",
+            "value": "PSTA610"
+        },
+        {
+            "label": "Collar stand close with loop(SN)",
+            "value": "PSTA611"
+        },
+        {
+            "label": "Collar stand tape attach(SN)",
+            "value": "PSTA612"
+        },
+        {
+            "label": "Collar stand tape attach with hem(SN)",
+            "value": "PSTA613"
+        },
+        {
+            "label": "Collar stand tape make & iron(Iron)",
+            "value": "PSTA614"
+        },
+        {
+            "label": "Collar stand hem & set(Iron)",
+            "value": "PSTA615"
+        },
+        {
+            "label": "Collar iron for collar make(Iron)",
+            "value": "PSTA616"
+        },
+        {
+            "label": "Collar make & mark(SN)",
+            "value": "PSTA617"
+        },
+        {
+            "label": "Collar edge servicing & mark(3T OL)",
+            "value": "PSTA618"
+        },
+        {
+            "label": "Placket attach(SN)",
+            "value": "PPLA701"
+        },
+        {
+            "label": "Placket attach & edge close(SN)",
+            "value": "PPLA702"
+        },
+        {
+            "label": "Tape attach at placket & close(SN)",
+            "value": "PPLA703"
+        },
+        {
+            "label": "Back top placket inner topstitch(SN)",
+            "value": "PPLA704"
+        },
+        {
+            "label": "Back under placket inner topstitch(SN)",
+            "value": "PPLA705"
+        },
+        {
+            "label": "Binding at placket (FL BIN)",
+            "value": "PPLA706"
+        },
+        {
+            "label": "Top placket inner topstitch(SN)",
+            "value": "PPLA707"
+        },
+        {
+            "label": "Top placket edge topstitch(SN)",
+            "value": "PPLA708"
+        },
+        {
+            "label": "Under placket inner topstitch(SN)",
+            "value": "PPLA709"
+        },
+        {
+            "label": "Under placket edge topstitch(SN)",
+            "value": "PPLA710"
+        },
+        {
+            "label": "Security stitch at placket(SN)",
+            "value": "PPLA711"
+        },
+        {
+            "label": "Placket false close for wash(SN)",
+            "value": "PPLA712"
+        },
+        {
+            "label": "Placket open (HEL)",
+            "value": "PPLA713"
+        },
+        {
+            "label": "Make placket box(SN)",
+            "value": "PPLA714"
+        },
+        {
+            "label": "Make placket box (Auto)(CYCLE ST)",
+            "value": "PPLA715"
+        },
+        {
+            "label": "Placket base tack(SN)",
+            "value": "PPLA716"
+        },
+        {
+            "label": "Placket rolling & mark(SN)",
+            "value": "PPLA717"
+        },
+        {
+            "label": "Nose tack(SN)",
+            "value": "PPLA718"
+        },
+        {
+            "label": "Placket tack to body(SN)",
+            "value": "PPLA719"
+        },
+        {
+            "label": "Body mark for placket attach(Hel)",
+            "value": "PPLA720"
+        },
+        {
+            "label": "Placket iron & mark(Hel)",
+            "value": "PPLA721"
+        },
+        {
+            "label": "Box pleate  two part  placket attach ol(Hel)",
+            "value": "PPLA722"
+        },
+        {
+            "label": "Box pleate upper topstitch(SN)",
+            "value": "PPLA723"
+        },
+        {
+            "label": "Box pleate lower topstitch(SN)",
+            "value": "PPLA724"
+        },
+        {
+            "label": "Placket edge OL(4T OL)",
+            "value": "PPLA725"
+        },
+        {
+            "label": "Placket attach OL(4T OL)",
+            "value": "PPLA726"
+        },
+        {
+            "label": "Placket box make cross(SN)",
+            "value": "PPLA727"
+        },
+        {
+            "label": "Hidden placket iron & cut(Iron)",
+            "value": "PPLA728"
+        },
+        {
+            "label": "Placket mark & box tack(SN)",
+            "value": "PPLA729"
+        },
+        {
+            "label": "Placket tack to body inside & outside(SN)",
+            "value": "PPLA730"
+        },
+        {
+            "label": "Placket attach (Stripe)(SN)",
+            "value": "PPLA731"
+        },
+        {
+            "label": "Under placket edge topstitch (Stripe)(SN)",
+            "value": "PPLA732"
+        },
+        {
+            "label": "Top placket edge topstitch (Stripe)(SN)",
+            "value": "PPLA733"
+        },
+        {
+            "label": "Zigzag stitch at placket inner topstitch(SN)",
+            "value": "PPLA734"
+        },
+        {
+            "label": "Label attach at placket(SN)",
+            "value": "PPLA735"
+        },
+        {
+            "label": "Placket two part join & mark(SN)",
+            "value": "PPLA736"
+        },
+        {
+            "label": "Placket iron & fold 2nd(Iron)",
+            "value": "PPLA737"
+        },
+        {
+            "label": "Placket inside rawstitch & mark(SN)",
+            "value": "PPLA738"
+        },
+        {
+            "label": "Cord attach at placket(SN)",
+            "value": "PPLA739"
+        },
+        {
+            "label": "Cord attach at placket topstitch(SN)",
+            "value": "PPLA740"
+        },
+        {
+            "label": "Placket mark & show stitch(SN)",
+            "value": "PPLA741"
+        },
+        {
+            "label": "Rib placket runstitch & trim(SN)",
+            "value": "PPLA742"
+        },
+        {
+            "label": "Rib placket iron & mark(Iron)",
+            "value": "PPLA743"
+        },
+        {
+            "label": "Back neck tape measure cut & iron(HEL)",
+            "value": "PBAC801"
+        },
+        {
+            "label": "Back neck tape attach (polo) (Binding)(FL BIN)",
+            "value": "PBAC802"
+        },
+        {
+            "label": "Back neck tape attach  (polo) (Acc. Tape)(SN)",
+            "value": "PBAC803"
+        },
+        {
+            "label": "Back neck tape end tack & trim(SN)",
+            "value": "PBAC804"
+        },
+        {
+            "label": "Back neck tape close  (polo)(SN)",
+            "value": "PBAC805"
+        },
+        {
+            "label": "Shoulder to shoulder tape attach(FOA)",
+            "value": "PBAC806"
+        },
+        {
+            "label": "Back neck tape attach(DN)",
+            "value": "PBAC807"
+        },
+        {
+            "label": "Back neck tape mark & attach(SN)",
+            "value": "PBAC808"
+        },
+        {
+            "label": "Zigzag stitch at back tape(SN)",
+            "value": "PBAC809"
+        },
+        {
+            "label": "Back neck tape fold & close with placket(SN)",
+            "value": "PBAC810"
+        },
+        {
+            "label": "Shoulder to shoulder binding attach(FL BIN)",
+            "value": "PBAC811"
+        },
+        {
+            "label": "Back neck tape attach check & trim(HEL)",
+            "value": "PBAC812"
+        },
+        {
+            "label": "Side seam  (Regular)(4T OL)",
+            "value": "PSID901"
+        },
+        {
+            "label": "Side seam with side slit o/l(lower part)(4T OL)",
+            "value": "PSID902"
+        },
+        {
+            "label": "Side seam(point match)(4T OL)",
+            "value": "PSID903"
+        },
+        {
+            "label": "Side seam with care label(4T OL)",
+            "value": "PSID904"
+        },
+        {
+            "label": "Side seam(inside panel)(4T OL)",
+            "value": "PSID905"
+        },
+        {
+            "label": "Side seam topstitch(FL COV)",
+            "value": "PSID906"
+        },
+        {
+            "label": "Side seam topstitch end tack & stitch open(SN)",
+            "value": "PSID907"
+        },
+        {
+            "label": "Side seam matching tack(SN)",
+            "value": "PSID908"
+        },
+        {
+            "label": "Binding attach at side cut & sew(FL BIN)",
+            "value": "PSID909"
+        },
+        {
+            "label": "Binding close at side cut & sew(SN)",
+            "value": "PSID910"
+        },
+        {
+            "label": "Side seam SS (Stripe)(4T OL)",
+            "value": "PSID911"
+        },
+        {
+            "label": "Side seam LS(4T OL)",
+            "value": "PSID912"
+        },
+        {
+            "label": "Side seam LS (Stripe)(4T OL)",
+            "value": "PSID913"
+        },
+        {
+            "label": "Side seam SS (4T OL)",
+            "value": "PSID914"
+        },
+        {
+            "label": "Sleeve side seam SS(4T OL)",
+            "value": "PSID915"
+        },
+        {
+            "label": "Sleeve side seam LS(4T OL)",
+            "value": "PSID916"
+        },
+        {
+            "label": "Bottom hem(FL HEM)",
+            "value": "PBOT1001"
+        },
+        {
+            "label": "Bottom hem (O/L)(3T OL)",
+            "value": "PBOT1002"
+        },
+        {
+            "label": "Bottom hem join tack(SN)",
+            "value": "PBOT1003"
+        },
+        {
+            "label": "Tack at bottom hem(SN)",
+            "value": "PBOT1004"
+        },
+        {
+            "label": "Bottom hem pull & knot make(HEL)",
+            "value": "PBOT1005"
+        },
+        {
+            "label": "Bottom hem o/l with mobilon tape(4T OL)",
+            "value": "PBOT1006"
+        },
+        {
+            "label": "Bottom hem  (chinese)(FL HEM)",
+            "value": "PBOT1007"
+        },
+        {
+            "label": "Tack at bottom hem (double)(SN)",
+            "value": "PBOT1008"
+        },
+        {
+            "label": "Bottom false tack for bottom hem(SN)",
+            "value": "PBOT1009"
+        },
+        {
+            "label": "Bottom hem (6cm)(FL HEM)",
+            "value": "PBOT1010"
+        },
+        {
+            "label": "Bottom rib join(SN)",
+            "value": "PBOT1011"
+        },
+        {
+            "label": "Bottom rib inside tack(SN)",
+            "value": "PBOT1012"
+        },
+        {
+            "label": "Bottom rib servicing(FL CY)",
+            "value": "PBOT1013"
+        },
+        {
+            "label": "Bottom rib attach(4T OL)",
+            "value": "PBOT1014"
+        },
+        {
+            "label": "Bottom rib topstitch(FL CY)",
+            "value": "PBOT1015"
+        },
+        {
+            "label": "Bottom servicing(4T OL)",
+            "value": "PBOT1016"
+        },
+        {
+            "label": "Bottom Blind hem(4T OL)",
+            "value": "PBOT1017"
+        },
+        {
+            "label": "Push for bottom hem(HEL)",
+            "value": "PBOT1018"
+        },
+        {
+            "label": "Side slit open tack with tape & stitch open(SN)",
+            "value": "PSID1101"
+        },
+        {
+            "label": "Side slit minner  make &  mark(SN)",
+            "value": "PSID1102"
+        },
+        {
+            "label": "Side slit tape attach(SN)",
+            "value": "PSID1103"
+        },
+        {
+            "label": "Side slit tape end tack & trim(SN)",
+            "value": "PSID1104"
+        },
+        {
+            "label": "Side slit tape close(SN)",
+            "value": "PSID1105"
+        },
+        {
+            "label": "Side slit tape servicing(4T OL)",
+            "value": "PSID1106"
+        },
+        {
+            "label": "Side slit o/l(4T OL)",
+            "value": "PSID1107"
+        },
+        {
+            "label": "Bar tack at side slit(B TACK)",
+            "value": "PSID1108"
+        },
+        {
+            "label": "Back slit hem(FL HEM)",
+            "value": "PSID1109"
+        },
+        {
+            "label": "Back deviding join at slit area(SN)",
+            "value": "PSID1110"
+        },
+        {
+            "label": "Side slit open close(SN)",
+            "value": "PSID1111"
+        },
+        {
+            "label": "Mark for pocket attach(HEL)",
+            "value": "PPOC1201"
+        },
+        {
+            "label": "Mark for pocket patch label attach(HEL)",
+            "value": "PPOC1202"
+        },
+        {
+            "label": "Pocket hem & raw edge trim(FL HEM)",
+            "value": "PPOC1203"
+        },
+        {
+            "label": "Patch label attach at pocket (SN)",
+            "value": "PPOC1204"
+        },
+        {
+            "label": "Pocket iron & scissoring(Iron)",
+            "value": "PPOC1205"
+        },
+        {
+            "label": "Pocket attach with diamond(SN)",
+            "value": "PPOC1206"
+        },
+        {
+            "label": "Pocket binding stitch open & tack 1st & 2nd (Double)(SN)",
+            "value": "PPOC1207"
+        },
+        {
+            "label": "Pocket rib make & mark & iron (Double)(Iron)",
+            "value": "PPOC1208"
+        },
+        {
+            "label": "Pocket rib attach &Mark for pocket attach (Double)(SN)",
+            "value": "PPOC1209"
+        },
+        {
+            "label": "Pocket 1st part attach & 2nd part attach (Double)(SN)",
+            "value": "PPOC1210"
+        },
+        {
+            "label": "Pocket rib open & ol (Double)(3T OL)",
+            "value": "PPOC1211"
+        },
+        {
+            "label": "Pocket rib tack to body & mark (Double)(SN)",
+            "value": "PPOC1212"
+        },
+        {
+            "label": "Pocket & pocket rib o/l & close (Double)(4T OL)",
+            "value": "PPOC1213"
+        },
+        {
+            "label": "Binding attach at pocket & role make (Double)(FL BIN)",
+            "value": "PPOC1214"
+        },
+        {
+            "label": "Pocket 1st part attach & mark for pocket attach(SN)",
+            "value": "PPOC1215"
+        },
+        {
+            "label": "Pocket rawstitch & Pocket open(SN)",
+            "value": "PPOC1216"
+        },
+        {
+            "label": "Pocket edge topstitch(SN)",
+            "value": "PPOC1217"
+        },
+        {
+            "label": "Pocket 2nd part tack with 1st part(SN)",
+            "value": "PPOC1218"
+        },
+        {
+            "label": "Pocket bag servicing at side(4T OL)",
+            "value": "PPOC1219"
+        },
+        {
+            "label": "Binding attach at pocket & role make(FL BIN)",
+            "value": "PPOC1220"
+        },
+        {
+            "label": "Pocket mouth close(SN)",
+            "value": "PPOC1221"
+        },
+        {
+            "label": "Eyelet attach at back pocket rib(SN)",
+            "value": "PPOC1222"
+        },
+        {
+            "label": "Body mark for pocket attach front & back (Single)(Iron)",
+            "value": "PPOC1223"
+        },
+        {
+            "label": "Pocket rib  make at  back (Single)(Iron)",
+            "value": "PPOC1224"
+        },
+        {
+            "label": "Pocket rib attach at  back & mark (Single)(SN)",
+            "value": "PPOC1225"
+        },
+        {
+            "label": "Pocket 1st & 2nd part attach at back (Single)(SN)",
+            "value": "PPOC1226"
+        },
+        {
+            "label": "Pocket rib o/l at back &Pocket open  & back pkt mark (Single)(4T OL)",
+            "value": "PPOC1227"
+        },
+        {
+            "label": "Pocket rib tack to body at back  (Single)(SN)",
+            "value": "PPOC1228"
+        },
+        {
+            "label": "Pocket bag servicing at back & mark (Single)(4T OL)",
+            "value": "PPOC1229"
+        },
+        {
+            "label": "Binding attach at pocket & role make (Single)(FL BIN)",
+            "value": "PPOC1230"
+        },
+        {
+            "label": "Pocket mouth close (Single)(SN)",
+            "value": "PPOC1231"
+        },
+        {
+            "label": "Pocket edge ol(4T OL)",
+            "value": "PPOC1232"
+        },
+        {
+            "label": "Pocket hem(FL HEM)",
+            "value": "PPOC1233"
+        },
+        {
+            "label": "Inside mark for runstitch & pocket attach(Iron)",
+            "value": "PPOC1234"
+        },
+        {
+            "label": "Inside  part runstitch (SN)",
+            "value": "PPOC1235"
+        },
+        {
+            "label": "Pocket attach with inside part(SN)",
+            "value": "PPOC1236"
+        },
+        {
+            "label": "Pocket attach with inside part bottom area(4T OL)",
+            "value": "PPOC1237"
+        },
+        {
+            "label": "Front pocket iron(Iron)",
+            "value": "PPOC1238"
+        },
+        {
+            "label": "Inside  part runstitch  & mark for bottom tack(SN)",
+            "value": "PPOC1239"
+        },
+        {
+            "label": "Pocket attach(SN)",
+            "value": "PPOC1240"
+        },
+        {
+            "label": "Pocket topstitch(FL CY)",
+            "value": "PPOC1241"
+        },
+        {
+            "label": "Pocket edge OL ( 2 M/C 1 OP )(4T OL)",
+            "value": "PPOC1242"
+        },
+        {
+            "label": "Pocket hem & raw edge trim(DN)",
+            "value": "PPOC1243"
+        },
+        {
+            "label": "Pocket dart make & mark(SN)",
+            "value": "PPOC1244"
+        },
+        {
+            "label": "Pocket iron & scissoring (Harmony)(Iron)",
+            "value": "PPOC1245"
+        },
+        {
+            "label": "Pocket harmony iron (Iron)",
+            "value": "PPOC1246"
+        },
+        {
+            "label": "Mark & show stitch at flap(SN)",
+            "value": "PPOC1247"
+        },
+        {
+            "label": "Body mark for pocket & flap attach(Iron)",
+            "value": "PPOC1248"
+        },
+        {
+            "label": "Pocket attach with flag label(SN)",
+            "value": "PPOC1249"
+        },
+        {
+            "label": "Mark for flap make(Iron)",
+            "value": "PPOC1250"
+        },
+        {
+            "label": "Pocket flap make(SN)",
+            "value": "PPOC1251"
+        },
+        {
+            "label": "Pocket flap turn & trim & thread  pull(Iron)",
+            "value": "PPOC1252"
+        },
+        {
+            "label": "Pocket flap edge topstitch  (SN)",
+            "value": "PPOC1253"
+        },
+        {
+            "label": "Pocket flap mark & scissoring(Iron)",
+            "value": "PPOC1254"
+        },
+        {
+            "label": "Velcrew measure & cut & corner trim(Iron)",
+            "value": "PPOC1255"
+        },
+        {
+            "label": "Mark for flap velcrew attach at flap(Iron)",
+            "value": "PPOC1256"
+        },
+        {
+            "label": "Velcrew attach at flap(CYCLE ST)",
+            "value": "PPOC1257"
+        },
+        {
+            "label": "Pocket flap attach(SN)",
+            "value": "PPOC1258"
+        },
+        {
+            "label": "Pocket flap attach topstitch(SN)",
+            "value": "PPOC1259"
+        },
+        {
+            "label": "Velcrew attach at pocket with mark(SN)",
+            "value": "PPOC1260"
+        },
+        {
+            "label": "Pocket end match & tack(SN)",
+            "value": "PPOC1261"
+        },
+        {
+            "label": "Bartack at pocket  & flap (B TACK)",
+            "value": "PPOC1262"
+        },
+        {
+            "label": "Bartack at pocket (3 pocket)(B TACK)",
+            "value": "PPOC1263"
+        },
+        {
+            "label": "Pocket attach  (Stripe)(SN)",
+            "value": "PPOC1264"
+        },
+        {
+            "label": "Front open for zipper attach(HEL)",
+            "value": "PZIP1301"
+        },
+        {
+            "label": "Body hamaring for zipper topstitch(HEL)",
+            "value": "PZIP1302"
+        },
+        {
+            "label": "Zipper & body mark & attach (HEL)",
+            "value": "PZIP1303"
+        },
+        {
+            "label": "Tape attach at zipper(SN)",
+            "value": "PZIP1304"
+        },
+        {
+            "label": "Zipper fold & tack(SN)",
+            "value": "PZIP1305"
+        },
+        {
+            "label": "Zipper topstitch(SN)",
+            "value": "PZIP1306"
+        },
+        {
+            "label": "Zipper & body mark(HEL)",
+            "value": "PZIP1307"
+        },
+        {
+            "label": "Zipper binding & role make(FL BIN)",
+            "value": "PZIP1308"
+        },
+        {
+            "label": "Zipper binding raw edge trim(HEL)",
+            "value": "PZIP1309"
+        },
+        {
+            "label": "Zipper binding end tack(SN)",
+            "value": "PZIP1310"
+        },
+        {
+            "label": "Zipper attach (SN)",
+            "value": "PZIP1311"
+        },
+        {
+            "label": "Zipper  facing o/l(3T OL)",
+            "value": "PZIP1312"
+        },
+        {
+            "label": "Zipper facing fold & tack at bottom (SN)",
+            "value": "PZIP1313"
+        },
+        {
+            "label": "Zipper facing attach(SN)",
+            "value": "PZIP1314"
+        },
+        {
+            "label": "Zipper attach with facing(SN)",
+            "value": "PZIP1315"
+        },
+        {
+            "label": "Zipper topstitch with facing(SN)",
+            "value": "PZIP1316"
+        },
+        {
+            "label": "Zipper facing upper close(SN)",
+            "value": "PZIP1317"
+        },
+        {
+            "label": "Zipper faching inside edge close(SN)",
+            "value": "PZIP1318"
+        },
+        {
+            "label": "Zipper rawedge trim(HEL)",
+            "value": "PZIP1319"
+        },
+        {
+            "label": "Fusing set & zipper panel iron(Iron)",
+            "value": "PZIP1320"
+        },
+        {
+            "label": " Zipper panel fold & tack(SN)",
+            "value": "PZIP1321"
+        },
+        {
+            "label": "Zipper panel attach(SN)",
+            "value": "PZIP1322"
+        },
+        {
+            "label": "Zipper tape attach & zipper end tack(SN)",
+            "value": "PZIP1323"
+        },
+        {
+            "label": "Zipper tape end tack & trim(SN)",
+            "value": "PZIP1324"
+        },
+        {
+            "label": "Zipper tack to body(SN)",
+            "value": "PZIP1325"
+        },
+        {
+            "label": "Zipper tape attach(SN)",
+            "value": "PZIP1326"
+        },
+        {
+            "label": "False fabric attach at zipper for wash(hand)(HEL)",
+            "value": "PZIP1327"
+        },
+        {
+            "label": "Body servicing for zipper attach(FL CY)",
+            "value": "PZIP1328"
+        },
+        {
+            "label": "Main label attach with paper(SN)",
+            "value": "PLAB1401"
+        },
+        {
+            "label": "Care label make(SN)",
+            "value": "PLAB1402"
+        },
+        {
+            "label": "Care label attach(SN)",
+            "value": "PLAB1403"
+        },
+        {
+            "label": "Care label make & attach(SN)",
+            "value": "PLAB1404"
+        },
+        {
+            "label": "Bottom tab label mark & attach(SN)",
+            "value": "PLAB1405"
+        },
+        {
+            "label": "Mark for label attach(HEL)",
+            "value": "PLAB1406"
+        },
+        {
+            "label": "Flag label attach(SN)",
+            "value": "PLAB1407"
+        },
+        {
+            "label": "Mark for bottom patch label(HEL)",
+            "value": "PLAB1408"
+        },
+        {
+            "label": "Bottom patch label attach(SN)",
+            "value": "PLAB1409"
+        },
+        {
+            "label": "Organic & country  or loop label make(SN)",
+            "value": "PLAB1410"
+        },
+        {
+            "label": "Organic label attach(SN)",
+            "value": "PLAB1411"
+        },
+        {
+            "label": "Organic & main or loop label make with poly(SN)",
+            "value": "PLAB1412"
+        },
+        {
+            "label": "Organic & country label attach(SN)",
+            "value": "PLAB1413"
+        },
+        {
+            "label": "Organic label make(SN)",
+            "value": "PLAB1414"
+        },
+        {
+            "label": "Mark for main & size label attach(SN)",
+            "value": "PLAB1415"
+        },
+        {
+            "label": "Slim fit label iron(Iron)",
+            "value": "PLAB1416"
+        },
+        {
+            "label": "Main label attach (slim fit lbl)(SN)",
+            "value": "PLAB1417"
+        },
+        {
+            "label": "Care label make & attach (one part)(SN)",
+            "value": "PLAB1418"
+        },
+        {
+            "label": "Country label attach(SN)",
+            "value": "PLAB1419"
+        },
+        {
+            "label": "Size label attach(SN)",
+            "value": "PLAB1420"
+        },
+        {
+            "label": "Mark for country & main label attach(HEL)",
+            "value": "PLAB1421"
+        },
+        {
+            "label": "Main & country & organic label attach(Iron)",
+            "value": "PLAB1422"
+        },
+        {
+            "label": "Hood tab label mark & attach(SN)",
+            "value": "PLAB1423"
+        },
+        {
+            "label": "Care label make 8 part(SN)",
+            "value": "PLAB1424"
+        },
+        {
+            "label": "Front panel matching(HEL)",
+            "value": "PFRO1501"
+        },
+        {
+            "label": "Front upper & lower two part tiken join(3T OL)",
+            "value": "PFRO1502"
+        },
+        {
+            "label": "Front two part edge servicing(SN)",
+            "value": "PFRO1503"
+        },
+        {
+            "label": "Front cut & sew attach (Half)(FL CY)",
+            "value": "PFRO1504"
+        },
+        {
+            "label": "Front part edge servicing(4T OL)",
+            "value": "PFRO1505"
+        },
+        {
+            "label": "Front binding attach(FOA)",
+            "value": "PFRO1506"
+        },
+        {
+            "label": "Front binding edge topstitch(SN)",
+            "value": "PFRO1507"
+        },
+        {
+            "label": "Mark for front & back tape attach(Iron)",
+            "value": "PFRO1508"
+        },
+        {
+            "label": "Front cut & sew V tack to body with sleeve(SN)",
+            "value": "PFRO1509"
+        },
+        {
+            "label": "Front cut & sew attach with back(4T OL)",
+            "value": "PFRO1510"
+        },
+        {
+            "label": "Back & front cut & sew false attach(SN)",
+            "value": "PFRO1511"
+        },
+        {
+            "label": "Front & back cut & sew attach (4T OL)",
+            "value": "PFRO1512"
+        },
+        {
+            "label": "Front & back cut & sew topstitch(FL CY)",
+            "value": "PFRO1513"
+        },
+        {
+            "label": "Front cut & sew attach(4T OL)",
+            "value": "PFRO1514"
+        },
+        {
+            "label": "Front cut & sew topstitch(FL CY)",
+            "value": "PFRO1515"
+        },
+        {
+            "label": "Fusing set at body left & fold(Iron)",
+            "value": "PFRO1516"
+        },
+        {
+            "label": "Fusing set at body right & fold(Iron)",
+            "value": "PFRO1517"
+        },
+        {
+            "label": "Tape attach at front with box(SN)",
+            "value": "PFRO1518"
+        },
+        {
+            "label": "Tape mark for zigzag stitch(Iron)",
+            "value": "PFRO1519"
+        },
+        {
+            "label": "Zigzag stitch at front tape(SN)",
+            "value": "PFRO1520"
+        },
+        {
+            "label": "Back deviding join(4T OL)",
+            "value": "PFRO1521"
+        },
+        {
+            "label": "Back deviding topstitch(FL CY)",
+            "value": "PFRO1522"
+        },
+        {
+            "label": "Box make at back (SN)",
+            "value": "PFRO1523"
+        },
+        {
+            "label": "Dard make at front part(SN)",
+            "value": "PFRO1524"
+        },
+        {
+            "label": "Dard topstitch(FL CY)",
+            "value": "PFRO1525"
+        },
+        {
+            "label": "Security tack at dard & over stitch open(SN)",
+            "value": "PFRO1526"
+        },
+        {
+            "label": "Cut & sew attach at back(SN)",
+            "value": "PFRO1527"
+        },
+        {
+            "label": "Cut & sew attach at back ol(4T OL)",
+            "value": "PFRO1528"
+        },
+        {
+            "label": "Cut & sew topstitch(FL CY)",
+            "value": "PFRO1529"
+        },
+        {
+            "label": "Back patch label attach with mark(SN)",
+            "value": "PFRO1530"
+        },
+        {
+            "label": "Front part mark for over layer attach(Iron)",
+            "value": "PFRO1531"
+        },
+        {
+            "label": "Front over layer attach (Chain Stitch)(SN CHAIN)",
+            "value": "PFRO1532"
+        },
+        {
+            "label": "Front over layer close(SN)",
+            "value": "PFRO1533"
+        },
+        {
+            "label": "Front over layer iron(SN)",
+            "value": "PFRO1534"
+        },
+        {
+            "label": "Front cut & sew runstitch for attach(SN)",
+            "value": "PFRO1535"
+        },
+        {
+            "label": "Front cut & sew iron for attach(Iron)",
+            "value": "PFRO1536"
+        },
+        {
+            "label": "Moon mark & false attach(SN)",
+            "value": "PMOO1601"
+        },
+        {
+            "label": "Moon topstitch & false stitch open(FL CY)",
+            "value": "PMOO1602"
+        },
+        {
+            "label": "Moon iron & scissoring(Iron)",
+            "value": "PMOO1603"
+        },
+        {
+            "label": "Body mark for moon attach(Iron)",
+            "value": "PMOO1604"
+        },
+        {
+            "label": "Patch label mark & attach at half moon (SN)",
+            "value": "PMOO1605"
+        },
+        {
+            "label": "Half moon attach(SN)",
+            "value": "PMOO1606"
+        },
+        {
+            "label": "Moon topstitch(SN)",
+            "value": "PMOO1607"
+        },
+        {
+            "label": "Body middle mark for moon attach(Iron)",
+            "value": "PMOO1608"
+        },
+        {
+            "label": "Triangle iron with fusing(Iron)",
+            "value": "PMOO1609"
+        },
+        {
+            "label": "Traingle attach(SN)",
+            "value": "PMOO1610"
+        },
+        {
+            "label": "Fit label attach at moon (SN)",
+            "value": "PMOO1611"
+        },
+        {
+            "label": "Main label attach at moon(SN)",
+            "value": "PMOO1612"
+        },
+        {
+            "label": "Mark for main & fit label attach(Iron)",
+            "value": "PMOO1613"
+        },
+        {
+            "label": "Main label attach with size label(SN)",
+            "value": "PMOO1614"
+        },
+        {
+            "label": "Fit label attach at triangle(SN)",
+            "value": "PMOO1615"
+        },
+        {
+            "label": "Half moon edge ol & iron(3T OL)",
+            "value": "PMOO1616"
+        },
+        {
+            "label": "Half moon attach  (Lycra)(SN)",
+            "value": "PMOO1617"
+        },
+        {
+            "label": "Half moon attach  (Stripe  )(SN)",
+            "value": "PMOO1618"
+        },
+        {
+            "label": "Tape attach at triangle(SN)",
+            "value": "PMOO1619"
+        },
+        {
+            "label": "Make button hole (4 hole)(Button Hole)",
+            "value": "PBUT1701"
+        },
+        {
+            "label": "Mark for button attach (3 button)(HEL)",
+            "value": "PBUT1702"
+        },
+        {
+            "label": "Button attach (4 button)(BUTTON ATT)",
+            "value": "PBUT1703"
+        },
+        {
+            "label": "Button insert(HEL)",
+            "value": "PBUT1704"
+        },
+        {
+            "label": "Snap button mark & iron(Iron)",
+            "value": "PBUT1705"
+        },
+        {
+            "label": "Snap button attach(EYELETE)",
+            "value": "PBUT1706"
+        },
+        {
+            "label": "Collar iron & placket iron for button(Iron)",
+            "value": "PBUT1707"
+        },
+        {
+            "label": "Collar & placket iron for button(Iron)",
+            "value": "PBUT1708"
+        },
+        {
+            "label": "Mark for button attach (2 button)(HEL)",
+            "value": "PBUT1709"
+        },
+        {
+            "label": "Snap button attach at pocket(EYELETE)",
+            "value": "PBUT1710"
+        }
+    ],
+    "Jacket": [
+        {
+            "label": "Shoulder join (Stripe)(4T OL)",
+            "value": "JSHO101"
+        },
+        {
+            "label": "Ironing (Finishing)",
+            "value": "JIRONFO101"
+        },
+        {
+            "label": "Packing (Finishing)",
+            "value": "JPACKFO101"
+        },
+        {
+            "label": "Folding (Finishing)",
+            "value": "JFOLFO101"
+        },
+        {
+            "label": "Shoulder join(4T OL)",
+            "value": "JSHO102"
+        },
+        {
+            "label": "Shoulder join (Lycra)(4T OL)",
+            "value": "JSHO103"
+        },
+        {
+            "label": "Shoulder join (Fleece)(4T OL)",
+            "value": "JSHO104"
+        },
+        {
+            "label": "1st shoulder join(4T OL)",
+            "value": "JSHO105"
+        },
+        {
+            "label": "2nd shoulder join(4T OL)",
+            "value": "JSHO106"
+        },
+        {
+            "label": "Shoulder join & pull(3T OL)",
+            "value": "JSHO107"
+        },
+        {
+            "label": "Shoulder join (long)(4T OL)",
+            "value": "JSHO108"
+        },
+        {
+            "label": "Shoulder join (long) (Fleece)(4T OL)",
+            "value": "JSHO109"
+        },
+        {
+            "label": "Shoulder join & pull(4T OL)",
+            "value": "JSHO110"
+        },
+        {
+            "label": "Shoulder join with sleeve(4T OL)",
+            "value": "JSHO111"
+        },
+        {
+            "label": "Shoulder topstitch(FL CY)",
+            "value": "JSHO112"
+        },
+        {
+            "label": "Shoulder topstitch with sleeve(FL COV)",
+            "value": "JSHO113"
+        },
+        {
+            "label": "Panel matching(HEL)",
+            "value": "JSHO114"
+        },
+        {
+            "label": "Shoulder loop attach(SN)",
+            "value": "JSHO115"
+        },
+        {
+            "label": "Shoulder join & shoulder scissoring(4T OL)",
+            "value": "JSHO116"
+        },
+        {
+            "label": "Shoulder topstitch(Long)(FL CY)",
+            "value": "JSHO117"
+        },
+        {
+            "label": "Shoulder edge overlock(4T OL)",
+            "value": "JSHO118"
+        },
+        {
+            "label": "Sleeve attach SS (In set)(4T OL)",
+            "value": "JSLE201"
+        },
+        {
+            "label": "Sleeve attach (Stripe)(4T OL)",
+            "value": "JSLE202"
+        },
+        {
+            "label": "Sleeve attach (Stripe long)(4T OL)",
+            "value": "JSLE203"
+        },
+        {
+            "label": "Sleeve attach (Synthetic)(4T OL)",
+            "value": "JSLE204"
+        },
+        {
+            "label": "Sleeve attach LS (long)(4T OL)",
+            "value": "JSLE205"
+        },
+        {
+            "label": "Sleeve attach at front (Raglan)(4T OL)",
+            "value": "JSLE206"
+        },
+        {
+            "label": "Sleeve attach at back (Raglan)(4T OL)",
+            "value": "JSLE207"
+        },
+        {
+            "label": "Sleeve attach (Tubular)(4T OL)",
+            "value": "JSLE208"
+        },
+        {
+            "label": "Sleeve attach (Tubular long)(4T OL)",
+            "value": "JSLE209"
+        },
+        {
+            "label": "Cut & sew attach at sleeve (4T OL)",
+            "value": "JSLE210"
+        },
+        {
+            "label": "Cut & sew v tack to sleeve(SN)",
+            "value": "JSLE211"
+        },
+        {
+            "label": "Sleeve servicing ( Edge)(4T OL)",
+            "value": "JSLE212"
+        },
+        {
+            "label": "Sleeve servicing  (Stripe)(4T OL)",
+            "value": "JSLE213"
+        },
+        {
+            "label": "Sleeve binding(FL BIN)",
+            "value": "JSLE214"
+        },
+        {
+            "label": "Sleeve binding matching tack(SN)",
+            "value": "JSLE215"
+        },
+        {
+            "label": "Sleeve open outer tack(SN)",
+            "value": "JSLE216"
+        },
+        {
+            "label": "Sleeve hem(FL HEM)",
+            "value": "JSLE217"
+        },
+        {
+            "label": "Sleeve hem (Open)(FL HEM)",
+            "value": "JSLE218"
+        },
+        {
+            "label": "Sleeve hem (Stripe)(FL HEM)",
+            "value": "JSLE219"
+        },
+        {
+            "label": "Sleeve hem edge topstitch(FL CY)",
+            "value": "JSLE220"
+        },
+        {
+            "label": "Sleeve hem & pull(3T OL)",
+            "value": "JSLE221"
+        },
+        {
+            "label": "Sleeve hem edge trim(OL)",
+            "value": "JSLE222"
+        },
+        {
+            "label": "Armhole topstitch (Open)(FL CY)",
+            "value": "JSLE223"
+        },
+        {
+            "label": "Armhole topstitch (Round)(FL COV)",
+            "value": "JSLE224"
+        },
+        {
+            "label": "Armhole topstitch (front) (Raglan)(FL COV)",
+            "value": "JSLE225"
+        },
+        {
+            "label": "Armhole topstitch (Back) (Raglan)(FL COV)",
+            "value": "JSLE226"
+        },
+        {
+            "label": "Sleeve hem (Blind)(FL HEM)",
+            "value": "JSLE227"
+        },
+        {
+            "label": "Sleeve tack to body(SN)",
+            "value": "JSLE228"
+        },
+        {
+            "label": "Armhole cross tack(SN)",
+            "value": "JSLE229"
+        },
+        {
+            "label": "sleeve hem join tack(SN)",
+            "value": "JSLE230"
+        },
+        {
+            "label": "Armhole hem (Open)(FL CY)",
+            "value": "JSLE231"
+        },
+        {
+            "label": "Armhole hem & pull (Open)(3T OL)",
+            "value": "JSLE232"
+        },
+        {
+            "label": "Side or sleeve frill ol(3T OL)",
+            "value": "JSLE233"
+        },
+        {
+            "label": "Side or sleeve frill hem(SN)",
+            "value": "JSLE234"
+        },
+        {
+            "label": "Body & sleeve frill match(HEL)",
+            "value": "JSLE235"
+        },
+        {
+            "label": "Body & sleeve frill attach with V  (Viscos febric) (SN)",
+            "value": "JSLE236"
+        },
+        {
+            "label": "False tack for sleeve hem(SN)",
+            "value": "JSLE237"
+        },
+        {
+            "label": "Sleeve hem (6 cm)(FL HEM)",
+            "value": "JSLE238"
+        },
+        {
+            "label": "Mark for sleeve tab patch label attach(SN)",
+            "value": "JSLE239"
+        },
+        {
+            "label": "Sleeve patch label attach(SN)",
+            "value": "JSLE240"
+        },
+        {
+            "label": "Sleeve edge ol(3T OL)",
+            "value": "JSLE241"
+        },
+        {
+            "label": "Mark for sleeve turn up & tack(HEL)",
+            "value": "JSLE242"
+        },
+        {
+            "label": "Sleeve turn up & tack & false stitch open(SN)",
+            "value": "JSLE243"
+        },
+        {
+            "label": "Sleeve turn up & tack  (SN)",
+            "value": "JSLE244"
+        },
+        {
+            "label": "Sleeve attach at front(big) (Raglan)(4T OL)",
+            "value": "JSLE245"
+        },
+        {
+            "label": "Sleeve attach at back(big) (Raglan)(4T OL)",
+            "value": "JSLE246"
+        },
+        {
+            "label": "Flap edge overlock(3T OL)",
+            "value": "JSLE247"
+        },
+        {
+            "label": "Bar tack at turnup sleeve & flap(B TACK)",
+            "value": "JSLE248"
+        },
+        {
+            "label": "Sleeve flap iron(HEL)",
+            "value": "JSLE249"
+        },
+        {
+            "label": "Sleeve flap fold & tack(SN)",
+            "value": "JSLE250"
+        },
+        {
+            "label": "Sleeve flap two part join(SN)",
+            "value": "JSLE251"
+        },
+        {
+            "label": "Sleeve flap topstitch & rawedge trim(SN)",
+            "value": "JSLE252"
+        },
+        {
+            "label": "Mark for sleeve flap attach(HEL)",
+            "value": "JSLE253"
+        },
+        {
+            "label": "Flap tack to body(SN)",
+            "value": "JSLE254"
+        },
+        {
+            "label": "Sleeve flap attach(SN)",
+            "value": "JSLE255"
+        },
+        {
+            "label": "Sleeve attach at back(SN)",
+            "value": "JSLE256"
+        },
+        {
+            "label": "Sleeve attach at front(SN)",
+            "value": "JSLE257"
+        },
+        {
+            "label": "Sleeve topstitch at back(SN)",
+            "value": "JSLE258"
+        },
+        {
+            "label": "Sleeve topstitch at front(SN)",
+            "value": "JSLE259"
+        },
+        {
+            "label": "Sleeve hem pull & check (Blind)(HEL)",
+            "value": "JSLE260"
+        },
+        {
+            "label": "Sleeve letus make(3T OL)",
+            "value": "JSLE261"
+        },
+        {
+            "label": "Sleeve cuff measure cut & trim(OL)",
+            "value": "JCUF301"
+        },
+        {
+            "label": "Sleeve cuff join ,fold & mark(SN)",
+            "value": "JCUF302"
+        },
+        {
+            "label": "Sleeve cuff join & topstitch(SN)",
+            "value": "JCUF303"
+        },
+        {
+            "label": "Sleeve cuff inside tack(SN)",
+            "value": "JCUF304"
+        },
+        {
+            "label": "Sleeve cuff attach (Open)(4T OL)",
+            "value": "JCUF305"
+        },
+        {
+            "label": "Sleeve cuff attach (Round)(4T OL)",
+            "value": "JCUF306"
+        },
+        {
+            "label": "Sleeve cuff topstitch (Open)(FL CY)",
+            "value": "JCUF307"
+        },
+        {
+            "label": "Sleeve cuff topstitch (Round)(FL CY)",
+            "value": "JCUF308"
+        },
+        {
+            "label": "Sleeve cuff servicing(SN)",
+            "value": "JCUF309"
+        },
+        {
+            "label": "Sleeve turn up & tack(SN)",
+            "value": "JSLE401"
+        },
+        {
+            "label": "Sleeve turn up bartack & False stitch open(B TACK)",
+            "value": "JSLE402"
+        },
+        {
+            "label": "Hood upper & lower two part join(4T OL)",
+            "value": "JHOO501"
+        },
+        {
+            "label": "Hood upper & lower three part join(4T OL)",
+            "value": "JHOO502"
+        },
+        {
+            "label": "Hood  edge  two part join(4T OL)",
+            "value": "JHOO503"
+        },
+        {
+            "label": "Hood  edge  topstitch(FL CY)",
+            "value": "JHOO504"
+        },
+        {
+            "label": "Loop tack at hood inside & mouth close(SN)",
+            "value": "JHOO505"
+        },
+        {
+            "label": "Hood false hem (SN)",
+            "value": "JHOO506"
+        },
+        {
+            "label": "Hood hem  & false stitch open(FL CY)",
+            "value": "JHOO507"
+        },
+        {
+            "label": "Hood upper two part join(4T OL)",
+            "value": "JHOO508"
+        },
+        {
+            "label": "Hood lower two part join(4T OL)",
+            "value": "JHOO509"
+        },
+        {
+            "label": "Mark & punch & hole at hood(EYELETE)",
+            "value": "JHOO510"
+        },
+        {
+            "label": "Hood upper & lower topstitch(FL CY)",
+            "value": "JHOO511"
+        },
+        {
+            "label": "Hood two part matching tack(SN)",
+            "value": "JHOO512"
+        },
+        {
+            "label": "Contrast tape attach at hood (SN)",
+            "value": "JHOO513"
+        },
+        {
+            "label": "Hood rib two part false attach(4T OL)",
+            "value": "JHOO514"
+        },
+        {
+            "label": "Hood panel & two part  edge o/l(4T OL)",
+            "value": "JHOO515"
+        },
+        {
+            "label": "Binding at hood(FL BIN)",
+            "value": "JHOO516"
+        },
+        {
+            "label": "Binding close at hood(SN)",
+            "value": "JHOO517"
+        },
+        {
+            "label": "Hood panel  edge o/l(4T OL)",
+            "value": "JHOO518"
+        },
+        {
+            "label": "Hood tack to body(SN)",
+            "value": "JHOO519"
+        },
+        {
+            "label": "Hood hem(SN)",
+            "value": "JHOO520"
+        },
+        {
+            "label": "Hood hem(FL CY)",
+            "value": "JHOO521"
+        },
+        {
+            "label": "Hood rib false attach(SN)",
+            "value": "JHOO522"
+        },
+        {
+            "label": "Hood attach(4T OL)",
+            "value": "JHOO523"
+        },
+        {
+            "label": "Mark for hood attach & pair(HEL)",
+            "value": "JHOO524"
+        },
+        {
+            "label": "Hood upper & lower two part join finish (SN)",
+            "value": "JHOO525"
+        },
+        {
+            "label": "Hood edge servicing for hem(4T OL)",
+            "value": "JHOO526"
+        },
+        {
+            "label": "Hood two part join with cord(4T OL)",
+            "value": "JHOO527"
+        },
+        {
+            "label": "Hood tack for hood hem(SN)",
+            "value": "JHOO528"
+        },
+        {
+            "label": "Back neck tape measure cut & iron(HEL)",
+            "value": "JBAC601"
+        },
+        {
+            "label": "Back neck tape end tack & trim(SN)",
+            "value": "JBAC602"
+        },
+        {
+            "label": "Shoulder to shoulder binding attach(FL BIN)",
+            "value": "JBAC603"
+        },
+        {
+            "label": "Shoulder to shoulder tape attach (FOA)",
+            "value": "JBAC604"
+        },
+        {
+            "label": "Back neck tape attach(DN)",
+            "value": "JBAC605"
+        },
+        {
+            "label": "Back neck tape mark & attach(SN)",
+            "value": "JBAC606"
+        },
+        {
+            "label": "Zigzag stitch at back tape(SN ZIGZAG)",
+            "value": "JBAC607"
+        },
+        {
+            "label": "Back neck tape end stitch open(HEL)",
+            "value": "JBAC608"
+        },
+        {
+            "label": "Back neck tape end insert & tack(SN)",
+            "value": "JBAC609"
+        },
+        {
+            "label": "Back neck tape end stitch open for DN(HEL)",
+            "value": "JBAC610"
+        },
+        {
+            "label": "Back neck tape end insert & tack for DN(SN)",
+            "value": "JBAC611"
+        },
+        {
+            "label": "Back neck tape close shoulder to shoulder(SN)",
+            "value": "JBAC612"
+        },
+        {
+            "label": "Back neck tape close shoulder to shoulder (One label)(SN)",
+            "value": "JBAC613"
+        },
+        {
+            "label": "Back neck tape close shoulder to shoulder (Two label)(SN)",
+            "value": "JBAC614"
+        },
+        {
+            "label": "Back neck tape contrast tape spread & iron(IRON)",
+            "value": "JBAC615"
+        },
+        {
+            "label": "Back neck tape contrast tape attach(SN)",
+            "value": "JBAC616"
+        },
+        {
+            "label": "Mark for label close(HEL)",
+            "value": "JBAC617"
+        },
+        {
+            "label": "Back neck tape attach & trim(FL BIN)",
+            "value": "JBAC618"
+        },
+        {
+            "label": "Back neck tape attach & trim(SN)",
+            "value": "JBAC619"
+        },
+        {
+            "label": "Back neck tape check & trim(HEL)",
+            "value": "JBAC620"
+        },
+        {
+            "label": "Mark for Back neck tape attach & trim(HEL)",
+            "value": "JBAC621"
+        },
+        {
+            "label": "Back knitting tape attach(SN)",
+            "value": "JBAC622"
+        },
+        {
+            "label": "Back knitting tape fold & tack(SN)",
+            "value": "JBAC623"
+        },
+        {
+            "label": "Side seam  (Regular)(4T OL)",
+            "value": "JSID701"
+        },
+        {
+            "label": "Side seam with side slit o/l(lower part)(4T OL)",
+            "value": "JSID702"
+        },
+        {
+            "label": "Side seam(point match)(4T OL)",
+            "value": "JSID703"
+        },
+        {
+            "label": "Side seam with care label(4T OL)",
+            "value": "JSID704"
+        },
+        {
+            "label": "Side seam(inside panel)(4T OL)",
+            "value": "JSID705"
+        },
+        {
+            "label": "Side seam SS (Stripe)(4T OL)",
+            "value": "JSID706"
+        },
+        {
+            "label": "Side seam LS(4T OL)",
+            "value": "JSID707"
+        },
+        {
+            "label": "Side seam LS (Stripe)(4T OL)",
+            "value": "JSID708"
+        },
+        {
+            "label": "Side seam LS  (Cardigan)(4T OL)",
+            "value": "JSID709"
+        },
+        {
+            "label": "Side seam topstitch(FL COV)",
+            "value": "JSID710"
+        },
+        {
+            "label": "Side seam topstitch end tack & stitch open(SN)",
+            "value": "JSID711"
+        },
+        {
+            "label": "Side seam matching tack(SN)",
+            "value": "JSID712"
+        },
+        {
+            "label": "Binding attach at side cut & sew(FL BIN)",
+            "value": "JSID713"
+        },
+        {
+            "label": "Binding close at side cut & sew(SN)",
+            "value": "JSID714"
+        },
+        {
+            "label": "Side seam topstitch(FL CY)",
+            "value": "JSID715"
+        },
+        {
+            "label": "Bottom hem(FL HEM)",
+            "value": "JBOT801"
+        },
+        {
+            "label": "Bottom hem (O/L)(3T OL)",
+            "value": "JBOT802"
+        },
+        {
+            "label": "Bottom hem join tack(SN)",
+            "value": "JBOT803"
+        },
+        {
+            "label": "Tack at bottom hem(SN)",
+            "value": "JBOT804"
+        },
+        {
+            "label": "Bottom hem pull & knot make(HEL)",
+            "value": "JBOT805"
+        },
+        {
+            "label": "Bottom hem o/l with mobilon tape(4T OL)",
+            "value": "JBOT806"
+        },
+        {
+            "label": "Bottom hem  (chinese)(FL CY)",
+            "value": "JBOT807"
+        },
+        {
+            "label": "Tack at bottom hem (double)(SN)",
+            "value": "JBOT808"
+        },
+        {
+            "label": "Bottom false tack for bottom hem(SN)",
+            "value": "JBOT809"
+        },
+        {
+            "label": "Bottom hem (6cm)(FL HEM)",
+            "value": "JBOT810"
+        },
+        {
+            "label": "Bottom rib join(SN)",
+            "value": "JBOT811"
+        },
+        {
+            "label": "Bottom rib inside tack(SN)",
+            "value": "JBOT812"
+        },
+        {
+            "label": "Bottom rib servicing(FL CY)",
+            "value": "JBOT813"
+        },
+        {
+            "label": "Bottom rib attach(4T OL)",
+            "value": "JBOT814"
+        },
+        {
+            "label": "Bottom rib topstitch(FL CY)",
+            "value": "JBOT815"
+        },
+        {
+            "label": "Bottom servicing(FL CY)",
+            "value": "JBOT816"
+        },
+        {
+            "label": "Bottom Blind hem (Blind)(3T OL)",
+            "value": "JBOT817"
+        },
+        {
+            "label": "Push for bottom hem(HEL)",
+            "value": "JBOT818"
+        },
+        {
+            "label": "Bottom hem (Stripe)(FL HEM)",
+            "value": "JBOT819"
+        },
+        {
+            "label": "Mark for patch label attach(SN)",
+            "value": "JBOT820"
+        },
+        {
+            "label": "Bottom Rib join, fold & mark(SN)",
+            "value": "JBOT821"
+        },
+        {
+            "label": "Bottom hem ( Open )(FL HEM)",
+            "value": "JBOT822"
+        },
+        {
+            "label": "Bottom hem edge trimming(OL)",
+            "value": "JBOT823"
+        },
+        {
+            "label": "Bottom hem pull, check & trim(HEL)",
+            "value": "JBOT824"
+        },
+        {
+            "label": "Body mark for Bottom RIB attach(HEL)",
+            "value": "JBOT825"
+        },
+        {
+            "label": "Bottom RIB tack to body(SN)",
+            "value": "JBOT826"
+        },
+        {
+            "label": "Bottom letus make(3T OL)",
+            "value": "JBOT827"
+        },
+        {
+            "label": "Mark for pocket attach(HEL)",
+            "value": "JPOC1001"
+        },
+        {
+            "label": "Mark for pocket patch label attach(HEL)",
+            "value": "JPOC1002"
+        },
+        {
+            "label": "Pocket hem & raw edge trim(FL CY)",
+            "value": "JPOC1003"
+        },
+        {
+            "label": "Patch label attach at pocket (SN)",
+            "value": "JPOC1004"
+        },
+        {
+            "label": "Pocket iron & scissoring(IRON)",
+            "value": "JPOC1005"
+        },
+        {
+            "label": "Pocket attach with diamond(SN)",
+            "value": "JPOC1006"
+        },
+        {
+            "label": "Pocket binding stitch open & tack 1st & 2nd (Double)(SN)",
+            "value": "JPOC1007"
+        },
+        {
+            "label": "Pocket rib make & mark & iron (Double)(Iron)",
+            "value": "JPOC1008"
+        },
+        {
+            "label": "Pocket rib attach &Mark for pocket attach (Double)(SN)",
+            "value": "JPOC1009"
+        },
+        {
+            "label": "Pocket 1st part attach & 2nd part attach (Double)(SN)",
+            "value": "JPOC1010"
+        },
+        {
+            "label": "Pocket rib open & ol (Double)(4T OL)",
+            "value": "JPOC1011"
+        },
+        {
+            "label": "Pocket rib tack to body & mark (Double)(SN)",
+            "value": "JPOC1012"
+        },
+        {
+            "label": "Pocket & pocket rib o/l & close (Double)(4T OL)",
+            "value": "JPOC1013"
+        },
+        {
+            "label": "Binding attach at pocket & role make (Double)(FL BIN)",
+            "value": "JPOC1014"
+        },
+        {
+            "label": "Pocket 1st part attach & mark for pocket attach(SN)",
+            "value": "JPOC1015"
+        },
+        {
+            "label": "Pocket rawstitch & Pocket open(SN)",
+            "value": "JPOC1016"
+        },
+        {
+            "label": "Pocket edge topstitch(SN)",
+            "value": "JPOC1017"
+        },
+        {
+            "label": "Pocket 2nd part tack with 1st part(SN)",
+            "value": "JPOC1018"
+        },
+        {
+            "label": "Pocket bag servicing at side(4T OL)",
+            "value": "JPOC1019"
+        },
+        {
+            "label": "Binding attach at pocket & role make(FL BIN)",
+            "value": "JPOC1020"
+        },
+        {
+            "label": "Pocket mouth close(SN)",
+            "value": "JPOC1021"
+        },
+        {
+            "label": "Eyelet attach at back pocket rib(EYELETE)",
+            "value": "JPOC1022"
+        },
+        {
+            "label": "Body mark for pocket attach front & back (Single)(HEL)",
+            "value": "JPOC1023"
+        },
+        {
+            "label": "Pocket rib  make at  back (Single)(IRON)",
+            "value": "JPOC1024"
+        },
+        {
+            "label": "Pocket rib attach at  back & mark (Single)(SN)",
+            "value": "JPOC1025"
+        },
+        {
+            "label": "Pocket 1st & 2nd part attach at back (Single)(SN)",
+            "value": "JPOC1026"
+        },
+        {
+            "label": "Pocket rib o/l at back &Pocket open  & back pkt mark (Single)(4T OL)",
+            "value": "JPOC1027"
+        },
+        {
+            "label": "Pocket rib tack to body at back  (Single)(SN)",
+            "value": "JPOC1028"
+        },
+        {
+            "label": "Pocket bag servicing at back (Single)(4T OL)",
+            "value": "JPOC1029"
+        },
+        {
+            "label": "Binding attach at pocket & role make (Single)(FL BIN)",
+            "value": "JPOC1030"
+        },
+        {
+            "label": "Pocket mouth close (Single)(SN)",
+            "value": "JPOC1031"
+        },
+        {
+            "label": "Pocket edge ol(4T OL)",
+            "value": "JPOC1032"
+        },
+        {
+            "label": "Pocket hem(FL CY)",
+            "value": "JPOC1033"
+        },
+        {
+            "label": "Inside mark for runstitch & pocket attach(SN)",
+            "value": "JPOC1034"
+        },
+        {
+            "label": "Inside  part runstitch (SN)",
+            "value": "JPOC1035"
+        },
+        {
+            "label": "Pocket attach with inside part(SN)",
+            "value": "JPOC1036"
+        },
+        {
+            "label": "Pocket attach with inside part bottom area(4T OL)",
+            "value": "JPOC1037"
+        },
+        {
+            "label": "Front pocket iron(IRON)",
+            "value": "JPOC1038"
+        },
+        {
+            "label": "Inside  part runstitch  & mark for bottom tack(SN)",
+            "value": "JPOC1039"
+        },
+        {
+            "label": "Pocket iron & scissoring (2 POCKET)(IRON)",
+            "value": "JPOC1040"
+        },
+        {
+            "label": "Pocket attach(SN)",
+            "value": "JPOC1041"
+        },
+        {
+            "label": "Pocket topstitch(FL CY)",
+            "value": "JPOC1042"
+        },
+        {
+            "label": "Pocket edge OL ( 2 M/C 1 OP )(4T OL)",
+            "value": "JPOC1043"
+        },
+        {
+            "label": "Pocket hem & raw edge trim (2 POCKET)(FL CY)",
+            "value": "JPOC1044"
+        },
+        {
+            "label": "Pocket dart make & mark(SN)",
+            "value": "JPOC1045"
+        },
+        {
+            "label": "Pocket iron & scissoring (HARMONY 2 POCKET)(IRON)",
+            "value": "JPOC1046"
+        },
+        {
+            "label": "Pocket harmony iron (IRON)",
+            "value": "JPOC1047"
+        },
+        {
+            "label": "Mark & show stitch at flap(HEL)",
+            "value": "JPOC1048"
+        },
+        {
+            "label": "Body mark for pocket & flap attach(HEL)",
+            "value": "JPOC1049"
+        },
+        {
+            "label": "Pocket attach with flag label(SN)",
+            "value": "JPOC1050"
+        },
+        {
+            "label": "Mark for flap make(HEL)",
+            "value": "JPOC1051"
+        },
+        {
+            "label": "Pocket flap make(SN)",
+            "value": "JPOC1052"
+        },
+        {
+            "label": "Pocket flap turn & trim & thread  pull(HEL)",
+            "value": "JPOC1053"
+        },
+        {
+            "label": "Pocket flap edge topstitch  (SN)",
+            "value": "JPOC1054"
+        },
+        {
+            "label": "Pocket flap mark & scissoring(HEL)",
+            "value": "JPOC1055"
+        },
+        {
+            "label": "Velcrew measure & cut & corner trim(HEL)",
+            "value": "JPOC1056"
+        },
+        {
+            "label": "Mark for flap velcrew attach at flap(HEL)",
+            "value": "JPOC1057"
+        },
+        {
+            "label": "Velcrew attach at flap(SN)",
+            "value": "JPOC1058"
+        },
+        {
+            "label": "Pocket flap attach(SN)",
+            "value": "JPOC1059"
+        },
+        {
+            "label": "Pocket flap attach topstitch(SN)",
+            "value": "JPOC1060"
+        },
+        {
+            "label": "Velcrew attach at pocket with mark(SN)",
+            "value": "JPOC1061"
+        },
+        {
+            "label": "Pocket end match & tack(SN)",
+            "value": "JPOC1062"
+        },
+        {
+            "label": "Bartack at pocket  & flap (B TACK)",
+            "value": "JPOC1063"
+        },
+        {
+            "label": "Bartack at pocket (3 pocket)(B TACK)",
+            "value": "JPOC1064"
+        },
+        {
+            "label": "Pocket attach  (Stripe)(SN)",
+            "value": "JPOC1065"
+        },
+        {
+            "label": "Cangroo pocket binding attach(FL BIN)",
+            "value": "JPOC1066"
+        },
+        {
+            "label": "Patch pocket mark for zipper attach(HEL)",
+            "value": "JPOC1067"
+        },
+        {
+            "label": "Patch pocket iron(IRON)",
+            "value": "JPOC1068"
+        },
+        {
+            "label": "Patch pocket edge servicing with mark(4T OL)",
+            "value": "JPOC1069"
+        },
+        {
+            "label": "Patch pocket zipper topstitch(SN)",
+            "value": "JPOC1070"
+        },
+        {
+            "label": "Patch pocket attach (SN)",
+            "value": "JPOC1071"
+        },
+        {
+            "label": "Front open for zipper attach(DN)",
+            "value": "JZIP901"
+        },
+        {
+            "label": "Body hamaring for zipper topstitch(HEL)",
+            "value": "JZIP902"
+        },
+        {
+            "label": "Zipper & body mark & attach (SN)",
+            "value": "JZIP903"
+        },
+        {
+            "label": "Tape attach at zipper(SN)",
+            "value": "JZIP904"
+        },
+        {
+            "label": "Zipper fold & tack(SN)",
+            "value": "JZIP905"
+        },
+        {
+            "label": "Zipper topstitch(SN)",
+            "value": "JZIP906"
+        },
+        {
+            "label": "Zipper & body mark(HEL)",
+            "value": "JZIP907"
+        },
+        {
+            "label": "Zipper binding & role make(FL BIN)",
+            "value": "JZIP908"
+        },
+        {
+            "label": "Zipper binding raw edge trim(HEL)",
+            "value": "JZIP909"
+        },
+        {
+            "label": "Zipper binding end tack(SN)",
+            "value": "JZIP910"
+        },
+        {
+            "label": "Zipper attach (SN)",
+            "value": "JZIP911"
+        },
+        {
+            "label": "Zipper  facing o/l(4T OL)",
+            "value": "JZIP912"
+        },
+        {
+            "label": "Zipper facing fold & tack at bottom (SN)",
+            "value": "JZIP913"
+        },
+        {
+            "label": "Zipper facing attach(SN)",
+            "value": "JZIP914"
+        },
+        {
+            "label": "Zipper attach with facing(SN)",
+            "value": "JZIP915"
+        },
+        {
+            "label": "Zipper topstitch with facing(SN)",
+            "value": "JZIP916"
+        },
+        {
+            "label": "Zipper facing upper close(SN)",
+            "value": "JZIP917"
+        },
+        {
+            "label": "Zipper faching inside edge close(SN)",
+            "value": "JZIP918"
+        },
+        {
+            "label": "Zipper rawedge trim(HEL)",
+            "value": "JZIP919"
+        },
+        {
+            "label": "Fusing set & zipper panel iron(IRON)",
+            "value": "JZIP920"
+        },
+        {
+            "label": "Zipper panel fold & tack(SN)",
+            "value": "JZIP921"
+        },
+        {
+            "label": "Zipper panel attach(SN)",
+            "value": "JZIP922"
+        },
+        {
+            "label": "Zipper tape attach & zipper end tack(SN)",
+            "value": "JZIP923"
+        },
+        {
+            "label": "Zipper tape end tack & trim(SN)",
+            "value": "JZIP924"
+        },
+        {
+            "label": "Zipper tack to body(SN)",
+            "value": "JZIP925"
+        },
+        {
+            "label": "Zipper tape attach(SN)",
+            "value": "JZIP926"
+        },
+        {
+            "label": "False fabric attach at zipper for wash(hand)(HEL)",
+            "value": "JZIP927"
+        },
+        {
+            "label": "Body servicing for zipper attach(4T OL)",
+            "value": "JZIP928"
+        },
+        {
+            "label": "Zipper tack to patch pocket(SN)",
+            "value": "JZIP929"
+        },
+        {
+            "label": "Zipper open(HEL)",
+            "value": "JZIP930"
+        },
+        {
+            "label": "Zipper attach with patch pocket(SN)",
+            "value": "JZIP931"
+        },
+        {
+            "label": "Zipper attach with patch pocket edge open (SN)",
+            "value": "JZIP932"
+        },
+        {
+            "label": "Main label attach with paper(SN)",
+            "value": "JLAB1101"
+        },
+        {
+            "label": "Care label make(SN)",
+            "value": "JLAB1102"
+        },
+        {
+            "label": "Care label attach(SN)",
+            "value": "JLAB1103"
+        },
+        {
+            "label": "Care label make & attach(SN)",
+            "value": "JLAB1104"
+        },
+        {
+            "label": "Bottom tab label mark & attach(SN)",
+            "value": "JLAB1105"
+        },
+        {
+            "label": "Mark for label attach(HEL)",
+            "value": "JLAB1106"
+        },
+        {
+            "label": "Flag label attach(SN)",
+            "value": "JLAB1107"
+        },
+        {
+            "label": "Mark for bottom patch label(HEL)",
+            "value": "JLAB1108"
+        },
+        {
+            "label": "Bottom patch label attach(SN)",
+            "value": "JLAB1109"
+        },
+        {
+            "label": "Organic & country  or loop label make(SN)",
+            "value": "JLAB1110"
+        },
+        {
+            "label": "Organic label attach(SN)",
+            "value": "JLAB1111"
+        },
+        {
+            "label": "Organic & main or loop label make with poly(SN)",
+            "value": "JLAB1112"
+        },
+        {
+            "label": "Organic & country label attach(SN)",
+            "value": "JLAB1113"
+        },
+        {
+            "label": "Organic label make(SN)",
+            "value": "JLAB1114"
+        },
+        {
+            "label": "Mark for main & size label attach(HEL)",
+            "value": "JLAB1115"
+        },
+        {
+            "label": "Slim fit label iron(IRON)",
+            "value": "JLAB1116"
+        },
+        {
+            "label": "Main label attach (slim fit lbl)(SN)",
+            "value": "JLAB1117"
+        },
+        {
+            "label": "Care label make & attach (one part)(SN)",
+            "value": "JLAB1118"
+        },
+        {
+            "label": "Country label attach(SN)",
+            "value": "JLAB1119"
+        },
+        {
+            "label": "Size label attach(SN)",
+            "value": "JLAB1120"
+        },
+        {
+            "label": "Mark for country & main label attach(HEL)",
+            "value": "JLAB1121"
+        },
+        {
+            "label": "Main & country & organic label attach(HEL)",
+            "value": "JLAB1122"
+        },
+        {
+            "label": "Hood tab label mark & attach(SN)",
+            "value": "JLAB1123"
+        },
+        {
+            "label": "Front panel matching(HEL)",
+            "value": "JFRO1201"
+        },
+        {
+            "label": "Front upper & lower two part tiken join(SN)",
+            "value": "JFRO1202"
+        },
+        {
+            "label": "Front two part edge servicing(SN)",
+            "value": "JFRO1203"
+        },
+        {
+            "label": "Front cut & sew attach (Half)(FL BIN)",
+            "value": "JFRO1204"
+        },
+        {
+            "label": "Front part edge servicing(4T OL)",
+            "value": "JFRO1205"
+        },
+        {
+            "label": "Front binding attach(FL BIN)",
+            "value": "JFRO1206"
+        },
+        {
+            "label": "Front binding edge topstitch(SN)",
+            "value": "JFRO1207"
+        },
+        {
+            "label": "Mark for front & back tape attach(HEL)",
+            "value": "JFRO1208"
+        },
+        {
+            "label": "Zigzag stitch at front tape(SN ZIGZAG)",
+            "value": "JFRO1209"
+        },
+        {
+            "label": "Front cut & sew V tack to body with sleeve(SN)",
+            "value": "JFRO1210"
+        },
+        {
+            "label": "Front cut & sew attach with back(4T OL)",
+            "value": "JFRO1211"
+        },
+        {
+            "label": "Back & front cut & sew false attach(SN)",
+            "value": "JFRO1212"
+        },
+        {
+            "label": "Front & back cut & sew attach (4T OL)",
+            "value": "JFRO1213"
+        },
+        {
+            "label": "Front & back cut & sew topstitch(FL CY)",
+            "value": "JFRO1214"
+        },
+        {
+            "label": "Front cut & sew attach(4T OL)",
+            "value": "JFRO1215"
+        },
+        {
+            "label": "Front cut & sew topstitch(FL CY)",
+            "value": "JFRO1216"
+        },
+        {
+            "label": "Fusing set at body left & fold(IRON)",
+            "value": "JFRO1217"
+        },
+        {
+            "label": "Fusing set at body right & fold(IRON)",
+            "value": "JFRO1218"
+        },
+        {
+            "label": "Tape mark for zigzag stitch(HEL)",
+            "value": "JFRO1219"
+        },
+        {
+            "label": "Zigzag stitch at front tape(SN)",
+            "value": "JFRO1220"
+        },
+        {
+            "label": "Back deviding join(4T OL)",
+            "value": "JFRO1221"
+        },
+        {
+            "label": "Back deviding topstitch(FL CY)",
+            "value": "JFRO1222"
+        },
+        {
+            "label": "Box make at back (SN)",
+            "value": "JFRO1223"
+        },
+        {
+            "label": "Dard make at front part(SN)",
+            "value": "JFRO1224"
+        },
+        {
+            "label": "Dard topstitch(FL CY)",
+            "value": "JFRO1225"
+        },
+        {
+            "label": "Security tack at dard & over stitch open(SN)",
+            "value": "JFRO1226"
+        },
+        {
+            "label": "Cut & sew attach at back(SN)",
+            "value": "JFRO1227"
+        },
+        {
+            "label": "Cut & sew attach at back ol(4T OL)",
+            "value": "JFRO1228"
+        },
+        {
+            "label": "Cut & sew topstitch(FL CY)",
+            "value": "JFRO1229"
+        },
+        {
+            "label": "Tafeta attach with front cut & sew(SN)",
+            "value": "JFRO1230"
+        },
+        {
+            "label": "Tafeta attach with back cut & sew(SN)",
+            "value": "JFRO1231"
+        },
+        {
+            "label": "Front part mark for over layer attach(HEL)",
+            "value": "JFRO1232"
+        },
+        {
+            "label": "Front over layer attach (Chain stitch)(SN)",
+            "value": "JFRO1233"
+        },
+        {
+            "label": "Front over layer close(SN)",
+            "value": "JFRO1234"
+        },
+        {
+            "label": "Front over layer iron(IRON)",
+            "value": "JFRO1235"
+        },
+        {
+            "label": "Front cut & sew runstitch for attach(SN)",
+            "value": "JFRO1236"
+        },
+        {
+            "label": "Front cut & sew iron for attach(IRON)",
+            "value": "JFRO1237"
+        },
+        {
+            "label": "Back patch label attach with mark(SN)",
+            "value": "JFRO1238"
+        },
+        {
+            "label": "Front part fold & tack with bottom rib(SN)",
+            "value": "JFRO1239"
+        },
+        {
+            "label": "Cord attach at front cut & sew(SN)",
+            "value": "JFRO1240"
+        },
+        {
+            "label": "Cord attach at back cut & sew(SN)",
+            "value": "JFRO1241"
+        },
+        {
+            "label": "Moon mark & false attach(SN)",
+            "value": "JMOO1301"
+        },
+        {
+            "label": "Moon topstitch & false stitch open(FL COV)",
+            "value": "JMOO1302"
+        },
+        {
+            "label": "Moon iron & scissoring(IRON)",
+            "value": "JMOO1303"
+        },
+        {
+            "label": "Moon mark & attach(SN)",
+            "value": "JMOO1304"
+        },
+        {
+            "label": "Body mark for moon attach(HEL)",
+            "value": "JMOO1305"
+        },
+        {
+            "label": "Patch label mark & attach at half moon (SN)",
+            "value": "JMOO1306"
+        },
+        {
+            "label": "Half moon attach(SN)",
+            "value": "JMOO1307"
+        },
+        {
+            "label": "Moon attach(SN)",
+            "value": "JMOO1308"
+        },
+        {
+            "label": "Moon topstitch(SN)",
+            "value": "JMOO1309"
+        },
+        {
+            "label": "Body middle mark for moon attach(HEL)",
+            "value": "JMOO1310"
+        },
+        {
+            "label": "Triangle iron with fusing(IRON)",
+            "value": "JMOO1311"
+        },
+        {
+            "label": "Traingle attach(SN)",
+            "value": "JMOO1312"
+        },
+        {
+            "label": "Moon inside scissoring & mouth servicing(SN)",
+            "value": "JMOO1313"
+        },
+        {
+            "label": "Half moon edge ol & iron(4T OL)",
+            "value": "JMOO1314"
+        },
+        {
+            "label": "Make button hole(BUTTON HOLE)",
+            "value": "JBUT1501"
+        },
+        {
+            "label": "Mark for button attach (3 BUTTON)(HEL)",
+            "value": "JBUT1502"
+        },
+        {
+            "label": "Button attach(BUTTON ATT)",
+            "value": "JBUT1503"
+        },
+        {
+            "label": "Button insert(HEL)",
+            "value": "JBUT1504"
+        },
+        {
+            "label": "Snap button mark & iron(IRON)",
+            "value": "JBUT1505"
+        },
+        {
+            "label": "Snap button attach(EYELETE)",
+            "value": "JBUT1506"
+        },
+        {
+            "label": "Collar iron & placket iron for button(IRON)",
+            "value": "JBUT1507"
+        },
+        {
+            "label": "Collar & placket iron for button(IRON)",
+            "value": "JBUT1508"
+        },
+        {
+            "label": "Mark for button attach(HEL)",
+            "value": "JBUT1509"
+        },
+        {
+            "label": "Snap button attach at pocket(EYELETE)",
+            "value": "JBUT1510"
+        }
+    ],
+    "Trouser": [
+        {
+            "label": "Side seam (Regular)(4T OL)",
+            "value": "TRSID101"
+        },
+        {
+            "label": "Ironing (Finishing)",
+            "value": "TRIRONFO101"
+        },
+        {
+            "label": "Packing (Finishing)",
+            "value": "TRPACKFO101"
+        },
+        {
+            "label": "Folding (Finishing)",
+            "value": "TRFOLFO101"
+        },
+        {
+            "label": "Side seam with side slit o/l(lower part)(4T OL)",
+            "value": "TRSID102"
+        },
+        {
+            "label": "Side seam(point match)(4T OL)",
+            "value": "TRSID103"
+        },
+        {
+            "label": "Side seam with care label(4T OL)",
+            "value": "TRSID104"
+        },
+        {
+            "label": "Side seam(inside panel)(4T OL)",
+            "value": "TRSID105"
+        },
+        {
+            "label": "Side seam topstitch(FL CY)",
+            "value": "TRSID106"
+        },
+        {
+            "label": "Side seam topstitch end tack & stitch open(SN)",
+            "value": "TRSID107"
+        },
+        {
+            "label": "Side seam matching tack(SN)",
+            "value": "TRSID108"
+        },
+        {
+            "label": "Side seam(4T OL)",
+            "value": "TRSID109"
+        },
+        {
+            "label": "Side seam (BIG)(4T OL)",
+            "value": "TRSID110"
+        },
+        {
+            "label": "Inseam (BIG)(4T OL)",
+            "value": "TRSID111"
+        },
+        {
+            "label": "Inseam(4T OL)",
+            "value": "TRSID112"
+        },
+        {
+            "label": "Binding attach at side cut & sew(FL BIN)",
+            "value": "TRSID113"
+        },
+        {
+            "label": "Binding close at side cut & sew(SN)",
+            "value": "TRSID114"
+        },
+        {
+            "label": "Mark for pocket attach(HEL)",
+            "value": "TRPOC201"
+        },
+        {
+            "label": "Mark for pocket patch label attach(HEL)",
+            "value": "TRPOC202"
+        },
+        {
+            "label": "Pocket hem & raw edge trim(FL CY)",
+            "value": "TRPOC203"
+        },
+        {
+            "label": "Patch label attach at pocket (SN)",
+            "value": "TRPOC204"
+        },
+        {
+            "label": "Pocket iron & scissoring(IRON)",
+            "value": "TRPOC205"
+        },
+        {
+            "label": "Pocket attach with diamond (Patch)(SN)",
+            "value": "TRPOC206"
+        },
+        {
+            "label": "Pocket binding stitch open & tack 1st & 2nd (Double)(SN)",
+            "value": "TRPOC207"
+        },
+        {
+            "label": "Pocket rib make & mark & iron (Double)(IRON)",
+            "value": "TRPOC208"
+        },
+        {
+            "label": "Pocket rib attach &Mark for pocket attach (Double)(SN)",
+            "value": "TRPOC209"
+        },
+        {
+            "label": "Pocket 1st part attach & 2nd part attach (Double)(SN)",
+            "value": "TRPOC210"
+        },
+        {
+            "label": "Pocket rib open & ol (Double)(4T OL)",
+            "value": "TRPOC211"
+        },
+        {
+            "label": "Pocket rib tack to body & mark (Double)(SN)",
+            "value": "TRPOC212"
+        },
+        {
+            "label": "Pocket & pocket rib o/l & close (Double)(4T OL)",
+            "value": "TRPOC213"
+        },
+        {
+            "label": "Binding attach at pocket & role make (Double)(FL BIN)",
+            "value": "TRPOC214"
+        },
+        {
+            "label": "Pocket 1st part attach & mark for pocket attach(SN)",
+            "value": "TRPOC215"
+        },
+        {
+            "label": "Pocket rawstitch & Pocket open(SN)",
+            "value": "TRPOC216"
+        },
+        {
+            "label": "Pocket edge topstitch(SN)",
+            "value": "TRPOC217"
+        },
+        {
+            "label": "Pocket 2nd part tack with 1st part(SN)",
+            "value": "TRPOC218"
+        },
+        {
+            "label": "Pocket bag servicing at side(4T OL)",
+            "value": "TRPOC219"
+        },
+        {
+            "label": "Binding attach at pocket & role make(FL BIN)",
+            "value": "TRPOC220"
+        },
+        {
+            "label": "Pocket mouth close(SN)",
+            "value": "TRPOC221"
+        },
+        {
+            "label": "Eyelet attach at back pocket rib(EYELETE)",
+            "value": "TRPOC222"
+        },
+        {
+            "label": "Body mark for pocket attach front & back (Single)(HEL)",
+            "value": "TRPOC223"
+        },
+        {
+            "label": "Pocket rib  make at  back (Single)(IRON)",
+            "value": "TRPOC224"
+        },
+        {
+            "label": "Pocket rib attach at  back & mark (Single)(SN)",
+            "value": "TRPOC225"
+        },
+        {
+            "label": "Pocket 1st & 2nd part attach at back (Single)(SN)",
+            "value": "TRPOC226"
+        },
+        {
+            "label": "Pocket rib o/l at back &Pocket open  & back pkt mark (Single)(4T OL)",
+            "value": "TRPOC227"
+        },
+        {
+            "label": "Pocket rib tack to body at back  (Single)(SN)",
+            "value": "TRPOC228"
+        },
+        {
+            "label": "Pocket bag servicing at back & mark (Single)(4T OL)",
+            "value": "TRPOC229"
+        },
+        {
+            "label": "Binding attach at pocket & role make (Single)(FL BIN)",
+            "value": "TRPOC230"
+        },
+        {
+            "label": "Pocket mouth close (Single)(SN)",
+            "value": "TRPOC231"
+        },
+        {
+            "label": "Pocket edge ol(4T OL)",
+            "value": "TRPOC232"
+        },
+        {
+            "label": "Pocket hem(FL CY)",
+            "value": "TRPOC233"
+        },
+        {
+            "label": "Inside mark for runstitch & pocket attach(HEL)",
+            "value": "TRPOC234"
+        },
+        {
+            "label": "Inside  part runstitch (SN)",
+            "value": "TRPOC235"
+        },
+        {
+            "label": "Pocket attach with inside part(SN)",
+            "value": "TRPOC236"
+        },
+        {
+            "label": "Pocket attach with inside part bottom area(4T OL)",
+            "value": "TRPOC237"
+        },
+        {
+            "label": "Front pocket iron(IRON)",
+            "value": "TRPOC238"
+        },
+        {
+            "label": "Inside  part runstitch  & mark for bottom tack(SN)",
+            "value": "TRPOC239"
+        },
+        {
+            "label": "Pocket attach(SN)",
+            "value": "TRPOC240"
+        },
+        {
+            "label": "Pocket topstitch(FL CY)",
+            "value": "TRPOC241"
+        },
+        {
+            "label": "Pocket edge OL ( 2 M/C 1 OP )(4T OL)",
+            "value": "TRPOC242"
+        },
+        {
+            "label": "Pocket hem & raw edge trim(DN)",
+            "value": "TRPOC243"
+        },
+        {
+            "label": "Pocket dart make & mark(SN)",
+            "value": "TRPOC244"
+        },
+        {
+            "label": "Pocket iron & scissoring (HARMONY)(IRON)",
+            "value": "TRPOC245"
+        },
+        {
+            "label": "Pocket harmony iron (IRON)",
+            "value": "TRPOC246"
+        },
+        {
+            "label": "Mark & show stitch at flap(SN)",
+            "value": "TRPOC247"
+        },
+        {
+            "label": "Body mark for pocket & flap attach(HEL)",
+            "value": "TRPOC248"
+        },
+        {
+            "label": "Pocket attach with flag label(SN)",
+            "value": "TRPOC249"
+        },
+        {
+            "label": "Mark for flap make(HEL)",
+            "value": "TRPOC250"
+        },
+        {
+            "label": "Pocket flap make(SN)",
+            "value": "TRPOC251"
+        },
+        {
+            "label": "Pocket flap turn & trim & thread  pull(IRON)",
+            "value": "TRPOC252"
+        },
+        {
+            "label": "Pocket flap edge topstitch  (SN)",
+            "value": "TRPOC253"
+        },
+        {
+            "label": "Pocket flap mark & scissoring(HEL)",
+            "value": "TRPOC254"
+        },
+        {
+            "label": "Velcrew measure & cut & corner trim(HEL)",
+            "value": "TRPOC255"
+        },
+        {
+            "label": "Mark for flap velcrew attach at flap(HEL)",
+            "value": "TRPOC256"
+        },
+        {
+            "label": "Velcrew attach at flap(SN)",
+            "value": "TRPOC257"
+        },
+        {
+            "label": "Pocket flap attach(SN)",
+            "value": "TRPOC258"
+        },
+        {
+            "label": "Pocket flap attach topstitch(SN)",
+            "value": "TRPOC259"
+        },
+        {
+            "label": "Velcrew attach at pocket with mark(SN)",
+            "value": "TRPOC260"
+        },
+        {
+            "label": "Pocket end match & tack(SN)",
+            "value": "TRPOC261"
+        },
+        {
+            "label": "Bartack at pocket  & flap (B TACK)",
+            "value": "TRPOC262"
+        },
+        {
+            "label": "Bartack at pocket (3 pocket)(B TACK)",
+            "value": "TRPOC263"
+        },
+        {
+            "label": "Front rise join (4T OL)",
+            "value": "TRRIS301"
+        },
+        {
+            "label": "Back rise join (4T OL)",
+            "value": "TRRIS302"
+        },
+        {
+            "label": "Back & front rise join with mobilon tape(4T OL)",
+            "value": "TRRIS303"
+        },
+        {
+            "label": "Front & back rise join (4T OL)",
+            "value": "TRRIS304"
+        },
+        {
+            "label": "Front & back rise topstitch(FL CY)",
+            "value": "TRRIS305"
+        },
+        {
+            "label": "Bar tack at fly & cross point false stitch open(B TACK)",
+            "value": "TRFLY401"
+        },
+        {
+            "label": "Front fly make & close both side(SN)",
+            "value": "TRFLY402"
+        },
+        {
+            "label": "Front rise join with fly(4T OL)",
+            "value": "TRFLY403"
+        },
+        {
+            "label": "Bar tack at fly & waist band & Drawcord(B TACK)",
+            "value": "TRFLY404"
+        },
+        {
+            "label": "Bar tack at fly & cross point(B TACK)",
+            "value": "TRFLY405"
+        },
+        {
+            "label": "Leg rib measure cut & trim & iron(HEL)",
+            "value": "TRLEG501"
+        },
+        {
+            "label": "Leg rib join fold & mark(SN)",
+            "value": "TRLEG502"
+        },
+        {
+            "label": "Leg rib attach(4T OL)",
+            "value": "TRLEG503"
+        },
+        {
+            "label": "Leg rib topstitch(FL CY)",
+            "value": "TRLEG504"
+        },
+        {
+            "label": "Leg cut & sew at upper front & back(4T OL)",
+            "value": "TRLEG505"
+        },
+        {
+            "label": "Leg cut & sew at lower front & back(4T OL)",
+            "value": "TRLEG506"
+        },
+        {
+            "label": "Leg patch false stitchor servecing(SN)",
+            "value": "TRLEG507"
+        },
+        {
+            "label": "Leg & elastic servicing(OL)",
+            "value": "TRLEG508"
+        },
+        {
+            "label": "Leg hem(FL CY)",
+            "value": "TRLEG509"
+        },
+        {
+            "label": "Tack for leg hem(SN)",
+            "value": "TRLEG510"
+        },
+        {
+            "label": "Mark for leg trun up & tack(HEL)",
+            "value": "TRLEG511"
+        },
+        {
+            "label": "Leg trun up & tack(SN)",
+            "value": "TRLEG512"
+        },
+        {
+            "label": "Leg hem o/l(4T OL)",
+            "value": "TRLEG513"
+        },
+        {
+            "label": "Leg rib join inside tack(SN)",
+            "value": "TRLEG514"
+        },
+        {
+            "label": "Tack for leg hem ( 4 Tack)(SN)",
+            "value": "TRLEG515"
+        },
+        {
+            "label": "Waist panel join(4T OL)",
+            "value": "TRWAI601"
+        },
+        {
+            "label": "Waist band join(SN)",
+            "value": "TRWAI602"
+        },
+        {
+            "label": "Waist band fold & mark(HEL)",
+            "value": "TRWAI603"
+        },
+        {
+            "label": "Fusing attach at waist band & mark(HEL)",
+            "value": "TRWAI604"
+        },
+        {
+            "label": "Elastic & waist band  measure & cut(HEL)",
+            "value": "TRWAI605"
+        },
+        {
+            "label": "Elastic servicing & waist band trim(OL)",
+            "value": "TRWAI606"
+        },
+        {
+            "label": "1st waist attach at waist(4T OL)",
+            "value": "TRWAI607"
+        },
+        {
+            "label": "Waist band attach(4T OL)",
+            "value": "TRWAI608"
+        },
+        {
+            "label": "Waist band top stitch(KANSAI)",
+            "value": "TRWAI609"
+        },
+        {
+            "label": "Waist tape iron & scissoring(IRON)",
+            "value": "TRWAI610"
+        },
+        {
+            "label": "Waist tape box make(SN)",
+            "value": "TRWAI611"
+        },
+        {
+            "label": "Waist tape attach(SN)",
+            "value": "TRWAI612"
+        },
+        {
+            "label": "Tack waist band & false stitch open(SN)",
+            "value": "TRWAI613"
+        },
+        {
+            "label": "Waist band join fold & mark(SN)",
+            "value": "TRWAI614"
+        },
+        {
+            "label": "Elastic tack to waist band(SN)",
+            "value": "TRWAI615"
+        },
+        {
+            "label": "Waist band & body mark(HEL)",
+            "value": "TRWAI616"
+        },
+        {
+            "label": "Waist band tack to body(SN)",
+            "value": "TRWAI617"
+        },
+        {
+            "label": "Hole at waist mark & attach(B TACK)",
+            "value": "TRWAI618"
+        },
+        {
+            "label": "Waist patch iron & scissoring(IRON)",
+            "value": "TRWAI619"
+        },
+        {
+            "label": "Waist patch mark & attach(SN)",
+            "value": "TRWAI620"
+        },
+        {
+            "label": "Waist patch box make(SN)",
+            "value": "TRWAI621"
+        },
+        {
+            "label": "Waist band patch end security tack & stitch open(SN)",
+            "value": "TRWAI622"
+        },
+        {
+            "label": "Elastic servicing & waist band trim(4T OL)",
+            "value": "TRWAI623"
+        },
+        {
+            "label": "Fusing set at waist(IRON)",
+            "value": "TRWAI624"
+        },
+        {
+            "label": "Drawcord insert & tack to waist(SN)",
+            "value": "TRWAI625"
+        },
+        {
+            "label": "Waist band end fold & tack(SN)",
+            "value": "TRWAI626"
+        },
+        {
+            "label": "Waist band edge topstitch(SN)",
+            "value": "TRWAI627"
+        },
+        {
+            "label": "Mark punch & hole at waist(BUTTON HOLE)",
+            "value": "TRWAI628"
+        },
+        {
+            "label": "Mark for waist loop attach(HEL)",
+            "value": "TRWAI629"
+        },
+        {
+            "label": "Waist loop attach(SN)",
+            "value": "TRWAI630"
+        },
+        {
+            "label": "Bar tack at waist loop(B TACK)",
+            "value": "TRWAI631"
+        },
+        {
+            "label": "Waist band servicing(3T OL)",
+            "value": "TRWAI632"
+        },
+        {
+            "label": "Waist two part servicing(4T OL)",
+            "value": "TRWAI633"
+        },
+        {
+            "label": "Contrast tape attach at waist(SN)",
+            "value": "TRWAI634"
+        },
+        {
+            "label": "Contrast tape false attach at waist(SN)",
+            "value": "TRWAI635"
+        },
+        {
+            "label": "Elastic measure & cut & iron (Boxer)(IRON)",
+            "value": "TRWAI636"
+        },
+        {
+            "label": "Elastic join (Boxer)(B TACK)",
+            "value": "TRWAI637"
+        },
+        {
+            "label": "Elastic tack with waist & body mark for attach (8 tack) (Boxer)(SN)",
+            "value": "TRWAI638"
+        },
+        {
+            "label": "Waist band attach  (Boxer)(FL COV)",
+            "value": "TRWAI639"
+        },
+        {
+            "label": "False stitch open waist band (Boxer)(HEL)",
+            "value": "TRWAI640"
+        },
+        {
+            "label": "Waist overlayer iron(IRON)",
+            "value": "TRWAI641"
+        },
+        {
+            "label": "Mark for waist overlayer attach(HEL)",
+            "value": "TRWAI642"
+        },
+        {
+            "label": "Waist overlayer attach(SN)",
+            "value": "TRWAI643"
+        },
+        {
+            "label": "Waist overlayer close(SN)",
+            "value": "TRWAI644"
+        },
+        {
+            "label": "Waist band upper & lower part mark & set(HEL)",
+            "value": "TRWAI645"
+        },
+        {
+            "label": "Waist band upper & lower part attach(SN)",
+            "value": "TRWAI646"
+        },
+        {
+            "label": "Waist band  attach ol(4T OL)",
+            "value": "TRWAI647"
+        },
+        {
+            "label": "Main label attach with paper(SN)",
+            "value": "TRLAB701"
+        },
+        {
+            "label": "Care label make(SN)",
+            "value": "TRLAB702"
+        },
+        {
+            "label": "Care label attach(SN)",
+            "value": "TRLAB703"
+        },
+        {
+            "label": "Care label make & attach(SN)",
+            "value": "TRLAB704"
+        },
+        {
+            "label": "Bottom tab label mark & attach(SN)",
+            "value": "TRLAB705"
+        },
+        {
+            "label": "Mark for label attach(HEL)",
+            "value": "TRLAB706"
+        },
+        {
+            "label": "Flag label attach(SN)",
+            "value": "TRLAB707"
+        },
+        {
+            "label": "Mark for bottom patch label(HEL)",
+            "value": "TRLAB708"
+        },
+        {
+            "label": "Bottom patch label attach(SN)",
+            "value": "TRLAB709"
+        },
+        {
+            "label": "Organic & country  or loop label make(SN)",
+            "value": "TRLAB710"
+        },
+        {
+            "label": "Organic label attach(SN)",
+            "value": "TRLAB711"
+        },
+        {
+            "label": "Organic & main or loop label make with poly(SN)",
+            "value": "TRLAB712"
+        },
+        {
+            "label": "Organic & country label attach(SN)",
+            "value": "TRLAB713"
+        },
+        {
+            "label": "Organic label make(SN)",
+            "value": "TRLAB714"
+        },
+        {
+            "label": "Mark for main & size label attach(SN)",
+            "value": "TRLAB715"
+        },
+        {
+            "label": "Slim fit label iron(IRON)",
+            "value": "TRLAB716"
+        },
+        {
+            "label": "Main label attach (slim fit lbl)(SN)",
+            "value": "TRLAB717"
+        },
+        {
+            "label": "Care label make & attach (one part)(SN)",
+            "value": "TRLAB718"
+        },
+        {
+            "label": "Country label attach(SN)",
+            "value": "TRLAB719"
+        },
+        {
+            "label": "Size label attach(SN)",
+            "value": "TRLAB720"
+        },
+        {
+            "label": "Mark for country & main label attach(HEL)",
+            "value": "TRLAB721"
+        },
+        {
+            "label": "Main & country & organic label attach(SN)",
+            "value": "TRLAB722"
+        },
+        {
+            "label": "Hood tab label mark & attach(SN)",
+            "value": "TRLAB723"
+        },
+        {
+            "label": "Make button hole(BUTTON HOLE)",
+            "value": "TRBUT801"
+        },
+        {
+            "label": "Mark for button attach(HEL)",
+            "value": "TRBUT802"
+        },
+        {
+            "label": "Button attach(BUTTON ATT)",
+            "value": "TRBUT803"
+        },
+        {
+            "label": "Button insert(HEL)",
+            "value": "TRBUT804"
+        },
+        {
+            "label": "Snap button mark & iron(EYELETE)",
+            "value": "TRBUT805"
+        },
+        {
+            "label": "Snap button attach(EYELETE)",
+            "value": "TRBUT806"
+        },
+        {
+            "label": "Collar iron & placket iron for button(IRON)",
+            "value": "TRBUT807"
+        },
+        {
+            "label": "Collar & placket iron for button(IRON)",
+            "value": "TRBUT808"
+        },
+        {
+            "label": "Mark for button attach (1 BUTTON)(HEL)",
+            "value": "TRBUT809"
+        },
+        {
+            "label": "Snap button attach at pocket(EYELETE)",
+            "value": "TRBUT810"
+        },
+        {
+            "label": "Front panel matching(HEL)",
+            "value": "TRFRO901"
+        },
+        {
+            "label": "Front upper & lower two part tiken join(SN)",
+            "value": "TRFRO902"
+        },
+        {
+            "label": "Front two part edge servicing(SN)",
+            "value": "TRFRO903"
+        },
+        {
+            "label": "Front cut & sew attach (Half)(SN)",
+            "value": "TRFRO904"
+        },
+        {
+            "label": "Front part edge servicing(4T OL)",
+            "value": "TRFRO905"
+        },
+        {
+            "label": "Front binding attach(FL BIN)",
+            "value": "TRFRO906"
+        },
+        {
+            "label": "Front binding edge topstitch(SN)",
+            "value": "TRFRO907"
+        },
+        {
+            "label": "Mark for front & back tape attach(HEL)",
+            "value": "TRFRO908"
+        },
+        {
+            "label": "Front cut & sew V tack to body with sleeve(SN)",
+            "value": "TRFRO909"
+        },
+        {
+            "label": "Front cut & sew attach with back(4T OL)",
+            "value": "TRFRO910"
+        },
+        {
+            "label": "Back & front cut & sew false attach(SN)",
+            "value": "TRFRO911"
+        },
+        {
+            "label": "Front & back cut & sew attach (4T OL)",
+            "value": "TRFRO912"
+        },
+        {
+            "label": "Front & back cut & sew topstitch(FL CY)",
+            "value": "TRFRO913"
+        },
+        {
+            "label": "Front cut & sew attach(4T OL)",
+            "value": "TRFRO914"
+        },
+        {
+            "label": "Front cut & sew topstitch(FL CY)",
+            "value": "TRFRO915"
+        },
+        {
+            "label": "Fusing set at body left & fold(IRON)",
+            "value": "TRFRO916"
+        },
+        {
+            "label": "Fusing set at body right & fold(IRON)",
+            "value": "TRFRO917"
+        },
+        {
+            "label": "Back deviding join(4T OL)",
+            "value": "TRFRO918"
+        },
+        {
+            "label": "Back deviding topstitch(Flat lock)",
+            "value": "TRFRO919"
+        },
+        {
+            "label": "Box make at back (SN)",
+            "value": "TRFRO920"
+        },
+        {
+            "label": "Dard make at front part(SN)",
+            "value": "TRFRO921"
+        },
+        {
+            "label": "Dard topstitch(FL CY)",
+            "value": "TRFRO922"
+        },
+        {
+            "label": "Security tack at dard & over stitch open(SN)",
+            "value": "TRFRO923"
+        },
+        {
+            "label": "Cut & sew attach at back(SN)",
+            "value": "TRFRO924"
+        },
+        {
+            "label": "Cut & sew attach at back ol(4T OL)",
+            "value": "TRFRO925"
+        },
+        {
+            "label": "Cut & sew topstitch(FL CY)",
+            "value": "TRFRO926"
+        }
+    ],
+    "Sweat Shirt": [
+        {
+            "label": "Shoulder join (Stripe)(4T OL)",
+            "value": "SSHO101"
+        },
+        {
+            "label": "Ironing (Finishing)",
+            "value": "SIRONFO101"
+        },
+        {
+            "label": "Packing (Finishing)",
+            "value": "SPACKFO101"
+        },
+        {
+            "label": "Folding (Finishing)",
+            "value": "SFOLFO101"
+        },
+        {
+            "label": "Shoulder join(4T OL)",
+            "value": "SSHO102"
+        },
+        {
+            "label": "Shoulder join (Lycra)(4T OL)",
+            "value": "SSHO103"
+        },
+        {
+            "label": "Shoulder join (Fleece)(4T OL)",
+            "value": "SSHO104"
+        },
+        {
+            "label": "1st shoulder join(4T OL)",
+            "value": "SSHO105"
+        },
+        {
+            "label": "2nd shoulder join(4T OL)",
+            "value": "SSHO106"
+        },
+        {
+            "label": "Shoulder join & pull(3T OL)",
+            "value": "SSHO107"
+        },
+        {
+            "label": "Shoulder join (long)(4T OL)",
+            "value": "SSHO108"
+        },
+        {
+            "label": "Shoulder join (long) (Fleece)(4T OL)",
+            "value": "SSHO109"
+        },
+        {
+            "label": "Shoulder join & pull(4T OL)",
+            "value": "SSHO110"
+        },
+        {
+            "label": "Shoulder join with sleeve(4T OL)",
+            "value": "SSHO111"
+        },
+        {
+            "label": "Shoulder topstitch(FL CY)",
+            "value": "SSHO112"
+        },
+        {
+            "label": "Shoulder topstitch with sleeve(FL COV)",
+            "value": "SSHO113"
+        },
+        {
+            "label": "Panel matching(HEL)",
+            "value": "SSHO114"
+        },
+        {
+            "label": "Shoulder loop attach(SN)",
+            "value": "SSHO115"
+        },
+        {
+            "label": "Shoulder join & shoulder scissoring(4T OL)",
+            "value": "SSHO116"
+        },
+        {
+            "label": "Shoulder topstitch(Long)(FL CY)",
+            "value": "SSHO117"
+        },
+        {
+            "label": "Sleeve attach SS (In set)(4T OL)",
+            "value": "SSLE201"
+        },
+        {
+            "label": "Sleeve attach (Stripe)(4T OL)",
+            "value": "SSLE202"
+        },
+        {
+            "label": "Sleeve attach (Stripe long)(4T OL)",
+            "value": "SSLE203"
+        },
+        {
+            "label": "Sleeve attach (Synthetic)(4T OL)",
+            "value": "SSLE204"
+        },
+        {
+            "label": "Sleeve attach LS (long)(4T OL)",
+            "value": "SSLE205"
+        },
+        {
+            "label": "Sleeve attach at front (Raglan)(4T OL)",
+            "value": "SSLE206"
+        },
+        {
+            "label": "Sleeve attach at back (Raglan)(4T OL)",
+            "value": "SSLE207"
+        },
+        {
+            "label": "Sleeve attach (Tubular)(4T OL)",
+            "value": "SSLE208"
+        },
+        {
+            "label": "Sleeve attach (Tubular long)(4T OL)",
+            "value": "SSLE209"
+        },
+        {
+            "label": "Cut & sew attach at sleeve (4T OL)",
+            "value": "SSLE210"
+        },
+        {
+            "label": "Cut & sew v tack to sleeve(SN)",
+            "value": "SSLE211"
+        },
+        {
+            "label": "Sleeve servicing ( Edge)(4T OL)",
+            "value": "SSLE212"
+        },
+        {
+            "label": "Sleeve servicing  (Stripe)(4T OL)",
+            "value": "SSLE213"
+        },
+        {
+            "label": "Sleeve binding(FL BIN)",
+            "value": "SSLE214"
+        },
+        {
+            "label": "Sleeve binding matching tack(SN)",
+            "value": "SSLE215"
+        },
+        {
+            "label": "Sleeve open outer tack(SN)",
+            "value": "SSLE216"
+        },
+        {
+            "label": "Sleeve hem(FL HEM)",
+            "value": "SSLE217"
+        },
+        {
+            "label": "Sleeve hem (Open)(FL HEM)",
+            "value": "SSLE218"
+        },
+        {
+            "label": "Sleeve hem (Stripe)(FL HEM)",
+            "value": "SSLE219"
+        },
+        {
+            "label": "Sleeve hem edge topstitch(FL CY)",
+            "value": "SSLE220"
+        },
+        {
+            "label": "Sleeve hem & pull(3T OL)",
+            "value": "SSLE221"
+        },
+        {
+            "label": "Sleeve hem edge trim(OL)",
+            "value": "SSLE222"
+        },
+        {
+            "label": "Armhole topstitch (Open)(FL CY)",
+            "value": "SSLE223"
+        },
+        {
+            "label": "Armhole topstitch (Round)(FL COV)",
+            "value": "SSLE224"
+        },
+        {
+            "label": "Armhole topstitch (front) (Raglan)(FL COV)",
+            "value": "SSLE225"
+        },
+        {
+            "label": "Armhole topstitch (Back) (Raglan)(FL COV)",
+            "value": "SSLE226"
+        },
+        {
+            "label": "Sleeve hem (Blind)(FL HEM)",
+            "value": "SSLE227"
+        },
+        {
+            "label": "Sleeve tack to body(SN)",
+            "value": "SSLE228"
+        },
+        {
+            "label": "Armhole cross tack(SN)",
+            "value": "SSLE229"
+        },
+        {
+            "label": "sleeve hem join tack(SN)",
+            "value": "SSLE230"
+        },
+        {
+            "label": "Armhole binding (T.top)(FL BIN)",
+            "value": "SSLE231"
+        },
+        {
+            "label": "Armhole binding measure & cut (T.top)(HEL)",
+            "value": "SSLE232"
+        },
+        {
+            "label": "Armhole binding stitch open (T.top)(HEL)",
+            "value": "SSLE233"
+        },
+        {
+            "label": "Armhole binding end tack (T.top)(SN)",
+            "value": "SSLE234"
+        },
+        {
+            "label": "Armhole binding end close (T.top)(FL CY)",
+            "value": "SSLE235"
+        },
+        {
+            "label": "Armhole hem (Open)(FL CY)",
+            "value": "SSLE236"
+        },
+        {
+            "label": "Armhole hem & pull (Open)(3T OL)",
+            "value": "SSLE237"
+        },
+        {
+            "label": "Side or sleeve frill ol(3T OL)",
+            "value": "SSLE238"
+        },
+        {
+            "label": "Side or sleeve frill hem(SN)",
+            "value": "SSLE239"
+        },
+        {
+            "label": "Body & sleeve frill match(HEL)",
+            "value": "SSLE240"
+        },
+        {
+            "label": "Body & sleeve frill attach with V  (Viscos febric) (SN)",
+            "value": "SSLE241"
+        },
+        {
+            "label": "False tack for sleeve hem(SN)",
+            "value": "SSLE242"
+        },
+        {
+            "label": "Sleeve hem (6 cm)(FL HEM)",
+            "value": "SSLE243"
+        },
+        {
+            "label": "Mark for sleeve tab patch label attach(SN)",
+            "value": "SSLE244"
+        },
+        {
+            "label": "Sleeve patch label attach(SN)",
+            "value": "SSLE245"
+        },
+        {
+            "label": "Sleeve edge ol(3T OL)",
+            "value": "SSLE246"
+        },
+        {
+            "label": "Mark for sleeve turn up & tack(HEL)",
+            "value": "SSLE247"
+        },
+        {
+            "label": "Sleeve turn up & tack & false stitch open(SN)",
+            "value": "SSLE248"
+        },
+        {
+            "label": "Sleeve turn up & tack  (SN)",
+            "value": "SSLE249"
+        },
+        {
+            "label": "Sleeve attach at front(big) (Raglan)(4T OL)",
+            "value": "SSLE250"
+        },
+        {
+            "label": "Sleeve attach at back(big) (Raglan)(4T OL)",
+            "value": "SSLE251"
+        },
+        {
+            "label": "Sleeve cuff measure cut & trim(OL)",
+            "value": "SCUF301"
+        },
+        {
+            "label": "Sleeve cuff join ,fold & mark(SN)",
+            "value": "SCUF302"
+        },
+        {
+            "label": "Sleeve cuff join & topstitch(SN)",
+            "value": "SCUF303"
+        },
+        {
+            "label": "Sleeve cuff inside tack(SN)",
+            "value": "SCUF304"
+        },
+        {
+            "label": "Sleeve cuff attach (Open)(4T OL)",
+            "value": "SCUF305"
+        },
+        {
+            "label": "Sleeve cuff attach (Round)(4T OL)",
+            "value": "SCUF306"
+        },
+        {
+            "label": "Sleeve cuff attach (Stripe & open)(4T OL)",
+            "value": "SCUF307"
+        },
+        {
+            "label": "Sleeve cuff topstitch (Open)(FL CY)",
+            "value": "SCUF308"
+        },
+        {
+            "label": "Sleeve cuff topstitch (Round)(FL CY)",
+            "value": "SCUF309"
+        },
+        {
+            "label": "Sleeve cuff servicing(SN)",
+            "value": "SCUF310"
+        },
+        {
+            "label": "Sleeve turn up & tack(SN)",
+            "value": "SSLE401"
+        },
+        {
+            "label": "Sleeve turn up bartack(B TACK)",
+            "value": "SSLE402"
+        },
+        {
+            "label": "Iron for sleeve turn up tack(Iron)",
+            "value": "SSLE403"
+        },
+        {
+            "label": "Mark for sleeve turn up bartack(Iron)",
+            "value": "SSLE404"
+        },
+        {
+            "label": "Sleeve turn up bartack & false stitch open(B TACK)",
+            "value": "SSLE405"
+        },
+        {
+            "label": "Neck rib make(3T OL)",
+            "value": "SNEC501"
+        },
+        {
+            "label": "Neck rib join,fold & mark(SN)",
+            "value": "SNEC502"
+        },
+        {
+            "label": "Neck rib end tack(SN)",
+            "value": "SNEC503"
+        },
+        {
+            "label": "Neck rib v  make & mark(SN)",
+            "value": "SNEC504"
+        },
+        {
+            "label": "Neck rib attach (Folder)(4T OL)",
+            "value": "SNEC505"
+        },
+        {
+            "label": "Neck rib attach(4T OL)",
+            "value": "SNEC506"
+        },
+        {
+            "label": "Neck rib attach (Roller)(4T OL)",
+            "value": "SNEC507"
+        },
+        {
+            "label": "Neck rib join ( double)(SN)",
+            "value": "SNEC508"
+        },
+        {
+            "label": "Neck rib edge trim(SN EDCUT)",
+            "value": "SNEC509"
+        },
+        {
+            "label": "Neck rib end close(4T OL)",
+            "value": "SNEC510"
+        },
+        {
+            "label": "Neck rib mark & tack to body(SN)",
+            "value": "SNEC511"
+        },
+        {
+            "label": "Neck rib servicing 1st(SN)",
+            "value": "SNEC512"
+        },
+        {
+            "label": "Neck rib servicing 2nd(SN)",
+            "value": "SNEC513"
+        },
+        {
+            "label": "Neck rib servicing 3rd(SN)",
+            "value": "SNEC514"
+        },
+        {
+            "label": "Neck rib servicing(OL)",
+            "value": "SNEC515"
+        },
+        {
+            "label": "Neck rib join & topstitch(double)(SN)",
+            "value": "SNEC516"
+        },
+        {
+            "label": "Neck rib topstitch(FL CY)",
+            "value": "SNEC517"
+        },
+        {
+            "label": "Neck rib topstitch full(FL CY)",
+            "value": "SNEC518"
+        },
+        {
+            "label": "Neck rib join 1st part(SN)",
+            "value": "SNEC519"
+        },
+        {
+            "label": "Neck rib join 2nd part(SN)",
+            "value": "SNEC520"
+        },
+        {
+            "label": "Neck carling tack(SN)",
+            "value": "SNEC521"
+        },
+        {
+            "label": "Front neck topstitch(FL CY)",
+            "value": "SNEC522"
+        },
+        {
+            "label": "Neck label attach with mark(SN)",
+            "value": "SNEC523"
+        },
+        {
+            "label": "Neck rib v  make & mark (V neck)(SN)",
+            "value": "SNEC524"
+        },
+        {
+            "label": "V tack to body (V neck)(SN)",
+            "value": "SNEC525"
+        },
+        {
+            "label": "Mark for neck rib attach (V neck)(HEL)",
+            "value": "SNEC526"
+        },
+        {
+            "label": "Neck rib attach (V neck)(4T OL)",
+            "value": "SNEC527"
+        },
+        {
+            "label": "V Front neck topstitch  (V neck)(SN)",
+            "value": "SNEC528"
+        },
+        {
+            "label": "Front neck topstitch end security tack (V neck)(SN)",
+            "value": "SNEC529"
+        },
+        {
+            "label": "V security tack (V neck)(SN)",
+            "value": "SNEC530"
+        },
+        {
+            "label": "Neck binding (T.top)(FL BIN)",
+            "value": "SNEC531"
+        },
+        {
+            "label": "Neck binding measure cut (T.top)(HEL)",
+            "value": "SNEC532"
+        },
+        {
+            "label": "Neck binding stitch open (T.top)(HEL)",
+            "value": "SNEC533"
+        },
+        {
+            "label": "Neck binding end tack (T.top)(SN)",
+            "value": "SNEC534"
+        },
+        {
+            "label": "Neck binding end close (T.top)(FL CY)",
+            "value": "SNEC535"
+        },
+        {
+            "label": "Neck rib end  stitch open(HEL)",
+            "value": "SNEC536"
+        },
+        {
+            "label": "Neck rib measure cut(HEL)",
+            "value": "SNEC537"
+        },
+        {
+            "label": "Neck rib Iron(IRON)",
+            "value": "SNEC538"
+        },
+        {
+            "label": "Front neck topstitch end tack & stitch open(SN)",
+            "value": "SNEC539"
+        },
+        {
+            "label": "Neck RIB make(4T OL)",
+            "value": "SNEC540"
+        },
+        {
+            "label": "Neck RIB stitch open & end tack(Double)(SN)",
+            "value": "SNEC541"
+        },
+        {
+            "label": "Body & neck rib mark for attach(HEL)",
+            "value": "SNEC542"
+        },
+        {
+            "label": "Neck rib joinedge overlock(4T OL)",
+            "value": "SNEC543"
+        },
+        {
+            "label": "Neck rib join & topstitch(SN)",
+            "value": "SNEC544"
+        },
+        {
+            "label": "Neck rib measure cut(OL)",
+            "value": "SNEC545"
+        },
+        {
+            "label": "Neck rib end tack with stitch open(SN)",
+            "value": "SNEC546"
+        },
+        {
+            "label": "Security tack at neck(SN)",
+            "value": "SNEC547"
+        },
+        {
+            "label": "Neck Loop mark & attach(SN)",
+            "value": "SNEC548"
+        },
+        {
+            "label": "Back neck tape measure cut & iron(HEL)",
+            "value": "SBAC601"
+        },
+        {
+            "label": "Back neck tape attach  (Tee) (Binding)(FL BIN)",
+            "value": "SBAC602"
+        },
+        {
+            "label": "Back neck tape attach  (Tee) (Acc. Tape)(SN)",
+            "value": "SBAC603"
+        },
+        {
+            "label": "Back neck tape end tack & trim(SN)",
+            "value": "SBAC604"
+        },
+        {
+            "label": "Back neck tape close  (Tee, self) (With label)(SN)",
+            "value": "SBAC605"
+        },
+        {
+            "label": "Back neck tape close  (Tee, self) (With loop)(SN)",
+            "value": "SBAC606"
+        },
+        {
+            "label": "Back neck tape close  (Tee, self) (Without label)(SN)",
+            "value": "SBAC607"
+        },
+        {
+            "label": "Back neck tape close  (Tee, acc tape) (With label)(SN)",
+            "value": "SBAC608"
+        },
+        {
+            "label": "Back neck tape close  (Tee, acc tape) (Without label)(SN)",
+            "value": "SBAC609"
+        },
+        {
+            "label": "Shoulder to shoulder binding attach(FL BIN)",
+            "value": "SBAC610"
+        },
+        {
+            "label": "Shoulder to shoulder tape attach(FOA)",
+            "value": "SBAC611"
+        },
+        {
+            "label": "Back neck tape attach(DN)",
+            "value": "SBAC612"
+        },
+        {
+            "label": "Back neck tape mark & attach(SN)",
+            "value": "SBAC613"
+        },
+        {
+            "label": "Inside tape or layer attach(By folder) (T.top)(SN)",
+            "value": "SBAC614"
+        },
+        {
+            "label": "Inside tape end rolling (T.top)(SN)",
+            "value": "SBAC615"
+        },
+        {
+            "label": "Inside tape end fold and tack (T.top)(SN)",
+            "value": "SBAC616"
+        },
+        {
+            "label": "Inside tape or layer  close 1st (T.top)(SN)",
+            "value": "SBAC617"
+        },
+        {
+            "label": "Inside tape or layer  close 2nd (T.top)(SN)",
+            "value": "SBAC618"
+        },
+        {
+            "label": "Zigzag stitch at back tape(FL CY)",
+            "value": "SBAC619"
+        },
+        {
+            "label": "Back neck tape end stitch open(HEL)",
+            "value": "SBAC620"
+        },
+        {
+            "label": "Back neck tape end insert & tack(SN)",
+            "value": "SBAC621"
+        },
+        {
+            "label": "Back neck tape end stitch open for DN(HEL)",
+            "value": "SBAC622"
+        },
+        {
+            "label": "Back neck tape end insert & tack for DN(SN)",
+            "value": "SBAC623"
+        },
+        {
+            "label": "Back neck tape close  (Tee, self) (Two label)(SN)",
+            "value": "SBAC624"
+        },
+        {
+            "label": "Back neck tape attach  (Tape Stripe)(FL BIN)",
+            "value": "SBAC625"
+        },
+        {
+            "label": "Back neck tape close shoulder to shoulder(SN)",
+            "value": "SBAC626"
+        },
+        {
+            "label": "Back neck tape close shoulder to shoulder (One label)(SN)",
+            "value": "SBAC627"
+        },
+        {
+            "label": "Back neck tape close shoulder to shoulder (Two label)(SN)",
+            "value": "SBAC628"
+        },
+        {
+            "label": "Back neck tape contrast tape spread & iron(IRON)",
+            "value": "SBAC629"
+        },
+        {
+            "label": "Back neck tape contrast tape attach(SN)",
+            "value": "SBAC630"
+        },
+        {
+            "label": "Mark for label close(HEL)",
+            "value": "SBAC631"
+        },
+        {
+            "label": "Back neck tape attach & trim(FL BIN)",
+            "value": "SBAC632"
+        },
+        {
+            "label": "Back neck tape attach & trim(SN)",
+            "value": "SBAC633"
+        },
+        {
+            "label": "Back neck tape check & trim(HEL)",
+            "value": "SBAC634"
+        },
+        {
+            "label": "Mark for Back neck tape attach & trim(HEL)",
+            "value": "SBAC635"
+        },
+        {
+            "label": "Side seam  (Regular)(4T OL)",
+            "value": "SSID701"
+        },
+        {
+            "label": "Side seam with side slit o/l(lower part)(4T OL)",
+            "value": "SSID702"
+        },
+        {
+            "label": "Side seam(point match)(4T OL)",
+            "value": "SSID703"
+        },
+        {
+            "label": "Side seam with care label(4T OL)",
+            "value": "SSID704"
+        },
+        {
+            "label": "Side seam(inside panel)(4T OL)",
+            "value": "SSID705"
+        },
+        {
+            "label": "Side seam SS (Stripe)(4T OL)",
+            "value": "SSID706"
+        },
+        {
+            "label": "Side seam LS(4T OL)",
+            "value": "SSID707"
+        },
+        {
+            "label": "Side seam LS (Stripe)(4T OL)",
+            "value": "SSID708"
+        },
+        {
+            "label": "Side seam LS  (Cardigan)(4T OL)",
+            "value": "SSID709"
+        },
+        {
+            "label": "Side seam topstitch(FL COV)",
+            "value": "SSID710"
+        },
+        {
+            "label": "Side seam topstitch end tack & stitch open(SN)",
+            "value": "SSID711"
+        },
+        {
+            "label": "Side seam matching tack(SN)",
+            "value": "SSID712"
+        },
+        {
+            "label": "Side seam with body set ( 1st part) (T.Top)(4T OL)",
+            "value": "SSID713"
+        },
+        {
+            "label": "Side seam with body set ( 2nd part) (T.Top)(4T OL)",
+            "value": "SSID714"
+        },
+        {
+            "label": "Binding attach at side cut & sew(FL BIN)",
+            "value": "SSID715"
+        },
+        {
+            "label": "Binding close at side cut & sew(SN)",
+            "value": "SSID716"
+        },
+        {
+            "label": "Side seam topstitch(FL CY)",
+            "value": "SSID717"
+        },
+        {
+            "label": "Bottom hem(FL HEM)",
+            "value": "SBOT801"
+        },
+        {
+            "label": "Bottom hem (O/L)(3T OL)",
+            "value": "SBOT802"
+        },
+        {
+            "label": "Bottom hem join tack(SN)",
+            "value": "SBOT803"
+        },
+        {
+            "label": "Tack at bottom hem(SN)",
+            "value": "SBOT804"
+        },
+        {
+            "label": "Bottom hem pull & knot make(HEL)",
+            "value": "SBOT805"
+        },
+        {
+            "label": "Bottom hem o/l with mobilon tape(4T OL)",
+            "value": "SBOT806"
+        },
+        {
+            "label": "Bottom hem  (chinese)(FL CY)",
+            "value": "SBOT807"
+        },
+        {
+            "label": "Tack at bottom hem (double)(SN)",
+            "value": "SBOT808"
+        },
+        {
+            "label": "Bottom false tack for bottom hem(SN)",
+            "value": "SBOT809"
+        },
+        {
+            "label": "Bottom hem (6cm)(FL HEM)",
+            "value": "SBOT810"
+        },
+        {
+            "label": "Bottom rib join(SN)",
+            "value": "SBOT811"
+        },
+        {
+            "label": "Bottom rib inside tack(SN)",
+            "value": "SBOT812"
+        },
+        {
+            "label": "Bottom rib servicing(FL CY)",
+            "value": "SBOT813"
+        },
+        {
+            "label": "Bottom rib attach(4T OL)",
+            "value": "SBOT814"
+        },
+        {
+            "label": "Bottom rib topstitch(FL CY)",
+            "value": "SBOT815"
+        },
+        {
+            "label": "Bottom servicing(4T OL)",
+            "value": "SBOT816"
+        },
+        {
+            "label": "Bottom Blind hem(3T OL)",
+            "value": "SBOT817"
+        },
+        {
+            "label": "Push for bottom hem(HEL)",
+            "value": "SBOT818"
+        },
+        {
+            "label": "Bottom hem (Stripe)(FL HEM)",
+            "value": "SBOT819"
+        },
+        {
+            "label": "Mark for bottom tab patch label attach(SN)",
+            "value": "SBOT820"
+        },
+        {
+            "label": "Bottom patch label attach(SN)",
+            "value": "SBOT821"
+        },
+        {
+            "label": "Bottom Rib join, fold & mark(SN)",
+            "value": "SBOT822"
+        },
+        {
+            "label": "Bottom hem (Open)(FL HEM)",
+            "value": "SBOT823"
+        },
+        {
+            "label": "Side slit open tack with tape & stitch open(SN)",
+            "value": "SSID901"
+        },
+        {
+            "label": "Side slit minner  make &  mark(SN)",
+            "value": "SSID902"
+        },
+        {
+            "label": "Side slit tape attach(SN)",
+            "value": "SSID903"
+        },
+        {
+            "label": "Side slit tape end tack & trim(SN)",
+            "value": "SSID904"
+        },
+        {
+            "label": "Side slit tape close(SN)",
+            "value": "SSID905"
+        },
+        {
+            "label": "Side slit tape servicing(4T OL)",
+            "value": "SSID906"
+        },
+        {
+            "label": "Side slit o/l(4T OL)",
+            "value": "SSID907"
+        },
+        {
+            "label": "Bar tack at side slit(B TACK)",
+            "value": "SSID908"
+        },
+        {
+            "label": "Back slit hem(Flat lock)",
+            "value": "SSID909"
+        },
+        {
+            "label": "Back deviding join at slit area(SN)",
+            "value": "SSID910"
+        },
+        {
+            "label": "Side slit open close(SN)",
+            "value": "SSID911"
+        },
+        {
+            "label": "Side slit tape make(FL BIN)",
+            "value": "SSID912"
+        },
+        {
+            "label": "Mark for pocket attach(Helper)",
+            "value": "SPOC1001"
+        },
+        {
+            "label": "Mark for pocket patch label attach(Helper)",
+            "value": "SPOC1002"
+        },
+        {
+            "label": "Pocket hem & raw edge trim(Flat lock)",
+            "value": "SPOC1003"
+        },
+        {
+            "label": "Patch label attach at pocket (Single Needle)",
+            "value": "SPOC1004"
+        },
+        {
+            "label": "Pocket iron & scissoring(Iron)",
+            "value": "SPOC1005"
+        },
+        {
+            "label": "Pocket attach with diamond(Single Needle)",
+            "value": "SPOC1006"
+        },
+        {
+            "label": "Pocket attach  (Stripe)(Single Needle)",
+            "value": "SPOC1007"
+        },
+        {
+            "label": "Pocket Overlock(3T OL)",
+            "value": "SPOC1008"
+        },
+        {
+            "label": "Pocket end tack(SN)",
+            "value": "SPOC1009"
+        },
+        {
+            "label": "Main label attach with paper(SN)",
+            "value": "SLAB1101"
+        },
+        {
+            "label": "Care label make(4T OL)",
+            "value": "SLAB1102"
+        },
+        {
+            "label": "Care label make (8 Part)(SN)",
+            "value": "SLAB1103"
+        },
+        {
+            "label": "Care label attach(SN)",
+            "value": "SLAB1104"
+        },
+        {
+            "label": "Care label make & attach(SN)",
+            "value": "SLAB1105"
+        },
+        {
+            "label": "Bottom tab label mark & attach(SN)",
+            "value": "SLAB1106"
+        },
+        {
+            "label": "Mark for label attach(HEL)",
+            "value": "SLAB1107"
+        },
+        {
+            "label": "Flag label attach(SN)",
+            "value": "SLAB1108"
+        },
+        {
+            "label": "Mark for bottom patch label(HEL)",
+            "value": "SLAB1109"
+        },
+        {
+            "label": "Patch label attach(SN)",
+            "value": "SLAB1110"
+        },
+        {
+            "label": "Organic & country  or loop label make(SN)",
+            "value": "SLAB1111"
+        },
+        {
+            "label": "Organic label attach(SN)",
+            "value": "SLAB1112"
+        },
+        {
+            "label": "Organic & main or loop label make with poly(SN)",
+            "value": "SLAB1113"
+        },
+        {
+            "label": "Organic & country label attach(SN)",
+            "value": "SLAB1114"
+        },
+        {
+            "label": "Organic label make(SN)",
+            "value": "SLAB1115"
+        },
+        {
+            "label": "Mark for main & size label attach(SN)",
+            "value": "SLAB1116"
+        },
+        {
+            "label": "Slim fit label iron(IRON)",
+            "value": "SLAB1117"
+        },
+        {
+            "label": "Main label attach (slim fit lbl)(SN)",
+            "value": "SLAB1118"
+        },
+        {
+            "label": "Care label make & attach (one part)(SN)",
+            "value": "SLAB1119"
+        },
+        {
+            "label": "Country label attach(SN)",
+            "value": "SLAB1120"
+        },
+        {
+            "label": "Country label attach & false stitch open(SN)",
+            "value": "SLAB1121"
+        },
+        {
+            "label": "Size label attach(SN)",
+            "value": "SLAB1122"
+        },
+        {
+            "label": "Mark for country & main label attach(HEL)",
+            "value": "SLAB1123"
+        },
+        {
+            "label": "Main & country & organic label attach(IRON)",
+            "value": "SLAB1124"
+        },
+        {
+            "label": "Hood tab label mark & attach(SN)",
+            "value": "SLAB1125"
+        },
+        {
+            "label": "Main label mark & attach(SN)",
+            "value": "SLAB1126"
+        },
+        {
+            "label": "Care label attach & middle tack(SN)",
+            "value": "SLAB1127"
+        },
+        {
+            "label": "Neck label mark & attach(SN)",
+            "value": "SLAB1128"
+        },
+        {
+            "label": "Mark for neck loop(HEL)",
+            "value": "SLAB1129"
+        },
+        {
+            "label": "Main & organic label make (SN)",
+            "value": "SLAB1130"
+        },
+        {
+            "label": "Main & organic label mark & attach(SN)",
+            "value": "SLAB1131"
+        },
+        {
+            "label": "Mark for front patch label attach(HEL)",
+            "value": "SLAB1132"
+        },
+        {
+            "label": "Front patch label attach(SN)",
+            "value": "SLAB1133"
+        },
+        {
+            "label": "False size label attach(SN)",
+            "value": "SLAB1134"
+        },
+        {
+            "label": "Main label make(SN)",
+            "value": "SLAB1135"
+        },
+        {
+            "label": "Neck label make with size label(SN)",
+            "value": "SLAB1136"
+        },
+        {
+            "label": "Mark for main label & loop attach(HEL)",
+            "value": "SLAB1137"
+        },
+        {
+            "label": "Back knitting tape attach(SN)",
+            "value": "SLAB1138"
+        },
+        {
+            "label": "Front panel matching(HEL)",
+            "value": "SFRO1201"
+        },
+        {
+            "label": "Front upper & lower two part tiken join(3T OL)",
+            "value": "SFRO1202"
+        },
+        {
+            "label": "Front two part edge servicing(SN)",
+            "value": "SFRO1203"
+        },
+        {
+            "label": "Front cut & sew attach (Half)(SN)",
+            "value": "SFRO1204"
+        },
+        {
+            "label": "Front part edge servicing(4T OL)",
+            "value": "SFRO1205"
+        },
+        {
+            "label": "Front binding attach(FL BIN)",
+            "value": "SFRO1206"
+        },
+        {
+            "label": "Front binding edge topstitch(SN)",
+            "value": "SFRO1207"
+        },
+        {
+            "label": "Mark for front & back tape attach(IRON)",
+            "value": "SFRO1208"
+        },
+        {
+            "label": "Tape attach at front with box(SN)",
+            "value": "SFRO1209"
+        },
+        {
+            "label": "Zigzag stitch at front tape(SN ZIGZAG)",
+            "value": "SFRO1210"
+        },
+        {
+            "label": "Front cut & sew V tack to body with sleeve(SN)",
+            "value": "SFRO1211"
+        },
+        {
+            "label": "Front cut & sew attach with back(4T OL)",
+            "value": "SFRO1212"
+        },
+        {
+            "label": "Back & front cut & sew false attach(SN)",
+            "value": "SFRO1213"
+        },
+        {
+            "label": "Front & back cut & sew attach (4T OL)",
+            "value": "SFRO1214"
+        },
+        {
+            "label": "Front & back cut & sew topstitch(FL CY)",
+            "value": "SFRO1215"
+        },
+        {
+            "label": "Front cut & sew attach(4T OL)",
+            "value": "SFRO1216"
+        },
+        {
+            "label": "Front cut & sew topstitch(FL CY)",
+            "value": "SFRO1217"
+        },
+        {
+            "label": "Fusing set at body left & fold(IRON)",
+            "value": "SFRO1218"
+        },
+        {
+            "label": "Fusing set at body right & fold(IRON)",
+            "value": "SFRO1219"
+        },
+        {
+            "label": "Tape mark for zigzag stitch(HEL)",
+            "value": "SFRO1220"
+        },
+        {
+            "label": "Zigzag stitch at front neck(SN ZIGZAG)",
+            "value": "SFRO1221"
+        },
+        {
+            "label": "Back deviding join (large)(4T OL)",
+            "value": "SFRO1222"
+        },
+        {
+            "label": "Back deviding topstitch(FL COV)",
+            "value": "SFRO1223"
+        },
+        {
+            "label": "Box make at back (SN)",
+            "value": "SFRO1224"
+        },
+        {
+            "label": "Dard make at front part(SN)",
+            "value": "SFRO1225"
+        },
+        {
+            "label": "Dard topstitch(FL COV)",
+            "value": "SFRO1226"
+        },
+        {
+            "label": "Security tack at dard & over stitch open(SN)",
+            "value": "SFRO1227"
+        },
+        {
+            "label": "Cut & sew attach at back(SN)",
+            "value": "SFRO1228"
+        },
+        {
+            "label": "Cut & sew attach at back ol(4T OL)",
+            "value": "SFRO1229"
+        },
+        {
+            "label": "Cut & sew topstitch(FL COV)",
+            "value": "SFRO1230"
+        },
+        {
+            "label": "Front yoke attach (4T OL)",
+            "value": "SFRO1231"
+        },
+        {
+            "label": "Back yoke attach(4T OL)",
+            "value": "SFRO1232"
+        },
+        {
+            "label": "Back deviding join(4T OL)",
+            "value": "SFRO1233"
+        },
+        {
+            "label": "Back deviding topstitch(FL CY)",
+            "value": "SFRO1234"
+        },
+        {
+            "label": "Moon mark & false attach(SN)",
+            "value": "SMOO1301"
+        },
+        {
+            "label": "Moon topstitch & false stitch open(FL COV)",
+            "value": "SMOO1302"
+        },
+        {
+            "label": "Moon iron & scissoring(IRON)",
+            "value": "SMOO1303"
+        },
+        {
+            "label": "Moon mark & attach(SN)",
+            "value": "SMOO1304"
+        },
+        {
+            "label": "Body mark for moon attach(HEL)",
+            "value": "SMOO1305"
+        },
+        {
+            "label": "Patch label mark & attach at half moon (SN)",
+            "value": "SMOO1306"
+        },
+        {
+            "label": "Half moon attach(SN)",
+            "value": "SMOO1307"
+        },
+        {
+            "label": "Moon attach(SN)",
+            "value": "SMOO1308"
+        },
+        {
+            "label": "Moon topstitch(SN)",
+            "value": "SMOO1309"
+        },
+        {
+            "label": "Body middle mark for moon attach(HEL)",
+            "value": "SMOO1310"
+        },
+        {
+            "label": "Triangle iron with fusing(IRON)",
+            "value": "SMOO1311"
+        },
+        {
+            "label": "Traingle attach(SN)",
+            "value": "SMOO1312"
+        },
+        {
+            "label": "Fit label attach at moon (SN)",
+            "value": "SMOO1313"
+        },
+        {
+            "label": "Main label attach at moon(SN)",
+            "value": "SMOO1314"
+        },
+        {
+            "label": "Fit label attach at triangle(SN)",
+            "value": "SMOO1315"
+        },
+        {
+            "label": "Half moon edge ol & iron(3T OL)",
+            "value": "SMOO1316"
+        },
+        {
+            "label": "Half moon attach  (Lycra)(SN)",
+            "value": "SMOO1317"
+        },
+        {
+            "label": "Half moon attach  (Stripe)(SN)",
+            "value": "SMOO1318"
+        },
+        {
+            "label": "Mark for main & fit label attach(HEL)",
+            "value": "SMOO1319"
+        },
+        {
+            "label": "Main label attach with size label(SN)",
+            "value": "SMOO1320"
+        },
+        {
+            "label": "Back patch label attach with mark(SN)",
+            "value": "SMOO1321"
+        },
+        {
+            "label": "Binding cutter & shoulder scissoring(BIN CUT)",
+            "value": "SOTH1401"
+        },
+        {
+            "label": "Spot & sticker remove(HEL)",
+            "value": "SOTH1402"
+        },
+        {
+            "label": "Sleeve & bottom join tack(SN)",
+            "value": "SOTH1403"
+        },
+        {
+            "label": "Body preparation(HEL)",
+            "value": "SOTH1404"
+        },
+        {
+            "label": "Thread sucking for mercerized fabric(HEL)",
+            "value": "SOTH1405"
+        },
+        {
+            "label": "Metal mark & attach(BUTTON ATT)",
+            "value": "SOTH1406"
+        },
+        {
+            "label": "Mark for button attach(HEL)",
+            "value": "SBUT1501"
+        },
+        {
+            "label": "Button hole make(BUTTON HOLE)",
+            "value": "SBUT1502"
+        },
+        {
+            "label": "Button attach(BUTTON ATT)",
+            "value": "SBUT1503"
+        },
+        {
+            "label": "Button insert(HEL)",
+            "value": "SBUT1504"
+        }
+    ]
+}
