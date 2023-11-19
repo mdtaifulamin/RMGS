@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button, Alert } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
-import * as Clipboard from 'expo-clipboard';
-import Dialog from "react-native-dialog";
-import SwitchSelector from 'react-native-switch-selector';
+// import * as Clipboard from 'expo-clipboard';
+// import Dialog from "react-native-dialog";
+// import SwitchSelector from 'react-native-switch-selector';
 
 export default function BarCode({setData}) {
   const [hasPermission, setHasPermission] = useState(null);

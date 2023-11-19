@@ -70,7 +70,7 @@ const HomeScreen = ({ navigation }) => {
               style={[styles.departmentButton, styles.shinyButton, { width: buttonWidth }]}
               onPress={() => { if (userInfo?userInfo.HRDepartment:false) {navigation.navigate('HRDepartment')}else setModalVisible(true); }}>
               <AntDesign name="team" size={40} />
-              <Text style={styles.buttonText}>HR Department</Text>
+              <Text style={styles.buttonText}>Maintainance Department</Text>
             </TouchableOpacity>
           </Animated.View>
           </View>

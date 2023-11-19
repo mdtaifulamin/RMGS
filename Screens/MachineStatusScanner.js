@@ -2,8 +2,7 @@ import axios from "axios"
 import { addDoc, collection, doc, getDoc, setDoc } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { StyleSheet, Text, TouchableOpacity, View, Modal, TextInput, Button, Alert, ScrollView } from "react-native"
-import SwitchSelector from "react-native-switch-selector"
-import BarCode from "../Components/BarcodeScanner"
+import BarCode from "../components/BarcodeScanner"
 import { fireStoreDb } from "../lib/firebase"
 import Spinner from "react-native-loading-spinner-overlay";
 import { Switch } from "react-native";

@@ -1,7 +1,7 @@
 import { View, Text, Dimensions } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import MachineOptz from "./MachineOptz";
+// import MachineOptz from "./MachineOptz";
 import BreakdownScanner from "./BreakdownScanner";
 import {Ionicons} from "@expo/vector-icons"
 import MachineStatusScanner from "./MachineStatusScanner";
@@ -29,29 +29,29 @@ function MachineOptimizationContainer() {
             position: 'absolute'
         }
       }}>
-        <Tab.Screen
-          name="MACHINE DATABASE RECORD"
-          component={MachineOptz}
-          options={{
-            tabBarShowLabel: false,
-            headerShown: false,
-            tabBarIcon: ({color, size}) => (
-                <Ionicons name="construct" size={26} color={"black"}/>
-            )
-
-          }}
-        />
         <Tab.Screen 
-            name="IDLE TIME RECORD" 
+            name="Machine Status" 
             component={MachineStatusScanner}
             options={{
-                tabBarShowLabel: false,
-                headerShown: false,
-                tabBarIcon: ({color, size}) => (
-                    <Ionicons name="speedometer" size={26} color={"black"}/>
+              tabBarShowLabel: false,
+              headerShown: false,
+              tabBarIcon: ({color, size}) => (
+                <Ionicons name="speedometer" size={26} color={"black"}/>
                 )
-            }}    
+              }}    
         />
+              <Tab.Screen
+                name="MACHINE DATABASE RECORD"
+                component={{}}
+                options={{
+                  tabBarShowLabel: false,
+                  headerShown: false,
+                  tabBarIcon: ({color, size}) => (
+                      <Ionicons name="construct" size={26} color={"black"}/>
+                  )
+      
+                }}
+              />
       </Tab.Navigator>
     </NavigationContainer>
   );
