@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView, Dimensions, Animated, Easing, Modal, Button } from 'react-native';
-import { AntDesign ,MaterialCommunityIcons} from '@expo/vector-icons';
+import { AntDesign ,MaterialCommunityIcons,Ionicons,MaterialIcons} from '@expo/vector-icons';
 import UserContext from '../components/Store/UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
@@ -51,7 +51,7 @@ const HomeScreen = ({ navigation }) => {
             <TouchableOpacity
               style={[styles.departmentButton, styles.shinyButton, { width: buttonWidth }]}
               onPress={() => { if (userInfo?userInfo.ProductionDepartment:false) {navigation.navigate('ProductionDepartment')}else setModalVisible(true); }}>
-              <AntDesign name="tool" size={40} />
+              <MaterialCommunityIcons name="factory" size={40} color="black" />
               <Text style={styles.buttonText}>Production Department</Text>
             </TouchableOpacity>
           </Animated.View>
@@ -68,9 +68,9 @@ const HomeScreen = ({ navigation }) => {
           <Animated.View style={{ transform: [{ translateY: buttonTransform }] }}>
             <TouchableOpacity
               style={[styles.departmentButton, styles.shinyButton, { width: buttonWidth }]}
-              onPress={() => { if (userInfo?userInfo.HRDepartment:false) {navigation.navigate('HRDepartment')}else setModalVisible(true); }}>
-              <AntDesign name="team" size={40} />
-              <Text style={styles.buttonText}>Maintainance Department</Text>
+              onPress={() => { if (userInfo?userInfo.ID=="122333":false) {navigation.navigate('MachineStatusScanner')}else setModalVisible(true); }}>
+              <MaterialIcons name="engineering" size={40} color="black" />
+              <Text style={styles.buttonText}>Engineering Department</Text>
             </TouchableOpacity>
           </Animated.View>
           </View>

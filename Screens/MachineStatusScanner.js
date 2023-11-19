@@ -1,4 +1,4 @@
-import axios from "axios"
+
 import { addDoc, collection, doc, getDoc, setDoc } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { StyleSheet, Text, TouchableOpacity, View, Modal, TextInput, Button, Alert, ScrollView } from "react-native"

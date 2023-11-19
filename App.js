@@ -27,7 +27,7 @@ import Loadingspinner from './EfficiencyAnalysis/components/UI/loading';
 import UserContext from './components/Store/UserContext';
 import DeveloperMeetScreen from './Screens/Developermeet';
 import { storeUserInfo } from './data-storing';
-import MachineStatusScanner from './'
+import MachineStatusScanner from './Screens/MachineStatusScanner'
 const Stack = createStackNavigator();
 
 export function Root(){
@@ -86,7 +86,7 @@ export function Root(){
             <Stack.Screen name="ProductionDepartment" component={ProductionDepartmentPage} options={{ title: 'Production Department' }} />
             <Stack.Screen name="QualityDepartment" component={QualityDepartmentPage} options={{ title: 'Home' }} />
             <Stack.Screen name="HRDepartment" component={HRDepartmentPage} options={{ title: 'HR Department' }} />
-
+            <Stack.Screen name="MachineStatusScanner" component={MachineStatusScanner} options={{ title: 'Machine Scanning ' }} />
             <Stack.Screen name="EfficiencyAnalysis" component={EfficiencyAnalysisPage} options={{ title: 'Efficiency Analysis' , headerShown:false}} />
             <Stack.Screen name="LostTimeAnalysis" component={LostTimeAnalysisPage} options={{ title: 'Lost Time Analysis' , headerShown:false}} />
             <Stack.Screen name="Target" component={TargetPage} options={{ title: 'Target' }} />
