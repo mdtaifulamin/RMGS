@@ -27,6 +27,7 @@ export const fetchPermissions = async(date)=>{
       dept:data.dept?data.dept:'',
       date: data.date? data.date:'',
       Admin: data.Admin?data.Admin:false,
+      engineering:data.engineering?data.engineering:false,
       HRDepartment:data.HRDepartment?data.HRDepartment:false,
       IEDepartment: data.IEDepartment?data.IEDepartment:false,
       ProductionDepartment: data.ProductionDepartment? data.ProductionDepartment:false,
@@ -62,4 +63,4 @@ export async function updatePermission (id,permissions){
  
 
 
- 
+[{ label: "TPD", value: "TPD" },{ label: "Cutting", value: "Cutting" },{ label: "Printing", value: "Printing" }, { label: "Embroidery", value: "Embroidery" }, { label: "Sewing", value: "Sewing" }, { label: "Finishing", value: "Finishing" }, { label: "Washing-Fabric", value: "Washing-Fabric" }, { label: "Washing-Garments", value: "Washing-Garments" }, { label: "Cap", value: "Cap" },{ label: "Engineering", value: "Engineering" }]

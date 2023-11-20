@@ -21,6 +21,7 @@ export const fetchUserInfo = async(ID,pass)=>{
       date:  data.date,
       Admin: data.Admin?data.Admin:false,
       HRDepartment:data.HRDepartment?data.HRDepartment:false,
+      Engineering:data.Engineering?data.Engineering:false,
       IEDepartment: data.IEDepartment?data.IEDepartment:false,
       ProductionDepartment: data.ProductionDepartment? data.ProductionDepartment:false,
       QualityDepartment: data.QualityDepartment?data.QualityDepartment:false,

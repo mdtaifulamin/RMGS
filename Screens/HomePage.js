@@ -68,7 +68,7 @@ const HomeScreen = ({ navigation }) => {
           <Animated.View style={{ transform: [{ translateY: buttonTransform }] }}>
             <TouchableOpacity
               style={[styles.departmentButton, styles.shinyButton, { width: buttonWidth }]}
-              onPress={() => { if (userInfo?userInfo.ID=="122333":false) {navigation.navigate('MachineStatusScanner')}else setModalVisible(true); }}>
+              onPress={() => { if (userInfo?userInfo.Engineering:false) {navigation.navigate('EngineeringDepartment')}else setModalVisible(true); }}>
               <MaterialIcons name="engineering" size={40} color="black" />
               <Text style={styles.buttonText}>Engineering Department</Text>
             </TouchableOpacity>

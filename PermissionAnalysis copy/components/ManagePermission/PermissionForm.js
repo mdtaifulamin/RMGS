@@ -6,6 +6,7 @@ import { getFormattedDate, momentTime } from "../../util/date";
 
 export default function PermissionForm({ onSubmit, onCancel, defaultValues }) {
   const [admin, setAdmin] = useState(defaultValues ? defaultValues.Admin : false);
+  const [engineering, setEngineering] = useState(defaultValues ? defaultValues.engineering : false);
   const [hrDepartment, setHRDepartment] = useState(defaultValues ? defaultValues.HRDepartment : false);
   const [ieDepartment, setIEDepartment] = useState(defaultValues ? defaultValues.IEDepartment : false);
   const [productionDepartment, setProductionDepartment] = useState(defaultValues ? defaultValues.ProductionDepartment : false);
@@ -23,6 +24,7 @@ export default function PermissionForm({ onSubmit, onCancel, defaultValues }) {
         password: defaultValues ? defaultValues.password : '',
         dept:defaultValues.dept?defaultValues.dept:'',
         Admin: admin,
+        engineering:engineering,
         HRDepartment: hrDepartment,
         IEDepartment: ieDepartment,
         ProductionDepartment: productionDepartment,
@@ -50,10 +52,13 @@ export default function PermissionForm({ onSubmit, onCancel, defaultValues }) {
         <Text>IE Department</Text>
         <Switch value={ieDepartment} onValueChange={() => setIEDepartment(!ieDepartment)} />
       </View>
-      {/* Repeat similar code for other switches */}
       <View style={styles.switchContainer}>
         <Text>Production Department</Text>
         <Switch value={productionDepartment} onValueChange={() => setProductionDepartment(!productionDepartment)} />
+      </View>
+      <View style={styles.switchContainer}>
+        <Text>Engineering Department</Text>
+        <Switch value={engineering} onValueChange={() => setEngineering(!engineering)} />
       </View>
       <View style={styles.switchContainer}>
         <Text>Quality Department</Text>
