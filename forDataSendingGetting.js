@@ -1,5 +1,5 @@
 import {setDoc,addDoc, collection, doc, getDoc, getDocs, query, where,deleteDoc,updateDoc, orderBy} from "firebase/firestore";
-import { database } from "./firebase";
+import { database,database1 } from "./firebase";
 import { getFormattedDate, momentTime } from "./EfficiencyAnalysis/util/date";
 
 
@@ -127,3 +127,23 @@ export const fetchUserInfo = async(ID,pass)=>{
   return efficiencies;
  }
  
+ export const fetchDepartments = async()=>{ 
+  const docSnap = await getDocs(collection(database1, "departments"));
+  const name= [];
+  if (docSnap){
+   docSnap.forEach((doc) => {
+    const data= doc.data();
+     const nameobj= {
+      name: data.name,
+      hour:data.hour, 
+      };
+      
+    name.push(nameobj)
+       })
+  }else{
+   console.log('no such data')
+  }
+ const myArray =eval(name[0]) ;
+  console.log('t'+myArray)
+  return myArray;
+ }

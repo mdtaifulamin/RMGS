@@ -7,12 +7,19 @@ import { storeUserInfo } from '../data-storing';
 import { fetchUserInfo, fetchUserInfoForSignUp } from '../forDataSendingGetting';
 import { getFormattedDate } from '../PermissionAnalysis copy/util/date';
 import NightSkyBackground from '../components/ColoredCircle';
-
+import { GlobalStyles } from '../constants/styles';
+import DropDownPicker from 'react-native-dropdown-picker';
+import { fetchDepartments } from '../forDataSendingGetting';
 
 const screen_width = Dimensions.get("screen").width;
 const screen_height = Dimensions.get("screen").height; // Set TextInput width to 90% of the screen width
 
 const SignupPage = ({ navigation }) => {
+    const [open, setOpen] = useState(false);
+    const [value, setValue] = useState( null); //updated 31/3/2023
+    const [items, setItems] = useState(
+        [{label: "Loading, please wait", value: "loading"}] //blockWiseLine.map((e) => ({label: `Line ${e[0]} - ${e[e.length - 1]}`,value:e}))
+    );
     const [modalVisible, setModalVisible] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -32,6 +39,11 @@ const SignupPage = ({ navigation }) => {
       // Check if all required fields are filled
       const isFieldsFilled = email && password && confirmPassword && Name && dept;
       setIsFormValid(isFieldsFilled && password === confirmPassword);
+      const d=async()=>{
+        const departmentsname= await fetchDepartments();
+        setItems(eval(departmentsname.name))
+      }
+      d();
     }, [email, password, confirmPassword, Name, dept]);
 
     const toggleConfirmPasswordVisibility = () => {
@@ -75,10 +87,11 @@ const SignupPage = ({ navigation }) => {
       <View style={styles.container}>
         
         <TextInput
-          placeholder="ID/email"
+          placeholder="ID Number"
           value={email.toUpperCase()}
           onChangeText={setEmail}
           style={styles.input}
+          keyboard='numeric'
         />
          <TextInput
           placeholder="Name"
@@ -86,12 +99,34 @@ const SignupPage = ({ navigation }) => {
           onChangeText={setName}
           style={styles.input}
         />
-         <TextInput
+         {/* <TextInput
           placeholder="Department"
           value={dept}
           onChangeText={setdept}
           style={styles.input}
-        />
+        /> */}
+                    <View style={{}}>                
+                        
+                        <DropDownPicker
+                            listMode="MODAL"
+                            open={open}
+                            value={value}
+                            items={items}
+                            setOpen={setOpen}
+                            setValue={setValue}
+                            setItems={setItems}
+                            style={styles.input}
+                            containerStyle={{backgroundColor:''}}
+                            onChangeValue={setdept}
+                            placeholder="Select Departments"
+                            searchable={true}
+                            placeholderStyle={{
+                                color: 'gray',
+                                //fontWeight: "bold"
+                              }}  
+                            //loading={isfetching}                        
+                        />
+                    </View>   
         
         <View style={styles.passwordInput}>
             <TextInput
@@ -160,7 +195,8 @@ const styles = StyleSheet.create({
       borderRadius: 5,
       paddingLeft: 10,
       marginBottom: 10,
-      color: 'black'
+      color: 'black',
+      backgroundColor:'rgba(0, 0, 0, 0)'
     },
     passwordInput: {
       width: screen_width * 0.8,
