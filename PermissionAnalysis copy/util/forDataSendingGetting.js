@@ -63,4 +63,3 @@ export async function updatePermission (id,permissions){
  
 
 
-[{ label: "TPD", value: "TPD" },{ label: "Cutting", value: "Cutting" },{ label: "Printing", value: "Printing" }, { label: "Embroidery", value: "Embroidery" }, { label: "Sewing", value: "Sewing" }, { label: "Finishing", value: "Finishing" }, { label: "Washing-Fabric", value: "Washing-Fabric" }, { label: "Washing-Garments", value: "Washing-Garments" }, { label: "Cap", value: "Cap" },{ label: "Engineering", value: "Engineering" }]
