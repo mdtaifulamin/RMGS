@@ -76,10 +76,10 @@ const MachineLocationSearching = ({ navigation }) => {
             </View>
          </View>    
         <View style={{flexDirection:'row',alignContent:'center',alignItems:'center',justifyContent:'center',flex:1}}>
-            <View style={{borderWidth:0,padding:8,backgroundColor:'white',borderRadius:4,width:"40%",margin:4}}>
+            <View style={{borderWidth:0,padding:8,backgroundColor:'white',borderRadius:4,width:"40%",margin:4,alignItems:'center',justifyContent:'center'}}>
              <Text style={{fontSize:20}}> Total Machine </Text>
             </View>
-            <View style={{borderWidth:0,padding:8,backgroundColor:'white',borderRadius:4,width:"40%",margin:4}}>
+            <View style={{borderWidth:0,padding:8,backgroundColor:'white',borderRadius:4,width:"40%",margin:4,alignItems:'center',justifyContent:'center'}}>
              <Text style={{fontSize:20}} >  {quantity} </Text>
             </View>  
         </View>

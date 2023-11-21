@@ -26,7 +26,7 @@ const HomeScreen = ({ navigation }) => {
     }
     console.log(userInfo.ID)
     //console.log(userInfo===null)
-    countTest()
+    //countTest()
   }, []);
 
   const buttonTransform = animation.interpolate({
