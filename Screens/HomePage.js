@@ -6,6 +6,7 @@ import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
 import { ModalAlert } from '../components/AlertModal';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { countTest } from '../forDataSendingGetting';
 
 
 const HomeScreen = ({ navigation }) => {
@@ -25,6 +26,7 @@ const HomeScreen = ({ navigation }) => {
     }
     console.log(userInfo.ID)
     //console.log(userInfo===null)
+    countTest()
   }, []);
 
   const buttonTransform = animation.interpolate({

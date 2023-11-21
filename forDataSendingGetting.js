@@ -1,4 +1,4 @@
-import {setDoc,addDoc, collection, doc, getDoc, getDocs, query, where,deleteDoc,updateDoc, orderBy} from "firebase/firestore";
+import {setDoc,addDoc, collection, doc, getDoc, getDocs, query, where,deleteDoc,updateDoc, orderBy,getCountFromServer} from "firebase/firestore";
 import { database,database1 } from "./firebase";
 import { getFormattedDate, momentTime } from "./EfficiencyAnalysis/util/date";
 
@@ -39,6 +39,13 @@ export const fetchUserInfo = async(ID,pass)=>{
   }
   //console.log(efficiencies[0].ID)
   return efficiencies;
+ }
+ export const countTest=async(activity,name)=>{
+  const coll = collection(database1, "machine-info");
+  const q = query(coll,where("name","==",name),where("activity","==",activity));
+  const snapshot = await getCountFromServer(q);
+  console.log('count: ', snapshot.data().count);
+  return snapshot.data().count;
  }
  export const fetchUserInfoForSignUp = async(ID)=>{
   const q =  query(collection(database, "userInfo"),where("ID","==",ID)); //,where("date","==",datess) where("lineNumber", "==","1")

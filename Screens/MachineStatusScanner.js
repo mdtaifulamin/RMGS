@@ -322,7 +322,7 @@ function MachineStatusScanner(){
                                         color: "gray",
                                     }}
                                     searchTextInputProps={{
-                                        keyboardType:'phone-pad'
+                                        //keyboardType:'phone-pad'
                                     }}                        
                                 />
                             </View>

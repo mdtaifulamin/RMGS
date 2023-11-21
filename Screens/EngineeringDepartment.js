@@ -42,6 +42,19 @@ const EngineeringDepartment = ({ navigation }) => {
               <Text style={[styles.buttonText, ]}>Machine Location Scanner</Text>
             </TouchableOpacity>
           </Animated.View>
+          <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+            <TouchableOpacity
+              style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+              onPress={() => {if (true) {
+                navigation.navigate('machineLocationSearching')
+              }else setModalVisible(true);}}>
+            <View style={{flexDirection:'row'}}>
+              
+              <MaterialCommunityIcons name="book-search-outline" size={24} color="black" />
+            </View>
+              <Text style={[styles.buttonText, ]}>Machine Location Searching</Text>
+            </TouchableOpacity>
+          </Animated.View>
         </View>
     </ScrollView>
      <ModalAlert modalVisible={modalVisible} onRequestClose={() => setModalVisible(false)}/>
