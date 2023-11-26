@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
       },
       header: {
         position: 'relative',
-        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        backgroundColor: 'rgba(250, 255, 250, 0.8)',
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
         paddingBottom: 20,

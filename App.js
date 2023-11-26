@@ -117,7 +117,7 @@ export default function App(){
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     borderBottomWidth: 1,
     borderBottomColor: 'gray',
     elevation: 0, // Remove shadow on Android

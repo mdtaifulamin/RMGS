@@ -1,7 +1,7 @@
 import {setDoc,addDoc, collection, doc, getDoc, getDocs, query, where,deleteDoc,updateDoc, orderBy,getCountFromServer} from "firebase/firestore";
 import { database,database1 } from "./firebase";
 import { getFormattedDate, momentTime } from "./EfficiencyAnalysis/util/date";
-
+import machineBrand from "./lib/machineBrand.json"
 
 
 
@@ -40,13 +40,28 @@ export const fetchUserInfo = async(ID,pass)=>{
   //console.log(efficiencies[0].ID)
   return efficiencies;
  }
- export const countTest=async(activity,name)=>{
+ export const countTest = async (activity, name, manufacturer, type, location) => {
+  const filters = [
+    where("name", "==", name),
+    where("activity", "==", activity),
+    ...(manufacturer ? [where("manufacturer", "==", manufacturer)] : []),
+    ...(type ? [where("type", "==", type)] : [])
+  ];
+
+  // Add location filter
+  if (location) {
+    filters.push(where("location", "==", location));
+  }
+
   const coll = collection(database1, "machine-info");
-  const q = query(coll,where("name","==",name),where("activity","==",activity));
+  const q = query(coll, ...filters);
   const snapshot = await getCountFromServer(q);
-  console.log('count: ', snapshot.data().count);
-  return snapshot.data().count;
- }
+  const count = snapshot.data().count;
+   
+  return { [location]: count };
+}
+
+
  export const fetchUserInfoForSignUp = async(ID)=>{
   const q =  query(collection(database, "userInfo"),where("ID","==",ID)); //,where("date","==",datess) where("lineNumber", "==","1")
   
