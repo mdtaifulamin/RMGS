@@ -53,6 +53,7 @@ const MachineLocationSearching = ({ navigation }) => {
   useEffect(() => {
    //countTest("activity")
    if(name){
+     setIsfetching(true)
      const search= async()=>{
         // r=await countTest(activity,name,manufacturer,type)
         // setQuantity(r)
@@ -60,7 +61,7 @@ const MachineLocationSearching = ({ navigation }) => {
           locationList.map(async(location) => await countTest(activity,name,manufacturer,type, location))
         );
         setLocationQuantity(locationCounts)
-        console.log(locationQuantity)
+        setIsfetching(false)
      }
      search()
    }
@@ -89,10 +90,11 @@ const MachineLocationSearching = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      
         <ColoredCirclesBackground />
         {/* <BrightSkyBackground/> */}
         <Header title={"Machine Quantity Searching"}/>
-        <View style={{backgroundColor:'rgba(255,255,255,0.7)',flexDirection:'row',marginVertical:'2%',elevation:1,justifyContent:'center',padding:4}}>
+        <View style={{backgroundColor:'rgba(255,255,255,0.7)',flexDirection:'row',marginVertical:'1%',elevation:1,justifyContent:'center',padding:4,borderRadius:5}}>
          
         <View style={{flexDirection:'coloumn',justifyContent:'center',alignItems:'center',}}>
             <DropDownPicker
@@ -185,16 +187,19 @@ const MachineLocationSearching = ({ navigation }) => {
           </View>
         </View>  
       </View>
-            <View style={{marginTop:'5%',backgroundColor:'white',justifyContent:'center',alignItems:'center'}}>
-              <Text style={{fontSize:30,fontWeight:'bold'}}>RESULT</Text>
+            <View style={{marginTop:'1%',backgroundColor:'white',justifyContent:'center',alignItems:'center'}}>
+              <Text style={{fontSize:30,fontWeight:'bold'}}>REPORT</Text>
             </View>
           <View style={{flex:1}}>
-            <FlatList
-              style={{flex:1,backgroundColor:'rgba(255,255,255,0.5)',padding:5}}
-              data={locationQuantity}
-              renderItem={renderItem}
-              keyExtractor={(item, index) => index.toString()}
-            />
+          {!isfetching&& <FlatList
+            style={{flex:1,backgroundColor:'rgba(255,255,255,0.5)',padding:5}}
+            data={locationQuantity}
+            renderItem={renderItem}
+            keyExtractor={(item, index) => index.toString()}
+          />}
+         {isfetching &&
+                 <Loadingspinner/>       
+            }
           </View>
       
      <ModalAlert modalVisible={modalVisible} onRequestClose={() => setModalVisible(false)}/>
@@ -205,7 +210,7 @@ const MachineLocationSearching = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: 'rgba(255,255,255,0.5)',
    
   },
   header: {

@@ -42,8 +42,8 @@ export const fetchUserInfo = async(ID,pass)=>{
  }
  export const countTest = async (activity, name, manufacturer, type, location) => {
   const filters = [
-    where("name", "==", name),
     where("activity", "==", activity),
+    ...(name ? [where("name", "==", name)] : []),
     ...(manufacturer ? [where("manufacturer", "==", manufacturer)] : []),
     ...(type ? [where("type", "==", type)] : [])
   ];

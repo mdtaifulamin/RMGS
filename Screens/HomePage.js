@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   shinyButton: {
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.8)',
+    borderColor: 'rgba(255, 255, 255, 0.7)',
     shadowColor: 'rgba(0, 0, 0, 0.3)',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.5,
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
   },
   departmentButton: {
     backgroundColor: '#007AFF',
-    height: 150,
+    height: 140,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
