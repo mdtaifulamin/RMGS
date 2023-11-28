@@ -83,6 +83,21 @@ function MachineStatusScanner(){
     };
     
     useEffect(() => {
+        setlValue(null)
+        setnValue(null)
+        setoValue(null)
+        setmValue(null)
+        settValue(null)
+        setlocValue(null)
+        setManufacturer('')
+        setLine('')
+        setlocation('')
+        setName('')
+        setActivity("Idle")
+        setNo('')
+        setLine('')
+        setOwnership('')
+        setType('')
         if (data) {
             getStatusOfMachine(data);
         }
@@ -132,9 +147,9 @@ function MachineStatusScanner(){
 
         setOpenModal(false);
         setData("");
-        setLine(null);
+        //setLine(null);
         setProblem("");
-        setlocation("")
+        //setlocation("")
         setIsSubmitting(false);
         setDisabled(false);
         } catch (error) {
@@ -142,7 +157,7 @@ function MachineStatusScanner(){
             setOpenModal(false);
             setOpenModal2(false);
             setData("");
-            setLine(null);
+            //setLine(null);
             setProblem("");
             setIsSubmitting(false);
             setDisabled(false);
@@ -258,17 +273,17 @@ function MachineStatusScanner(){
                 </View>
             </Modal>
             <Modal
-            animationType="slide"
-            transparent={true}
-            visible={openModal2}
-            onRequestClose={() => {
-            setOpenModal2(false);
-            setScannerOpen(false);
-            setData("");
-            setLine(null);
-            setProblem("");
-            }}
-            >
+                animationType="slide"
+                transparent={true}
+                visible={openModal2}
+                onRequestClose={() => {
+                setOpenModal2(false);
+                setScannerOpen(false);
+                setData("");
+                //setLine(null);
+                setProblem("");
+                }}
+                >
                 <View style={styles.centeredView}>
                  <ScrollView style={{marginTop:30}}>
                     <View style={styles.modalView}>
