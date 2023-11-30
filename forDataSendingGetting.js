@@ -60,6 +60,41 @@ export const fetchUserInfo = async(ID,pass)=>{
    
   return { [location]: count };
 }
+export const locationWiseMacine = async (activity, line, manufacturer, type, location) => {
+  const filters = [
+    where("activity", "==", activity),
+    ...(line ? [where("line", "==", line)] : []),
+    ...(manufacturer ? [where("manufacturer", "==", manufacturer)] : []),
+    ...(type ? [where("type", "==", type)] : [])
+  ];
+
+  // Add location filter
+  if (location) {
+    filters.push(where("location", "==", location));
+  }
+
+  const coll = collection(database1, "machine-info");
+  const q = query(coll, ...filters);
+  const docSnap = await getDocs(q);
+  const machines= [];
+  if (docSnap){
+   docSnap.forEach((doc) => {
+    const data= doc.data();
+    //console.log(data)
+     const machinesobj= {
+      name:data.name,
+      line: data.line, 
+      type:data.type,
+      };
+      machines.push(machinesobj)
+    
+       })
+  }else{
+   return [{}];
+  }
+  console.log(machines)
+  return machines;
+ }
 
 
  export const fetchUserInfoForSignUp = async(ID)=>{

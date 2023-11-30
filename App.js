@@ -30,6 +30,7 @@ import { storeUserInfo } from './data-storing';
 import MachineStatusScanner from './Screens/MachineStatusScanner'
 import EngineeringDepartment from './Screens/EngineeringDepartment';
 import MachineLocationSearching from './Screens/machineLocationSearching';
+import LocationWiseMachineQTY from './Screens/LocationWiseMachineQTY';
 const Stack = createStackNavigator();
 
 export function Root(){
@@ -96,6 +97,7 @@ export function Root(){
             <Stack.Screen name="OverTime" component={OverTimePage} options={{ title: 'Over Time', headerShown:false}} />
             <Stack.Screen name="developermeet" component={DeveloperMeetScreen} options={{ title: 'Developer Meet', headerShown:false}} />
             <Stack.Screen name="machineLocationSearching" component={MachineLocationSearching} options={{ title: 'Engineering Department'}} />
+            <Stack.Screen name="LocationWiseMachineQTY" component={LocationWiseMachineQTY} options={{ title: 'Engineering Department'}} />
             {/* <Stack.Screen name="NewOperatorAssessment" component={NewOperatorAssessmentPage} options={{ title: 'IE' }} /> */}
             <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} options={{ title: 'IE' }} />
           </Stack.Navigator>
