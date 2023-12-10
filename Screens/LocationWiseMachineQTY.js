@@ -53,34 +53,39 @@ const LocationWiseMachineQTY = ({ navigation }) => {
 
   useEffect(() => {
    //countTest("activity")
-   if(location){
+   if(location !== null || line !== null){
      setIsfetching(true)
      const search= async()=>{
         // r=await countTest(activity,name,manufacturer,type)
         // setQuantity(r)
         const machines = await locationWiseMacine(activity,line,manufacturer,type, location)
-          
+         console.log(machines)
           // Use reduce to count occurrences
           const machineCount = machines.reduce((count, obj) => {
             const machineType = obj.name;
-          
+            const machineID=obj.ID;
             // If the machine type is already in the count object, increment its count
             if (count[machineType]) {
               count[machineType]++;
+              //count["machineID"]= count["machineID"]+","+machineID
             } else {
               // If the machine type is not in the count object, initialize its count to 1
               count[machineType] = 1;
+             // count["machineID"]=machineID
+              console.log('else')
             }
           
             return count;
           }, {});
           setmachineQuantity(Object.entries(machineCount).map(([type, count]) => ({ [type]: count })))
-          console.log(Object.entries(machineCount).map(([type, count]) => ({ [type]: count })));
-          
+          //console.log(machineCount);
         setIsfetching(false)
      }
      search()
+    
    }
+   
+   
   }, [activity,line,manufacturer,type,location]);
 
  
@@ -91,6 +96,7 @@ const LocationWiseMachineQTY = ({ navigation }) => {
       <View style={{flexDirection:'row',borderWidth:2,flex:1,borderColor:'white',borderRadius:5,overflow:'hidden'}}>
         <View style={{borderColor:'white',borderWidth:1,justifyContent:'center',flex:0.5,height:50,}}> 
           <Text style={{marginLeft:5}}>{`${Object.keys(item)[0]}`} </Text>
+          <Text style={{marginLeft:5}}>{``} </Text>
         </View>
         <View style={{borderColor:'white',borderWidth:1,justifyContent:'center',alignItems:'center',flex:0.5,height:50}}> 
           <Text>{`${Object.values(item)[0]}`}</Text>
@@ -110,27 +116,27 @@ const LocationWiseMachineQTY = ({ navigation }) => {
          
         <View style={{flexDirection:'coloumn',justifyContent:'center',alignItems:'center',}}>
             <DropDownPicker
-                                    listMode="MODAL"
-                                    open={lopen}
-                                    value={lvalue?lvalue:location}
-                                    items={litems}
-                                    setOpen={setlOpen}
-                                    setValue={setlValue}
-                                    setItems={setlItems}
-                                    containerProps={{style:{width:150,borderWidth:0,padding:0,}}}
-                                    containerStyle={{ height: 40, width: 150 }}
-                                    style={{ borderWidth: 1, borderColor:  'white', borderRadius: 5, paddingHorizontal: 5, margin: 5 }}
-                                    dropDownStyle={{ backgroundColor: '#fafafa' }}
-                                    onChangeValue={setlocation}
-                                    placeholder="Location"
-                                    searchable={true} 
-                                    placeholderStyle={{
-                                        color: "gray",
-                                    }}
-                                    searchTextInputProps={{
-                                      //  keyboardType:'phone-pad'
-                                    }}                        
-                                />
+                  listMode="MODAL"
+                  open={lopen}
+                  value={lvalue?lvalue:location}
+                  items={litems}
+                  setOpen={setlOpen}
+                  setValue={setlValue}
+                  setItems={setlItems}
+                  containerProps={{style:{width:150,borderWidth:0,padding:0,}}}
+                  containerStyle={{ height: 40, width: 150 }}
+                  style={{ borderWidth: 1, borderColor:  'white', borderRadius: 5, paddingHorizontal: 5, margin: 5 }}
+                  dropDownStyle={{ backgroundColor: '#fafafa' }}
+                  onChangeValue={setlocation}
+                  placeholder="Location"
+                  searchable={true} 
+                  placeholderStyle={{
+                      color: "gray",
+                  }}
+                  searchTextInputProps={{
+                    //  keyboardType:'phone-pad'
+                  }}                        
+              />
          
             <DropDownPicker
               listMode="MODAL"
@@ -181,7 +187,7 @@ const LocationWiseMachineQTY = ({ navigation }) => {
         </View> 
         <View style={{flexDirection:'coloumn',alignItems:'center',paddingHorizontal:20,}}>
           <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' ,}}> 
-              <View style={{ margin:5,display: 'flex', flexDirection: 'row', alignItems: 'center',alignSelf:'center',borderWidth:1, alignItems:'center',justifyContent:'center',width:150,borderRadius:5,borderColor: 'white',backgroundColor:'white' }}>
+              <View style={{ height:50,margin:5,display: 'flex', flexDirection: 'row', alignItems: 'center',alignSelf:'center',borderWidth:1, alignItems:'center',justifyContent:'center',width:150,borderRadius:5,borderColor: 'white',backgroundColor:'white' }}>
                 <Text style={{  }}> Idle </Text>
                 <Switch
                 value={activity === "Active"}

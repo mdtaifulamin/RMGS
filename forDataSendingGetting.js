@@ -72,7 +72,7 @@ export const locationWiseMacine = async (activity, line, manufacturer, type, loc
   if (location) {
     filters.push(where("location", "==", location));
   }
-
+  
   const coll = collection(database1, "machine-info");
   const q = query(coll, ...filters);
   const docSnap = await getDocs(q);
@@ -82,6 +82,7 @@ export const locationWiseMacine = async (activity, line, manufacturer, type, loc
     const data= doc.data();
     //console.log(data)
      const machinesobj= {
+      ID:doc.id,
       name:data.name,
       line: data.line, 
       type:data.type,

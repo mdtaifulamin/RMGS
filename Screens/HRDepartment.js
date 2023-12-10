@@ -4,6 +4,7 @@ import * as DocumentPicker from 'expo-document-picker';
 import * as FileSystem from 'expo-file-system';
 import XLSX from 'xlsx';
 
+
 const HRDepartmentPage = () => {
   const [excelData, setExcelData] = useState(null);
 
@@ -36,10 +37,11 @@ const HRDepartmentPage = () => {
 
   return (
     <View>
-      <Button title="Pick Excel File" onPress={pickDocument} />
+      {/* <Button title="Pick Excel File" onPress={pickDocument} />
       {excelData && (
         <Button title="Convert to JSON" onPress={convertExcelToJson} />
-      )}
+      )} */}
+      <SlideFromRightIOS/>
     </View>
   );
 };

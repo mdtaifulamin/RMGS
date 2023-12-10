@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions,ScrollView } from 'react-native';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
+import SwipeUnlock from '../components/Slider';
 
 const QualityDepartmentPage = ({ navigation }) => {
   const [animation] = useState(new Animated.Value(0));
@@ -57,6 +58,7 @@ const QualityDepartmentPage = ({ navigation }) => {
         </Animated.View>
       </View>
       </ScrollView>
+      <SwipeUnlock/>
     </View>
   );
 };
