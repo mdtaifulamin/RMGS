@@ -81,6 +81,17 @@ const IEDepartmentPage = ({ navigation }) => {
             </TouchableOpacity>
         </Animated.View>
       </View>
+      <View style={styles.buttonRow}>
+        <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+            <TouchableOpacity
+              style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+              onPress={() => {if (false) {navigation.navigate('CapacityAnalysisContainer')
+            }else setModalVisible(true);}}>
+              <MaterialCommunityIcons name="timer-settings-outline" size={24} color="black" />
+              <Text style={[styles.buttonText,]}>CAPACITY ANALYSIS</Text>
+            </TouchableOpacity>
+        </Animated.View>
+      </View>
     </ScrollView>
      <ModalAlert modalVisible={modalVisible} onRequestClose={() => setModalVisible(false)}/>
     </View>

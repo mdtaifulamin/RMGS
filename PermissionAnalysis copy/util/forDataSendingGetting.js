@@ -8,10 +8,10 @@ export const storePermission=async(permissionData)=>{
   return id;
 }
 
-export const fetchPermissions = async(date)=>{
-  const sDate= getFormattedDate(date)                       //updated
-  const datess=new Date(sDate)
-  const q =  query(collection(database, "userInfo"),where("date",">",date));; //,where("date","==",datess) where("lineNumber", "==","1")
+export const fetchPermissions = async(dept)=>{
+  //const sDate= getFormattedDate(date)                       //updated
+  //const datess=new Date(sDate)
+  const q =  query(collection(database, "userInfo"),where("dept","==",dept));; //,where("date","==",datess) where("lineNumber", "==","1")
   
   const docSnap= await getDocs(q);
   const permissions= [];

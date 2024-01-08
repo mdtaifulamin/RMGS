@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity, TextInput } from "react-native";
 import Input from "./Input";
-import Button from "../../util/Button";
+import Button, { ButtonColor } from "../../util/Button";
 import { getdateMinusdays, getFormattedDate } from "../../util/date";
 import { GlobalStyles } from "../../../constants/styles";
 import { DateTimePickerAndroid } from "@react-native-community/datetimepicker";
@@ -13,13 +13,24 @@ import { evalCalculation } from "../../util/ordinalTonumberToordinal";
 import OTContext from "../../../components/Store/OTcontext";
 import UserContext from "../../../components/Store/UserContext";
 import { convertRangeStringToArrayOfArrays } from "../../../components/convertStringToarray";
+//import STYLE from "../../../lib/STYLE.json"
+import ButtonM from "../../util/Button";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Modal } from "react-native";
+import TrackingStatus from "../../../components/TrackingStatus";
+import SwipeUnlock from "../../../components/Slider";
+import RibbonButton from "../../../components/RibbonButton";
 
 export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultValues, testp }) {
+  const [modalisVisible,setModalisVisible]=useState(false)
+  const [downloadState,setdownloadstate]=useState(1)
+  const [STYLE, setSTYLE] = useState('')
   const { userInfo, updateUser } = useContext(UserContext);
   const { otInfo, setOTInfo } = useContext(OTContext);
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
-  const [items, setItems] = useState([{ label: "Loading, please wait", value: "loading" }]);
+  const [buyerItems, setBuyerItems] = useState(Object.keys(STYLE).map((e) => ({ label: e, value: e })));
+ // console.log(buyerItems)
   const [lopen, setlOpen] = useState(false);
   const [lvalue, setlValue] = useState(null);
   const [litems, setlItems] = useState(convertRangeStringToArrayOfArrays(userInfo.block).flatMap((range) =>
@@ -29,10 +40,12 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
   }))
 )
 );
-    console.log(
-      convertRangeStringToArrayOfArrays(userInfo.block)
-    );
-    
+  const [openSalesDocument, setOpenSalesDocument] = useState(false);
+  const [salesDocument, setSalesDocument] = useState(null);
+  const [salesDocumentItems, setSalesDocumentItems] = useState([]);
+  const [openStyleDocument, setOpenStyleDocument] = useState(false);
+  const [styleDocument, setStyleDocument] = useState(null);
+  const [styleDocumentItems, setStyleDocumentItems] = useState([]);  
   const [dopen, setdOpen] = useState(false);
   const [dvalue, setdValue] = useState(null);
   const [ditems, setdItems] = useState(Array.from({ length: 215 }, (_, i) => {
@@ -112,7 +125,8 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
 
     const lineNumberIsValid = efficiencyData.lineNumber.trim().length > 0;
     const buyerNameIsValid = efficiencyData.buyerName.trim().length > 0;
-    const SOIsValid = efficiencyData.SO.trim().length > 7;
+    //console.log( efficiencyData.buyerName.trim().length)
+    //const SOIsValid = efficiencyData.SO.trim().length > 7;
     const styleNameIsValid = efficiencyData.styleName.trim().length > 0;
     const dateIsValid = efficiencyData.date.toString() !== 'Invalid Date';
     const itemNameIsValid = efficiencyData.itemName.trim().length > 0;
@@ -127,13 +141,13 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
     const productionIsvalid = true;
     const remarksIsValid = efficiencyData.without > 0 ? efficiencyData.remarks.trim().length > 0 : true;
 
-    if (!lineNumberIsValid || !buyerNameIsValid || !SOIsValid || !styleNameIsValid || !itemNameIsValid || !dateIsValid || !SMVIsvalid || !manpowerIsvalid || !target10Isvalid || !hourIsvalid || !productionIsvalid || !withoutsvalid || !dueIsvalid || !rejectionIsvalid || !remarksIsValid) {
+    if (!lineNumberIsValid || !buyerNameIsValid  || !styleNameIsValid || !itemNameIsValid || !dateIsValid || !SMVIsvalid || !manpowerIsvalid || !target10Isvalid || !hourIsvalid || !productionIsvalid || !withoutsvalid || !dueIsvalid || !rejectionIsvalid || !remarksIsValid) {
       setInputs((curInputs) => {
         return {
           lineNumber: { value: curInputs.lineNumber.value, isValid: lineNumberIsValid },
           date: { value: curInputs.date.value, isValid: dateIsValid },
           buyerName: { value: curInputs.buyerName.value, isValid: buyerNameIsValid },
-          SO: { value: curInputs.SO.value, isValid: SOIsValid },
+          SO: { value: curInputs.SO.value, isValid: true },
           styleName: { value: curInputs.styleName.value.trim().replace(/[^\w\s]+$/, '').replace(/\s+/g, " ").trim(), isValid: styleNameIsValid },
           itemName: { value: curInputs.itemName.value, isValid: itemNameIsValid },
           daysRun: { value: curInputs.daysRun.value, isValid: daysRunIsvalid },
@@ -181,7 +195,7 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
   const showDatepicker = () => {
     showMode('date');
   };
-
+//console.log(inputs.buyerName.isValid)
   const formIsValid =
   !inputs.lineNumber.isValid ||
   !inputs.date.isValid ||
@@ -202,14 +216,138 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
   const Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
   const submitButtonisValid = Difference_In_Days + 6 / 24 < eval(hourss) || Number(inputs.date.value) === 0;
 
+  const handleBuyerChange = (selectedBuyer) => {
+    inputChangeHandler('buyerName',selectedBuyer); //send selected buyer name along with the key
+    // Check if the selectedBuyer exists in STYLE before accessing its properties
+    if (STYLE[selectedBuyer]) {
+      const selectedBuyerData = STYLE[selectedBuyer];
+      const salesDocumentOptions = Object.keys(selectedBuyerData).map((e) => ({ label: e, value: e }));
+      setSalesDocumentItems(salesDocumentOptions);
+      setSalesDocument(null); // Reset selected sales document
+      //setStyleDocument(null)
+      //setStyleDocument(null)
+    } else {
+      // Handle the case where the selectedBuyer doesn't exist in STYLE
+     // console.error(`Buyer data not found for ${selectedBuyer}`);
+    }
+  };
+  const handleSalesDocumentChange = (selectedSalesDocument) => {
+    setSalesDocument(selectedSalesDocument);
+    if(STYLE[inputs.buyerName.value][salesDocument]){
+      const selectedSalesDocumentData=STYLE[inputs.buyerName.value][salesDocument];
+      setStyleDocumentItems(selectedSalesDocumentData.map((e)=>({label:e,value:e})))
+      setStyleDocument(null)
+    }else{
+
+    }
+    // Fetch and update styles based on the selected sales document
+    // setStyles([...]); // Update with the fetched styles
+  };
+  useEffect(()=>{
+   
+  },[downloadState])
+  const downloadStyle = async () => {
+    try {
+      setModalisVisible(true);
+      setdownloadstate(0);
+      // Fetch buyer details
+      const buyerDetails = await fetchBuyer(1);
+      const data2 = buyerDetails[0].Style;
+  
+      // Save buyer details to AsyncStorage
+      await AsyncStorage.setItem('STYLE', JSON.stringify(data2));
+  
+      // Update buyerItems with actual buyer data
+      const actualBuyerItems = Object.keys(data2).map((e) => ({ label: e, value: e }));
+      setBuyerItems(actualBuyerItems);
+  
+      // Set STYLE state with the downloaded data
+      setSTYLE(data2);
+  
+      // Simulate a progress bar
+      let progress = 0;
+      const intervalId = setInterval(() => {
+        progress += 1;
+        setdownloadstate(progress);
+  
+        if (progress >= 8) {
+          clearInterval(intervalId);
+          setModalisVisible(false);
+        }
+      }, 1000);
+    } catch (error) {
+      console.error('Error downloading style: ', error);
+    }
+  };
+
+ 
+  useEffect(() => {
+    // Load data from AsyncStorage on component mount
+    setIsfetching(true);
+    const loadStyleFromStorage = async () => {
+      try {
+        const storedSTYLE = await AsyncStorage.getItem('STYLE');
+  
+        if (storedSTYLE == null || storedSTYLE == "null" || storedSTYLE === '[]' || storedSTYLE == []|| storedSTYLE == '') {
+          console.log(storedSTYLE == null || storedSTYLE == "null" || storedSTYLE === '[]' )
+          // Start downloading if no data in AsyncStorage
+          downloadStyle();
+        } else if (storedSTYLE !== null || storedSTYLE !== "null" || storedSTYLE !== '[]' || storedSTYLE !== '') {
+          //console.log("entered" + storedSTYLE)
+          const parsedSTYLE = JSON.parse(storedSTYLE);
+          setSTYLE(parsedSTYLE);
+          setBuyerItems(Object.keys(parsedSTYLE).map((e) => ({ label: e, value: e })));
+        }
+      } catch (error) {
+        console.error('Error loading style from storage: ', error);
+      } finally {
+        setIsfetching(false);
+      }
+    };
+  
+    loadStyleFromStorage();
+  }, []);
+  
+useEffect(() => {
+  if (STYLE && STYLE[inputs.buyerName.value]) {
+    setSalesDocumentItems(
+      Object.keys(STYLE[inputs.buyerName.value]).map((e) => ({
+        label: e,
+        value: e,
+      }))
+    );
+  } else {
+    // Handle the case when STYLE or STYLE[inputs.buyerName.value] is not defined
+  }
+
+  if (
+    STYLE &&
+    STYLE[inputs.buyerName.value] &&
+    STYLE[inputs.buyerName.value][inputs.SO.value]
+  ) {
+    const selectedSalesDocumentData =
+      STYLE[inputs.buyerName.value][inputs.SO.value];
+    setStyleDocumentItems(
+      selectedSalesDocumentData.map((e) => ({ label: e, value: e }))
+    );
+  } else {
+    // Handle the case when STYLE, STYLE[inputs.buyerName.value], or STYLE[inputs.buyerName.value][inputs.SO.value] is not defined
+  }
+
+  // Fetch and update styles based on the selected sales document
+  // setStyles([...]); // Update with the fetched styles
+
+}, [STYLE, inputs.buyerName.value, inputs.SO.value]);
+
+  
   useEffect(() => {
     testp(submitButtonisValid);
-
+  
     async function fetchData() {
       try {
         const hours = await fetchHours();
         sethourss(hours);
-        console.log(hours)
+        //console.log(hours)
         if (inputs.lineNumber.value) {
           const lineNumber = +inputs.lineNumber.value;
           const otInfoItem = otInfo.find(item => item.lineNumber === lineNumber && getFormattedDate(item.date) === inputs.date.value);
@@ -245,7 +383,7 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
               },
   
             }));
-            console.log(otInfo)
+           // console.log(otInfo)
             // Now you have the values of manpower and TNC_Main from otInfoItem
           } else {
             // Handle the case where no matching item was found in otInfo
@@ -254,28 +392,51 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
           
           
         }
-
-        const buyername = await fetchBuyer();
+         
+        const buyername = await fetchBuyer(0);
         let data2 = eval(buyername[0].name3);
-        setItems(Object.entries(data2).map(([label, value]) => ({ label, value })));
+        //setItems(Object.entries(data2).map(([label, value]) => ({ label, value })));
 
         let data = eval(buyername[0].name2);
         setitemItems(Object.entries(data).map(([label, value]) => ({ label, value })));
-        setIsfetching(true);
+       
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     }
-
+    
     fetchData();
+    
   }, [inputs.date.value, value, inputs.lineNumber.value]);
+
+  if(isfetching){
+    return <Loadingspinner/>       
+ }
 
   return (
     <View style={styles.form}>
       <Text style={styles.title}>Your line-wise style efficiency Data</Text>
+      {/*  */}
+      <RibbonButton onPress={downloadStyle} children={'Download Style Information'} />
+      {/* <SwipeUnlock
+          onUnlock={() => {
+            downloadStyle()
+          }}
+          swipText="Swipe To download Style"
+      /> */}
+      <Modal visible={modalisVisible} >
+        <View style={styles.modalContent}>
+          <View style={{justifyContent:'center',alignItems:'center',borderWidth:0}}>
+            <View style={{paddingVertical:'40%',justifyContent:'center',alignItems:'center',borderWidth:0,marginVertical:'40%'}}>
+              <Text style={{fontWeight:'bold', fontSize:20,margin:'5%'}}>{(downloadState/7*100).toFixed(0) + '%'}</Text>
+              <TrackingStatus currentIndex={downloadState} statuses={ ['Sent Request ', 'Downloading ', '43%',' 57% ','71%','86%', 'Completed ',]} activeColor={'green'}/>
+            </View>
+          </View>
+        </View>
+      </Modal>
       <View>
         <View style={styles.inputsRow}>
-          <View style={{ flex: 1, marginVertical: 8 }}>
+          <View style={{ flex: 1, marginVertical: 8, }}>
             <Text style={{ fontSize: 12, color: GlobalStyles.colors.textcolor, marginBottom: 4 }}> Line:</Text>
             <DropDownPicker
               listMode="MODAL"
@@ -317,31 +478,42 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
               listMode="MODAL"
               open={open}
               value={value ? value : inputs.buyerName.value}
-              items={items}
+              items={buyerItems}
               setOpen={setOpen}
               setValue={setValue}
-              setItems={setItems}
-              style={{ borderRadius: 10, backgroundColor: GlobalStyles.colors.textInputBackground, borderColor: 'white', borderWidth: .2 }}
+              setItems={setBuyerItems}
+              style={{ borderRadius: 10, backgroundColor: GlobalStyles.colors.textInputBackground, borderColor: 'white', borderWidth: 0.2 }}
               containerStyle={{ elevation: 5, backgroundColor: GlobalStyles.colors.textInputBackground, borderRadius: 10 }}
-              onChangeValue={inputChangeHandler.bind(this, 'buyerName')}
+              onChangeValue={handleBuyerChange}
               placeholder="Select Buyer"
               searchable={true}
               placeholderStyle={{
-                color: "red",
-                fontWeight: "bold"
+                color: 'red',
+                fontWeight: 'bold',
               }}
-              loading={isfetching}
             />
           </View>
-          <View style={{ flex: 1 }}>
-            <Input
-              style={styles.rowInput}
-              invalid={!inputs.styleName.isValid}
-              label='Style Name:' textInputConfig={{
-                maxLentgh: 10,
-                onChangeText: inputChangeHandler.bind(this, 'styleName'),
-                value: inputs.styleName.value,
-              }} />
+          
+          <View style={{ flex: 1, marginVertical: 8,marginHorizontal: '2%' }}>
+            <Text style={{ fontSize: 12, color: GlobalStyles.colors.textcolor, marginBottom: 4 }}> SO:</Text>
+            <DropDownPicker
+              listMode="MODAL"
+              open={openSalesDocument}
+              value={salesDocument?salesDocument:inputs.SO.value}
+              items={salesDocumentItems}
+              setOpen={setOpenSalesDocument}
+              setValue={setSalesDocument}
+              setItems={setSalesDocumentItems}
+              style={{ borderRadius: 10, backgroundColor: GlobalStyles.colors.textInputBackground, borderColor:'white', borderWidth: 0.2 }}
+              containerStyle={{ elevation: 5, backgroundColor: GlobalStyles.colors.textInputBackground, borderRadius: 10 }}
+              onChangeValue={(e)=>{inputChangeHandler('SO',e);handleSalesDocumentChange(e);}}
+              placeholder="Select Sales Document"
+              searchable={true}
+              placeholderStyle={{
+                color: 'red',
+                fontWeight: 'bold',
+              }}
+            />
           </View>
         </View>
         <View style={styles.inputsRow}>
@@ -393,14 +565,27 @@ export default function EfficiencyForm({ onSubmit, onCancel, onButton, defaultVa
 
         </View>
         <View style={styles.inputsRow}>
-          <Input
-            style={styles.rowInput}
-            invalid={!inputs.SO.isValid}
-            label='SO:' textInputConfig={{
-              keyboardType: 'phone-pad',
-              onChangeText: inputChangeHandler.bind(this, 'SO'),
-              value: inputs.SO.value
-            }} />
+          <View style={{ flex: 1, marginVertical: 8, marginHorizontal: '1%' }}>
+            <Text style={{ fontSize: 12, color: GlobalStyles.colors.textcolor, marginBottom: 4 }}> Style Name:</Text>
+              <DropDownPicker
+                  listMode="MODAL"
+                  open={openStyleDocument}
+                  value={styleDocument?styleDocument:inputs.styleName.value}
+                  items={styleDocumentItems}
+                  setOpen={setOpenStyleDocument}
+                  setValue={setStyleDocument}
+                  setItems={setStyleDocumentItems}
+                  style={{ borderRadius: 10, backgroundColor: GlobalStyles.colors.textInputBackground, borderColor: 'white', borderWidth: 0.2 }}
+                  containerStyle={{ elevation: 5, backgroundColor: GlobalStyles.colors.textInputBackground, borderRadius: 10 }}
+                  onChangeValue={(e)=>{inputChangeHandler('styleName',e);setStyleDocument(e);console.log(styleDocument)}}
+                  placeholder="Select Style Document"
+                  searchable={true}
+                  placeholderStyle={{
+                    color: 'red',
+                    fontWeight: 'bold',
+                  }}
+                />
+          </View>
           <Input
             style={styles.rowInput}
             invalid={!inputs.SMV.isValid}
@@ -520,6 +705,14 @@ const styles = StyleSheet.create({
     marginBottom: 25,
     textAlign: 'center',
   },
+  modalContent: {
+    backgroundColor: 'white',
+    padding: 22,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+    borderColor: 'rgba(0, 0, 0, 0.1)',
+  },
   inputsRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -527,6 +720,7 @@ const styles = StyleSheet.create({
   },
   rowInput: {
     flex: 1,
+    marginHorizontal:"1%"
   },
   buttons: {
     flexDirection: 'row',
@@ -546,11 +740,6 @@ const styles = StyleSheet.create({
 });
 
 
-
-
-
-
-// import { useContext, useEffect, useState } from "react";
 // import {  StyleSheet, Text, View ,TouchableOpacity,TextInput} from "react-native";
 // import Input from "./Input";
 // import Button from "../../util/Button";

@@ -10,6 +10,7 @@ import ButtonM from "../util/Button";
 import { getdateMinusdays, momentTime } from "../util/date";
 import { Fontisto } from '@expo/vector-icons';
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker'
+import SwipeUnlock from "../../components/Slider";
 
 const screenWidth = Dimensions.get('window').width
 const screen_height=Dimensions.get('window').height
@@ -142,10 +143,23 @@ export default function ManageEfficiency({route,navigation}){
          { isEditing && (
             
             <View style={styles.deleteCopyContainer }>
-               {deleteButton && <IconButton icon="trash" color={GlobalStyles.colors.error500} size={36} onPress={deleteEfficiencyhandler}/>}
-               <IconButton icon="copy" color={GlobalStyles.colors.text_border_button} size={36} onPress={handleOpenModal}/>
+                <View style={{flex:0.7,justifyContent:'center',alignItems:'center',paddingHorizontal:'2%'}}>
+                    {deleteButton &&  <SwipeUnlock
+                                        onUnlock={() => {
+                                            deleteEfficiencyhandler()
+                                        }}
+                                        swipText=" Swipe to Delete"
+                                        />}
+                </View>
+                <View style={{flex:0.3,justifyContent:'center',alignItems:'center'}}>
+                    <IconButton icon="copy" color={GlobalStyles.colors.text_border_button} size={36} onPress={handleOpenModal}/>
+                </View>
+
+                {/* {deleteButton && <IconButton icon="trash" color={GlobalStyles.colors.error500} size={36} onPress={deleteEfficiencyhandler}/>} */} 
             </View>
+            
             )}
+
             <Modal
                 visible={modalVisible}
                 animationType="slide"

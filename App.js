@@ -31,6 +31,10 @@ import MachineStatusScanner from './Screens/MachineStatusScanner'
 import EngineeringDepartment from './Screens/EngineeringDepartment';
 import MachineLocationSearching from './Screens/machineLocationSearching';
 import LocationWiseMachineQTY from './Screens/LocationWiseMachineQTY';
+import GarmentsUnit from './Screens/GarmentsUnit';
+import FabricUnit from './Screens/FabricUnit';
+import HourlyProductionContainer from './Screens/HourlyProductionContainer';
+import CapacityAnalysisContainer from './Screens/CapacityAnalysisContainer';
 const Stack = createStackNavigator();
 
 export function Root(){
@@ -97,7 +101,11 @@ export function Root(){
             <Stack.Screen name="OverTime" component={OverTimePage} options={{ title: 'Over Time', headerShown:false}} />
             <Stack.Screen name="developermeet" component={DeveloperMeetScreen} options={{ title: 'Developer Meet', headerShown:false}} />
             <Stack.Screen name="machineLocationSearching" component={MachineLocationSearching} options={{ title: 'Engineering Department'}} />
+            <Stack.Screen name="FabricUnit" component={FabricUnit} options={{ title: 'Engineering Department'}} />
+            <Stack.Screen name="GarmentsUnit" component={GarmentsUnit} options={{ title: 'Engineering Department'}} />
             <Stack.Screen name="LocationWiseMachineQTY" component={LocationWiseMachineQTY} options={{ title: 'Engineering Department'}} />
+            <Stack.Screen name="HourlyProductionContainer" component={HourlyProductionContainer} options={{title:"SEWING PRODUCTION"}}/>
+            <Stack.Screen name="CapacityAnalysisContainer" component={CapacityAnalysisContainer} options={{title:"CAPACITY ANALYSIS"}}/>
             {/* <Stack.Screen name="NewOperatorAssessment" component={NewOperatorAssessmentPage} options={{ title: 'IE' }} /> */}
             <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} options={{ title: 'IE' }} />
           </Stack.Navigator>

@@ -2,12 +2,12 @@ import React, { useRef } from 'react';
 import { Alert, Animated, Dimensions, PanResponder, StyleSheet, View } from 'react-native';
 
 const { width } = Dimensions.get('window');
-const lockWidth = width * 0.75;
+const lockWidth = width * 0.60;
 const lockHeight = 60;
 const smallgap = 4;
 const finalPosition = lockWidth - lockHeight;
 
-export default function SwipeUnlock() {
+export default function SwipeUnlock({onUnlock,swipText}) {
     const pan = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
     const translateBtn = pan.x.interpolate({ inputRange: [0, finalPosition], outputRange: [0, finalPosition], extrapolate: 'clamp' })
     const textOpacity = pan.x.interpolate({ inputRange: [0, lockWidth / 2], outputRange: [1, 0], extrapolate: 'clamp' })
@@ -43,20 +43,15 @@ export default function SwipeUnlock() {
             bounciness: 0
         }).start();
         setTimeout(() => {
-            Alert.alert(
-                "Unlocked",
-                "You can now remove this lock and display your View! Completely your logic!",
-                [
-                    { text: "COOL", onPress: () => reset() }
-                ]
-            );
+            reset();
+            onUnlock();
         }, 300);
     }
     return (
         <View style={styles.container}>
             <View style={styles.lockContainer}>
                 <Animated.Text style={[styles.txt, { opacity: textOpacity, transform: [{ translateX: translateText }] }]}>
-                    {'Slide to unlock ->'}
+                    {swipText}
                 </Animated.Text>
                 <Animated.View style={[styles.bar, { transform: [{ translateX: translateBtn }] }]} {...panResponder.panHandlers} />
             </View>
@@ -69,7 +64,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'flex-end',
-        paddingBottom: 100
+        //paddingBottom: 100
     },
     lockContainer: {
         height: lockHeight,

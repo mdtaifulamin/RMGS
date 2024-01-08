@@ -13,6 +13,18 @@ export default function ButtonM({children,onPress,mode,style}){
         </View>
     )
 }
+
+export function ButtonColor({children,onPress,mode,styleContainer,style,textStyle}){
+    return (
+        <View style={styleContainer}>
+            <Pressable onPress={onPress} style={({pressed})=>pressed && styles.pressed}>
+                <View style={style}>
+                    <Text style={textStyle}> {children} </Text>
+                </View>
+            </Pressable>
+        </View>
+    )
+}
 const styles= StyleSheet.create({
     button:{
         borderRadius:15,

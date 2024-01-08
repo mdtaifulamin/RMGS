@@ -79,26 +79,48 @@ export const fetchHours = async()=>{
   return hours[0].bindings;
  }
 
- export const fetchBuyer = async()=>{ 
-  const docSnap = await getDocs(collection(database1, "buyer-name"));
-  const name= [];
-  if (docSnap){
-   docSnap.forEach((doc) => {
-    const data= doc.data();
-     const nameobj= {
-      name: data.name,
-      name2: data.name2, 
-      name3:data.Name3,
-      };
-      
-    name.push(nameobj)
-       })
-  }else{
-   console.log('no such data')
-  }
- const myArray =eval(name) ;
- //console.log(myArray[0])
-  return myArray;
+ export const fetchBuyer = async(SAP)=>{ 
+  if(SAP==1){
+    const name= [];
+    const docSnap = await getDocs(query(collection(database1, "buyer-name"),where("SAP","==",1)));
+    if (docSnap){
+     docSnap.forEach((doc) => {  
+      const data= doc.data();
+       const nameobj= {
+        Style:JSON.parse(data.Style) ,
+        };  
+      name.push(nameobj)
+         })
+    }else{
+     console.log('no such data')
+      }
+      const myArray =eval(name) ;
+      //console.log(myArray)
+      //console.log(myArray[0])
+       return myArray;
+    }
+  if(SAP==0){ 
+    const name= []; 
+    const docSnap = await getDocs(query(collection(database1, "buyer-name"),where("SAP","==",0)));
+    if (docSnap){ 
+    docSnap.forEach((doc) => {
+      //console.log(doc.data())
+        const data= doc.data();
+        const nameobj= {
+          //name: data.name,
+          name2: data.name2, 
+          name3:data.Name3,
+          //Style: JSON.parse(data.Style),
+          };
+        name.push(nameobj)
+        })
+    }else{
+    console.log('no such data')
+      }
+      const myArray =eval(name) ;
+      //console.log(myArray[0])
+      return myArray;
+  } 
  }
 
 

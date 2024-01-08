@@ -13,7 +13,7 @@ import ButtonM from "../util/Button";
 import { convertOrdinalToNumber, getOrdinalIndicator } from "../util/ordinalTonumberToordinal";
 import NightSkyBackground from "../../components/ColoredCircle";
 import { fetchPermissions } from "../util/forDataSendingGetting";
-
+import { fetchDepartments } from "../../forDataSendingGetting";
 
 const blockWiseLine = [
     [1,2,3,4,5,6],
@@ -61,9 +61,9 @@ export default function Recentpermissions(){
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState( null); //updated 31/3/2023
     const [items, setItems] = useState(
-        blockWiseLine.map((e) => ({label: `Line ${e[0]} - ${e[e.length - 1]}`,value:e}))
+        [{label: "Loading, please wait", value: "loading"}] //blockWiseLine.map((e) => ({label: `Line ${e[0]} - ${e[e.length - 1]}`,value:e}))
     );
-
+    const [dept, setdept] = useState('');
     const [refreshing, setRefreshing] = useState(false);
     const [ isfetching,setIsfetching]= useState(true)
 
@@ -123,82 +123,27 @@ export default function Recentpermissions(){
     
     
    const permissionsCtx= useContext(PermissionsContext);
-   useEffect(() =>{                                        //updated
+   useEffect(() =>{ 
+            const d=async()=>{
+                const departmentsname= await fetchDepartments();
+                setItems(eval(departmentsname.name))
+            }
+            d();                                       //updated
         async  function getPermissions(){
-            const permissions=  await fetchPermissions(date);
+            const permissions=  await fetchPermissions(value);
             setIsfetching(false);
             setRefreshing(false);
             permissionsCtx.setPermission(permissions);   
         }
         getPermissions();
-     },[date,refreshing])
-    //  const permissionsCtx= useContext(PermissionsContext);  
-    //  useFocusEffect(
-    //   React.useCallback(() => {                                        //updated
-    //       async  function getPermissions(){
-    //           const permissions=  await fetchPermissions(date,value);
-    //           setIsfetching(false);
-    //           permissionsCtx.setPermission(permissions);   
-    //       }
-    //       getPermissions();
-         
-    //    },[value,date]))
+     },[value,refreshing])
+    
      
      
     if(isfetching){
         return <Loadingspinner/>       
      }
      
-    // const recentPermissions= permissionsCtx.permissions.filter((permission)=>{
-        
-    //     return  getFormattedDate(date) === getFormattedDate(permission.date); //&& checkNumberInArray(Number(permission.lineNumber), value) ;
-        
-    // });
-   
-    // function copyHandler(){
-       
-    //    recentPermissions.forEach(async(data) => {
-    //    // itoday.setDate(itoday.getDate())
-
-    //     //console.log(new Date(itoday))
-    //     const changedDaysRun= data.daysRun?getOrdinalIndicator(convertOrdinalToNumber(data.daysRun)+1):'';
-    //     const permissionData= {
-    //       lineNumber: data.lineNumber, 
-    //       date: new Date(momentTime(cdate)),
-    //       buyerName: data.buyerName,
-    //       SO:        data.SO,
-    //       daysRun: changedDaysRun,
-    //       styleName: data.styleName,
-    //       itemName: data.itemName,
-    //       SMV:       +data.SMV,
-    //       manpower:  0,
-    //       hour:       0,
-    //       production: '',
-    //       without:   '',
-    //       due:        '',
-    //       rejection:  '',
-    //       };
-    //       const id= await storePermission(permissionData);
-         
-    // }
-    // )
-    //     const showToast = () => {
-    //         ToastAndroid.show('Successfully Copied', ToastAndroid.SHORT);
-    //     };
-    //     //console.log(recentPermissions+'r')
-    //     showToast()
-    //     handleCloseModal()
-    // }
-
-// const createTwoButtonAlert = () =>
-// Alert.alert('Data Copy for Next Day', 'Are You Sure, You want to copy data to '+ momentTime( new Date( )) +'  ?', [
-//     {
-//         text: 'Cancel',
-//         onPress: () => console.log('Cancel Pressed'),
-//         style: 'cancel',
-//     },
-//     { text: 'Copy', onPress:() =>  copyHandler() },
-// ]);
 
 const handleOpenModal = () => {
     setModalVisible(true);
@@ -212,28 +157,33 @@ return (
     <View style={{ flex: 1 }}>
         <NightSkyBackground/>
        <View style={styles.rootSearchContainer}>
-            {/* <View style={{flex:4, zIndex:10000, backgroundColor:GlobalStyles.colors.backgroundColor,marginHorizontal:"1%",}}>
-                <DropDownPicker
-                    listMode="MODAL"
-                    open={open}
-                    value={value}
-                    items={items}
-                    setOpen={setOpen}
-                    setValue={setValue}
-                    setItems={setItems}
-                    style={{borderRadius:10,borderWidth:.2,}}
-                    placeholder="Select a Block"
-                    
-                />
-            </View> */}
-                <TouchableOpacity onPress={showDatepicker}  style={{backgroundColor:GlobalStyles.colors.backgroundColor,borderWidth:.2,borderRadius:10,flexDirection:"row",padding:screenWidth*0.03,flex:3.5,justifyContent:'center',alignItems:'center',}}>
+                     <DropDownPicker
+                            listMode="MODAL"
+                            open={open}
+                            value={value}
+                            items={items}
+                            setOpen={setOpen}
+                            setValue={setValue}
+                            setItems={setItems}
+                            style={styles.input}
+                            containerStyle={{backgroundColor:''}}
+                            onChangeValue={setdept}
+                            placeholder="Select Departments"
+                            searchable={true}
+                            placeholderStyle={{
+                                color: 'gray',
+                                //fontWeight: "bold"
+                              }}  
+                            //loading={isfetching}                        
+                        />
+                {/* <TouchableOpacity onPress={showDatepicker}  style={{backgroundColor:GlobalStyles.colors.backgroundColor,borderWidth:.2,borderRadius:10,flexDirection:"row",padding:screenWidth*0.03,flex:3.5,justifyContent:'center',alignItems:'center',}}>
                     <View style={{ justifyContent:'center',marginRight:'3%'}}>
                         <Text style={{fontSize:13}}>Date: {getFormattedDate(date)} </Text>
                     </View>
                     <View style={{ justifyContent:'center', marginLeft:'3%'}}>
                         <Fontisto name="date" size={16} color="black" />
                     </View>
-                </TouchableOpacity> 
+                </TouchableOpacity>  */}
             {/* <View style={{backgroundColor:GlobalStyles.colors.backgroundColor,flex:3,marginLeft:6,minHeight:42,justifyContent:'center',alignItems:'center',alignContent:'center',flexWrap:'wrap'}}>
                 <ButtonM onPress={handleOpenModal} >Batch Copy</ButtonM>
             </View> */}
@@ -277,7 +227,7 @@ return (
 
 const styles=StyleSheet.create({
     rootSearchContainer:{
-        flexDirection:'row',
+        //flexDirection:'row',
         backgroundColor:GlobalStyles.colors.backgroundColor,
         paddingTop:10,
         justifyContent:'center',

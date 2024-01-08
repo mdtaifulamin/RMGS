@@ -1,12 +1,12 @@
 import React, { useEffect, useState,useContext } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions,Modal, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions,Modal, ScrollView } from 'react-native';
 import UserContext from '../components/Store/UserContext';
 import ColoredCirclesBackground from '../components/ColoredCircle';
 import Header from '../components/Header';
 import { ModalAlert } from '../components/AlertModal';
 import { FontAwesome5,Ionicons,Feather,MaterialCommunityIcons ,MaterialIcons,Entypo} from '@expo/vector-icons';
 
-const EngineeringDepartment = ({ navigation }) => {
+const GarmentsUnit = ({ navigation }) => {
   const [animation] = useState(new Animated.Value(0));
   const buttonWidth = Dimensions.get('window').width / 2 - 30;
   const { userInfo, updateUser } = useContext(UserContext);
@@ -33,25 +33,41 @@ const EngineeringDepartment = ({ navigation }) => {
             <TouchableOpacity
               style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
               onPress={() => {if (true) {
-                navigation.navigate('GarmentsUnit')
+                navigation.navigate('MachineStatusScanner')
               }else setModalVisible(true);}}>
             <View style={{flexDirection:'row'}}>
-              <MaterialCommunityIcons name="tshirt-crew-outline" size={24} color="#21B4CB" />
+              <Entypo name="location" size={24} color="black" />
+              <MaterialIcons name="qr-code-scanner" size={24} color="black" />
             </View>
-              <Text style={[styles.buttonText, ]}>Garments Unit</Text>
+              <Text style={[styles.buttonText, ]}>Machine Location Scanner</Text>
             </TouchableOpacity>
           </Animated.View>
           <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
             <TouchableOpacity
               style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
               onPress={() => {if (true) {
-                navigation.navigate('FabricUnit')
+                navigation.navigate('machineLocationSearching')
               }else setModalVisible(true);}}>
             <View style={{flexDirection:'row'}}>
-              {/* <MaterialCommunityIcons name="book-search-outline" size={24} color="black" /> */}
-              <Image source={require('../assets/fabric.png')} style={{height:25,width:25}}/>
+              
+              <MaterialCommunityIcons name="book-search-outline" size={24} color="black" />
             </View>
-              <Text style={[styles.buttonText, ]}>Fabric Unit</Text>
+              <Text style={[styles.buttonText, ]}>Machine Location Searching</Text>
+            </TouchableOpacity>
+          </Animated.View>
+        </View>
+        <View style={styles.buttonRow}>
+          <Animated.View style={[styles.buttonContainer, { transform: [{ translateY: buttonTransform }] }]}>
+            <TouchableOpacity
+              style={[styles.subPageButton, { width: buttonWidth, elevation: 10 }]}
+              onPress={() => {if (true) {
+                navigation.navigate('LocationWiseMachineQTY')
+              }else setModalVisible(true);}}>
+            <View style={{flexDirection:'row'}}>
+              
+              <MaterialCommunityIcons name="book-account-outline" size={24} color="black" />
+            </View>
+              <Text style={[styles.buttonText, ]}>Location-wise Report</Text>
             </TouchableOpacity>
           </Animated.View>
         </View>
@@ -140,4 +156,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EngineeringDepartment;
+export default GarmentsUnit;
