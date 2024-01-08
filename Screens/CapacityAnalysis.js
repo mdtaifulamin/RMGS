@@ -12,11 +12,11 @@ import {
   Alert,
   Button,
 } from "react-native";
-import CAScrollDown from "../Components/CAScrollDown";
-import { store_capacity_data } from "../Components/server_activity";
+import CAScrollDown from "../components/CAScrollDown";
+import { store_capacity_data } from "../components/server_activity";
 import DropDownPicker from "react-native-dropdown-picker";
 import Spinner from "react-native-loading-spinner-overlay";
-import Stopwatch from "../Components/StopWatch";
+import Stopwatch from "../components/StopWatch";
 import MachineList from "../lib/machineList.json"
 import { ColorLibrary } from "../Style/color";
 

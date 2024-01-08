@@ -11,7 +11,8 @@ import {
 } from "react-native";
 import DropDownPicker from "react-native-dropdown-picker";
 import { BarChart } from "react-native-chart-kit";
-import { ColorLibrary } from "../Style/color";
+//import { ColorLibrary } from "../Style/color";
+import { GlobalStyles } from "../constants/styles";
 
 ////////////////////////////// USING REACT NATIVE SVG V-9.13.3 ///////////////////////////////
 
@@ -173,7 +174,7 @@ function Dashboard() {
                     width={screenWidth * 0.96}
                     height={220}
                     chartConfig={{
-                      backgroundColor: ColorLibrary.body_background,
+                      backgroundColor: GlobalStyles.colors.backgroundColor,
                       barPercentage: 0.8,
                       backgroundGradientFrom: "#ffffff",
                       backgroundGradientTo: "#ffffff",
@@ -222,10 +223,10 @@ const styles = StyleSheet.create({
   lineText: {
     fontSize: 16,
     fontFamily: "phudu-Black",
-    color: ColorLibrary.primary_text_border_button,
+    color: GlobalStyles.colors.textcolor,
   },
   chartArea: {
-    backgroundColor: ColorLibrary.body_background,
+    backgroundColor: GlobalStyles.colors.backgroundColor,
   },
   reportContainer:{
     flexDirection: 'row',
