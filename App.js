@@ -41,29 +41,7 @@ export function Root(){
  const [login,setLogin]=useState(false)
  const [loading, setLoading] = useState(true);
  const { userInfo, updateUser } = useContext(UserContext);
-  useEffect(() => {
-    AsyncStorage.getItem('userInfo')
-     .then(userInfoString => {
-       if (userInfoString) {
-         const storedUserInfo = JSON.parse(userInfoString);
-         setLogin(storedUserInfo.login);
-         // Update your context or state with storedUserInfo
-         //console.log(storedUserInfo.ID)
-         //console.log(login +"t")
-         updateUser(storedUserInfo)
-         
-         setLoading(false);
-        
-       }
-     })
-     .catch(error => {
-      console.log('Error loading user info:', error);
-      setLoading(false); // Make sure to handle errors 
-    });
-    userInfo===null&& setTimeout(() => {
-      setLoading(false)
-    }, 15000); // for the newly installed login
-  }, [])
+  
   console.log(userInfo)
   const route=login===true?"Home":'Login'
   //console.log(JSON.stringify(userInfo)+route + login)
